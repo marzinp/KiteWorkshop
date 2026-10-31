@@ -1,0 +1,956 @@
+{
+ "v": 2,
+ "nid": 38,
+ "points": {
+  "p1": [
+   0,
+   289.5543090321709,
+   40.64044541749947
+  ],
+  "p2": [
+   -296,
+   289.5543090321709,
+   40.64044541749947
+  ],
+  "p3": [
+   -283.28276277887153,
+   -405.90625,
+   28.938334748151537
+  ],
+  "p4": [
+   0,
+   -405.90625,
+   28.938334748151537
+  ],
+  "p8": [
+   296,
+   289.5543090321709,
+   40.64044541749947
+  ],
+  "p9": [
+   283.28276277887153,
+   -405.90625,
+   28.938334748151537
+  ],
+  "p11": [
+   0,
+   184.68270972581067,
+   168.67736130605672
+  ],
+  "p12": [
+   0,
+   -415.99236720660144,
+   43.53833776622289
+  ],
+  "p16": [
+   -290.5343683273498,
+   193.29979272744978,
+   168.6773613060567
+  ],
+  "p17": [
+   -288.9515194325055,
+   -396.8947234883114,
+   40.64044541749947
+  ],
+  "p19": [
+   290.5343683273498,
+   193.29979272744978,
+   168.6773613060567
+  ],
+  "p20": [
+   288.9515194325055,
+   -396.8947234883114,
+   40.64044541749947
+  ],
+  "p26": [
+   0,
+   15.96833470600285,
+   324.2319625096459
+  ],
+  "p30": [
+   -249.7869181555138,
+   40.051308067484484,
+   324.2319625096459
+  ],
+  "p32": [
+   249.7869181555138,
+   40.051308067484484,
+   324.2319625096459
+  ],
+  "p34": [
+   0,
+   40.051308067484484,
+   1310
+  ]
+ },
+ "shapes": [
+  {
+   "id": "s7",
+   "kind": "sail",
+   "closed": true,
+   "plane": "face",
+   "pts": [
+    "p1",
+    "p2",
+    "p3",
+    "p4"
+   ],
+   "segs": [
+    {
+     "straight": false,
+     "c1": [
+      -98.66666666666666,
+      0,
+      0
+     ],
+     "c2": [
+      98.66666666666669,
+      0,
+      0
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      24.371933793903665,
+      -156.06922775279355,
+      -84.5989209838655
+     ],
+     "c2": [
+      0,
+      269.2431377517478,
+      -33.24216195541473
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      14.978151511442146,
+      267.80954287060143,
+      -41.01092623992456
+     ],
+     "c2": [
+      11.339743611513656,
+      -137.531144786399,
+      -69.06016685836302
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "E1": 60,
+    "E2": 50,
+    "G": 3,
+    "nu": 0.25,
+    "ang": 0,
+    "ret": 0,
+    "hemEA": 3000,
+    "gsm": 40,
+    "fabId": "t_rny",
+    "fab": "Ripstop nylon 40 g",
+    "cornR": 55
+   },
+   "name": "Voile 1"
+  },
+  {
+   "id": "s10",
+   "kind": "sail",
+   "closed": true,
+   "plane": "face",
+   "pts": [
+    "p1",
+    "p8",
+    "p9",
+    "p4"
+   ],
+   "segs": [
+    {
+     "straight": false,
+     "c1": [
+      98.66666666666666,
+      0,
+      0
+     ],
+     "c2": [
+      -98.66666666666669,
+      0,
+      0
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      -24.371933793903665,
+      -156.06922775279355,
+      -84.5989209838655
+     ],
+     "c2": [
+      0,
+      269.2431377517478,
+      -33.24216195541473
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      14.978151511442146,
+      267.80954287060143,
+      41.01092623992456
+     ],
+     "c2": [
+      12.410470941230965,
+      -256.03403102501017,
+      43.26602919447045
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "E1": 60,
+    "E2": 50,
+    "G": 3,
+    "nu": 0.25,
+    "ang": 0,
+    "ret": 0,
+    "hemEA": 3000,
+    "gsm": 40,
+    "fabId": "t_rny",
+    "fab": "Ripstop nylon 40 g",
+    "cornR": 55
+   },
+   "name": "Voile 1 ′"
+  },
+  {
+   "id": "s13",
+   "kind": "sail",
+   "closed": true,
+   "plane": "cote",
+   "pts": [
+    "p1",
+    "p11",
+    "p12",
+    "p4"
+   ],
+   "segs": [
+    {
+     "straight": false,
+     "c1": [
+      -2.378584738154678,
+      -53.78494408732428,
+      68.12829729450584
+     ],
+     "c2": [
+      0,
+      34.95719976878675,
+      -42.678971962852415
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      14.978151511442146,
+      267.80954287060143,
+      -41.01092623992456
+     ],
+     "c2": [
+      11.339743611513656,
+      -137.531144786399,
+      -69.06016685836302
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "E1": 60,
+    "E2": 50,
+    "G": 3,
+    "nu": 0.25,
+    "ang": 0,
+    "ret": 0,
+    "hemEA": 3000,
+    "gsm": 40,
+    "fabId": "t_rny",
+    "fab": "Ripstop nylon 40 g",
+    "cornR": 55
+   },
+   "name": "Voile 2"
+  },
+  {
+   "id": "s18",
+   "kind": "sail",
+   "closed": true,
+   "plane": "cote",
+   "pts": [
+    "p2",
+    "p16",
+    "p17",
+    "p3"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      0,
+      269.2431377517478,
+      -33.24216195541473
+     ],
+     "c2": [
+      24.371933793903665,
+      -156.06922775279355,
+      -84.5989209838655
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "E1": 60,
+    "E2": 50,
+    "G": 3,
+    "nu": 0.25,
+    "ang": 0,
+    "ret": 0,
+    "hemEA": 3000,
+    "gsm": 40,
+    "fabId": "t_rny",
+    "fab": "Ripstop nylon 40 g",
+    "cornR": 55
+   },
+   "name": "Voile 3"
+  },
+  {
+   "id": "s21",
+   "kind": "sail",
+   "closed": true,
+   "plane": "cote",
+   "pts": [
+    "p8",
+    "p19",
+    "p20",
+    "p9"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      0,
+      269.2431377517478,
+      -33.24216195541473
+     ],
+     "c2": [
+      -24.371933793903665,
+      -156.06922775279355,
+      -84.5989209838655
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "E1": 60,
+    "E2": 50,
+    "G": 3,
+    "nu": 0.25,
+    "ang": 0,
+    "ret": 0,
+    "hemEA": 3000,
+    "gsm": 40,
+    "fabId": "t_rny",
+    "fab": "Ripstop nylon 40 g",
+    "cornR": 55
+   },
+   "name": "Voile 3 ′"
+  },
+  {
+   "id": "s22",
+   "kind": "sail",
+   "closed": true,
+   "plane": "face",
+   "pts": [
+    "p16",
+    "p11",
+    "p12",
+    "p17"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "E1": 60,
+    "E2": 50,
+    "G": 3,
+    "nu": 0.25,
+    "ang": 0,
+    "ret": 0,
+    "hemEA": 3000,
+    "gsm": 40,
+    "fabId": "t_rny",
+    "fab": "Ripstop nylon 40 g",
+    "cornR": 55
+   },
+   "name": "Voile 4"
+  },
+  {
+   "id": "s23",
+   "kind": "sail",
+   "closed": true,
+   "plane": "face",
+   "pts": [
+    "p19",
+    "p11",
+    "p12",
+    "p20"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "E1": 60,
+    "E2": 50,
+    "G": 3,
+    "nu": 0.25,
+    "ang": 0,
+    "ret": 0,
+    "hemEA": 3000,
+    "gsm": 40,
+    "fabId": "t_rny",
+    "fab": "Ripstop nylon 40 g",
+    "cornR": 55
+   },
+   "name": "Voile 4 ′"
+  },
+  {
+   "id": "s27",
+   "kind": "sail",
+   "closed": true,
+   "plane": "cote",
+   "pts": [
+    "p11",
+    "p26",
+    "p12"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "E1": 60,
+    "E2": 50,
+    "G": 3,
+    "nu": 0.25,
+    "ang": 0,
+    "ret": 0,
+    "hemEA": 3000,
+    "gsm": 40,
+    "fabId": "t_rny",
+    "fab": "Ripstop nylon 40 g",
+    "cornR": 55
+   },
+   "name": "Voile 6"
+  },
+  {
+   "id": "s31",
+   "kind": "sail",
+   "closed": true,
+   "plane": "cote",
+   "pts": [
+    "p16",
+    "p30",
+    "p17"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "E1": 60,
+    "E2": 50,
+    "G": 3,
+    "nu": 0.25,
+    "ang": 0,
+    "ret": 0,
+    "hemEA": 3000,
+    "gsm": 40,
+    "fabId": "t_rny",
+    "fab": "Ripstop nylon 40 g",
+    "cornR": 55
+   },
+   "name": "Voile 7"
+  },
+  {
+   "id": "s33",
+   "kind": "sail",
+   "closed": true,
+   "plane": "cote",
+   "pts": [
+    "p19",
+    "p32",
+    "p20"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "E1": 60,
+    "E2": 50,
+    "G": 3,
+    "nu": 0.25,
+    "ang": 0,
+    "ret": 0,
+    "hemEA": 3000,
+    "gsm": 40,
+    "fabId": "t_rny",
+    "fab": "Ripstop nylon 40 g",
+    "cornR": 55
+   },
+   "name": "Voile 7 ′"
+  },
+  {
+   "id": "s35",
+   "kind": "cable",
+   "closed": false,
+   "plane": "dessus",
+   "pts": [
+    "p26",
+    "p34"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "EA": 4000,
+    "rac": 0,
+    "compId": "k_pe1",
+    "mat": "Polyester tressé 1 mm",
+    "bride": true
+   },
+   "name": "Bride 1"
+  },
+  {
+   "id": "s36",
+   "kind": "cable",
+   "closed": false,
+   "plane": "dessus",
+   "pts": [
+    "p34",
+    "p30"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "EA": 4000,
+    "rac": 0,
+    "compId": "k_pe1",
+    "mat": "Polyester tressé 1 mm",
+    "bride": true
+   },
+   "name": "Bride 2"
+  },
+  {
+   "id": "s37",
+   "kind": "cable",
+   "closed": false,
+   "plane": "dessus",
+   "pts": [
+    "p34",
+    "p32"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "EA": 4000,
+    "rac": 0,
+    "compId": "k_pe1",
+    "mat": "Polyester tressé 1 mm",
+    "bride": true
+   },
+   "name": "Bride 2 ′"
+  }
+ ],
+ "offset": {
+  "base": "face",
+  "d": 150,
+  "tilt": 0,
+  "rot": 0
+ },
+ "h": 83,
+ "hk": 25,
+ "hMode": "rel",
+ "deduce": 1,
+ "nodes": {
+  "p26": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N1"
+  },
+  "p34": {
+   "type": "rigide",
+   "auto": false,
+   "name": "N2",
+   "ring": true
+  },
+  "p30": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N3"
+  },
+  "p32": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N4"
+  }
+ },
+ "sym": true,
+ "symMap": {
+  "p8": "p2",
+  "p9": "p3",
+  "p19": "p16",
+  "p20": "p17",
+  "p32": "p30"
+ },
+ "tails": {},
+ "lests": {},
+ "name": "Parafoil",
+ "calcMode": "repos",
+ "wind": {
+  "V": 6
+ },
+ "fpos": {
+  "L": 10
+ }
+}

@@ -1,0 +1,1710 @@
+{
+ "v": 2,
+ "nid": 100,
+ "points": {
+  "p1": [
+   0,
+   324.4876215565954,
+   0
+  ],
+  "p2": [
+   -36.71156888172245,
+   254.23646485551618,
+   -13.021364224247169
+  ],
+  "p3": [
+   -17.579321915524496,
+   182.8094095150438,
+   0
+  ],
+  "p4": [
+   -107.03506244244875,
+   116.52739964816675,
+   0
+  ],
+  "p5": [
+   -309.2533988083103,
+   157.36710890242148,
+   0
+  ],
+  "p6": [
+   -681.5980844476071,
+   -82.54978473305934,
+   0
+  ],
+  "p8": [
+   -345.10312129941076,
+   -4.073050975928538,
+   0
+  ],
+  "p10": [
+   -35.74559992834003,
+   -152.63102499012507,
+   0.11403064266554028
+  ],
+  "p11": [
+   -154.00000000000003,
+   -289.2190469639138,
+   -19.72094258208471
+  ],
+  "p12": [
+   0,
+   -253.19878264649518,
+   0
+  ],
+  "p15": [
+   36.71156888172245,
+   254.23646485551618,
+   -13.021364224247169
+  ],
+  "p16": [
+   17.579321915524496,
+   182.8094095150438,
+   0
+  ],
+  "p17": [
+   107.03506244244875,
+   116.52739964816675,
+   0
+  ],
+  "p18": [
+   309.2533988083103,
+   157.36710890242148,
+   0
+  ],
+  "p19": [
+   681.5980844476071,
+   -82.54978473305934,
+   0
+  ],
+  "p21": [
+   345.10312129941076,
+   -4.073050975928538,
+   0
+  ],
+  "p23": [
+   35.74559992834003,
+   -152.63102499012507,
+   0.11403064266554028
+  ],
+  "p24": [
+   154.00000000000003,
+   -289.2190469639138,
+   -19.72094258208471
+  ],
+  "p26": [
+   0,
+   183.33493983566373,
+   0
+  ],
+  "p40": [
+   0,
+   -60.83011923863001,
+   0
+  ],
+  "p43": [
+   0,
+   -199.80400780724838,
+   0
+  ],
+  "p55": [
+   -154,
+   -43.69109967700568,
+   0
+  ],
+  "p56": [
+   154,
+   -43.69109967700568,
+   0
+  ],
+  "p57": [
+   0,
+   95.54076566014682,
+   343.53694368645404
+  ],
+  "p71": [
+   0,
+   254.23646485551618,
+   0
+  ],
+  "p92": [
+   -518.6694797991682,
+   70.94743306840427,
+   0
+  ],
+  "p93": [
+   518.6694797991682,
+   70.94743306840427,
+   0
+  ],
+  "p97": [
+   -497.04651368317815,
+   84.73263976203357,
+   0
+  ],
+  "p98": [
+   497.04651368317815,
+   84.73263976203357,
+   0
+  ]
+ },
+ "shapes": [
+  {
+   "id": "s14",
+   "kind": "sail",
+   "closed": true,
+   "plane": "face",
+   "pts": [
+    "p1",
+    "p2",
+    "p3",
+    "p4",
+    "p5",
+    "p97",
+    "p92",
+    "p6",
+    "p8",
+    "p55",
+    "p10",
+    "p11",
+    "p12",
+    "p43",
+    "p40",
+    "p26",
+    "p71"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      8.990954026844408,
+      -15.028956202779204,
+      4.013197562809573
+     ],
+     "c2": [
+      7.449810209208034,
+      23.495555275194565,
+      0
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     },
+     "smB": true
+    },
+    {
+     "straight": false,
+     "c1": [
+      -11.057921028088067,
+      -34.87498170397005,
+      0
+     ],
+     "c2": [
+      36.43514495257509,
+      3.319966656538284,
+      0
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     },
+     "smB": true,
+     "smA": true
+    },
+    {
+     "straight": false,
+     "c1": [
+      -84.06280857297506,
+      -7.659794461652421,
+      0
+     ],
+     "c2": [
+      53.27151453423255,
+      -46.88623186918814,
+      0
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     },
+     "smA": true
+    },
+    {
+     "straight": false,
+     "c1": [
+      -83.24241882814749,
+      -19.835698126483692,
+      0
+     ],
+     "c2": [
+      50.020436997644424,
+      30.629613274155247,
+      0
+     ],
+     "edge": {
+      "type": "fourreau",
+      "host": "s31",
+      "mode": "glissant",
+      "auto": true
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      -4.228873480858283,
+      -2.589516747127149,
+      0
+     ],
+     "c2": [
+      4.035972318729932,
+      2.621656478640375,
+      0
+     ],
+     "edge": {
+      "type": "fourreau",
+      "host": "s31",
+      "mode": "glissant",
+      "auto": true
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      -86.2911901528388,
+      -56.052380900612604,
+      0
+     ],
+     "c2": [
+      33.64255034433813,
+      34.84843631933293,
+      0
+     ],
+     "edge": {
+      "type": "fourreau",
+      "host": "s31",
+      "mode": "glissant",
+      "auto": true
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      117.66114540204514,
+      43.81404013600024,
+      0
+     ],
+     "c2": [
+      -112.04244173427941,
+      6.520679700350474,
+      0
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant",
+      "manual": true
+     },
+     "smB": true
+    },
+    {
+     "straight": false,
+     "c1": [
+      62.778864155474835,
+      -3.6536232053966446,
+      0
+     ],
+     "c2": [
+      -49.1244983643329,
+      20.566601312672777,
+      0
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     },
+     "smA": true,
+     "smB": true
+    },
+    {
+     "straight": false,
+     "c1": [
+      35.37165519861855,
+      -14.808797126924025,
+      0
+     ],
+     "c2": [
+      0.20965696423147193,
+      65.25042024276638,
+      0.33219262514979875
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     },
+     "smB": true
+    },
+    {
+     "straight": false,
+     "c1": [
+      -0.13125753232482748,
+      -40.85058264397897,
+      -0.20797202894500239
+     ],
+     "c2": [
+      37.21639110824686,
+      35.371759722902866,
+      0
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     },
+     "smA": true
+    },
+    {
+     "straight": false,
+     "c1": [
+      47.71639110824686,
+      15.942487640785147,
+      0
+     ],
+     "c2": [
+      -41.22556711814154,
+      10.916584595028086,
+      1.5013046027390387
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      0,
+      23.030413480490267,
+      0
+     ],
+     "c2": [
+      0,
+      0,
+      0
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "E1": 150,
+    "E2": 120,
+    "G": 6,
+    "nu": 0.2,
+    "ang": 2.8,
+    "ret": 0,
+    "hemEA": 3000,
+    "gsm": 31,
+    "fabId": "t_rpe",
+    "fab": "Ripstop polyester 31 g",
+    "res": 0
+   },
+   "name": "Voile 1"
+  },
+  {
+   "id": "s31",
+   "kind": "tube",
+   "closed": false,
+   "plane": "face",
+   "pts": [
+    "p6",
+    "p92",
+    "p97",
+    "p5"
+   ],
+   "segs": [
+    {
+     "straight": false,
+     "c1": [
+      33.64255034433813,
+      34.84843631933293,
+      0
+     ],
+     "c2": [
+      -86.2911901528388,
+      -56.052380900612604,
+      0
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      4.035972318729932,
+      2.621656478640375,
+      0
+     ],
+     "c2": [
+      -4.228873480858283,
+      -2.5895167471271634,
+      0
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      50.020436997644424,
+      30.629613274155233,
+      0
+     ],
+     "c2": [
+      -83.24241882814749,
+      -19.835698126483692,
+      0
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "de": 2,
+    "di": 0,
+    "E": 135,
+    "sigR": 1500,
+    "droit": true,
+    "sur": 1.07,
+    "poche": 30,
+    "appui": false,
+    "matId": "cp",
+    "mat": "Carbone pultrudé",
+    "compId": "comp_umvbku3ov"
+   },
+   "name": "Tube 1a",
+   "ends": {},
+   "kinks": {
+    "p51": "geom"
+   }
+  },
+  {
+   "id": "s32",
+   "kind": "tube",
+   "closed": false,
+   "plane": "face",
+   "pts": [
+    "p5",
+    "p26"
+   ],
+   "segs": [
+    {
+     "straight": false,
+     "c1": [
+      75.02623714090396,
+      19.85667401813283,
+      0
+     ],
+     "c2": [
+      -163.92784023625651,
+      -0.5746831622304409,
+      0
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "de": 2.5,
+    "di": 0,
+    "E": 135,
+    "sigR": 1500,
+    "droit": true,
+    "sur": 1.01,
+    "poche": 30,
+    "appui": false,
+    "matId": "cp",
+    "mat": "Carbone pultrudé",
+    "compId": "comp_umvvbp61o"
+   },
+   "name": "Tube 1b",
+   "kinks": {},
+   "ends": {}
+  },
+  {
+   "id": "s58",
+   "kind": "cable",
+   "closed": false,
+   "plane": "face",
+   "pts": [
+    "p26",
+    "p57"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "EA": 8000,
+    "rac": 3,
+    "bride": true
+   },
+   "name": "Bride 1"
+  },
+  {
+   "id": "s61",
+   "kind": "cable",
+   "closed": false,
+   "plane": "face",
+   "pts": [
+    "p57",
+    "p40"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "EA": 8000,
+    "rac": 0,
+    "bride": true
+   },
+   "name": "Bride 2"
+  },
+  {
+   "id": "s74",
+   "kind": "sail",
+   "closed": true,
+   "plane": "face",
+   "pts": [
+    "p1",
+    "p15",
+    "p16",
+    "p17",
+    "p18",
+    "p98",
+    "p93",
+    "p19",
+    "p21",
+    "p56",
+    "p23",
+    "p24",
+    "p12",
+    "p43",
+    "p40",
+    "p26",
+    "p71"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      -8.990954026844408,
+      -15.028956202779204,
+      4.013197562809573
+     ],
+     "c2": [
+      -7.449810209208034,
+      23.495555275194565,
+      0
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      11.057921028088067,
+      -34.87498170397005,
+      0
+     ],
+     "c2": [
+      -36.43514495257509,
+      3.319966656538284,
+      0
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      84.06280857297506,
+      -7.659794461652421,
+      0
+     ],
+     "c2": [
+      -53.27151453423255,
+      -46.88623186918814,
+      0
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      83.24241882814749,
+      -19.835698126483692,
+      0
+     ],
+     "c2": [
+      -50.020436997644424,
+      30.629613274155247,
+      0
+     ],
+     "edge": {
+      "type": "fourreau",
+      "host": "s75",
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      4.228873480858283,
+      -2.589516747127149,
+      0
+     ],
+     "c2": [
+      -4.035972318729932,
+      2.621656478640375,
+      0
+     ],
+     "edge": {
+      "type": "fourreau",
+      "host": "s75",
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      86.2911901528388,
+      -56.052380900612604,
+      0
+     ],
+     "c2": [
+      -33.64255034433813,
+      34.84843631933293,
+      0
+     ],
+     "edge": {
+      "type": "fourreau",
+      "host": "s75",
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      -117.66114540204514,
+      43.81404013600024,
+      0
+     ],
+     "c2": [
+      112.04244173427941,
+      6.520679700350474,
+      0
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      -62.778864155474835,
+      -3.6536232053966446,
+      0
+     ],
+     "c2": [
+      49.1244983643329,
+      20.566601312672777,
+      0
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      -35.37165519861855,
+      -14.808797126924025,
+      0
+     ],
+     "c2": [
+      -0.20965696423147193,
+      65.25042024276638,
+      0.33219262514979875
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      0.13125753232482748,
+      -40.85058264397897,
+      -0.20797202894500239
+     ],
+     "c2": [
+      -37.21639110824686,
+      35.371759722902866,
+      0
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      -47.71639110824686,
+      15.942487640785147,
+      0
+     ],
+     "c2": [
+      41.22556711814154,
+      10.916584595028086,
+      1.5013046027390387
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      0,
+      23.030413480490267,
+      0
+     ],
+     "c2": [
+      0,
+      0,
+      0
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "E1": 150,
+    "E2": 120,
+    "G": 6,
+    "nu": 0.2,
+    "ang": -2.8,
+    "ret": 0,
+    "hemEA": 3000,
+    "gsm": 31,
+    "fabId": "t_rpe",
+    "fab": "Ripstop polyester 31 g",
+    "res": 0
+   },
+   "name": "Voile 1 ′"
+  },
+  {
+   "id": "s75",
+   "kind": "tube",
+   "closed": false,
+   "plane": "face",
+   "pts": [
+    "p19",
+    "p93",
+    "p98",
+    "p18"
+   ],
+   "segs": [
+    {
+     "straight": false,
+     "c1": [
+      -33.64255034433813,
+      34.84843631933293,
+      0
+     ],
+     "c2": [
+      86.2911901528388,
+      -56.052380900612604,
+      0
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      -4.035972318729932,
+      2.621656478640375,
+      0
+     ],
+     "c2": [
+      4.228873480858283,
+      -2.5895167471271634,
+      0
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      -50.020436997644424,
+      30.629613274155233,
+      0
+     ],
+     "c2": [
+      83.24241882814749,
+      -19.835698126483692,
+      0
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "de": 2,
+    "di": 0,
+    "E": 135,
+    "sigR": 1500,
+    "droit": true,
+    "sur": 1.07,
+    "poche": 30,
+    "appui": false,
+    "matId": "cp",
+    "mat": "Carbone pultrudé",
+    "compId": "comp_umvbku3ov"
+   },
+   "name": "Tube 1a ′",
+   "kinks": {}
+  },
+  {
+   "id": "s76",
+   "kind": "tube",
+   "closed": false,
+   "plane": "face",
+   "pts": [
+    "p18",
+    "p26"
+   ],
+   "segs": [
+    {
+     "straight": false,
+     "c1": [
+      -75.02623714090396,
+      19.85667401813283,
+      0
+     ],
+     "c2": [
+      163.92784023625651,
+      -0.5746831622304409,
+      0
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "de": 2.5,
+    "di": 0,
+    "E": 135,
+    "sigR": 1500,
+    "droit": true,
+    "sur": 1.01,
+    "poche": 30,
+    "appui": false,
+    "matId": "cp",
+    "mat": "Carbone pultrudé",
+    "compId": "comp_umvvbp61o"
+   },
+   "name": "Tube 1b ′",
+   "kinks": {}
+  },
+  {
+   "id": "s81",
+   "kind": "latte",
+   "closed": false,
+   "plane": "face",
+   "pts": [
+    "p11",
+    "p43"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "forme": "rond",
+    "de": 2,
+    "di": 0,
+    "b": 10,
+    "e": 1.5,
+    "E": 135,
+    "sigR": 1500,
+    "droit": true,
+    "sur": 0.3,
+    "creux": 1,
+    "poche": 0,
+    "matId": "cp",
+    "mat": "Carbone pultrudé",
+    "compId": "comp_umvbku3ov"
+   },
+   "name": "Latte 2",
+   "ends": {}
+  },
+  {
+   "id": "s82",
+   "kind": "latte",
+   "closed": false,
+   "plane": "face",
+   "pts": [
+    "p24",
+    "p43"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "forme": "rond",
+    "de": 2,
+    "di": 0,
+    "b": 10,
+    "e": 1.5,
+    "E": 135,
+    "sigR": 1500,
+    "droit": true,
+    "sur": 0.3,
+    "creux": 1,
+    "poche": 0,
+    "matId": "cp",
+    "mat": "Carbone pultrudé",
+    "compId": "comp_umvbku3ov"
+   },
+   "name": "Latte 2 ′"
+  },
+  {
+   "id": "s89",
+   "kind": "latte",
+   "closed": false,
+   "plane": "face",
+   "pts": [
+    "p1",
+    "p71",
+    "p26",
+    "p40",
+    "p43",
+    "p12"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      0,
+      0,
+      0
+     ],
+     "c2": [
+      0,
+      23.030413480490267,
+      0
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "forme": "rond",
+    "de": 3,
+    "di": 0,
+    "b": 10,
+    "e": 1.5,
+    "E": 135,
+    "sigR": 1500,
+    "droit": true,
+    "sur": 0,
+    "creux": 1,
+    "poche": 0,
+    "matId": "cp",
+    "mat": "Carbone pultrudé",
+    "compId": "c_jc3"
+   },
+   "name": "Latte 1",
+   "ends": {}
+  },
+  {
+   "id": "s90",
+   "kind": "tube",
+   "closed": false,
+   "plane": "dessus",
+   "pts": [
+    "p2",
+    "p71"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "de": 2,
+    "di": 0,
+    "E": 135,
+    "sigR": 1500,
+    "droit": true,
+    "sur": 0.2,
+    "poche": 30,
+    "appui": true,
+    "matId": "cp",
+    "mat": "Carbone pultrudé",
+    "compId": "comp_umvbku3ov"
+   },
+   "name": "Tube 2",
+   "ends": {}
+  },
+  {
+   "id": "s91",
+   "kind": "tube",
+   "closed": false,
+   "plane": "dessus",
+   "pts": [
+    "p15",
+    "p71"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "de": 2,
+    "di": 0,
+    "E": 135,
+    "sigR": 1500,
+    "droit": true,
+    "sur": 0.2,
+    "poche": 30,
+    "appui": true,
+    "matId": "cp",
+    "mat": "Carbone pultrudé",
+    "compId": "comp_umvbku3ov"
+   },
+   "name": "Tube 2 ′"
+  },
+  {
+   "id": "s95",
+   "kind": "cable",
+   "closed": false,
+   "plane": "dessus",
+   "pts": [
+    "p57",
+    "p5"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "EA": 4000,
+    "rac": 0,
+    "compId": "k_pe1",
+    "mat": "Polyester tressé 1 mm",
+    "bride": true
+   },
+   "name": "Bride 3"
+  },
+  {
+   "id": "s96",
+   "kind": "cable",
+   "closed": false,
+   "plane": "dessus",
+   "pts": [
+    "p57",
+    "p18"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "EA": 4000,
+    "rac": 0,
+    "compId": "k_pe1",
+    "mat": "Polyester tressé 1 mm",
+    "bride": true
+   },
+   "name": "Bride 3 ′"
+  },
+  {
+   "id": "s99",
+   "kind": "tube",
+   "closed": false,
+   "plane": "face",
+   "pts": [
+    "p97",
+    "p98"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "de": 2.5,
+    "di": 0,
+    "E": 135,
+    "sigR": 1500,
+    "droit": true,
+    "sur": 5.1,
+    "poche": 30,
+    "appui": false,
+    "matId": "cp",
+    "mat": "Carbone pultrudé",
+    "compId": "comp_umvvbp61o"
+   },
+   "name": "Tube 1",
+   "ends": {}
+  }
+ ],
+ "offset": {
+  "base": "face",
+  "d": 150,
+  "tilt": 0,
+  "rot": 0
+ },
+ "h": 25,
+ "hk": 15,
+ "hMode": "rel",
+ "deduce": 1,
+ "nodes": {
+  "p6": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N1"
+  },
+  "p26": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N2"
+  },
+  "p19": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N3"
+  },
+  "p5": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N4"
+  },
+  "p18": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N5"
+  },
+  "p43": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N19"
+  },
+  "p40": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N21"
+  },
+  "p57": {
+   "type": "rotule",
+   "auto": false,
+   "name": "N25",
+   "ring": true
+  },
+  "p11": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N33"
+  },
+  "p24": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N34"
+  },
+  "p1": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N39"
+  },
+  "p12": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N40"
+  },
+  "p71": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N41"
+  },
+  "p2": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N42"
+  },
+  "p15": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N43"
+  },
+  "p92": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N44"
+  },
+  "p93": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N45"
+  },
+  "p97": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N46"
+  },
+  "p98": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N47"
+  }
+ },
+ "sym": true,
+ "symMap": {
+  "p15": "p2",
+  "p16": "p3",
+  "p17": "p4",
+  "p18": "p5",
+  "p19": "p6",
+  "p21": "p8",
+  "p56": "p55",
+  "p23": "p10",
+  "p24": "p11",
+  "p93": "p92",
+  "p98": "p97"
+ },
+ "tails": {},
+ "name": "MouetteGliderLightArceau",
+ "calcMode": "plane",
+ "wind": {
+  "V": 5,
+  "bdrag": true
+ },
+ "fpos": {
+  "L": 10
+ },
+ "presets": {
+  "comp": [
+   {
+    "id": "comp_umv9kvxor",
+    "name": "Jonc carbone Ø4mm",
+    "vals": {
+     "de": 4,
+     "di": 0,
+     "E": 135,
+     "sigR": 1500,
+     "matId": "cp",
+     "mat": "Carbone pultrudé",
+     "forme": "rond"
+    }
+   },
+   {
+    "id": "comp_umvilndlp",
+    "name": "Jonc Fibre tressée (JTech) 2.1mm",
+    "vals": {
+     "de": 2.1,
+     "di": 0,
+     "E": 40,
+     "sigR": 800,
+     "matId": "fv",
+     "mat": "Fibre de verre",
+     "forme": "rond"
+    }
+   },
+   {
+    "id": "c_tc64",
+    "name": "Tube carbone 6/4",
+    "vals": {
+     "de": 6,
+     "di": 4,
+     "E": 135,
+     "sigR": 1500,
+     "matId": "cp",
+     "mat": "Carbone pultrudé",
+     "forme": "rond"
+    }
+   },
+   {
+    "id": "c_jc3",
+    "name": "Jonc carbone Ø3mm",
+    "vals": {
+     "forme": "rond",
+     "de": 3,
+     "di": 0,
+     "E": 135,
+     "sigR": 1500,
+     "matId": "cp",
+     "mat": "Carbone pultrudé"
+    }
+   },
+   {
+    "id": "comp_umvbku3ov",
+    "name": "Jonc carbone Ø2mm",
+    "vals": {
+     "forme": "rond",
+     "de": 2,
+     "di": 0,
+     "E": 135,
+     "sigR": 1500,
+     "matId": "cp",
+     "mat": "Carbone pultrudé"
+    }
+   },
+   {
+    "id": "comp_umvvbp61o",
+    "name": "Jonc carbone Ø2.5mm",
+    "vals": {
+     "de": 2.5,
+     "di": 0,
+     "E": 135,
+     "sigR": 1500,
+     "matId": "cp",
+     "mat": "Carbone pultrudé"
+    }
+   }
+  ],
+  "calc": [
+   {
+    "id": "p_fin",
+    "name": "Précis",
+    "vals": {
+     "hk": 35,
+     "tol": 0.0003,
+     "maxIt": 400000,
+     "stages": 0,
+     "imperf": true
+    }
+   },
+   {
+    "id": "p_rap",
+    "name": "Estimation",
+    "vals": {
+     "hk": 15,
+     "tol": 0.005,
+     "maxIt": 60000,
+     "stages": 0,
+     "imperf": true
+    }
+   },
+   {
+    "id": "p_std",
+    "name": "Standard",
+    "vals": {
+     "hk": 15,
+     "tol": 0.002,
+     "maxIt": 150000,
+     "stages": 0,
+     "imperf": true
+    }
+   }
+  ],
+  "tissu": [
+   {
+    "id": "t_rpe",
+    "name": "Ripstop polyester 31 g",
+    "vals": {
+     "E1": 150,
+     "E2": 120,
+     "G": 6,
+     "nu": 0.2,
+     "gsm": 31
+    }
+   }
+  ]
+ },
+ "rest": {
+  "key": "f7ajakyufs5o9ak",
+  "n": 425,
+  "dx": "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",
+  "q": "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",
+  "it": 20025
+ },
+ "lests": {},
+ "vol": {
+  "F": 4.79,
+  "on": true
+ }
+}

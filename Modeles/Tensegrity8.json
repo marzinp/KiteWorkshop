@@ -1,0 +1,2786 @@
+{
+ "v": 2,
+ "nid": 265,
+ "points": {
+  "p11": [
+   -410,
+   200,
+   -2.439872119534713
+  ],
+  "p12": [
+   410,
+   200,
+   -2.439872119534713
+  ],
+  "p15": [
+   -410,
+   -200,
+   -2.439872119534713
+  ],
+  "p16": [
+   410,
+   -200,
+   -2.439872119534713
+  ],
+  "p19": [
+   199.99999999999997,
+   0,
+   409.99999999999994
+  ],
+  "p20": [
+   199.99999999999997,
+   0,
+   -409.99999999999994
+  ],
+  "p22": [
+   -199.99999999999997,
+   0,
+   409.99999999999994
+  ],
+  "p23": [
+   -199.99999999999997,
+   0,
+   -409.99999999999994
+  ],
+  "p25": [
+   0,
+   409.99999999999994,
+   -199.99999999999997
+  ],
+  "p26": [
+   0,
+   -409.99999999999994,
+   -199.99999999999997
+  ],
+  "p28": [
+   0,
+   409.99999999999994,
+   199.99999999999997
+  ],
+  "p29": [
+   0,
+   -409.99999999999994,
+   199.99999999999997
+  ],
+  "p46": [
+   0,
+   0,
+   197.59769480849917
+  ],
+  "p58": [
+   0,
+   170,
+   0
+  ],
+  "p59": [
+   0,
+   200,
+   30
+  ],
+  "p60": [
+   0,
+   230,
+   0
+  ],
+  "p61": [
+   0,
+   200,
+   -30
+  ],
+  "p119": [
+   0,
+   0,
+   -197.59769480849917
+  ],
+  "p179": [
+   0,
+   -333.03644639845544,
+   -952.2624494252498
+  ],
+  "p200": [
+   0,
+   -170,
+   0
+  ],
+  "p201": [
+   0,
+   -200,
+   30
+  ],
+  "p202": [
+   0,
+   -230,
+   0
+  ],
+  "p203": [
+   0,
+   -200,
+   -30
+  ],
+  "p205": [
+   410,
+   1.9676763783005953,
+   -2.439872119534713
+  ],
+  "p206": [
+   0,
+   -1.2512207031250568,
+   199.99999999999997
+  ],
+  "p208": [
+   231.7697827747267,
+   -1.250610351562435,
+   86.94156937818208
+  ],
+  "p209": [
+   205.55597739247546,
+   27.915751139323046,
+   99.72879151586561
+  ],
+  "p210": [
+   179.34217201022423,
+   -1.2506103515624307,
+   112.51601365354912
+  ],
+  "p211": [
+   205.55597739247546,
+   -30.416971842447918,
+   99.72879151586561
+  ],
+  "p215": [
+   0,
+   -1.2512207031250568,
+   -199.99999999999997
+  ],
+  "p218": [
+   231.7697827747267,
+   -1.250610351562435,
+   -86.94156937818208
+  ],
+  "p219": [
+   205.55597739247546,
+   27.915751139323046,
+   -99.72879151586561
+  ],
+  "p220": [
+   179.34217201022423,
+   -1.2506103515624307,
+   -112.51601365354912
+  ],
+  "p221": [
+   205.55597739247546,
+   -30.416971842447918,
+   -99.72879151586561
+  ],
+  "p225": [
+   -410,
+   1.9676763783005953,
+   -2.439872119534713
+  ],
+  "p228": [
+   -231.7697827747267,
+   -1.250610351562435,
+   -86.94156937818208
+  ],
+  "p229": [
+   -205.55597739247546,
+   27.915751139323046,
+   -99.72879151586561
+  ],
+  "p230": [
+   -179.34217201022423,
+   -1.2506103515624307,
+   -112.51601365354912
+  ],
+  "p231": [
+   -205.55597739247546,
+   -30.416971842447918,
+   -99.72879151586561
+  ],
+  "p237": [
+   -231.7697827747267,
+   -1.250610351562435,
+   86.94156937818208
+  ],
+  "p238": [
+   -205.55597739247546,
+   27.915751139323046,
+   99.72879151586561
+  ],
+  "p239": [
+   -179.34217201022423,
+   -1.2506103515624307,
+   112.51601365354912
+  ],
+  "p240": [
+   -205.55597739247546,
+   -30.416971842447918,
+   99.72879151586561
+  ]
+ },
+ "shapes": [
+  {
+   "id": "s14",
+   "kind": "tube",
+   "closed": false,
+   "plane": "face",
+   "pts": [
+    "p15",
+    "p16"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "de": 7.5,
+    "di": 6.2,
+    "E": 110,
+    "sigR": 1100,
+    "droit": true,
+    "sur": 5,
+    "poche": 30,
+    "appui": false,
+    "matId": "ce",
+    "mat": "Carbone enroulé",
+    "compId": "comp_umv44djpr"
+   },
+   "name": "Tube 2",
+   "kinks": {},
+   "ends": {}
+  },
+  {
+   "id": "s21",
+   "kind": "tube",
+   "closed": false,
+   "plane": "dessus",
+   "pts": [
+    "p22",
+    "p23"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "de": 7.5,
+    "di": 6.2,
+    "E": 110,
+    "sigR": 1100,
+    "droit": true,
+    "sur": 5,
+    "poche": 30,
+    "appui": false,
+    "matId": "ce",
+    "mat": "Carbone enroulé",
+    "compId": "comp_umv44djpr"
+   },
+   "name": "Tube 4"
+  },
+  {
+   "id": "s185",
+   "kind": "tube",
+   "closed": false,
+   "plane": "face",
+   "pts": [
+    "p15",
+    "p225",
+    "p11"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "de": 7.5,
+    "di": 6.2,
+    "E": 110,
+    "sigR": 1100,
+    "droit": true,
+    "sur": 3.28,
+    "poche": 30,
+    "appui": false,
+    "matId": "ce",
+    "mat": "Carbone enroulé",
+    "compId": "comp_umv44djpr"
+   },
+   "name": "Tube 2 ′a",
+   "kinks": {},
+   "ends": {}
+  },
+  {
+   "id": "s186",
+   "kind": "tube",
+   "closed": false,
+   "plane": "face",
+   "pts": [
+    "p11",
+    "p12"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "de": 7.5,
+    "di": 6.2,
+    "E": 110,
+    "sigR": 1100,
+    "droit": true,
+    "sur": 5,
+    "poche": 30,
+    "appui": false,
+    "matId": "ce",
+    "mat": "Carbone enroulé",
+    "compId": "comp_umv44djpr"
+   },
+   "name": "Tube 2 ′b",
+   "kinks": {}
+  },
+  {
+   "id": "s159",
+   "kind": "sail",
+   "closed": true,
+   "plane": "cote",
+   "pts": [
+    "p58",
+    "p59",
+    "p60",
+    "p61"
+   ],
+   "segs": [
+    {
+     "straight": false,
+     "c1": [
+      0,
+      4.0581225065890665e-15,
+      16.5685424949238
+     ],
+     "c2": [
+      0,
+      -16.5685424949238,
+      3.0435918799417997e-15
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      0,
+      16.5685424949238,
+      -3.0435918799417997e-15
+     ],
+     "c2": [
+      0,
+      2.0290612532945333e-15,
+      16.5685424949238
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      0,
+      2.0290612532945333e-15,
+      -16.5685424949238
+     ],
+     "c2": [
+      0,
+      16.5685424949238,
+      3.0435918799417997e-15
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      0,
+      -16.5685424949238,
+      -3.0435918799417997e-15
+     ],
+     "c2": [
+      0,
+      4.0581225065890665e-15,
+      -16.5685424949238
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "E1": 60,
+    "E2": 50,
+    "G": 3,
+    "nu": 0.25,
+    "ang": 0,
+    "ret": 0,
+    "hemEA": 3000,
+    "gsm": 40,
+    "fabId": "t_rny",
+    "fab": "Ripstop nylon 40 g",
+    "cornR": 55
+   },
+   "name": "Trou 2 ′",
+   "hole": true
+  },
+  {
+   "id": "s160",
+   "kind": "sail",
+   "closed": true,
+   "plane": "cote",
+   "pts": [
+    "p119",
+    "p25",
+    "p28",
+    "p46"
+   ],
+   "segs": [
+    {
+     "straight": false,
+     "c1": [
+      0,
+      99.99999999999999,
+      12.389649511838513
+     ],
+     "c2": [
+      0,
+      -139.99999999999994,
+      19.99999999999997
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      0,
+      -39.99999999999994,
+      129.99999999999997
+     ],
+     "c2": [
+      0,
+      -39.99999999999994,
+      -129.99999999999997
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      0,
+      -139.99999999999994,
+      -19.99999999999997
+     ],
+     "c2": [
+      0,
+      99.99999999999999,
+      -12.389649511838513
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "E1": 60,
+    "E2": 50,
+    "G": 3,
+    "nu": 0.25,
+    "ang": 0,
+    "ret": 0,
+    "hemEA": 3000,
+    "gsm": 40,
+    "fabId": "t_rny",
+    "fab": "Ripstop nylon 40 g",
+    "cornR": 55
+   },
+   "name": "Voile 5 ′"
+  },
+  {
+   "id": "s180",
+   "kind": "cable",
+   "closed": false,
+   "plane": "cote",
+   "pts": [
+    "p26",
+    "p179"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "EA": 4000,
+    "rac": 0,
+    "compId": "k_pe1",
+    "mat": "Polyester tressé 1 mm",
+    "bride": true
+   },
+   "name": "Bride 1"
+  },
+  {
+   "id": "s181",
+   "kind": "cable",
+   "closed": false,
+   "plane": "cote",
+   "pts": [
+    "p23",
+    "p179"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "EA": 4000,
+    "rac": 0,
+    "compId": "k_pe1",
+    "mat": "Polyester tressé 1 mm",
+    "bride": true
+   },
+   "name": "Bride 2"
+  },
+  {
+   "id": "s183",
+   "kind": "tube",
+   "closed": false,
+   "plane": "face",
+   "pts": [
+    "p28",
+    "p46",
+    "p29"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "de": 7.5,
+    "di": 6.2,
+    "E": 110,
+    "sigR": 1100,
+    "droit": true,
+    "sur": 5,
+    "poche": 30,
+    "appui": false,
+    "matId": "ce",
+    "mat": "Carbone enroulé",
+    "compId": "comp_umv44djpr"
+   },
+   "name": "Tube 3",
+   "kinks": {}
+  },
+  {
+   "id": "s184",
+   "kind": "tube",
+   "closed": false,
+   "plane": "face",
+   "pts": [
+    "p25",
+    "p119",
+    "p26"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "de": 7.5,
+    "di": 6.2,
+    "E": 110,
+    "sigR": 1100,
+    "droit": true,
+    "sur": 5,
+    "poche": 30,
+    "appui": false,
+    "matId": "ce",
+    "mat": "Carbone enroulé",
+    "compId": "comp_umv44djpr"
+   },
+   "name": "Tube 5",
+   "kinks": {}
+  },
+  {
+   "id": "s198",
+   "kind": "sail",
+   "closed": true,
+   "plane": "cote",
+   "pts": [
+    "p119",
+    "p26",
+    "p29",
+    "p46"
+   ],
+   "segs": [
+    {
+     "straight": false,
+     "c1": [
+      0,
+      -99.99999999999999,
+      12.389649511838513
+     ],
+     "c2": [
+      0,
+      139.99999999999994,
+      19.99999999999997
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      0,
+      39.99999999999994,
+      129.99999999999997
+     ],
+     "c2": [
+      0,
+      39.99999999999994,
+      -129.99999999999997
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      0,
+      139.99999999999994,
+      -19.99999999999997
+     ],
+     "c2": [
+      0,
+      -99.99999999999999,
+      -12.389649511838513
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "E1": 60,
+    "E2": 50,
+    "G": 3,
+    "nu": 0.25,
+    "ang": 0,
+    "ret": 0,
+    "hemEA": 3000,
+    "gsm": 40,
+    "fabId": "t_rny",
+    "fab": "Ripstop nylon 40 g",
+    "cornR": 55
+   },
+   "name": "Voile 1"
+  },
+  {
+   "id": "s199",
+   "kind": "sail",
+   "closed": true,
+   "plane": "cote",
+   "pts": [
+    "p200",
+    "p201",
+    "p202",
+    "p203"
+   ],
+   "segs": [
+    {
+     "straight": false,
+     "c1": [
+      0,
+      -4.0581225065890665e-15,
+      16.5685424949238
+     ],
+     "c2": [
+      0,
+      16.5685424949238,
+      3.0435918799417997e-15
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      0,
+      -16.5685424949238,
+      -3.0435918799417997e-15
+     ],
+     "c2": [
+      0,
+      -2.0290612532945333e-15,
+      16.5685424949238
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      0,
+      -2.0290612532945333e-15,
+      -16.5685424949238
+     ],
+     "c2": [
+      0,
+      -16.5685424949238,
+      3.0435918799417997e-15
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      0,
+      16.5685424949238,
+      -3.0435918799417997e-15
+     ],
+     "c2": [
+      0,
+      -4.0581225065890665e-15,
+      -16.5685424949238
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "E1": 60,
+    "E2": 50,
+    "G": 3,
+    "nu": 0.25,
+    "ang": 0,
+    "ret": 0,
+    "hemEA": 3000,
+    "gsm": 40,
+    "fabId": "t_rny",
+    "fab": "Ripstop nylon 40 g",
+    "cornR": 55
+   },
+   "name": "Voile 2",
+   "hole": true
+  },
+  {
+   "id": "s223",
+   "kind": "sail",
+   "closed": true,
+   "plane": "cote",
+   "pts": [
+    "p23",
+    "p15",
+    "p225",
+    "p11"
+   ],
+   "segs": [
+    {
+     "straight": false,
+     "c1": [
+      -71.61861952915135,
+      -50,
+      139.82682860453355
+     ],
+     "c2": [
+      70,
+      80,
+      -136.66666666666663
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      3.4346433251535586,
+      71.10125320078865,
+      -5.209524197132647
+     ],
+     "c2": [
+      0.2942556733448214,
+      -65.10526552570587,
+      -0.16488997903161096
+     ],
+     "edge": {
+      "type": "fourreau",
+      "host": "s185",
+      "mode": "glissant",
+      "auto": true
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      -0.29425567334487823,
+      65.10526552570587,
+      0.16488997903161096
+     ],
+     "c2": [
+      2.2576206317742162,
+      -68.47768469638785,
+      -4.549964281006204
+     ],
+     "edge": {
+      "type": "fourreau",
+      "host": "s185",
+      "mode": "glissant",
+      "auto": true
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      70,
+      -80,
+      -136.66666666666663
+     ],
+     "c2": [
+      -71.61861952915135,
+      50,
+      139.82682860453355
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "E1": 60,
+    "E2": 50,
+    "G": 3,
+    "nu": 0.25,
+    "ang": 0,
+    "ret": 0,
+    "hemEA": 3000,
+    "gsm": 40,
+    "fabId": "t_rny",
+    "fab": "Ripstop nylon 40 g",
+    "cornR": 55
+   },
+   "name": "Voile 9"
+  },
+  {
+   "id": "s224",
+   "kind": "sail",
+   "closed": true,
+   "plane": "face",
+   "pts": [
+    "p25",
+    "p11",
+    "p225",
+    "p15",
+    "p26",
+    "p215"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      16.258626414781077,
+      -70,
+      -7.931037275502987
+     ],
+     "c2": [
+      16.258626414781077,
+      61.250610351562486,
+      -7.931037275502987
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant",
+      "auto": true
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      16.258626414781077,
+      -58.749389648437514,
+      -7.931037275503002
+     ],
+     "c2": [
+      16.258626414781077,
+      70,
+      -7.931037275502987
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant",
+      "auto": true
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      0,
+      139.74987792968744,
+      10.394091994646374
+     ],
+     "c2": [
+      0,
+      -138.99890136718744,
+      10.394091994646402
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      0,
+      141.00109863281256,
+      14.778328314860545
+     ],
+     "c2": [
+      0,
+      -130.25012207031244,
+      10.394091994646402
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "E1": 60,
+    "E2": 50,
+    "G": 3,
+    "nu": 0.25,
+    "ang": 0,
+    "ret": 0,
+    "hemEA": 3000,
+    "gsm": 40,
+    "fabId": "t_rny",
+    "fab": "Ripstop nylon 40 g",
+    "cornR": 55
+   },
+   "name": "Voile 10"
+  },
+  {
+   "id": "s226",
+   "kind": "sail",
+   "closed": true,
+   "plane": "cote",
+   "pts": [
+    "p25",
+    "p23",
+    "p26",
+    "p215"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      0,
+      139.6871948242187,
+      -16.293103448275843
+     ],
+     "c2": [
+      0,
+      -139.0615844726562,
+      -16.293103448275843
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      0,
+      130.9384155273438,
+      -16.293103448275843
+     ],
+     "c2": [
+      0,
+      -130.3128051757812,
+      -16.293103448275843
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "E1": 60,
+    "E2": 50,
+    "G": 3,
+    "nu": 0.25,
+    "ang": 0,
+    "ret": 0,
+    "hemEA": 3000,
+    "gsm": 40,
+    "fabId": "t_rny",
+    "fab": "Ripstop nylon 40 g",
+    "cornR": 55
+   },
+   "name": "Voile 11"
+  },
+  {
+   "id": "s227",
+   "kind": "sail",
+   "closed": true,
+   "plane": "face",
+   "pts": [
+    "p228",
+    "p229",
+    "p230",
+    "p231"
+   ],
+   "segs": [
+    {
+     "straight": false,
+     "c1": [
+      -1.8413393710735864e-32,
+      16.108136659468173,
+      3.857345730259781e-16
+     ],
+     "c2": [
+      -14.477484947649726,
+      -1.1554540525145706e-15,
+      7.062187779341328
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      14.477484947649726,
+      1.1554540525145706e-15,
+      -7.062187779341328
+     ],
+     "c2": [
+      -1.7729805600843225e-15,
+      16.108136659468173,
+      1.2506031389207691e-15
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      1.7729805600843225e-15,
+      -16.108136659468173,
+      -1.2506031389207691e-15
+     ],
+     "c2": [
+      14.477484947649726,
+      3.128131852539154e-15,
+      -7.062187779341328
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      -14.477484947649726,
+      -3.128131852539154e-15,
+      7.062187779341328
+     ],
+     "c2": [
+      3.545961120168645e-15,
+      -16.108136659468173,
+      -2.1154717048155605e-15
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "E1": 60,
+    "E2": 50,
+    "G": 3,
+    "nu": 0.25,
+    "ang": 3.1,
+    "ret": 0,
+    "hemEA": 3000,
+    "gsm": 40,
+    "fabId": "t_rny",
+    "fab": "Ripstop nylon 40 g",
+    "cornR": 55
+   },
+   "name": "Voile 12",
+   "hole": true
+  },
+  {
+   "id": "s233",
+   "kind": "sail",
+   "closed": true,
+   "plane": "cote",
+   "pts": [
+    "p22",
+    "p15",
+    "p11"
+   ],
+   "segs": [
+    {
+     "straight": false,
+     "c1": [
+      -71.61861952915135,
+      -50,
+      -139.82682860453355
+     ],
+     "c2": [
+      70,
+      80,
+      136.66666666666663
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      6.8692866503071155,
+      142.2025064015773,
+      10.419048394265294
+     ],
+     "c2": [
+      4.515241263548426,
+      -136.9553693927757,
+      9.099928562012408
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      70,
+      -80,
+      136.66666666666663
+     ],
+     "c2": [
+      -71.61861952915135,
+      50,
+      -139.82682860453355
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "E1": 60,
+    "E2": 50,
+    "G": 3,
+    "nu": 0.25,
+    "ang": 0,
+    "ret": 0,
+    "hemEA": 3000,
+    "gsm": 40,
+    "fabId": "t_rny",
+    "fab": "Ripstop nylon 40 g",
+    "cornR": 55
+   },
+   "name": "Voile 13"
+  },
+  {
+   "id": "s234",
+   "kind": "sail",
+   "closed": true,
+   "plane": "face",
+   "pts": [
+    "p28",
+    "p11",
+    "p225",
+    "p15",
+    "p29",
+    "p206"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      16.258626414781077,
+      -70,
+      7.931037275502987
+     ],
+     "c2": [
+      16.258626414781077,
+      61.250610351562486,
+      7.931037275502987
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      16.258626414781077,
+      -58.749389648437514,
+      7.931037275503002
+     ],
+     "c2": [
+      16.258626414781077,
+      70,
+      7.931037275502987
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      0,
+      139.74987792968744,
+      -10.394091994646374
+     ],
+     "c2": [
+      0,
+      -138.99890136718744,
+      -10.394091994646402
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      0,
+      141.00109863281256,
+      -14.778328314860545
+     ],
+     "c2": [
+      0,
+      -130.25012207031244,
+      -10.394091994646402
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "E1": 60,
+    "E2": 50,
+    "G": 3,
+    "nu": 0.25,
+    "ang": 0,
+    "ret": 0,
+    "hemEA": 3000,
+    "gsm": 40,
+    "fabId": "t_rny",
+    "fab": "Ripstop nylon 40 g",
+    "cornR": 55
+   },
+   "name": "Voile 14"
+  },
+  {
+   "id": "s235",
+   "kind": "sail",
+   "closed": true,
+   "plane": "cote",
+   "pts": [
+    "p28",
+    "p22",
+    "p29",
+    "p206"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      0,
+      139.6871948242187,
+      16.293103448275843
+     ],
+     "c2": [
+      0,
+      -139.0615844726562,
+      16.293103448275843
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      0,
+      130.9384155273438,
+      16.293103448275843
+     ],
+     "c2": [
+      0,
+      -130.3128051757812,
+      16.293103448275843
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "E1": 60,
+    "E2": 50,
+    "G": 3,
+    "nu": 0.25,
+    "ang": 0,
+    "ret": 0,
+    "hemEA": 3000,
+    "gsm": 40,
+    "fabId": "t_rny",
+    "fab": "Ripstop nylon 40 g",
+    "cornR": 55
+   },
+   "name": "Voile 15"
+  },
+  {
+   "id": "s236",
+   "kind": "sail",
+   "closed": true,
+   "plane": "face",
+   "pts": [
+    "p237",
+    "p238",
+    "p239",
+    "p240"
+   ],
+   "segs": [
+    {
+     "straight": false,
+     "c1": [
+      -1.8413393710735864e-32,
+      16.108136659468173,
+      -3.857345730259781e-16
+     ],
+     "c2": [
+      -14.477484947649726,
+      -1.1554540525145706e-15,
+      -7.062187779341328
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      14.477484947649726,
+      1.1554540525145706e-15,
+      7.062187779341328
+     ],
+     "c2": [
+      -1.7729805600843225e-15,
+      16.108136659468173,
+      -1.2506031389207691e-15
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      1.7729805600843225e-15,
+      -16.108136659468173,
+      1.2506031389207691e-15
+     ],
+     "c2": [
+      14.477484947649726,
+      3.128131852539154e-15,
+      7.062187779341328
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      -14.477484947649726,
+      -3.128131852539154e-15,
+      -7.062187779341328
+     ],
+     "c2": [
+      3.545961120168645e-15,
+      -16.108136659468173,
+      2.1154717048155605e-15
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "E1": 60,
+    "E2": 50,
+    "G": 3,
+    "nu": 0.25,
+    "ang": 3.1,
+    "ret": 0,
+    "hemEA": 3000,
+    "gsm": 40,
+    "fabId": "t_rny",
+    "fab": "Ripstop nylon 40 g",
+    "cornR": 55
+   },
+   "name": "Voile 16",
+   "hole": true
+  },
+  {
+   "id": "s254",
+   "kind": "tube",
+   "closed": false,
+   "plane": "dessus",
+   "pts": [
+    "p19",
+    "p20"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "de": 7.5,
+    "di": 6.2,
+    "E": 110,
+    "sigR": 1100,
+    "droit": true,
+    "sur": 5,
+    "poche": 30,
+    "appui": false,
+    "matId": "ce",
+    "mat": "Carbone enroulé",
+    "compId": "comp_umv44djpr"
+   },
+   "name": "Tube 4 ′"
+  },
+  {
+   "id": "s255",
+   "kind": "tube",
+   "closed": false,
+   "plane": "face",
+   "pts": [
+    "p16",
+    "p205",
+    "p12"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "de": 7.5,
+    "di": 6.2,
+    "E": 110,
+    "sigR": 1100,
+    "droit": true,
+    "sur": 3.28,
+    "poche": 30,
+    "appui": false,
+    "matId": "ce",
+    "mat": "Carbone enroulé",
+    "compId": "comp_umv44djpr"
+   },
+   "name": "Tube 2 ′a ′",
+   "kinks": {}
+  },
+  {
+   "id": "s256",
+   "kind": "cable",
+   "closed": false,
+   "plane": "cote",
+   "pts": [
+    "p20",
+    "p179"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "EA": 4000,
+    "rac": 0,
+    "compId": "k_pe1",
+    "mat": "Polyester tressé 1 mm",
+    "bride": true
+   },
+   "name": "Bride 2 ′"
+  },
+  {
+   "id": "s257",
+   "kind": "sail",
+   "closed": true,
+   "plane": "cote",
+   "pts": [
+    "p20",
+    "p16",
+    "p205",
+    "p12"
+   ],
+   "segs": [
+    {
+     "straight": false,
+     "c1": [
+      71.61861952915135,
+      -50,
+      139.82682860453355
+     ],
+     "c2": [
+      -70,
+      80,
+      -136.66666666666663
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      -3.4346433251535586,
+      71.10125320078865,
+      -5.209524197132647
+     ],
+     "c2": [
+      -0.2942556733448214,
+      -65.10526552570587,
+      -0.16488997903161096
+     ],
+     "edge": {
+      "type": "fourreau",
+      "host": "s255",
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      0.29425567334487823,
+      65.10526552570587,
+      0.16488997903161096
+     ],
+     "c2": [
+      -2.2576206317742162,
+      -68.47768469638785,
+      -4.549964281006204
+     ],
+     "edge": {
+      "type": "fourreau",
+      "host": "s255",
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      -70,
+      -80,
+      -136.66666666666663
+     ],
+     "c2": [
+      71.61861952915135,
+      50,
+      139.82682860453355
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "E1": 60,
+    "E2": 50,
+    "G": 3,
+    "nu": 0.25,
+    "ang": 0,
+    "ret": 0,
+    "hemEA": 3000,
+    "gsm": 40,
+    "fabId": "t_rny",
+    "fab": "Ripstop nylon 40 g",
+    "cornR": 55
+   },
+   "name": "Voile 9 ′"
+  },
+  {
+   "id": "s258",
+   "kind": "sail",
+   "closed": true,
+   "plane": "face",
+   "pts": [
+    "p25",
+    "p12",
+    "p205",
+    "p16",
+    "p26",
+    "p215"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      -16.258626414781077,
+      -70,
+      -7.931037275502987
+     ],
+     "c2": [
+      -16.258626414781077,
+      61.250610351562486,
+      -7.931037275502987
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      -16.258626414781077,
+      -58.749389648437514,
+      -7.931037275503002
+     ],
+     "c2": [
+      -16.258626414781077,
+      70,
+      -7.931037275502987
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      0,
+      139.74987792968744,
+      10.394091994646374
+     ],
+     "c2": [
+      0,
+      -138.99890136718744,
+      10.394091994646402
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      0,
+      141.00109863281256,
+      14.778328314860545
+     ],
+     "c2": [
+      0,
+      -130.25012207031244,
+      10.394091994646402
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "E1": 60,
+    "E2": 50,
+    "G": 3,
+    "nu": 0.25,
+    "ang": 0,
+    "ret": 0,
+    "hemEA": 3000,
+    "gsm": 40,
+    "fabId": "t_rny",
+    "fab": "Ripstop nylon 40 g",
+    "cornR": 55
+   },
+   "name": "Voile 10 ′"
+  },
+  {
+   "id": "s259",
+   "kind": "sail",
+   "closed": true,
+   "plane": "cote",
+   "pts": [
+    "p25",
+    "p20",
+    "p26",
+    "p215"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      0,
+      139.6871948242187,
+      -16.293103448275843
+     ],
+     "c2": [
+      0,
+      -139.0615844726562,
+      -16.293103448275843
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      0,
+      130.9384155273438,
+      -16.293103448275843
+     ],
+     "c2": [
+      0,
+      -130.3128051757812,
+      -16.293103448275843
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "E1": 60,
+    "E2": 50,
+    "G": 3,
+    "nu": 0.25,
+    "ang": 0,
+    "ret": 0,
+    "hemEA": 3000,
+    "gsm": 40,
+    "fabId": "t_rny",
+    "fab": "Ripstop nylon 40 g",
+    "cornR": 55
+   },
+   "name": "Voile 11 ′"
+  },
+  {
+   "id": "s260",
+   "kind": "sail",
+   "closed": true,
+   "plane": "face",
+   "pts": [
+    "p218",
+    "p219",
+    "p220",
+    "p221"
+   ],
+   "segs": [
+    {
+     "straight": false,
+     "c1": [
+      1.8413393710735864e-32,
+      16.108136659468173,
+      3.857345730259781e-16
+     ],
+     "c2": [
+      14.477484947649726,
+      -1.1554540525145706e-15,
+      7.062187779341328
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      -14.477484947649726,
+      1.1554540525145706e-15,
+      -7.062187779341328
+     ],
+     "c2": [
+      1.7729805600843225e-15,
+      16.108136659468173,
+      1.2506031389207691e-15
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      -1.7729805600843225e-15,
+      -16.108136659468173,
+      -1.2506031389207691e-15
+     ],
+     "c2": [
+      -14.477484947649726,
+      3.128131852539154e-15,
+      -7.062187779341328
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      14.477484947649726,
+      -3.128131852539154e-15,
+      7.062187779341328
+     ],
+     "c2": [
+      -3.545961120168645e-15,
+      -16.108136659468173,
+      -2.1154717048155605e-15
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "E1": 60,
+    "E2": 50,
+    "G": 3,
+    "nu": 0.25,
+    "ang": -3.1,
+    "ret": 0,
+    "hemEA": 3000,
+    "gsm": 40,
+    "fabId": "t_rny",
+    "fab": "Ripstop nylon 40 g",
+    "cornR": 55
+   },
+   "name": "Voile 12 ′",
+   "hole": true
+  },
+  {
+   "id": "s261",
+   "kind": "sail",
+   "closed": true,
+   "plane": "cote",
+   "pts": [
+    "p19",
+    "p16",
+    "p12"
+   ],
+   "segs": [
+    {
+     "straight": false,
+     "c1": [
+      71.61861952915135,
+      -50,
+      -139.82682860453355
+     ],
+     "c2": [
+      -70,
+      80,
+      136.66666666666663
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      -6.8692866503071155,
+      142.2025064015773,
+      10.419048394265294
+     ],
+     "c2": [
+      -4.515241263548426,
+      -136.9553693927757,
+      9.099928562012408
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      -70,
+      -80,
+      136.66666666666663
+     ],
+     "c2": [
+      71.61861952915135,
+      50,
+      -139.82682860453355
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "E1": 60,
+    "E2": 50,
+    "G": 3,
+    "nu": 0.25,
+    "ang": 0,
+    "ret": 0,
+    "hemEA": 3000,
+    "gsm": 40,
+    "fabId": "t_rny",
+    "fab": "Ripstop nylon 40 g",
+    "cornR": 55
+   },
+   "name": "Voile 13 ′"
+  },
+  {
+   "id": "s262",
+   "kind": "sail",
+   "closed": true,
+   "plane": "face",
+   "pts": [
+    "p28",
+    "p12",
+    "p205",
+    "p16",
+    "p29",
+    "p206"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      -16.258626414781077,
+      -70,
+      7.931037275502987
+     ],
+     "c2": [
+      -16.258626414781077,
+      61.250610351562486,
+      7.931037275502987
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      -16.258626414781077,
+      -58.749389648437514,
+      7.931037275503002
+     ],
+     "c2": [
+      -16.258626414781077,
+      70,
+      7.931037275502987
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      0,
+      139.74987792968744,
+      -10.394091994646374
+     ],
+     "c2": [
+      0,
+      -138.99890136718744,
+      -10.394091994646402
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      0,
+      141.00109863281256,
+      -14.778328314860545
+     ],
+     "c2": [
+      0,
+      -130.25012207031244,
+      -10.394091994646402
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "E1": 60,
+    "E2": 50,
+    "G": 3,
+    "nu": 0.25,
+    "ang": 0,
+    "ret": 0,
+    "hemEA": 3000,
+    "gsm": 40,
+    "fabId": "t_rny",
+    "fab": "Ripstop nylon 40 g",
+    "cornR": 55
+   },
+   "name": "Voile 14 ′"
+  },
+  {
+   "id": "s263",
+   "kind": "sail",
+   "closed": true,
+   "plane": "cote",
+   "pts": [
+    "p28",
+    "p19",
+    "p29",
+    "p206"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      0,
+      139.6871948242187,
+      16.293103448275843
+     ],
+     "c2": [
+      0,
+      -139.0615844726562,
+      16.293103448275843
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      0,
+      130.9384155273438,
+      16.293103448275843
+     ],
+     "c2": [
+      0,
+      -130.3128051757812,
+      16.293103448275843
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "E1": 60,
+    "E2": 50,
+    "G": 3,
+    "nu": 0.25,
+    "ang": 0,
+    "ret": 0,
+    "hemEA": 3000,
+    "gsm": 40,
+    "fabId": "t_rny",
+    "fab": "Ripstop nylon 40 g",
+    "cornR": 55
+   },
+   "name": "Voile 15 ′"
+  },
+  {
+   "id": "s264",
+   "kind": "sail",
+   "closed": true,
+   "plane": "face",
+   "pts": [
+    "p208",
+    "p209",
+    "p210",
+    "p211"
+   ],
+   "segs": [
+    {
+     "straight": false,
+     "c1": [
+      1.8413393710735864e-32,
+      16.108136659468173,
+      -3.857345730259781e-16
+     ],
+     "c2": [
+      14.477484947649726,
+      -1.1554540525145706e-15,
+      -7.062187779341328
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      -14.477484947649726,
+      1.1554540525145706e-15,
+      7.062187779341328
+     ],
+     "c2": [
+      1.7729805600843225e-15,
+      16.108136659468173,
+      -1.2506031389207691e-15
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      -1.7729805600843225e-15,
+      -16.108136659468173,
+      1.2506031389207691e-15
+     ],
+     "c2": [
+      -14.477484947649726,
+      3.128131852539154e-15,
+      7.062187779341328
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      14.477484947649726,
+      -3.128131852539154e-15,
+      -7.062187779341328
+     ],
+     "c2": [
+      -3.545961120168645e-15,
+      -16.108136659468173,
+      2.1154717048155605e-15
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "E1": 60,
+    "E2": 50,
+    "G": 3,
+    "nu": 0.25,
+    "ang": -3.1,
+    "ret": 0,
+    "hemEA": 3000,
+    "gsm": 40,
+    "fabId": "t_rny",
+    "fab": "Ripstop nylon 40 g",
+    "cornR": 55
+   },
+   "name": "Voile 16 ′",
+   "hole": true
+  }
+ ],
+ "offset": {
+  "base": "face",
+  "d": 150,
+  "tilt": 0,
+  "rot": 0
+ },
+ "h": 83,
+ "hk": 25,
+ "hMode": "rel",
+ "deduce": 1,
+ "nodes": {
+  "p15": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N3"
+  },
+  "p16": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N16"
+  },
+  "p12": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N21"
+  },
+  "p19": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N23"
+  },
+  "p20": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N24"
+  },
+  "p23": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N25"
+  },
+  "p11": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N26"
+  },
+  "p26": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N28"
+  },
+  "p179": {
+   "type": "rigide",
+   "auto": false,
+   "name": "N29",
+   "ring": true
+  },
+  "p29": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N30"
+  },
+  "p28": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N31"
+  },
+  "p25": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N34"
+  },
+  "p46": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N32"
+  },
+  "p119": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N33"
+  },
+  "p22": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N37"
+  },
+  "p225": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N38"
+  },
+  "p205": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N39"
+  }
+ },
+ "name": "Tensegrity8",
+ "sym": true,
+ "symMap": {
+  "p19": "p22",
+  "p20": "p23",
+  "p16": "p15",
+  "p205": "p225",
+  "p12": "p11",
+  "p218": "p228",
+  "p219": "p229",
+  "p220": "p230",
+  "p221": "p231",
+  "p208": "p237",
+  "p209": "p238",
+  "p210": "p239",
+  "p211": "p240"
+ },
+ "rest": {
+  "key": "97ind6107a7muie5",
+  "n": 1943,
+  "dx": "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",
+  "q": "AAAAAAAAAADabBDyO//vP4B6ebkmooM/uDqFBC3GXz8zXI4JmZGDPwAAAAAAAPA/N0JuxkP/7z+aRA3VQpqDPykBfC8QOF8/FL6hMl3Mgj8AAAAAAAAAQCqtFKJS/+8/jME8v0mSgz+l5B/peatdP/tnme4rOYE/AAAAAAAACEDuXVwHZv/vP/cU0NY7ioM/Iemc0Ug1Wz+jgaEW9NR9PwAAAAAAABBAnH18uHr/7z9/KrS1GYKDP1D6l71o9Vc//88Y4KL2dz8AAAAAAAAUQFI5YEuN/+8/VNO/cuV5gz/2VfV+LxVUP8Vy22ciHHE/AAAAAAAAGEBkbKHEmv/vP58lDceicYM/tgwtt/mKTz9M0sICWitjPwAAAAAAABxAavSpHaH/7z9PGfDGVmmDP21nNkW3eEY//FwyL4+1Oz8AAAAAAAAgQBX1PJ6f/+8/O2Md3Qdhgz+v4Z6l8ck6P2RROxDhW1i/AAAAAAAAIkBQnzf5lv/vP6U7/2C9WIM/y3Yh8QgFIz85H2l/iAtrvwAAAAAAACRAV8nPJ4n/7z/tEE9Mf1CDP5l2ONmpMRi/s3ak3RA6dL8AAAAAAAAmQHwr7gl5/+8/H6zZ6VVIgz8TkVWYAh8zvzWt9jRt5Xm/AAAAAAAAKEAJP3Ldaf/vP75MkVNJQIM/AtZYvEQPPb8KOaQGdUV+vwAAAAAAACpAlwKnpF7/7z9zgBZ7YDiDP83aTQGVrkG/KqFDp3WTgL8AAAAAAAAsQOV/P5hZ/+8/5bsJHqAwgz8cJJiiVtpCv3MDO00JNIG/AAAAAAAALkDuks1P7//vP/I1j0cqGlo/pMR1UdDxbD+NQNvk4/ZOPwAAAAAAADBALbaL9u//7z/+WWNLBZZZPwPW8UbWZWw/DHgxQOsATj8AAAAAAAAxQP5ESG7x/+8/+iSM5VP7WD+LnBDG2uZqP7ofRtKcCU0/AAAAAAAAMkCDOSiD8//vP6b4jyxhUVg/OlJmztaJaD9kybIdEhFMPwAAAAAAADNARoaw7PX/7z89NfZpK6BXP0LRmhMTb2U/VflDNGkXSz8AAAAAAAA0QBJFG1v4/+8/LSeiqxLwVj8Uy8yiDcBhP9UP6nraHEo/AAAAAAAANUAakjKF+v/vP6bxja5fSVY/qo5MzXRaWz+Z/8PnvSFJPwAAAAAAADZAPiheNPz/7z9ySKtd9bNVP5mimG4Z1lI/hn3QFWYmSD8AAAAAAAA3QA9cVkz9/+8/Rgh+g2o2VT8PVzgIc7xEPyU3CTQWK0c/AAAAAAAAOEBvHzvN/f/vP/mYY7gX1lQ/9bpZo3vWIj8ycGv4BzBGPwAAAAAAADlAtkZH0P3/7z+TC3Pc35ZUP/GXE+D/UzO/Ly8EhGc1RT8AAAAAAAA6QIX/BID9/+8/yEx+4jF7VD+GrzHcmb1Fv6ZDuBlyO0Q/AAAAAAAAO0DpEvsN/f/vPzNsRxFXhFQ/d9G2/IEBT78YNEo6bkJDPwAAAAAAADxAfdgXqPz/7z8KOPnQ+bFUP3VHnjfmi1K/vqigEo1KQj8AAAAAAAA9QO2lsW/8/+8/rDZolzoCVT9c9x8FjuVTv2xeAtXZU0E/AAAAAAAAPkCI6SeHUP7vPxRtwC0FNpK/FyaZHWB+VD/AS4J4UNCDvwAAAAAAAD9A/Lw3v67/7z/PVEl1Wt99v0s5jbBSZFE/iUzSboO3c78AAAAAAABAQPJa0j34/+8/kJoJy6glYT+uo98oighNP0cp0JBIe1g/AAAAAACAQEDutzRkV//vPzdF7GryDIY/o411Y6hmST/D2GhiWEB7PwAAAAAAAEFAhKSJ1Bz+7z+xgIQJaSaUP5nCtQIU8kY/POel2WOAgT8AAAAAAIBBQKxpfZDY/+8/JT9eanS6cb/a9wlx2gtQP4m+j1pPVnG/AAAAAAAAQkB1lqMm2v/vP/4Q92g0qnG/Cyky8g1jUD9LDVorwqJwvwAAAAAAgEJA006RZd3/7z/iem8W1ZlxvwFi/xAzXVA/7iWNyhQkbr8AAAAAAABDQEh4jq3h/+8/53PxZViJcb+sAUMg7flPP6t/DreHbWm/AAAAAACAQ0BmpTEo5v/vPzsR54fBeHG/e6uhLZyTTj/jqr1h5FljvwAAAAAAAERAL7Ky8On/7z8ZI8N2FGhxv2d67AZ2nkw/uAVhjepiWL8AAAAAAIBEQPuJJD/s/+8/u04TrlZXcb/L4BA2rThKP3pNUVcTJUG/AAAAAAAARUBXWWKO7P/vPxC3SOGPRnG/JUCbv/eFRz82fY+rFANAPwAAAAAAgEVAF3fwter/7z/b+0zzyDVxvzzmmZhgrUQ/cHVmBFOUWD8AAAAAAABGQIwJ3vLm/+8/006YQQolcb+VZ+l15NdBP9uh6dJ+MGQ/AAAAAACARkBvnxXe4f/vP9OmvCRcFHG/dfWlwB9cPj/ZVLTP2VVrPwAAAAAAAEdAXRSuUdz/7z8y2lOKxwNxvzjrencBrDk/SkppN52ycD8AAAAAAIBHQKlJAULX/+8/DwTM1VTzcL/7W8SmsuM1P1ga13tIC3M/AAAAAAAASEAnluGR0//vP3m18WAK43C/jwXUAyw7Mz8FEnFAAJl0PwAAAAAAgEhAJ2WX6dH/7z8SusA67NJwv4A1B3LV2zE/porgj0RJdT8AAAAAAIBRQPhsySn9/+8/ckw+r+raWD/YcGlGHCdCP8MCionJajQ/AAAAAABAVEA08+uX3//vP/PPYYZlcnY/s8TOmLypRz+BdmmDdWpDPwAAAAAAAFdA9brCt/b/7z9B8/jr03Nnvz4s7gIlJEM/VpRSNGNkQj8AAAAAAMBZQGCynGL9/+8/wxSpnwHXVT9dJ6BZS2JJP2MBzgDbYjY/AAAAAABAYUAB0IA78v/vP21J/x/adWy/MZWFLcv0OD9GZj7/uldPPwAAAAAAQFxA2+yra/3/7z+VnseDmFtWv7/fHY4VDkQ/wdDmU6j1Pj8AAAAAAIBcQJFvaF3//+8/TMr8ZNaNKr9l8j2IRvZEPzFk6tRc1jk/AAAAAADAXECK74Ei///vP8yFGWj3/EA/RdcTcjLcRT/Hw1zEId01PwAAAAAAAF1AAgzo1v7/7z8LsJPQvARIPzMr0qeHv0Y/HtSlIDFkMz8AAAAAAEBdQP7ZfS7//+8/Yd/lZbrGOz8YKcbnJ6BHP2edlaoqpzI/AAAAAACAXUCS13Er///vP5X+s6avvTi/LTunkSl+SD9YATjqP7ozPwAAAAAAwF1AiJclYvX/7z+u6mhZGgFpPxxp+Bw2SUo/8YVaOG+bOj8AAAAAAABeQMbn8Jf5/+8/VlPUQkqlYj+1C5REuilLP2DBKaB7HkA/AAAAAABAXkAXbkSm+v/vP0q0EGIkbmA/aUUd1LwMTD+0YoMEck9DPwAAAAAAgF5AwhQYSvn/7z/gaV3jg5RiP29UR+iC8kw/xcoQEPyVRj8AAAAAAMBeQIKVFMr0/+8/6tF/r77paD9cH8alC9tNP5KC4pRcpUk/AAAAAAAAX0A+j0dR6//vPzxbKPkqbXE/t5aEthHGTj9cb3QohDdMPwAAAAAAQF9ABSGm4Nr/7z+BEkn4U8B3P2ou3bMes08/dnejy1USTj8AAAAAAIBfQJsDtyTu/+8/HGFWNb6JcD9LMtS6x9tGPxNgXc6XEEA/AAAAAADAX0Dvsq5O9v/vP1jPrGZZEWg/XmVOclgPRj9Az22MLh06PwAAAAAAAGBAhUijBPr/7z+M5pY4/KNiPz4kq0bNREU/gfIoWtBPNT8AAAAAACBgQFwZv9z6/+8/Mwo8YRo/YT+xpjXpWXxEP6Uzt9MkJDI/AAAAAABAYEArPAZR+f/vP1CuflOl+WM/UFtI5QO2Qz/y+w6ql+EwPwAAAAAAYGBAfyTLjPT/7z8f4hCivY9qPxLoVgOc8UI/cpcKzuKhMT8AAAAAAIBgQAVkin7//+8/O0cQX/w8L7+dCO14/FhBP2IVPLsD+Tg/AAAAAACgYEB06l5C///vP7SOELRcVj8/SzIRDvSPQD9OonitV+Y+PwAAAAAAwGBAK9PM7v7/7z/QyIx8ShRGPxvl6AwuiD8/UKYxdDbjQj8AAAAAAOBgQFvPpiz//+8/5rKkVoJ9NT+MQnIWueo9Pw5Fob2af0Y/AAAAAAAAYUC/ePDY/v/vP+yLOMsSfUG/pJGqutFHPD89WsMYV/hJPwAAAAAAIGFAgvsKdvv/7z9O29JkLR9ev5lBUeUeoDo/sKL2JVoBTT8AAAAAACB/QD9qBZb4/+8/gb8+wlbyWT9pV3Swhn9hv8XuJmIw8NS+AAAAAAAwf0Bw5u76+P/vPzAlmvdfb1k/rAGAO6T0YL9XIv9UV534PgAAAAAAQH9Aio9y2Pn/7z/Fk32v2tVYP5vCqbm1816/Fs4tGOpRCz8AAAAAAFB/QDoEIQP7/+8/zm6QlhEtWD+MxdgdpUdav7evHiM1NRU/AAAAAABgf0CvSEM//P/vPweNwM1SfVc/TFbqKpokVL/Mvx4lmMocPwAAAAAAcH9A5ZogTf3/7z/2YEI2Tc9WPzDC37PtuEm/VVoqGYQzIj8AAAAAAIB/QGlLzPX9/+8/fx6+HZsrVj9VVC3SDDozvxZUtcQoBCY/AAAAAACQf0BkutgV/v/vP6GSk3IbmlU/Ab9TUhTuLD9w4AUfOdYpPwAAAAAAoH9ATePZo/3/7z+yj6EcmCFVP5WkUh9a/Uc/cyqiK36oLT8AAAAAALB/QL6HmrH8/+8/ODKJ8TjHVD9jB5qnvu1TP9KGoSLJvDA/AAAAAADAf0A7lAJo+//vP2BwfmtnjlQ/OWvhMNYMWz+NH/3eI6QyPwAAAAAA0H9Akiiw/vn/7z9adai2PnlUP4s5kmhhhWA/LN5r3eSJND8AAAAAAOB/QG2+gbH4/+8/8WS05oKIVD8ug3A1DdNiP1pOxPLAbTY/AAAAAADwf0Cvl5219//vP/YZ8fOqu1Q/z3rXeixYZD/kFSDpaE84PwAAAAAAAIBAHTGZMPf/7z9pKmFfahBVPyrEHZ5kB2U/yif/UKsuOj8AAAAAAAiAQILJV2kz/u8/TT18O5lgkr873hXs+1ERPzi0PKXkKYY/AAAAAAAQgEDSOgcoo//vPy2JK1ZyPH6/LaNdjaKAMD+ikvOy3+B3PwAAAAAAGIBAiISrDPv/7z/3Rl1Syt5gP/p7GXHksjs/GZH7K6X+Qb8AAAAAACCAQKL6Pshi/+8/IEraJOwhhj+lNnC7IkpBP5UB1Vf5ene/AAAAAAAogEDJ9bYCJv7vPxmx0OJ+UJQ/5M2Up9uIQz8GwIx5RjZ/vw==",
+  "it": 16250
+ },
+ "tails": {},
+ "presets": {
+  "comp": [
+   {
+    "id": "c_tc64",
+    "name": "Tube carbone 6/4",
+    "vals": {
+     "de": 6,
+     "di": 4,
+     "E": 135,
+     "sigR": 1500,
+     "matId": "cp",
+     "mat": "Carbone pultrudé",
+     "forme": "rond"
+    }
+   },
+   {
+    "id": "comp_umv44djpr",
+    "name": "Tube carbone 7.5/6.2",
+    "vals": {
+     "de": 7.5,
+     "di": 6.2,
+     "E": 110,
+     "sigR": 1100,
+     "matId": "ce",
+     "mat": "Carbone enroulé",
+     "forme": "rond"
+    }
+   }
+  ]
+ }
+}

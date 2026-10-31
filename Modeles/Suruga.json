@@ -1,0 +1,749 @@
+{
+ "v": 2,
+ "nid": 69,
+ "points": {
+  "p1": [
+   0,
+   646.9343,
+   0
+  ],
+  "p3": [
+   592.0531,
+   646.9343,
+   0
+  ],
+  "p4": [
+   592.0531,
+   -260.9479,
+   0
+  ],
+  "p6": [
+   -592.0531,
+   646.9343,
+   0
+  ],
+  "p10": [
+   -810.5895,
+   -646.9343,
+   0
+  ],
+  "p11": [
+   0,
+   -1055.9111,
+   0
+  ],
+  "p20": [
+   0,
+   -544.7237,
+   0
+  ],
+  "p26": [
+   810.5895,
+   -646.9343,
+   0
+  ],
+  "p27": [
+   -592.0531,
+   -260.9479,
+   0
+  ],
+  "p43": [
+   0,
+   180.6539,
+   935.2283
+  ],
+  "p53": [
+   -296.0265,
+   646.9343,
+   0
+  ],
+  "p55": [
+   296.0265,
+   646.9343,
+   0
+  ],
+  "p57": [
+   0,
+   48.5784,
+   574.3348
+  ],
+  "p58": [
+   0,
+   103.2019,
+   -1.2098
+  ]
+ },
+ "shapes": [
+  {
+   "id": "s18",
+   "kind": "cable",
+   "closed": false,
+   "plane": "face",
+   "pts": [
+    "p26",
+    "p58",
+    "p6"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "EA": 4000,
+    "rac": 40,
+    "compId": "k_pe1",
+    "mat": "Polyester tressé 1 mm",
+    "side": "ext"
+   },
+   "name": "Câble 2"
+  },
+  {
+   "id": "s19",
+   "kind": "cable",
+   "closed": false,
+   "plane": "face",
+   "pts": [
+    "p3",
+    "p58",
+    "p10"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "EA": 4000,
+    "rac": 40,
+    "compId": "k_pe1",
+    "mat": "Polyester tressé 1 mm",
+    "side": "ext"
+   },
+   "name": "Câble 3"
+  },
+  {
+   "id": "s14",
+   "kind": "latte",
+   "closed": false,
+   "plane": "face",
+   "pts": [
+    "p3",
+    "p55",
+    "p1",
+    "p53",
+    "p6"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "forme": "rond",
+    "de": 5,
+    "di": 3,
+    "b": 10,
+    "e": 1.5,
+    "E": 135,
+    "sigR": 1500,
+    "droit": true,
+    "sur": 5,
+    "creux": -1,
+    "poche": 0,
+    "matId": "cp",
+    "mat": "Carbone pultrudé",
+    "compId": "comp_umv3jmwf9"
+   },
+   "name": "Latte 1",
+   "ends": {}
+  },
+  {
+   "id": "s24",
+   "kind": "sail",
+   "closed": true,
+   "plane": "face",
+   "pts": [
+    "p4",
+    "p26",
+    "p11",
+    "p10",
+    "p27",
+    "p6",
+    "p53",
+    "p1",
+    "p55",
+    "p3"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant",
+      "manual": true
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant",
+      "manual": true
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant",
+      "manual": true
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant",
+      "manual": true
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant",
+      "manual": true
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant",
+      "manual": true
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant",
+      "manual": true
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant",
+      "manual": true
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant",
+      "manual": true
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant",
+      "manual": true
+     }
+    }
+   ],
+   "props": {
+    "E1": 60,
+    "E2": 50,
+    "G": 3,
+    "nu": 0.25,
+    "ang": -90,
+    "ret": 0,
+    "hemEA": 3000,
+    "gsm": 40,
+    "fabId": "t_rny",
+    "fab": "Ripstop nylon 40 g"
+   },
+   "name": "Voile 1 · P4",
+   "voile": "Voile 1"
+  },
+  {
+   "id": "s13",
+   "kind": "latte",
+   "closed": false,
+   "plane": "face",
+   "pts": [
+    "p1",
+    "p58",
+    "p20",
+    "p11"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "forme": "rond",
+    "de": 6,
+    "di": 4,
+    "b": 10,
+    "e": 1.5,
+    "E": 110,
+    "sigR": 1100,
+    "droit": true,
+    "sur": 5,
+    "creux": -1,
+    "poche": 0,
+    "matId": "ce",
+    "mat": "Carbone enroulé",
+    "compId": "c_tc64"
+   },
+   "name": "Latte 4",
+   "ends": {},
+   "kinks": {
+    "p32": "geom",
+    "p20": "geom"
+   }
+  },
+  {
+   "id": "s52",
+   "kind": "cable",
+   "closed": false,
+   "plane": "dessus",
+   "pts": [
+    "p1",
+    "p43"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "EA": 25000,
+    "rac": 0,
+    "bride": true,
+    "compId": "k_dy1",
+    "mat": "Dyneema 1 mm"
+   },
+   "name": "Bride 5"
+  },
+  {
+   "id": "s59",
+   "kind": "cable",
+   "closed": false,
+   "plane": "cote",
+   "pts": [
+    "p57",
+    "p58"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "EA": 25000,
+    "rac": 0,
+    "bride": true,
+    "compId": "k_dy1",
+    "mat": "Dyneema 1 mm"
+   },
+   "name": "Bride 6"
+  },
+  {
+   "id": "s63",
+   "kind": "cable",
+   "closed": false,
+   "plane": "cote",
+   "pts": [
+    "p43",
+    "p57"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "EA": 8000,
+    "rac": 0,
+    "bride": true
+   },
+   "name": "Bride 1"
+  },
+  {
+   "id": "s64",
+   "kind": "cable",
+   "closed": false,
+   "plane": "cote",
+   "pts": [
+    "p57",
+    "p20"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "EA": 8000,
+    "rac": 0,
+    "bride": true
+   },
+   "name": "Bride 2"
+  },
+  {
+   "id": "s67",
+   "kind": "tube",
+   "closed": false,
+   "plane": "face",
+   "pts": [
+    "p3",
+    "p10"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "de": 7.5,
+    "di": 6,
+    "E": 110,
+    "sigR": 1100,
+    "droit": true,
+    "sur": 2.08,
+    "poche": 30,
+    "appui": true,
+    "matId": "ce",
+    "mat": "Carbone enroulé",
+    "compId": "comp_umv44djpr",
+    "appuiSet": true
+   },
+   "name": "Tube 1"
+  },
+  {
+   "id": "s68",
+   "kind": "tube",
+   "closed": false,
+   "plane": "face",
+   "pts": [
+    "p26",
+    "p6"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "de": 7.5,
+    "di": 6,
+    "E": 110,
+    "sigR": 1100,
+    "droit": true,
+    "sur": 2.08,
+    "poche": 30,
+    "appui": true,
+    "matId": "ce",
+    "mat": "Carbone enroulé",
+    "compId": "comp_umv44djpr",
+    "appuiSet": true
+   },
+   "name": "Tube 2"
+  }
+ ],
+ "offset": {
+  "base": "face",
+  "d": 150,
+  "tilt": 0,
+  "rot": 0
+ },
+ "h": 50,
+ "nodes": {
+  "p11": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N2"
+  },
+  "p1": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N3"
+  },
+  "p3": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N4"
+  },
+  "p6": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N5"
+  },
+  "p10": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N7"
+  },
+  "p26": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N9"
+  },
+  "p43": {
+   "type": "rigide",
+   "auto": false,
+   "name": "N11",
+   "ring": true
+  },
+  "p53": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N14"
+  },
+  "p55": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N15"
+  },
+  "p58": {
+   "type": "rigide",
+   "auto": false,
+   "name": "N16"
+  },
+  "p57": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N17"
+  },
+  "p20": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N19"
+  }
+ },
+ "name": "Suruga",
+ "sym": true,
+ "symMap": {
+  "p3": "p6",
+  "p55": "p53",
+  "p4": "p27",
+  "p26": "p10"
+ },
+ "presets": {
+  "comp": [
+   {
+    "id": "comp_umv3jmwf9",
+    "name": "Tube Carbone 5/3",
+    "vals": {
+     "forme": "rond",
+     "de": 5,
+     "di": 3,
+     "b": 10,
+     "e": 1.5,
+     "E": 135,
+     "sigR": 1500,
+     "matId": "cp",
+     "mat": "Carbone pultrudé"
+    }
+   }
+  ]
+ },
+ "hk": 15,
+ "hMode": "rel",
+ "vol": {
+  "anchor": "p36",
+  "F": 25.7,
+  "on": true
+ },
+ "wind": {
+  "V": 6,
+  "coupled": true,
+  "coupEvery": 100
+ },
+ "calcMode": "repos",
+ "tails": {},
+ "fpos": {
+  "L": 3.7,
+  "beta": 75
+ },
+ "deduce": 1
+}
