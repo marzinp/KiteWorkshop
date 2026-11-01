@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="google" content="notranslate">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>AtelierCV v305</title>
+  <title>AtelierCV v306</title>
   <style>
     :root {
       --bg: #f4f3ef;
@@ -914,7 +914,7 @@
   <script id="engine">
     'use strict';
     /* ================= MOTEUR (sans DOM) ================= */
-    const VERSION = 'v305';
+    const VERSION = 'v306';
     const V = {
       add: (a, b) => [a[0] + b[0], a[1] + b[1], a[2] + b[2]],
       sub: (a, b) => [a[0] - b[0], a[1] - b[1], a[2] - b[2]],
@@ -4631,7 +4631,7 @@ const PRESETS_USINE = {"mat":[{"id":"cp","name":"Carbone pultrudé","vals":{"E":
       const B = frameOf(doc, shs[0].plane); let n = [0, 0, 0], c = [0, 0, 0], k = 0; for (const S of shs) {const nS = panelNormal(S); n = V.add(n, V.mul(nS, V.dot(nS, B.n) < 0 ? -1 : 1)); for (const q of S.pts) {c = V.add(c, doc.points[q]); k++;} }
       n = V.norm(n); if (V.dot(n, B.n) < 0) n = V.mul(n, -1); const tilt = Math.acos(Math.min(1, Math.abs(V.dot(n, B.n)))) * 180 / Math.PI; if (tilt < 3) return null;
       let u = V.sub(B.u, V.mul(n, V.dot(B.u, n))); if (V.len(u) < 1e-6) u = V.cross(B.v, n); u = V.norm(u); let v = V.sub(B.v, V.add(V.mul(n, V.dot(B.v, n)), V.mul(u, V.dot(B.v, u)))); v = V.len(v) > 1e-6 ? V.norm(v) : V.norm(V.cross(n, u));
-      return {o: V.mul(c, 1 / k), u, v, n, plane: shs[0].plane, tilt};
+      /* v306 : origine du repère = O projeté sur le plan de la voile (plan passant par ses sommets) : la grille reste alignée sur O */ return {o: V.mul(n, V.dot(V.mul(c, 1 / k), n)), u, v, n, plane: shs[0].plane, tilt};
     }
     function isoExit() {const I = ui.iso; if (!I) return; ui.iso = null; ui.plane = I.plane; ui.cam = I.cam; ui.camO = I.camO; if (ui.mode !== I.mode) setMode(I.mode); buildPlanes(); buildOffset(); isoBar(); buildSel(); drawEditor();}
     function isoBar() {
@@ -6398,6 +6398,8 @@ function run(){const M=job;if(!M)return;stepSolve(M,80,opt);const now=Date.now()
     const isoTilted = () => !!(ui.iso && ui.iso.frame && ui.plane === ui.iso.frame.plane);
     const AF = () => {if (PERSP()) {const B = camBP(); return {o: ui.camP.t.slice(), u: B.r, v: B.u, n: V.mul(B.f, -1)};} if (isoTilted()) return ui.iso.frame; return frameOf(doc, ui.plane);};
     /* v305 : plan de travail en perspective quand une voile est isolée — le plan de la voile (incliné ou non), passant par ses sommets : grille, axe de symétrie et points posés y sont, au lieu du sol (Z = 0) ou de la profondeur du dernier point */
+    /* coordonnée d'axe (X) de l'origine du repère de vue, corrigée pour une voile isolée inclinée : profondeur moyenne de ses sommets sur l'axe */
+    function axisOx(F) {let ox = F.o[SA()]; if (isoTilted() && Math.abs(F.n[SA()]) > 1e-6) {let w = 0, k = 0; for (const id of ui.iso.ids || []) {const S = shapeById(id); if (S) for (const q of S.pts) {const P = doc.points[q]; if (Math.abs(P[SA()]) < 0.5) {w += V.dot(V.sub(P, F.o), F.n); k++;}} } if (k) ox += F.n[SA()] * w / k;} return ox;}
     function workPlane() {
       if (!PERSP() || !ui.iso || !ui.iso.ids) return null; const shs = ui.iso.ids.map(shapeById).filter(Boolean); if (!shs.length) return null; if (ui.iso.frame) return ui.iso.frame;
       const B = frameOf(doc, shs[0].plane === 'decale' ? 'face' : shs[0].plane); let c = [0, 0, 0], k = 0; for (const S of shs) for (const q of S.pts) {c = V.add(c, doc.points[q]); k++;} c = V.mul(c, 1 / k); const d = V.dot(V.sub(c, B.o), B.n);
@@ -6478,9 +6480,7 @@ function run(){const M=job;if(!M)return;stepSolve(M,80,opt);const now=Date.now()
       // ordre : autres plans, puis plan actif ; voiles puis lignes
       if (doc.sym && !PERSP()) {
         const ax = []; const a0 = s2l(0, 0), a1 = s2l(W1, H1);
-        const ux = F.u[SA()], vx = F.v[SA()]; let ox = F.o[SA()];
-        /* v305 : voile isolée inclinée — ses sommets sur l'axe (X = 0) ne sont pas dans son plan moyen : projetés, ils tombaient à côté de l'intersection de ce plan avec X = 0. L'axe est tracé à leur profondeur moyenne */
-        if (isoTilted() && Math.abs(F.n[SA()]) > 1e-6) {let w = 0, k = 0; for (const id of ui.iso.ids || []) {const S = shapeById(id); if (S) for (const q of S.pts) {const P = doc.points[q]; if (Math.abs(P[SA()]) < 0.5) {w += V.dot(V.sub(P, F.o), F.n); k++;}} } if (k) ox += F.n[SA()] * w / k;}
+        const ux = F.u[SA()], vx = F.v[SA()], ox = axisOx(F);/* v305 : voile isolée inclinée — ses sommets sur l'axe (X = 0) ne sont pas dans son plan moyen : l'axe est tracé à leur profondeur moyenne */
         if (Math.abs(ux) > 1e-6 || Math.abs(vx) > 1e-6) {
           if (Math.abs(ux) >= Math.abs(vx)) {for (const b of [a1[1], a0[1]]) ax.push([(-ox - vx * b) / ux, b]);} else {for (const a of [a0[0], a1[0]]) ax.push([a, (-ox - ux * a) / vx]);}
           const P = ax.map(l => [W1 / 2 + (l[0] - ui.cam.cx) * s, H1 / 2 - (l[1] - ui.cam.cy) * s]);
@@ -6491,7 +6491,7 @@ function run(){const M=job;if(!M)return;stepSolve(M,80,opt);const now=Date.now()
       }
       if (doc.sym && !PERSP()) {
         const ux = F.u[SA()], vx = -F.v[SA()], nl = Math.hypot(ux, vx); if (nl > 1e-6) {
-          const nx = ux / nl, ny = vx / nl, o0 = w2s([0, 0, 0], F), tx = -ny, ty = nx, L = 1e5;
+          const nx = ux / nl, ny = vx / nl, ox = axisOx(F), la = -ox * F.u[SA()] / (nl * nl), lb = -ox * F.v[SA()] / (nl * nl), o0 = [W1 / 2 + (la - ui.cam.cx) * ui.cam.s, H1 / 2 - (lb - ui.cam.cy) * ui.cam.s], tx = -ny, ty = nx, L = 1e5;/* v306 : bord de la zone grisée sur l'axe tracé (et non sur l'origine projetée) */
           g.fillStyle = 'rgba(128,128,128,.13)'; g.beginPath(); g.moveTo(o0[0] + tx * L, o0[1] + ty * L); g.lineTo(o0[0] - tx * L, o0[1] - ty * L); g.lineTo(o0[0] - tx * L + nx * L, o0[1] - ty * L + ny * L); g.lineTo(o0[0] + tx * L + nx * L, o0[1] + ty * L + ny * L); g.closePath(); g.fill();
           g.fillStyle = css('--mut'); const lx = Math.min(W1 - 175, Math.max(8, o0[0] + nx * 14)); g.fillText('côté symétrique — verrouillé', lx, 22);
         }
