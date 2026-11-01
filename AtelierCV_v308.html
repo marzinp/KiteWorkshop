@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="google" content="notranslate">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>AtelierCV v307</title>
+  <title>AtelierCV v308</title>
   <style>
     :root {
       --bg: #f4f3ef;
@@ -914,7 +914,7 @@
   <script id="engine">
     'use strict';
     /* ================= MOTEUR (sans DOM) ================= */
-    const VERSION = 'v307';
+    const VERSION = 'v308';
     const V = {
       add: (a, b) => [a[0] + b[0], a[1] + b[1], a[2] + b[2]],
       sub: (a, b) => [a[0] - b[0], a[1] - b[1], a[2] - b[2]],
@@ -7058,7 +7058,8 @@ function run(){const M=job;if(!M)return;stepSolve(M,80,opt);const now=Date.now()
           const P = w2s(W, F);
           const dx = Math.abs(P[0] - x), dy = Math.abs(P[1] - y); if (dx < 6 && (!ax || dx < ax.d)) ax = {d: dx, v: P[0], ref: P}; if (dy < 6 && (!ay || dy < ay.d)) ay = {d: dy, v: P[1], ref: P};
         }
-        if (ax || ay) {const sx = ax ? ax.v : x, sy = ay ? ay.v : y; let [a, b] = s2l(sx, sy); const gs = ui.disp.grid ? (ui.disp.gstep || 10) : 0; let X = sx, Y = sy; if (gs) {if (!ax) a = Math.round(a / gs) * gs; if (!ay) b = Math.round(b / gs) * gs; const P = w2s(toWorld(a, b, 0, F), F); X = P[0]; Y = P[1];} return {kind: 'free', x: X, y: Y, a, b, guides: [ax && ax.ref, ay && ay.ref].filter(Boolean), lab: ax && ay ? 'aligné ↕↔' : (ax ? 'aligné ↕' : 'aligné ↔') + (gs ? ' + grille' : '')};}
+        if (ax || ay) {const sx = ax ? ax.v : x, sy = ay ? ay.v : y; let [a, b] = s2l(sx, sy); const gs = ui.disp.grid ? (ui.disp.gstep || 10) : 0; let X = sx, Y = sy;
+          {const IB = gs && !PERSP() ? isoBase() : null; if (IB) {let [px, py] = IB.xy(toWorld(a, b, 0, F)); const ua = Math.abs(V.dot(IB.B.u, F.u)) >= Math.abs(V.dot(IB.B.u, F.v));/* X d'origine vu à l'horizontale ? */ const keepX = ua ? !!ax : !!ay, keepY = ua ? !!ay : !!ax; if (!keepX) px = Math.round(px / gs) * gs; if (!keepY) py = Math.round(py / gs) * gs; const Wd = IB.at(px, py), P = w2s(Wd, F), l = toLocal(Wd, F); return {kind: 'free', x: P[0], y: P[1], a: l[0], b: l[1], W: Wd, guides: [ax && ax.ref, ay && ay.ref].filter(Boolean), lab: (ax && ay ? 'aligné ↕↔' : ax ? 'aligné ↕' : 'aligné ↔') + ' + grille'};} } if (gs) {if (!ax) a = Math.round(a / gs) * gs; if (!ay) b = Math.round(b / gs) * gs; const P = w2s(toWorld(a, b, 0, F), F); X = P[0]; Y = P[1];} return {kind: 'free', x: X, y: Y, a, b, guides: [ax && ax.ref, ay && ay.ref].filter(Boolean), lab: ax && ay ? 'aligné ↕↔' : (ax ? 'aligné ↕' : 'aligné ↔') + (gs ? ' + grille' : '')};}
       }
       {const Wp = workPlane(); if (Wp && ui.disp.grid) {const H = workHit(x, y, Wp); if (H) {const gs = ui.disp.gstep || 10, d = V.sub(H, Wp.o), a = Math.round(V.dot(d, Wp.u) / gs) * gs, b = Math.round(V.dot(d, Wp.v) / gs) * gs, Wd = V.add(Wp.o, V.add(V.mul(Wp.u, a), V.mul(Wp.v, b))), P = w2s(Wd); return {kind: 'free', x: P[0], y: P[1], a, b, W: Wd, guides: [], lab: 'grille ' + (gs >= 10 ? gs / 10 + ' cm' : gs + ' mm') + ' (plan de la voile)'};} } }
       if (ui.disp.grid && !PERSP() && isoBase()) {const IB = isoBase(), gs = ui.disp.gstep || 10, [a0, b0] = s2l(x, y), [px, py] = IB.xy(toWorld(a0, b0, 0, F)), Wd = IB.at(Math.round(px / gs) * gs, Math.round(py / gs) * gs), P = w2s(Wd, F), l = toLocal(Wd, F); return {kind: 'free', x: P[0], y: P[1], a: l[0], b: l[1], W: Wd, guides: [], lab: 'grille ' + (gs >= 10 ? gs / 10 + ' cm' : gs + ' mm')};}
@@ -7270,13 +7271,15 @@ function run(){const M=job;if(!M)return;stepSolve(M,80,opt);const now=Date.now()
       }
       if (D.kind === 'anchor') {
         ui.alt = e.altKey; const owners0 = doc.shapes.filter(s => s.pts.includes(D.pid)); const sn0 = findSnap(x, y, owners0, D.pid); let np = V.add(D.start, dv);
-        if (sn0 && sn0.kind === 'free') {const l = toLocal(D.start, F); np = toWorld(sn0.a, sn0.b, l[2], F);} else if (sn0) np = snapW(sn0); if (D.axis) np[SA()] = 0; else if (doc.sym && D.start[SA()] < 0) {if (np[SA()] * ui.cam.s > -9) np[SA()] = 0;} doc.points[D.pid] = np; if (D.tw && D.tw !== D.pid) doc.points[D.tw] = mirP(np); symEnforce(); ui.snap = sn0; drawEditor();
+        const IB0 = sn0 && sn0.W ? isoBase() : null;
+        if (IB0) {const [px, py] = IB0.xy(sn0.W), off = V.dot(V.sub(D.start, F.o), F.n) / V.dot(IB0.B.n, F.n); np = V.add(IB0.at(px, py), V.mul(IB0.B.n, off));}/* v308 : plan incliné — X, Y ronds de la grille gardés, le point garde son écart au plan le long de l'axe de profondeur d'origine */
+        else if (sn0 && sn0.kind === 'free') {const l = toLocal(D.start, F); np = toWorld(sn0.a, sn0.b, l[2], F);} else if (sn0) np = snapW(sn0); if (D.axis) np[SA()] = 0; else if (doc.sym && D.start[SA()] < 0) {if (np[SA()] * ui.cam.s > -9) np[SA()] = 0;} doc.points[D.pid] = np; if (D.tw && D.tw !== D.pid) doc.points[D.tw] = mirP(np); symEnforce(); ui.snap = sn0; drawEditor();
       }
       else if (D.kind === 'handle') {
         ui.alt = e.altKey; const s = D.sh.segs[D.seg]; if (D.which === 1) s.c1 = V.add(D.start, dv); else s.c2 = V.add(D.start, dv);
         const n = D.sh.pts.length, P0 = doc.points[D.which === 1 ? D.sh.pts[D.seg] : D.sh.pts[(D.seg + 1) % n]], l = toLocal(V.add(P0, D.which === 1 ? s.c1 : s.c2), F);
         const sn = findSnap(x, y, [], null, {noSeg: true, wRef: PERSP() ? undefined : l[2], wTol: 10}); ui.snap = sn; if (sn) {
-          const T = sn.kind === 'free' ? toWorld(sn.a, sn.b, l[2], F) : (() => {const q = toLocal(snapW(sn), F); return PERSP() ? snapW(sn) : toWorld(q[0], q[1], l[2], F);})();/* la poignée reste dans son plan : seule sa position à l'écran est accrochée */ if (D.which === 1) s.c1 = V.sub(T, P0); else s.c2 = V.sub(T, P0);
+          const IBh = sn.W ? isoBase() : null, T = IBh ? (() => {const [px, py] = IBh.xy(sn.W); return V.add(IBh.at(px, py), V.mul(IBh.B.n, l[2] / V.dot(IBh.B.n, F.n)));})() : sn.kind === 'free' ? toWorld(sn.a, sn.b, l[2], F) : (() => {const q = toLocal(snapW(sn), F); return PERSP() ? snapW(sn) : toWorld(q[0], q[1], l[2], F);})();/* la poignée reste dans son plan : seule sa position à l'écran est accrochée */ if (D.which === 1) s.c1 = V.sub(T, P0); else s.c2 = V.sub(T, P0);
         }
         if (D.sm) {if (D.which === 1) s.c2 = mirP(s.c1); else s.c1 = mirP(s.c2);} propagateSeg(D.G); keepSmooth(D.sh, {seg: D.seg, which: D.which}); symEnforce(); drawEditor();
       }
