@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="google" content="notranslate">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>AtelierCV v306</title>
+  <title>AtelierCV v307</title>
   <style>
     :root {
       --bg: #f4f3ef;
@@ -914,7 +914,7 @@
   <script id="engine">
     'use strict';
     /* ================= MOTEUR (sans DOM) ================= */
-    const VERSION = 'v306';
+    const VERSION = 'v307';
     const V = {
       add: (a, b) => [a[0] + b[0], a[1] + b[1], a[2] + b[2]],
       sub: (a, b) => [a[0] - b[0], a[1] - b[1], a[2] - b[2]],
@@ -6400,6 +6400,9 @@ function run(){const M=job;if(!M)return;stepSolve(M,80,opt);const now=Date.now()
     /* v305 : plan de travail en perspective quand une voile est isolée — le plan de la voile (incliné ou non), passant par ses sommets : grille, axe de symétrie et points posés y sont, au lieu du sol (Z = 0) ou de la profondeur du dernier point */
     /* coordonnée d'axe (X) de l'origine du repère de vue, corrigée pour une voile isolée inclinée : profondeur moyenne de ses sommets sur l'axe */
     function axisOx(F) {let ox = F.o[SA()]; if (isoTilted() && Math.abs(F.n[SA()]) > 1e-6) {let w = 0, k = 0; for (const id of ui.iso.ids || []) {const S = shapeById(id); if (S) for (const q of S.pts) {const P = doc.points[q]; if (Math.abs(P[SA()]) < 0.5) {w += V.dot(V.sub(P, F.o), F.n); k++;}} } if (k) ox += F.n[SA()] * w / k;} return ox;}
+    /* v307 : voile isolée inclinée — grille « vraie » : lignes à coordonnées rondes du plan de dessin d'origine (X, Y en vue Dessus…), tracées sur le plan incliné ; un point de grille a des coordonnées rondes */
+    function isoBase() {if (!isoTilted()) return null; const F = ui.iso.frame, B = frameOf(doc, F.plane), den = V.dot(B.n, F.n); if (Math.abs(den) < 0.2) return null; const d0 = V.dot(F.o, F.n);
+      const at = (x, y) => {const P = V.add(B.o, V.add(V.mul(B.u, x), V.mul(B.v, y))); return V.add(P, V.mul(B.n, (d0 - V.dot(P, F.n)) / den));}; return {B, at, xy: P => [V.dot(V.sub(P, B.o), B.u), V.dot(V.sub(P, B.o), B.v)]};}
     function workPlane() {
       if (!PERSP() || !ui.iso || !ui.iso.ids) return null; const shs = ui.iso.ids.map(shapeById).filter(Boolean); if (!shs.length) return null; if (ui.iso.frame) return ui.iso.frame;
       const B = frameOf(doc, shs[0].plane === 'decale' ? 'face' : shs[0].plane); let c = [0, 0, 0], k = 0; for (const S of shs) for (const q of S.pts) {c = V.add(c, doc.points[q]); k++;} c = V.mul(c, 1 / k); const d = V.dot(V.sub(c, B.o), B.n);
@@ -6468,6 +6471,12 @@ function run(){const M=job;if(!M)return;stepSolve(M,80,opt);const now=Date.now()
         g.fillStyle = css('--mut'); g.font = '11px system-ui'; g.fillText('Perspective — clic droit glissé = tourner autour de la croix, F = croix sur la sélection ou le point visé, Maj+clic droit / milieu / Espace = déplacer, double-clic = recadrer', 8, H1 - 8);
       }
       else {
+        const IB = isoBase(); if (IB) {const cs = [[0, 0], [W1, 0], [0, H1], [W1, H1]].map(([x, y]) => {const [a, b] = s2l(x, y); return IB.xy(toWorld(a, b, 0, F));}), x0 = Math.min(...cs.map(c => c[0])), x1 = Math.max(...cs.map(c => c[0])), y0 = Math.min(...cs.map(c => c[1])), y1 = Math.max(...cs.map(c => c[1]));
+          for (const [st, col] of (ui.disp.grid && (ui.disp.gstep || 10) !== 10 ? [[ui.disp.gstep, css('--grid')], [Math.max(100, 10 * ui.disp.gstep), css('--grid2')]] : [[10, css('--grid')], [100, css('--grid2')]])) {
+            if ((x1 - x0) / st > 600 || (y1 - y0) / st > 600) continue; const P0 = w2s(IB.at(0, 0), F), P1 = w2s(IB.at(st, 0), F); if (Math.hypot(P1[0] - P0[0], P1[1] - P0[1]) < 6) continue; g.strokeStyle = col; g.lineWidth = 1; g.beginPath();
+            for (let x = Math.ceil(x0 / st) * st; x <= x1; x += st) {const P = w2s(IB.at(x, y0), F), Q = w2s(IB.at(x, y1), F); g.moveTo(P[0], P[1]); g.lineTo(Q[0], Q[1]);}
+            for (let y = Math.ceil(y0 / st) * st; y <= y1; y += st) {const P = w2s(IB.at(x0, y), F), Q = w2s(IB.at(x1, y), F); g.moveTo(P[0], P[1]); g.lineTo(Q[0], Q[1]);} g.stroke();}
+        } else
         for (const [st, col] of (ui.disp.grid && (ui.disp.gstep || 10) !== 10 ? [[ui.disp.gstep, css('--grid')], [Math.max(100, 10 * ui.disp.gstep), css('--grid2')]] : [[10, css('--grid')], [100, css('--grid2')]])) {
           if (st * s < 6) continue; g.strokeStyle = col; g.lineWidth = 1; g.beginPath();
           for (let a = Math.ceil(a0 / st) * st; a <= a1; a += st) {const x = Math.round(W1 / 2 + (a - ui.cam.cx) * s) + 0.5; g.moveTo(x, 0); g.lineTo(x, H1);}
@@ -7052,6 +7061,7 @@ function run(){const M=job;if(!M)return;stepSolve(M,80,opt);const now=Date.now()
         if (ax || ay) {const sx = ax ? ax.v : x, sy = ay ? ay.v : y; let [a, b] = s2l(sx, sy); const gs = ui.disp.grid ? (ui.disp.gstep || 10) : 0; let X = sx, Y = sy; if (gs) {if (!ax) a = Math.round(a / gs) * gs; if (!ay) b = Math.round(b / gs) * gs; const P = w2s(toWorld(a, b, 0, F), F); X = P[0]; Y = P[1];} return {kind: 'free', x: X, y: Y, a, b, guides: [ax && ax.ref, ay && ay.ref].filter(Boolean), lab: ax && ay ? 'aligné ↕↔' : (ax ? 'aligné ↕' : 'aligné ↔') + (gs ? ' + grille' : '')};}
       }
       {const Wp = workPlane(); if (Wp && ui.disp.grid) {const H = workHit(x, y, Wp); if (H) {const gs = ui.disp.gstep || 10, d = V.sub(H, Wp.o), a = Math.round(V.dot(d, Wp.u) / gs) * gs, b = Math.round(V.dot(d, Wp.v) / gs) * gs, Wd = V.add(Wp.o, V.add(V.mul(Wp.u, a), V.mul(Wp.v, b))), P = w2s(Wd); return {kind: 'free', x: P[0], y: P[1], a, b, W: Wd, guides: [], lab: 'grille ' + (gs >= 10 ? gs / 10 + ' cm' : gs + ' mm') + ' (plan de la voile)'};} } }
+      if (ui.disp.grid && !PERSP() && isoBase()) {const IB = isoBase(), gs = ui.disp.gstep || 10, [a0, b0] = s2l(x, y), [px, py] = IB.xy(toWorld(a0, b0, 0, F)), Wd = IB.at(Math.round(px / gs) * gs, Math.round(py / gs) * gs), P = w2s(Wd, F), l = toLocal(Wd, F); return {kind: 'free', x: P[0], y: P[1], a: l[0], b: l[1], W: Wd, guides: [], lab: 'grille ' + (gs >= 10 ? gs / 10 + ' cm' : gs + ' mm')};}
       if (ui.disp.grid && !PERSP()) {const gs = ui.disp.grid ? (ui.disp.gstep || 10) : 10; let [a, b] = s2l(x, y); a = Math.round(a / gs) * gs; b = Math.round(b / gs) * gs; const P = w2s(toWorld(a, b, 0, F), F); return {kind: 'free', x: P[0], y: P[1], a, b, guides: [], lab: 'grille ' + (gs >= 10 ? gs / 10 + ' cm' : gs + ' mm')};}
       return null;
     }
@@ -7085,7 +7095,7 @@ function run(){const M=job;if(!M)return;stepSolve(M,80,opt);const now=Date.now()
       else if (sn && sn.kind === 'seg') pid = splitGroup(sn.sh, sn.seg, axisT(sn.sh, sn.seg, sn.t));
       else if (sn && sn.kind === 'int') pid = splitInt(sn);
       else if (PERSP()) {const ref = C.pts.length ? doc.points[C.pts[C.pts.length - 1]] : ui.camP.t, R = w2s(ref), Wp = workPlane(), Hw = sn && sn.W ? sn.W : Wp ? workHit(x, y, Wp) : null; const P = Hw ? Hw.slice() : V.add(ref, pxToWorld(x - R[0], y - R[1], ref)); if (doc.sym && Math.abs(P[SA()]) * ui.cam.s < 9) P[SA()] = 0; pid = newPoint(P);}
-      else {const [a, b] = sn && sn.kind === 'free' ? [sn.a, sn.b] : s2l(x, y); const P = toWorld(a, b, wkW(), AF()); if (doc.sym && Math.abs(P[SA()]) * ui.cam.s < 9) P[SA()] = 0; pid = newPoint(P);}
+      else {const [a, b] = sn && sn.kind === 'free' ? [sn.a, sn.b] : s2l(x, y); const P = sn && sn.W ? sn.W.slice() : toWorld(a, b, wkW(), AF()); if (doc.sym && Math.abs(P[SA()]) * ui.cam.s < 9) P[SA()] = 0; pid = newPoint(P);}
       if (C.kind === 'poly' && pid === C.pts[0] && C.pts.length >= 3) C.done = true; else {if (C.pts.includes(pid)) return; C.pts.push(pid);}
       finishCreate(C);
     }
