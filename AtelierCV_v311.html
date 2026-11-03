@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="google" content="notranslate">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>AtelierCV v310</title>
+  <title>AtelierCV v311</title>
   <style>
     :root {
       --bg: #f4f3ef;
@@ -914,7 +914,7 @@
   <script id="engine">
     'use strict';
     /* ================= MOTEUR (sans DOM) ================= */
-    const VERSION = 'v310';
+    const VERSION = 'v311';
     const V = {
       add: (a, b) => [a[0] + b[0], a[1] + b[1], a[2] + b[2]],
       sub: (a, b) => [a[0] - b[0], a[1] - b[1], a[2] - b[2]],
@@ -1653,7 +1653,7 @@
           for (const t of tris) if (own.has(t.owner)) {const w = V.len(cr(t)); C = V.add(C, V.mul(g(t), w)); W += w;}
           if (W > 0) {C = V.mul(C, 1 / W); M.pin = new Float64Array(tris.length); tris.forEach((t, k) => {if (own.has(t.owner)) M.pin[k] = (V.dot(cr(t), V.sub(g(t), C)) >= 0 ? 1 : -1) * opt.pin.p;});} }
         /* vol plané : corps libre (ni ligne ni point fixe) — l'effort et le moment d'ensemble qui restent (équilibre approché du tour) sont retirés de tous les nœuds */
-        if (opt && opt.free && M.ext) {const L = []; for (let i = 0; i < n; i++) L.push(i); M.relief = Int32Array.from(L); M.reliefFree = true; let c = [0, 0, 0]; for (let i = 0; i < n; i++) for (let d = 0; d < 3; d++) c[d] += X[i][d] / n; let bi = 0, bd = 1e18; for (let i = 0; i < n; i++) {const dd = V.len(V.sub(X[i], c)); if (dd < bd) {bd = dd; bi = i;}} M.reliefRing = bi;}
+        if (opt && opt.free && M.ext) {const L = [], used = new Uint8Array(n); for (const t of tris) {used[t.a] = used[t.b] = used[t.c] = 1;} for (const e of beams) {used[e.a] = used[e.b] = 1;} for (const e of bars) {used[e.a] = used[e.b] = 1;} for (let i = 0; i < n; i++) if (used[i]) L.push(i);/* v311 : nœuds reliés seulement — un nœud isolé (bord d'un trou resté hors maillage, iFlite) recevait sa part de l'allègement sans masse et partait à l'infini */ M.relief = Int32Array.from(L); M.reliefFree = true; let c = [0, 0, 0]; for (let i = 0; i < n; i++) for (let d = 0; d < 3; d++) c[d] += X[i][d] / n; let bi = 0, bd = 1e18; for (let i = 0; i < n; i++) {const dd = V.len(V.sub(X[i], c)); if (dd < bd) {bd = dd; bi = i;}} M.reliefRing = bi;}
         else         if (!(opt && opt.noRelief) && M.ext && M.vol && M.vol.fx.length && M.vol.fx[0].line) {if (opt && opt.coupledFull && opt.pitchAx) M.reliefAx = opt.pitchAx.slice();const LN = M.vol.fx[0].line, ring = LN[LN.length - 1], ex = new Set(LN), L = []; for (const q of M.vol.fx) ex.add(q.an); for (let i = 0; i < n; i++) if (!ex.has(i)) L.push(i); M.relief = Int32Array.from(L); M.reliefRing = ring;}
       }
       const nt = tris.length; M.ts1 = new Float64Array(nt); M.ts2 = new Float64Array(nt); M.tsx = new Float64Array(nt); M.tsy = new Float64Array(nt); M.tsxy = new Float64Array(nt);
@@ -3235,7 +3235,10 @@ const PRESETS_USINE = {"mat":[{"id":"cp","name":"Carbone pultrudé","vals":{"E":
     /* vol plané : ligne lâchée — points fixes et lignes qui en partent retirés du calcul (le dessin ne change pas) */
     function planeDoc() {
       if (ui.pdD && ui.pdV === ui.ver && ui.pdDoc === doc) return ui.pdD; const N = doc.nodes || {}, fx = Object.keys(N).filter(q => N[q].fixe); let d = doc;
-      if (fx.length) {d = JSON.parse(JSON.stringify(doc)); d.shapes = d.shapes.filter(S => !(S.kind === 'cable' && S.pts.some(q => fx.includes(q)))); for (const q of fx) delete d.nodes[q].fixe; const used = new Set(); for (const S of d.shapes) for (const q of S.pts) used.add(q); for (const q of fx) if (!used.has(q)) delete d.points[q];}
+      /* v311 : brides retirées aussi — ligne lâchée, elles sont molles et ne sont pas pesées ; gardées, leurs nœuds sans raideur partaient au loin (iFlite : 66 km, calcul divergent) */
+      const BR = new Set(bridleSet(doc)); for (const S of doc.shapes) if (S.kind === 'cable' && S.props && S.props.bride) BR.add(S.id);
+      /* …sauf si un lest pend aux brides (poids de la ligne, tension du pilote) : elles le portent, tendues par lui */ {const L = Object.keys(doc.lests || {}).filter(q => (+doc.lests[q].m || 0) > 0); if (L.some(q => doc.shapes.some(S => S.pts.includes(q)) && doc.shapes.filter(S => S.pts.includes(q)).every(S => BR.has(S.id)))) BR.clear();}
+      if (fx.length || BR.size) {d = JSON.parse(JSON.stringify(doc)); d.shapes = d.shapes.filter(S => !BR.has(S.id) && !(S.kind === 'cable' && S.pts.some(q => fx.includes(q)))); for (const q of fx) if (d.nodes[q]) delete d.nodes[q].fixe; const used = new Set(); for (const S of d.shapes) for (const q of S.pts) used.add(q); for (const q in d.points) if (!used.has(q)) delete d.points[q]; if (d.nodes) for (const q in d.nodes) if (!used.has(q)) delete d.nodes[q];}
       ui.pdD = d; ui.pdV = ui.ver; ui.pdDoc = doc; return d;
     }
     function calcDoc() {
@@ -6056,7 +6059,7 @@ const PRESETS_USINE = {"mat":[{"id":"cp","name":"Carbone pultrudé","vals":{"E":
         }
       }
       /* forme au repos enregistrée dans le fichier : même cerf-volant (brides exclues), mêmes réglages → départ depuis cette forme */
-      const restRun = !!bopt.carry && !bopt.drop; if (!warm && restRun && ui.solve.warm !== false) {const w = restWarm(M); if (w) {warm = w; for (let i = 0; i < 3 * M.n; i++)M.x[i] = M.x0[i] + w.dx[i]; virtReset(M); M.q.set(w.q); M.ramp = 0; M.lam = 1; if (M.vol) M.vol.ramp = 1; setPreFrom(M, w.pre);} }
+      const restRun = !!bopt.carry && !bopt.drop && !bopt.ext; if (!warm && restRun && ui.solve.warm !== false) {const w = restWarm(M); if (w) {warm = w; for (let i = 0; i < 3 * M.n; i++)M.x[i] = M.x0[i] + w.dx[i]; virtReset(M); M.q.set(w.q); M.ramp = 0; M.lam = 1; if (M.vol) M.vol.ramp = 1; setPreFrom(M, w.pre);} }
       /* départ sur maillage grossier : l'équilibre grossier (paliers compris) sert de point de départ au maillage fin */
       const hc = coarseH(); if (!warm && hc && !M.vol) {
         const dC = JSON.parse(JSON.stringify(calcDoc())); dC.h = hc; dC.hMode = 'mm'; let Mc = null; try {Mc = buildModel(dC, bopt);} catch (e) {Mc = null;}
@@ -7937,6 +7940,8 @@ function run(){const M=job;if(!M)return;stepSolve(M,80,opt);const now=Date.now()
       return {a: Object.assign({}, a, {F, Fn, drag, lift: Math.sqrt(Math.max(0, Fn * Fn - drag * drag)), dragI: a.drag, dragS: fr.Fs, dragT: fr.Ft}), m};
     }
     /* assiette de plané sur la forme figée. Au premier tour, le dessin (intrados vers +Z) est retourné : intrados vers le bas, nez (+Y) face à l'air */
+    /* nœuds de la toile et de l'armature (pas les brides ni les nœuds libres) : pour les bouts avant et arrière où poser un lest */
+    function glideBody(M) {if (M.bodyN) return M.bodyN; const B = new Uint8Array(M.n); for (const t of M.tris) {B[t.a] = B[t.b] = B[t.c] = 1;} for (const e of M.beams) {B[e.a] = B[e.b] = 1;} return M.bodyN = B;}
     async function glideTrim(M, first) {
       const D = Math.PI / 180, x0 = Float64Array.from(M.x), q0 = Float64Array.from(M.q), G0 = glideMass(M); if (!(G0.mt > 0)) return {err: 'masse nulle : renseigner le grammage des tissus et les matériaux des tubes'};
       const cg = G0.cg, ax = V.norm(V.cross(GLIDE_DIR, [0, 0, 1])), flip = first ? Math.PI : 0, up = [0, 1, 0];
@@ -7946,7 +7951,7 @@ function run(){const M=job;if(!M)return;stepSolve(M,80,opt);const now=Date.now()
       const rec = []; for (let t = -40; t <= 40; t += 4) {const e = await ev(t * D); if (e) rec.push(e);}
       let best = null; for (let k = 0; k + 1 < rec.length; k++) if (rec[k].m > 0 && rec[k + 1].m <= 0 && rec[k].a.alphaS + rec[k + 1].a.alphaS > 0) {if (!best || Math.abs(rec[k].a.alphaS - 10) < Math.abs(best[0].a.alphaS - 10)) best = [rec[k], rec[k + 1]];}
       if (!best) {/* bouts avant et arrière le long de la corde, à l'incidence la plus proche de 8° : pour le conseil de centrage (lest) */
-        let sF = null, sR = null, ch = null, chord = null; {let k = null; for (const e of rec) if (e.a.alphaS > 0 && e.a.ch && (!k || Math.abs(e.a.alphaS - 8) < Math.abs(k.a.alphaS - 8))) k = e; if (k) {place(k.th); ch = k.a.ch; chord = k.a.chord; sF = 0; sR = 0; for (let i = 0; i < M.n; i++) {const v = (M.x[3 * i] - cg[0]) * ch[0] + (M.x[3 * i + 1] - cg[1]) * ch[1] + (M.x[3 * i + 2] - cg[2]) * ch[2]; if (v < sF) sF = v; if (v > sR) sR = v;}} }
+        let sF = null, sR = null, ch = null, chord = null; {let k = null; for (const e of rec) if (e.a.alphaS > 0 && e.a.ch && (!k || Math.abs(e.a.alphaS - 8) < Math.abs(k.a.alphaS - 8))) k = e; if (k) {place(k.th); ch = k.a.ch; chord = k.a.chord; sF = 0; sR = 0; const BD = glideBody(M); for (let i = 0; i < M.n; i++) {if (!BD[i]) continue; const v = (M.x[3 * i] - cg[0]) * ch[0] + (M.x[3 * i + 1] - cg[1]) * ch[1] + (M.x[3 * i + 2] - cg[2]) * ch[2]; if (v < sF) sF = v; if (v > sR) sR = v;}} }
         M.x.set(x0); M.q.set(q0); const pos = rec.filter(e => e.a.alphaS > 0), allUp = pos.length && pos.every(e => e.m > 0), allDn = pos.length && pos.every(e => e.m < 0);
         return {err: 'aucune assiette de plané stable' + (allDn ? ' : le moment cabre à toutes les incidences — centre de gravité trop en arrière (il cabre et décroche)' : allUp ? ' : le moment pique à toutes les incidences — centre de gravité trop en avant (il pique)' : ''), rec, mass: G0.mt, ax, a: {chord}, sF, sR};}
       let [p1, p2] = best; for (let k = 0; k < 5; k++) {const t = p1.th - p1.m * (p2.th - p1.th) / (p2.m - p1.m), e = await ev(t); if (!e) break; if (e.m > 0) p1 = e; else p2 = e; if (Math.abs(p2.th - p1.th) < 0.05 * D) break;}
@@ -7961,7 +7966,7 @@ function run(){const M=job;if(!M)return;stepSolve(M,80,opt);const now=Date.now()
       for (let i = 0; i < M.n; i++) for (let d = 0; d < 3; d++) ext[3 * i + d] = -G1.m[i] * 9.81 * Fu[d];
       const gam = Math.atan2(e.a.drag, Math.max(1e-9, e.a.lift)) / D;
       /* bouts avant et arrière du cerf-volant le long de la corde (depuis le centre de gravité) : où poser un lest de centrage */
-      let sF = 0, sR = 0; if (e.a.ch) for (let i = 0; i < M.n; i++) {const v = (M.x[3 * i] - G1.cg[0]) * e.a.ch[0] + (M.x[3 * i + 1] - G1.cg[1]) * e.a.ch[1] + (M.x[3 * i + 2] - G1.cg[2]) * e.a.ch[2]; if (v < sF) sF = v; if (v > sR) sR = v;}
+      let sF = 0, sR = 0; const BD = glideBody(M); if (e.a.ch) for (let i = 0; i < M.n; i++) {if (!BD[i]) continue;/* v311 : une bride molle partie au loin (66 km dans l'iFlite) faisait croire à un bout avant immense : « 0,0 g de lest » */ const v = (M.x[3 * i] - G1.cg[0]) * e.a.ch[0] + (M.x[3 * i + 1] - G1.cg[1]) * e.a.ch[1] + (M.x[3 * i + 2] - G1.cg[2]) * e.a.ch[2]; if (v < sF) sF = v; if (v > sR) sR = v;}
       return {th: th / D, flip: !!flip, a: e.a, V: Vg, Vd, s, gam, kn, mass: G0.mt, mL: weightForces(M).mL, ext, pT: Array.from(e.a.pT, v => v * s), rec, cg: G1.cg, ax, sF, sR};
     }
     async function glideNext(r) {
@@ -8031,7 +8036,7 @@ function run(){const M=job;if(!M)return;stepSolve(M,80,opt);const now=Date.now()
         /* moment après déplacement, de part et d'autre : plané stable si, comme pour l'assiette, il pique (m > 0) du côté des petites assiettes et cabre de l'autre */
         const mp = e => e.m - d / 1000 * V.dot(V.cross(e.a.ch, e.a.F), t.ax), st = mp(rec[k]) > 0 && mp(rec[k + 1]) < 0;
                 const sB = d < 0 ? t.sF : t.sR, mg = sB != null && Math.abs(sB) > Math.abs(d) + 1 ? t.mass * 1000 * d / (sB - d) : null;
-        return `Centrage : pour planer vers ${target}° d'incidence, ${d > 0 ? 'reculer' : 'avancer'} le centre de gravité de ${Math.abs(d) < 10 ? Math.abs(d).toFixed(1) : Math.abs(d).toFixed(0)} mm (${(Math.abs(d) / c * 100).toFixed(0)} % de la corde)${mg != null && mg > 0 ? `, par exemple avec environ ${mg < 10 ? mg.toFixed(1) : mg.toFixed(0)} g de lest ${d < 0 ? 'au nez' : 'à l\'arrière'} (outil Lest, couche Bridage)` : ''} : estimation sur la forme figée${st ? '' : ' — mais ce plané serait instable en tangage'}.`;}
+        return `Centrage : pour planer vers ${target}° d'incidence, ${d > 0 ? 'reculer' : 'avancer'} le centre de gravité de ${Math.abs(d) < 10 ? Math.abs(d).toFixed(1) : Math.abs(d).toFixed(0)} mm (${(Math.abs(d) / c * 100).toFixed(0)} % de la corde)${mg != null && mg >= 0.05 ? `, par exemple avec environ ${mg < 10 ? mg.toFixed(1) : mg.toFixed(0)} g de lest ${d < 0 ? 'au nez' : 'à l\'arrière'} (outil Lest, couche Bridage)` : ''} : estimation sur la forme figée${st ? '' : ' — mais ce plané serait instable en tangage'}.`;}
       return null;
     }
 
