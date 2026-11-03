@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="google" content="notranslate">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>AtelierCV v311</title>
+  <title>AtelierCV v312</title>
   <style>
     :root {
       --bg: #f4f3ef;
@@ -914,7 +914,7 @@
   <script id="engine">
     'use strict';
     /* ================= MOTEUR (sans DOM) ================= */
-    const VERSION = 'v311';
+    const VERSION = 'v312';
     const V = {
       add: (a, b) => [a[0] + b[0], a[1] + b[1], a[2] + b[2]],
       sub: (a, b) => [a[0] - b[0], a[1] - b[1], a[2] - b[2]],
@@ -7951,7 +7951,7 @@ function run(){const M=job;if(!M)return;stepSolve(M,80,opt);const now=Date.now()
       const rec = []; for (let t = -40; t <= 40; t += 4) {const e = await ev(t * D); if (e) rec.push(e);}
       let best = null; for (let k = 0; k + 1 < rec.length; k++) if (rec[k].m > 0 && rec[k + 1].m <= 0 && rec[k].a.alphaS + rec[k + 1].a.alphaS > 0) {if (!best || Math.abs(rec[k].a.alphaS - 10) < Math.abs(best[0].a.alphaS - 10)) best = [rec[k], rec[k + 1]];}
       if (!best) {/* bouts avant et arrière le long de la corde, à l'incidence la plus proche de 8° : pour le conseil de centrage (lest) */
-        let sF = null, sR = null, ch = null, chord = null; {let k = null; for (const e of rec) if (e.a.alphaS > 0 && e.a.ch && (!k || Math.abs(e.a.alphaS - 8) < Math.abs(k.a.alphaS - 8))) k = e; if (k) {place(k.th); ch = k.a.ch; chord = k.a.chord; sF = 0; sR = 0; const BD = glideBody(M); for (let i = 0; i < M.n; i++) {if (!BD[i]) continue; const v = (M.x[3 * i] - cg[0]) * ch[0] + (M.x[3 * i + 1] - cg[1]) * ch[1] + (M.x[3 * i + 2] - cg[2]) * ch[2]; if (v < sF) sF = v; if (v > sR) sR = v;}} }
+        let sF = null, sR = null, ch = null, chord = null; {let k = null; for (const e of rec) if (e.a.alphaS > 0 && e.a.ch && (!k || Math.abs(e.a.alphaS - 8) < Math.abs(k.a.alphaS - 8))) k = e; if (k) {place(k.th); ch = chAft(k.a.ch); chord = k.a.chord; sF = 0; sR = 0; const BD = glideBody(M); for (let i = 0; i < M.n; i++) {if (!BD[i]) continue; const v = (M.x[3 * i] - cg[0]) * ch[0] + (M.x[3 * i + 1] - cg[1]) * ch[1] + (M.x[3 * i + 2] - cg[2]) * ch[2]; if (v < sF) sF = v; if (v > sR) sR = v;}} }
         M.x.set(x0); M.q.set(q0); const pos = rec.filter(e => e.a.alphaS > 0), allUp = pos.length && pos.every(e => e.m > 0), allDn = pos.length && pos.every(e => e.m < 0);
         return {err: 'aucune assiette de plané stable' + (allDn ? ' : le moment cabre à toutes les incidences — centre de gravité trop en arrière (il cabre et décroche)' : allUp ? ' : le moment pique à toutes les incidences — centre de gravité trop en avant (il pique)' : ''), rec, mass: G0.mt, ax, a: {chord}, sF, sR};}
       let [p1, p2] = best; for (let k = 0; k < 5; k++) {const t = p1.th - p1.m * (p2.th - p1.th) / (p2.m - p1.m), e = await ev(t); if (!e) break; if (e.m > 0) p1 = e; else p2 = e; if (Math.abs(p2.th - p1.th) < 0.05 * D) break;}
@@ -7966,7 +7966,7 @@ function run(){const M=job;if(!M)return;stepSolve(M,80,opt);const now=Date.now()
       for (let i = 0; i < M.n; i++) for (let d = 0; d < 3; d++) ext[3 * i + d] = -G1.m[i] * 9.81 * Fu[d];
       const gam = Math.atan2(e.a.drag, Math.max(1e-9, e.a.lift)) / D;
       /* bouts avant et arrière du cerf-volant le long de la corde (depuis le centre de gravité) : où poser un lest de centrage */
-      let sF = 0, sR = 0; const BD = glideBody(M); if (e.a.ch) for (let i = 0; i < M.n; i++) {if (!BD[i]) continue;/* v311 : une bride molle partie au loin (66 km dans l'iFlite) faisait croire à un bout avant immense : « 0,0 g de lest » */ const v = (M.x[3 * i] - G1.cg[0]) * e.a.ch[0] + (M.x[3 * i + 1] - G1.cg[1]) * e.a.ch[1] + (M.x[3 * i + 2] - G1.cg[2]) * e.a.ch[2]; if (v < sF) sF = v; if (v > sR) sR = v;}
+      let sF = 0, sR = 0; const BD = glideBody(M), cA = chAft(e.a.ch); if (cA) for (let i = 0; i < M.n; i++) {if (!BD[i]) continue;/* v311 : une bride molle partie au loin (66 km dans l'iFlite) faisait croire à un bout avant immense : « 0,0 g de lest » */ const v = (M.x[3 * i] - G1.cg[0]) * cA[0] + (M.x[3 * i + 1] - G1.cg[1]) * cA[1] + (M.x[3 * i + 2] - G1.cg[2]) * cA[2]; if (v < sF) sF = v; if (v > sR) sR = v;}
       return {th: th / D, flip: !!flip, a: e.a, V: Vg, Vd, s, gam, kn, mass: G0.mt, mL: weightForces(M).mL, ext, pT: Array.from(e.a.pT, v => v * s), rec, cg: G1.cg, ax, sF, sR};
     }
     async function glideNext(r) {
@@ -8028,15 +8028,22 @@ function run(){const M=job;if(!M)return;stepSolve(M,80,opt);const now=Date.now()
       return L;
     }
     /* déplacement δ du centre de gravité le long de la corde qui annule le moment à l'incidence visée : m' = m − ((δ ĉ) × F)·axe */
+    /* v312 : corde orientée du bord d'attaque vers le bord de fuite, c'est-à-dire vers l'aval (le nez fait face à l'air) — la corde du calcul d'air pouvait être retournée (iFlite : « pique partout » et pourtant « avancer le centre de gravité ») */
+    const chAft = ch => ch && V.dot(ch, GLIDE_DIR) < 0 ? V.mul(ch, -1) : ch;
     function glideCG(t, target) {
-      const rec = t.rec.slice().sort((u, v) => u.th - v.th); for (let k = 0; k + 1 < rec.length; k++) {const a1 = rec[k].a.alphaS - target, a2 = rec[k + 1].a.alphaS - target; if (a1 * a2 > 0) continue;
-        const w = a1 / (a1 - a2 || 1e-9), m = rec[k].m + w * (rec[k + 1].m - rec[k].m), F = V.add(V.mul(rec[k].a.F, 1 - w), V.mul(rec[k + 1].a.F, w)), ch = rec[k].a.ch, den = V.dot(V.cross(ch, F), t.ax); if (Math.abs(den) < 1e-9) return null;
-        const d = 1000 * m / den, c = t.a.chord || 1; if (Math.abs(d) < 0.01 * c && (t.a.alphaS == null || Math.abs(t.a.alphaS - target) < 1.5)) return `Centrage : déjà proche de ${target}° d'incidence.`;/* v294 : moment presque plat entre l'incidence actuelle et la visée (Mouette Light : 20° → 7° pour moins de 1 % de corde) — ce n'est pas « déjà proche » : le déplacement est donné, au dixième de mm */
+      const rec = t.rec.slice().sort((u, v) => u.th - v.th), D = 180 / Math.PI; for (let k = 0; k + 1 < rec.length; k++) {const a1 = rec[k].a.alphaS - target, a2 = rec[k + 1].a.alphaS - target; if (a1 * a2 > 0) continue;
+        /* v312 : seulement entre deux assiettes voisines où l'incidence suit l'assiette et où l'air porte — un point aberrant de la polaire (iFlite : « 24° » à 6 m/s, au bout du balayage) donnait un conseil à l'envers */ if (!(rec[k].a.lift > 0 && rec[k + 1].a.lift > 0) || Math.abs(rec[k + 1].a.alphaS - rec[k].a.alphaS) > 1.6 * Math.abs(rec[k + 1].th - rec[k].th) * D) continue;
+        const w = a1 / (a1 - a2 || 1e-9), m = rec[k].m + w * (rec[k + 1].m - rec[k].m), F = V.add(V.mul(rec[k].a.F, 1 - w), V.mul(rec[k + 1].a.F, w)), ch = chAft(rec[k].a.ch), den = V.dot(V.cross(ch, F), t.ax); if (Math.abs(den) < 1e-9) return null;
+        const d = 1000 * m / den, c = t.a.chord || 1;
+        /* cohérence avec le diagnostic : s'il pique à toutes les incidences, le centre de gravité doit reculer ; s'il cabre partout, avancer */ {const pos = (t.full || t.rec).filter(e => e.a.alphaS > 0 && e.a.lift > 0); if (pos.length && ((pos.every(e => e.m > 0) && d < 0) || (pos.every(e => e.m < 0) && d > 0))) continue;} if (Math.abs(d) < 0.01 * c && (t.a.alphaS == null || Math.abs(t.a.alphaS - target) < 1.5)) return `Centrage : déjà proche de ${target}° d'incidence.`;/* v294 : moment presque plat entre l'incidence actuelle et la visée (Mouette Light : 20° → 7° pour moins de 1 % de corde) — ce n'est pas « déjà proche » : le déplacement est donné, au dixième de mm */
         /* lest m posé à l'abscisse sB (bout avant ou arrière) : le centre de gravité passe de 0 à m·sB/(M+m) = d, soit m = M·d/(sB − d) */
         /* moment après déplacement, de part et d'autre : plané stable si, comme pour l'assiette, il pique (m > 0) du côté des petites assiettes et cabre de l'autre */
-        const mp = e => e.m - d / 1000 * V.dot(V.cross(e.a.ch, e.a.F), t.ax), st = mp(rec[k]) > 0 && mp(rec[k + 1]) < 0;
+        const mp = e => e.m - d / 1000 * V.dot(V.cross(chAft(e.a.ch), e.a.F), t.ax), st = t.fb || (mp(rec[k]) > 0 && mp(rec[k + 1]) < 0);
                 const sB = d < 0 ? t.sF : t.sR, mg = sB != null && Math.abs(sB) > Math.abs(d) + 1 ? t.mass * 1000 * d / (sB - d) : null;
         return `Centrage : pour planer vers ${target}° d'incidence, ${d > 0 ? 'reculer' : 'avancer'} le centre de gravité de ${Math.abs(d) < 10 ? Math.abs(d).toFixed(1) : Math.abs(d).toFixed(0)} mm (${(Math.abs(d) / c * 100).toFixed(0)} % de la corde)${mg != null && mg >= 0.05 ? `, par exemple avec environ ${mg < 10 ? mg.toFixed(1) : mg.toFixed(0)} g de lest ${d < 0 ? 'au nez' : 'à l\'arrière'} (outil Lest, couche Bridage)` : ''} : estimation sur la forme figée${st ? '' : ' — mais ce plané serait instable en tangage'}.`;}
+      /* v312 : pas d'encadrement de l'incidence visée (incidence mesurée qui ne descend pas jusque-là, polaire irrégulière) : estimation à l'incidence portante la plus proche */
+      {let e = null; for (const q of rec) {if (!(q.a.lift > 0) || q.a.alphaS < 2 || q.a.alphaS > 20) continue; const dn = V.dot(V.cross(chAft(q.a.ch), q.a.F), t.ax); if (!(dn > 1e-9)) continue; if (!e || Math.abs(q.a.alphaS - target) < Math.abs(e.a.alphaS - target)) e = q;}
+        if (e && !t.fb) {const tg = Math.round(e.a.alphaS), lo = Object.assign({}, e, {a: Object.assign({}, e.a, {alphaS: tg - 0.01})}), hi = Object.assign({}, e, {th: e.th + 1e-3, a: Object.assign({}, e.a, {alphaS: tg + 0.01})}); return glideCG(Object.assign({}, t, {rec: [lo, hi], fb: true, full: t.rec}), tg);} }
       return null;
     }
 
