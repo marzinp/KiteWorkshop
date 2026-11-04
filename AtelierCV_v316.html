@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="google" content="notranslate">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>AtelierCV v315</title>
+  <title>AtelierCV v316</title>
   <style>
     :root {
       --bg: #f4f3ef;
@@ -539,6 +539,23 @@
       background: #e8a15c
     }
 
+    /* v316 : bilan de fin cliquable (Polaire, Courbe de centrage, Essais repliés) ; la barre de progression reste transparente aux clics */
+    .phase.fin {
+      pointer-events: auto;
+      max-height: 70%;
+      overflow: auto
+    }
+
+    .phase summary {
+      cursor: pointer;
+      color: var(--fg);
+      text-decoration: underline dotted
+    }
+
+    .phase details[open] {
+      text-align: left
+    }
+
     .phase.fin.ok {
       border-color: #6aa86a
     }
@@ -914,7 +931,7 @@
   <script id="engine">
     'use strict';
     /* ================= MOTEUR (sans DOM) ================= */
-    const VERSION = 'v315';
+    const VERSION = 'v316';
     const V = {
       add: (a, b) => [a[0] + b[0], a[1] + b[1], a[2] + b[2]],
       sub: (a, b) => [a[0] - b[0], a[1] - b[1], a[2] - b[2]],
