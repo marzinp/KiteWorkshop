@@ -3,7 +3,7 @@
 [Français](README.md) · **English** · [Español](README.es.md)
 
 AtelierCV is for drawing a kite (frame, sail, bridle) and calculating its shape: at rest, flying
-in the wind or gliding. It is **a single file**: open `AtelierCV_v314.html` in a recent
+in the wind or gliding. It is **a single file**: open `AtelierCV_v315.html` in a recent
 browser (Chrome or Edge recommended), nothing to install.
 
 The **`Modeles/`** folder holds a library of kites ready to open (Eddy, Edo, Flare, Sled,
@@ -112,6 +112,8 @@ Choose the conditions in the centre, then **Calculate**:
 - **Glide (no line)**: the attitude at which the kite glides stably, its speed, slope and
   glide ratio (adjustable fabric friction), the polar, the best glide and the **balance**: how far
   to move the centre of gravity, and how much ballast to put at the nose or at the rear.
+  The **Optimise the glide** button adjusts the mass of a drawn ballast through real glide
+  calculations, try after try, up to the best glide ratio in a stable glide.
 
 **Calculation profile**: Estimate (fast, coarse mesh), Standard, Precise. If in doubt about a
 result, calculate again in Standard or Precise.
