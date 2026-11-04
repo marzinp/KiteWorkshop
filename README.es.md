@@ -3,7 +3,7 @@
 [Français](README.md) · [English](README.en.md) · **Español**
 
 AtelierCV sirve para dibujar una cometa (armazón, vela, embridado) y calcular su forma: en
-reposo, en vuelo con viento o en planeo. Es **un solo archivo**: abrir `AtelierCV_v316.html`
+reposo, en vuelo con viento o en planeo. Es **un solo archivo**: abrir `AtelierCV_v317.html`
 en un navegador reciente (se recomiendan Chrome o Edge), sin instalar nada.
 
 La carpeta **`Modeles/`** contiene una biblioteca de cometas listas para abrir (Eddy, Edo, Flare,
@@ -112,8 +112,10 @@ Elegir las condiciones en el centro, luego **Calcular**:
 - **Planeo (sin línea)**: la actitud en la que la cometa planea estable, su velocidad, su
   pendiente y su fineza (rozamiento de la tela ajustable), la polar, el mejor planeo y el
   **centrado**: cuánto desplazar el centro de gravedad, y qué masa de lastre poner en el morro o
-  atrás. El botón **Optimizar el planeo** ajusta la masa de un lastre dibujado con cálculos de
-  planeo reales, intento tras intento, hasta la mejor fineza en planeo estable.
+  atrás. El botón **Optimizar el planeo** ajusta la masa del lastre marcado «A optimizar» con
+  cálculos de planeo reales, intento tras intento, hasta la mejor fineza en planeo estable; los
+  demás lastres (por ejemplo el peso de la línea en la anilla) quedan fijos. El dibujo solo cambia
+  con «Aplicar».
 
 **Perfil de cálculo**: Estimación (rápido, malla gruesa), Estándar, Preciso. En caso de duda
 sobre un resultado, repetir el cálculo en Estándar o Preciso.

@@ -4,7 +4,7 @@
 
 AtelierCV sert à dessiner un cerf-volant (armature, voile, bridage) et à calculer sa forme :
 au repos, en vol au vent ou en vol plané. C'est **un seul fichier** : ouvrir
-`AtelierCV_v316.html` dans un navigateur récent (Chrome ou Edge conseillés), sans rien installer.
+`AtelierCV_v317.html` dans un navigateur récent (Chrome ou Edge conseillés), sans rien installer.
 
 Le dossier **`Modeles/`** contient une bibliothèque de cerfs-volants prêts à ouvrir (Eddy, Edo,
 Flare, Sled, Eclipse, Mouette…) : bouton **Ouvrir**, puis le fichier `.json`. C'est le plus
@@ -112,8 +112,9 @@ Choisir les conditions au centre, puis **Calculer** :
 - **Vol plané (sans ligne)** : l'assiette où le cerf-volant plane stable, sa vitesse, sa pente et
   sa finesse (frottement de la toile réglable), la polaire, le meilleur plané et le **centrage** :
   de combien déplacer le centre de gravité, et quelle masse de lest poser au nez ou à l'arrière.
-  Le bouton **Optimiser le plané** ajuste la masse d'un lest dessiné par de vrais calculs de plané,
-  essai après essai, jusqu'à la meilleure finesse en plané stable.
+  Le bouton **Optimiser le plané** ajuste la masse du lest coché « À optimiser » par de vrais
+  calculs de plané, essai après essai, jusqu'à la meilleure finesse en plané stable ; les autres lests
+  (par exemple le poids de la ligne à l'anneau) restent fixes. Le dessin ne change qu'avec « Appliquer ».
 
 **Profil de calcul** : Estimation (rapide, maille grossière), Standard, Précis. En cas de doute
 sur un résultat, refaire le calcul en Standard ou Précis.
