@@ -3,7 +3,7 @@
 [Français](README.md) · **English** · [Español](README.es.md)
 
 AtelierCV is for drawing a kite (frame, sail, bridle) and calculating its shape: at rest, flying
-in the wind or gliding. It is **a single file**: open `AtelierCV_v317.html` in a recent
+in the wind or gliding. It is **a single file**: open `AtelierCV_v357.html` in a recent
 browser (Chrome or Edge recommended), nothing to install.
 
 The **`Modeles/`** folder holds a library of kites ready to open (Eddy, Edo, Flare, Sled,
@@ -112,9 +112,10 @@ Choose the conditions in the centre, then **Calculate**:
 - **Glide (no line)**: the attitude at which the kite glides stably, its speed, slope and
   glide ratio (adjustable fabric friction), the polar, the best glide and the **balance**: how far
   to move the centre of gravity, and how much ballast to put at the nose or at the rear.
-  The **Optimise the glide** button adjusts the mass of the ballast ticked "To optimise" through
+  The **Optimise the glide** button adjusts the mass of the ballast (the only one, or the one ticked "To optimise") through
   real glide calculations, try after try, up to the best glide ratio in a stable glide; the other
-  ballasts (for instance the weight of the line at the ring) stay fixed. The drawing only changes
+  ballasts (for instance the weight of the line at the ring) stay fixed. If the ballast hangs at the ring,
+  a second pass slides the ring along the bridle, mass fixed. The drawing only changes
   with "Apply".
 
 **Calculation profile**: Estimate (fast, coarse mesh), Standard, Precise. If in doubt about a
@@ -128,7 +129,9 @@ correct** (tension, bridle, balance).
 
 - **The model.** Each sail is cut into small triangles (the *mesh*; the higher the fineness, the
   smaller they are). The fabric has its own stiffness along the warp, the weft and the bias, and
-  does not resist compression (it wrinkles). Tubes and battens are beams (tension, compression,
+  does not resist compression (it wrinkles); it also has a small bending stiffness, like a sheet of
+  paper (set per fabric, measurable by the cantilever test), which matters mostly for light,
+  barely tensioned gliders. Tubes and battens are beams (tension, compression,
   bending, torsion); cables, bridles and hems only work in tension. Connectors join all this
   according to their type.
 - **Finding the equilibrium (dynamic relaxation).** The calculation moves all the nodes step by

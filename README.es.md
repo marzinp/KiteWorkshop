@@ -3,7 +3,7 @@
 [Français](README.md) · [English](README.en.md) · **Español**
 
 AtelierCV sirve para dibujar una cometa (armazón, vela, embridado) y calcular su forma: en
-reposo, en vuelo con viento o en planeo. Es **un solo archivo**: abrir `AtelierCV_v317.html`
+reposo, en vuelo con viento o en planeo. Es **un solo archivo**: abrir `AtelierCV_v357.html`
 en un navegador reciente (se recomiendan Chrome o Edge), sin instalar nada.
 
 La carpeta **`Modeles/`** contiene una biblioteca de cometas listas para abrir (Eddy, Edo, Flare,
@@ -112,9 +112,10 @@ Elegir las condiciones en el centro, luego **Calcular**:
 - **Planeo (sin línea)**: la actitud en la que la cometa planea estable, su velocidad, su
   pendiente y su fineza (rozamiento de la tela ajustable), la polar, el mejor planeo y el
   **centrado**: cuánto desplazar el centro de gravedad, y qué masa de lastre poner en el morro o
-  atrás. El botón **Optimizar el planeo** ajusta la masa del lastre marcado «A optimizar» con
+  atrás. El botón **Optimizar el planeo** ajusta la masa del lastre (el único, o el marcado «A optimizar») con
   cálculos de planeo reales, intento tras intento, hasta la mejor fineza en planeo estable; los
-  demás lastres (por ejemplo el peso de la línea en la anilla) quedan fijos. El dibujo solo cambia
+  demás lastres (por ejemplo el peso de la línea en la anilla) quedan fijos. Si el lastre cuelga de la anilla,
+  una segunda pasada desliza la anilla a lo largo de la brida, con la masa fija. El dibujo solo cambia
   con «Aplicar».
 
 **Perfil de cálculo**: Estimación (rápido, malla gruesa), Estándar, Preciso. En caso de duda
@@ -128,7 +129,9 @@ encontrar **en qué sentido corregir** (tensión, embridado, centrado).
 
 - **El modelo.** Cada vela se corta en pequeños triángulos (la *malla*; cuanto mayor es la
   finura, más pequeños son). La tela tiene su propia rigidez en urdimbre, en trama y al bies, y no
-  resiste la compresión (forma pliegues). Tubos y sables son vigas (tracción, compresión, flexión,
+  resiste la compresión (forma pliegues); tiene además una pequeña rigidez a la flexión, como una
+  hoja de papel (ajustable por tejido, medible con el ensayo del voladizo), que cuenta sobre todo en
+  los planeadores ligeros poco tensos. Tubos y sables son vigas (tracción, compresión, flexión,
   torsión); cables, bridas y dobladillos solo trabajan a tracción. Los conectores lo unen todo según
   su tipo.
 - **La búsqueda del equilibrio (relajación dinámica).** El cálculo mueve todos los nodos paso a
