@@ -3,7 +3,7 @@
 [Français](README.md) · [English](README.en.md) · **Español**
 
 AtelierCV sirve para dibujar una cometa (armazón, vela, embridado) y calcular su forma: en
-reposo, en vuelo con viento o en planeo. Es **un solo archivo**: abrir `AtelierCV_v389.html`
+reposo, en vuelo con viento o en planeo. Es **un solo archivo**: abrir `AtelierCV_v390.html`
 en un navegador reciente (se recomiendan Chrome o Edge), sin instalar nada.
 
 La carpeta **`Modeles/`** contiene una biblioteca de cometas listas para abrir (Eddy, Edo, Flare,
