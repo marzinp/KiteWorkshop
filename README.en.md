@@ -3,7 +3,7 @@
 [Français](README.md) · **English** · [Español](README.es.md)
 
 AtelierCV is for drawing a kite (frame, sail, bridle) and calculating its shape: at rest, flying
-in the wind or gliding. It is **a single file**: open `AtelierCV_v394.html` in a recent
+in the wind or gliding. It is **a single file**: open `AtelierCV_v395.html` in a recent
 browser (Chrome or Edge recommended), nothing to install.
 
 The **`Modeles/`** folder holds a library of kites ready to open (Eddy, Edo, Flare, Sled,
@@ -201,13 +201,13 @@ On the very first run, FluidX3D does not find a kite yet: that is normal.
 ### For each kite
 
 1. In AtelierCV, compute the shape, preferably in wind flight, then Export → "Wind tunnel FluidX3D (.stl)" (plain click).
-2. Copy `atelier_voile.stl`, `atelier_armature.stl` and `atelier.txt` into `FluidX3D/stl/` (create the folder if missing), replacing the old ones.
+2. Copy `atelier_soufflerie.txt` into `FluidX3D/stl/` (create the folder if missing), replacing the old one. This single file holds the settings, then the sail and the frame.
 3. Run FluidX3D again (`FluidX3D.exe` in `FluidX3D/bin/`, or Ctrl + F5 in Visual Studio). No need to recompile.
 
 In the window: P starts or pauses, H shows the key help, keys 1 to 7 change the display
 (streamlines, vortices…). The console regularly prints drag, lift and their coefficients.
 
-### Settings in atelier.txt (no recompiling)
+### Settings at the top of atelier_soufflerie.txt (no recompiling)
 
 - `n`: resolution, in cells along the kite's length (75 by default). Memory grows like n³, computing time roughly like n⁴.
 - `amont`, `aval`, `largeur`, `hauteur`: tunnel size in kite lengths — upstream, downstream, width, height (1, 2.5, 2.5, 2.5).

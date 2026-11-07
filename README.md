@@ -4,7 +4,7 @@
 
 AtelierCV sert à dessiner un cerf-volant (armature, voile, bridage) et à calculer sa forme :
 au repos, en vol au vent ou en vol plané. C'est **un seul fichier** : ouvrir
-`AtelierCV_v394.html` dans un navigateur récent (Chrome ou Edge conseillés), sans rien installer.
+`AtelierCV_v395.html` dans un navigateur récent (Chrome ou Edge conseillés), sans rien installer.
 
 Le dossier **`Modeles/`** contient une bibliothèque de cerfs-volants prêts à ouvrir (Eddy, Edo,
 Flare, Sled, Eclipse, Mouette…) : bouton **Ouvrir**, puis le fichier `.json`. C'est le plus
@@ -201,13 +201,13 @@ Au tout premier lancement, FluidX3D ne trouve pas encore de cerf-volant : c'est 
 ### Pour chaque cerf-volant
 
 1. Dans AtelierCV, calculer la forme, de préférence en vol au vent, puis Exporter → « Soufflerie FluidX3D (.stl) » (clic simple).
-2. Copier `atelier_voile.stl`, `atelier_armature.stl` et `atelier.txt` dans `FluidX3D/stl/` (créer le dossier s'il manque), en remplaçant les anciens.
+2. Copier `atelier_soufflerie.txt` dans `FluidX3D/stl/` (créer le dossier s'il manque), en remplaçant l'ancien. Ce fichier unique contient les réglages, puis la voile et l'armature.
 3. Relancer FluidX3D (`FluidX3D.exe` dans `FluidX3D/bin/`, ou Ctrl + F5 dans Visual Studio). Pas besoin de recompiler.
 
 Dans la fenêtre : P lance ou met en pause, H affiche l'aide des touches, les touches 1 à 7 changent l'affichage
 (lignes de flux, tourbillons…). La console affiche régulièrement la traînée, la portance et leurs coefficients.
 
-### Réglages dans atelier.txt (sans recompiler)
+### Réglages en tête de atelier_soufflerie.txt (sans recompiler)
 
 - `n` : finesse, en mailles sur la longueur du cerf-volant (75 par défaut). La mémoire suit n³, le temps de calcul n⁴ environ.
 - `amont`, `aval`, `largeur`, `hauteur` : taille de la soufflerie, en longueurs du cerf-volant (1, 2,5, 2,5, 2,5).

@@ -3,7 +3,7 @@
 [Français](README.md) · [English](README.en.md) · **Español**
 
 AtelierCV sirve para dibujar una cometa (armazón, vela, embridado) y calcular su forma: en
-reposo, en vuelo con viento o en planeo. Es **un solo archivo**: abrir `AtelierCV_v394.html`
+reposo, en vuelo con viento o en planeo. Es **un solo archivo**: abrir `AtelierCV_v395.html`
 en un navegador reciente (se recomiendan Chrome o Edge), sin instalar nada.
 
 La carpeta **`Modeles/`** contiene una biblioteca de cometas listas para abrir (Eddy, Edo, Flare,
@@ -201,13 +201,13 @@ En el primer arranque, FluidX3D todavía no encuentra ninguna cometa: es normal.
 ### Para cada cometa
 
 1. En AtelierCV, calcular la forma, de preferencia en vuelo con viento, y luego Exportar → «Túnel de viento FluidX3D (.stl)» (clic simple).
-2. Copiar `atelier_voile.stl`, `atelier_armature.stl` y `atelier.txt` en `FluidX3D/stl/` (crear la carpeta si falta), sustituyendo los anteriores.
+2. Copiar `atelier_soufflerie.txt` en `FluidX3D/stl/` (crear la carpeta si falta), sustituyendo el anterior. Este archivo único contiene los ajustes, y después la vela y el armazón.
 3. Volver a lanzar FluidX3D (`FluidX3D.exe` en `FluidX3D/bin/`, o Ctrl + F5 en Visual Studio). No hace falta recompilar.
 
 En la ventana: P arranca o pausa, H muestra la ayuda de las teclas, las teclas 1 a 7 cambian la vista
 (líneas de corriente, torbellinos…). La consola muestra con regularidad el arrastre, la sustentación y sus coeficientes.
 
-### Ajustes en atelier.txt (sin recompilar)
+### Ajustes al principio de atelier_soufflerie.txt (sin recompilar)
 
 - `n`: finura, en celdas a lo largo de la cometa (75 por defecto). La memoria crece como n³, el tiempo de cálculo como n⁴ aproximadamente.
 - `amont`, `aval`, `largeur`, `hauteur`: tamaño del túnel en longitudes de la cometa — delante, detrás, anchura, altura (1, 2,5, 2,5, 2,5).
