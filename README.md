@@ -4,7 +4,7 @@
 
 AtelierCV sert à dessiner un cerf-volant (armature, voile, bridage) et à calculer sa forme :
 au repos, en vol au vent ou en vol plané. C'est **un seul fichier** : ouvrir
-`AtelierCV_v386.html` dans un navigateur récent (Chrome ou Edge conseillés), sans rien installer.
+`AtelierCV_v387.html` dans un navigateur récent (Chrome ou Edge conseillés), sans rien installer.
 
 Le dossier **`Modeles/`** contient une bibliothèque de cerfs-volants prêts à ouvrir (Eddy, Edo,
 Flare, Sled, Eclipse, Mouette…) : bouton **Ouvrir**, puis le fichier `.json`. C'est le plus
@@ -167,6 +167,58 @@ Le calcul est un modèle : toile et armature sont bien calculées ; l'air l'est 
 - **Rapport de calcul (.html)** : tout le bilan et la vue 3D, avec le fichier du cerf-volant
   inclus (on peut le récupérer depuis le rapport).
 - **PanelSearch** : envoie une voile à l'outil compagnon PanelSearch, pour chercher son panneautage.
+
+## Soufflerie numérique FluidX3D
+
+FluidX3D est un simulateur d'écoulement de l'air qui tourne sur la carte graphique, écrit par Moritz Lehmann
+(https://github.com/ProjectPhysX/FluidX3D). Il est gratuit pour un usage personnel, éducatif ou de recherche publique ;
+l'usage commercial ou militaire est interdit (voir LICENSE.md dans FluidX3D). AtelierCV ne l'inclut pas : il faut
+l'installer et le compiler une seule fois. Ensuite, chaque cerf-volant passe en soufflerie sans recompiler.
+
+### Ce qu'il faut
+
+- Une carte graphique compatible OpenCL (NVIDIA, AMD ou Intel) avec son pilote à jour ; 4 Go de mémoire graphique ou plus conseillés.
+- Windows : Visual Studio Community (gratuit), avec la charge de travail « Développement Desktop en C++ ».
+- Linux : g++, make et le pilote OpenCL de la carte (paquet ocl-icd-opencl-dev, plus le pilote du fabricant).
+
+### Installation (une fois)
+
+1. Télécharger FluidX3D : sur sa page GitHub, bouton « Code » puis « Download ZIP », et décompresser.
+2. Dans AtelierCV : **Alt + clic** sur Exporter → « Soufflerie FluidX3D (.stl) ». En plus des fichiers du cerf-volant,
+   on obtient le réglage `atelier_fluidx3d.cpp` et ce guide.
+3. Ouvrir `FluidX3D/src/setup.cpp`. Il contient une série d'exemples `void main_setup()`, tous entre `/*` et `*/`
+   sauf un : mettre celui-là aussi en commentaire, puis coller tout le contenu de `atelier_fluidx3d.cpp` à la fin du fichier.
+4. Ouvrir `FluidX3D/src/defines.hpp` :
+   - mettre en commentaire (ajouter `//` devant) : `#define BENCHMARK`
+   - activer (enlever le `//` devant) : `#define FP16S`, `#define EQUILIBRIUM_BOUNDARIES`, `#define SUBGRID`,
+     `#define FORCE_FIELD`, `#define INTERACTIVE_GRAPHICS`
+5. Compiler :
+   - Windows : ouvrir `FluidX3D.sln` dans Visual Studio, choisir « Release », puis Déboguer → Exécuter sans débogage (Ctrl + F5).
+   - Linux : dans `make.sh`, choisir la ligne de compilation « with X11 » (fenêtre interactive), puis lancer `./make.sh`.
+
+Au tout premier lancement, FluidX3D ne trouve pas encore de cerf-volant : c'est normal.
+
+### Pour chaque cerf-volant
+
+1. Dans AtelierCV, calculer la forme, de préférence en vol au vent, puis Exporter → « Soufflerie FluidX3D (.stl) » (clic simple).
+2. Copier `atelier_voile.stl`, `atelier_armature.stl` et `atelier.txt` dans `FluidX3D/stl/` (créer le dossier s'il manque), en remplaçant les anciens.
+3. Relancer FluidX3D (`FluidX3D.exe` dans `FluidX3D/bin/`, ou Ctrl + F5 dans Visual Studio). Pas besoin de recompiler.
+
+Dans la fenêtre : P lance ou met en pause, H affiche l'aide des touches, les touches 1 à 7 changent l'affichage
+(lignes de flux, tourbillons…). La console affiche régulièrement la traînée, la portance et leurs coefficients.
+
+### Réglages dans atelier.txt (sans recompiler)
+
+- `n` : finesse, en mailles sur la longueur du cerf-volant (75 par défaut). La mémoire suit n³, le temps de calcul n⁴ environ.
+- `amont`, `aval`, `largeur`, `hauteur` : taille de la soufflerie, en longueurs du cerf-volant (1, 2,5, 2,5, 2,5).
+  Garder au moins 1 en amont.
+- `d` : nombre de domaines, pour forcer la découpe de la grille (calculé seul d'après la carte graphique).
+
+### Lire les résultats
+
+- Comparer surtout en relatif (deux réglages d'un même cerf-volant) : à ces tailles, les valeurs absolues restent approximatives.
+- Les tubes sont grossis pour être vus par la grille : leur traînée est surestimée.
+- Les brides ne sont pas en soufflerie : ajouter leur traînée, donnée par AtelierCV (« Traînée et poids des brides »).
 
 ## Bibliothèque
 

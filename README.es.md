@@ -3,7 +3,7 @@
 [Français](README.md) · [English](README.en.md) · **Español**
 
 AtelierCV sirve para dibujar una cometa (armazón, vela, embridado) y calcular su forma: en
-reposo, en vuelo con viento o en planeo. Es **un solo archivo**: abrir `AtelierCV_v386.html`
+reposo, en vuelo con viento o en planeo. Es **un solo archivo**: abrir `AtelierCV_v387.html`
 en un navegador reciente (se recomiendan Chrome o Edge), sin instalar nada.
 
 La carpeta **`Modeles/`** contiene una biblioteca de cometas listas para abrir (Eddy, Edo, Flare,
@@ -167,6 +167,58 @@ encontrar **en qué sentido corregir** (tensión, embridado, centrado).
 - **Informe de cálculo (.html)**: todos los resultados y la vista 3D, con el archivo de la cometa
   incluido (se puede recuperar desde el informe).
 - **PanelSearch**: envía una vela a la herramienta compañera PanelSearch, para buscar su panelado.
+
+## Túnel de viento virtual FluidX3D
+
+FluidX3D es un simulador de flujo de aire que funciona en la tarjeta gráfica, escrito por Moritz Lehmann
+(https://github.com/ProjectPhysX/FluidX3D). Es gratuito para uso personal, educativo o de investigación pública;
+el uso comercial o militar está prohibido (ver LICENSE.md en FluidX3D). AtelierCV no lo incluye: hay que instalarlo
+y compilarlo una sola vez. Después, cada cometa pasa por el túnel sin recompilar.
+
+### Lo que hace falta
+
+- Una tarjeta gráfica compatible con OpenCL (NVIDIA, AMD o Intel) con su controlador al día; se aconsejan 4 GB de memoria gráfica o más.
+- Windows: Visual Studio Community (gratuito), con la carga de trabajo «Desarrollo para el escritorio con C++».
+- Linux: g++, make y el controlador OpenCL de la tarjeta (paquete ocl-icd-opencl-dev, más el controlador del fabricante).
+
+### Instalación (una vez)
+
+1. Descargar FluidX3D: en su página de GitHub, botón «Code» y luego «Download ZIP», y descomprimir.
+2. En AtelierCV: **Alt + clic** en Exportar → «Túnel de viento FluidX3D (.stl)». Además de los archivos de la cometa,
+   se obtiene el ajuste `atelier_fluidx3d.cpp` y esta guía.
+3. Abrir `FluidX3D/src/setup.cpp`. Contiene una serie de ejemplos `void main_setup()`, todos entre `/*` y `*/`
+   salvo uno: comentar también ese, y pegar todo el contenido de `atelier_fluidx3d.cpp` al final del archivo.
+4. Abrir `FluidX3D/src/defines.hpp`:
+   - comentar (añadir `//` delante): `#define BENCHMARK`
+   - activar (quitar el `//` delante): `#define FP16S`, `#define EQUILIBRIUM_BOUNDARIES`, `#define SUBGRID`,
+     `#define FORCE_FIELD`, `#define INTERACTIVE_GRAPHICS`
+5. Compilar:
+   - Windows: abrir `FluidX3D.sln` en Visual Studio, elegir «Release» y luego Depurar → Iniciar sin depurar (Ctrl + F5).
+   - Linux: en `make.sh`, elegir la línea de compilación «with X11» (ventana interactiva) y ejecutar `./make.sh`.
+
+En el primer arranque, FluidX3D todavía no encuentra ninguna cometa: es normal.
+
+### Para cada cometa
+
+1. En AtelierCV, calcular la forma, de preferencia en vuelo con viento, y luego Exportar → «Túnel de viento FluidX3D (.stl)» (clic simple).
+2. Copiar `atelier_voile.stl`, `atelier_armature.stl` y `atelier.txt` en `FluidX3D/stl/` (crear la carpeta si falta), sustituyendo los anteriores.
+3. Volver a lanzar FluidX3D (`FluidX3D.exe` en `FluidX3D/bin/`, o Ctrl + F5 en Visual Studio). No hace falta recompilar.
+
+En la ventana: P arranca o pausa, H muestra la ayuda de las teclas, las teclas 1 a 7 cambian la vista
+(líneas de corriente, torbellinos…). La consola muestra con regularidad el arrastre, la sustentación y sus coeficientes.
+
+### Ajustes en atelier.txt (sin recompilar)
+
+- `n`: finura, en celdas a lo largo de la cometa (75 por defecto). La memoria crece como n³, el tiempo de cálculo como n⁴ aproximadamente.
+- `amont`, `aval`, `largeur`, `hauteur`: tamaño del túnel en longitudes de la cometa — delante, detrás, anchura, altura (1, 2,5, 2,5, 2,5).
+  Dejar al menos 1 delante.
+- `d`: número de dominios, para forzar la división de la malla (si no, se calcula según la tarjeta gráfica).
+
+### Leer los resultados
+
+- Comparar sobre todo en relativo (dos ajustes de una misma cometa): a estos tamaños, los valores absolutos siguen siendo aproximados.
+- Los tubos se engruesan para que la malla los vea: su arrastre está sobreestimado.
+- Las bridas no están en el túnel: sumar su arrastre, dado por AtelierCV («Resistencia y peso de las bridas»).
 
 ## Biblioteca
 

@@ -3,7 +3,7 @@
 [Français](README.md) · **English** · [Español](README.es.md)
 
 AtelierCV is for drawing a kite (frame, sail, bridle) and calculating its shape: at rest, flying
-in the wind or gliding. It is **a single file**: open `AtelierCV_v386.html` in a recent
+in the wind or gliding. It is **a single file**: open `AtelierCV_v387.html` in a recent
 browser (Chrome or Edge recommended), nothing to install.
 
 The **`Modeles/`** folder holds a library of kites ready to open (Eddy, Edo, Flare, Sled,
@@ -167,6 +167,58 @@ correct** (tension, bridle, balance).
 - **Calculation report (.html)**: all the results and the 3D view, with the kite file included
   (it can be retrieved from the report).
 - **PanelSearch**: sends a sail to the companion tool PanelSearch, to search for its panelling.
+
+## FluidX3D virtual wind tunnel
+
+FluidX3D is an airflow simulator running on the graphics card, written by Moritz Lehmann
+(https://github.com/ProjectPhysX/FluidX3D). It is free for personal, educational or public research use;
+commercial or military use is not allowed (see LICENSE.md in FluidX3D). AtelierCV does not include it: you install
+and compile it once. After that, every kite goes into the tunnel without recompiling.
+
+### What you need
+
+- An OpenCL-capable graphics card (NVIDIA, AMD or Intel) with an up-to-date driver; 4 GB of video memory or more recommended.
+- Windows: Visual Studio Community (free), with the "Desktop development with C++" workload.
+- Linux: g++, make and the card's OpenCL driver (package ocl-icd-opencl-dev, plus the vendor driver).
+
+### Installation (once)
+
+1. Download FluidX3D: on its GitHub page, "Code" button then "Download ZIP", and unzip it.
+2. In AtelierCV: **Alt + click** on Export → "Wind tunnel FluidX3D (.stl)". Besides the kite files,
+   you get the setup `atelier_fluidx3d.cpp` and this guide.
+3. Open `FluidX3D/src/setup.cpp`. It holds a series of example `void main_setup()` functions, all between `/*` and `*/`
+   except one: comment that one out too, then paste the whole content of `atelier_fluidx3d.cpp` at the end of the file.
+4. Open `FluidX3D/src/defines.hpp`:
+   - comment out (add `//` in front): `#define BENCHMARK`
+   - enable (remove the `//` in front): `#define FP16S`, `#define EQUILIBRIUM_BOUNDARIES`, `#define SUBGRID`,
+     `#define FORCE_FIELD`, `#define INTERACTIVE_GRAPHICS`
+5. Compile:
+   - Windows: open `FluidX3D.sln` in Visual Studio, choose "Release", then Debug → Start Without Debugging (Ctrl + F5).
+   - Linux: in `make.sh`, choose the compile line "with X11" (interactive window), then run `./make.sh`.
+
+On the very first run, FluidX3D does not find a kite yet: that is normal.
+
+### For each kite
+
+1. In AtelierCV, compute the shape, preferably in wind flight, then Export → "Wind tunnel FluidX3D (.stl)" (plain click).
+2. Copy `atelier_voile.stl`, `atelier_armature.stl` and `atelier.txt` into `FluidX3D/stl/` (create the folder if missing), replacing the old ones.
+3. Run FluidX3D again (`FluidX3D.exe` in `FluidX3D/bin/`, or Ctrl + F5 in Visual Studio). No need to recompile.
+
+In the window: P starts or pauses, H shows the key help, keys 1 to 7 change the display
+(streamlines, vortices…). The console regularly prints drag, lift and their coefficients.
+
+### Settings in atelier.txt (no recompiling)
+
+- `n`: resolution, in cells along the kite's length (75 by default). Memory grows like n³, computing time roughly like n⁴.
+- `amont`, `aval`, `largeur`, `hauteur`: tunnel size in kite lengths — upstream, downstream, width, height (1, 2.5, 2.5, 2.5).
+  Keep at least 1 upstream.
+- `d`: number of domains, to force how the grid is split (otherwise worked out from the graphics card).
+
+### Reading the results
+
+- Compare mostly in relative terms (two settings of the same kite): at these sizes, absolute values stay approximate.
+- Tubes are thickened so the grid can see them: their drag is overestimated.
+- Bridles are not in the tunnel: add their drag, given by AtelierCV ("Bridle drag and weight").
 
 ## Library
 
