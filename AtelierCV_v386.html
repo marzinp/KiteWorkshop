@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="google" content="notranslate">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>AtelierCV v385</title>
+  <title>AtelierCV v386</title>
   <style>
     :root {
       --bg: #f4f3ef;
@@ -1062,7 +1062,7 @@
   <script id="engine">
     'use strict';
     /* ================= MOTEUR (sans DOM) ================= */
-    const VERSION = 'v385';
+    const VERSION = 'v386';
     const V = {
       add: (a, b) => [a[0] + b[0], a[1] + b[1], a[2] + b[2]],
       sub: (a, b) => [a[0] - b[0], a[1] - b[1], a[2] - b[2]],
@@ -6848,6 +6848,9 @@ function run(){const M=job;if(!M)return;stepSolve(M,80,opt);const now=Date.now()
       }
       const d = V.norm(V.sub(P[P.length - 1], P[0])); bv = 1e9; for (const k of ['face', 'dessus', 'cote']) {const v = Math.abs(V.dot(d, PLANES[k].n)); if (v < bv - 1e-6) {bv = v; best = k;} } return best;
     }
+    /* v386 : curseur de sélection centré (viseur) à la place de la main — le point sensible de la main est au bout de l'index, en haut à gauche :
+       un nœud se sélectionnait « dès que la main touchait le cercle en arrivant par la gauche », sinon seulement quand le centre de la main était dessus */
+    const SEL_CURSOR = `url("data:image/svg+xml,${encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><circle cx="12" cy="12" r="6.5" fill="none" stroke="#fff" stroke-width="3.5"/><circle cx="12" cy="12" r="6.5" fill="none" stroke="#000" stroke-width="1.5"/><path d="M12 1v6M12 17v6M1 12h6M17 12h6" stroke="#fff" stroke-width="3.5"/><path d="M12 1v6M12 17v6M1 12h6M17 12h6" stroke="#000" stroke-width="1.5"/></svg>')}") 12 12, crosshair`;
     const ROT_CURSOR = `url("data:image/svg+xml,${encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M12 4a8 8 0 1 1-7.4 5" fill="none" stroke="white" stroke-width="4"/><path d="M12 4a8 8 0 1 1-7.4 5" fill="none" stroke="black" stroke-width="1.6"/><path d="M1.5 7l3.4 2.4L7 5.6" fill="none" stroke="black" stroke-width="1.6"/></svg>')}") 12 12, pointer`;
     function w2s(p, F) {if (PERSP()) {const B = camBP(), d = V.sub(p, B.pos), z = Math.max(1, 0.02 * ui.camP.dist, V.dot(d, B.f)), L = 4 * (W1 + H1); return [Math.max(-L, Math.min(L, W1 / 2 + V.dot(d, B.r) * B.foc / z)), Math.max(-L, Math.min(L, H1 / 2 - V.dot(d, B.u) * B.foc / z))];} const d = V.sub(p, F.o); return [W1 / 2 + (V.dot(d, F.u) - ui.cam.cx) * ui.cam.s, H1 / 2 - (V.dot(d, F.v) - ui.cam.cy) * ui.cam.s];}
     function s2l(x, y) {if (PERSP()) {const k = ui.camP.dist / (H1 * 1.3); return [(x - W1 / 2) * k, -(y - H1 / 2) * k];} return [ui.cam.cx + (x - W1 / 2) / ui.cam.s, ui.cam.cy - (y - H1 / 2) / ui.cam.s];}
@@ -7692,7 +7695,7 @@ function run(){const M=job;if(!M)return;stepSolve(M,80,opt);const now=Date.now()
         cv1.title = !ui.linkStart ? 'Liaison : clic sur un coin ou un bord de voile' : ui.linkStart.kind === 'corner' ? 'Clic sur un point ou un tracé d\'armature (broche)' : 'Clic sur un tube (fourreau) ou un câble (bord lié)'; drawEditor(); return;
       }
       if (ui.fit && !D) {/* v379 : « Épouser un tracé » — curseur en croix, main sur un tracé épousable (son nom en infobulle) */
-        const S = shapeById(ui.fit.id), b = S ? fitFind(x, y, S) : null; cv1.style.cursor = b ? 'pointer' : 'crosshair';
+        const S = shapeById(ui.fit.id), b = S ? fitFind(x, y, S) : null; cv1.style.cursor = b ? SEL_CURSOR : 'crosshair';
         cv1.title = b ? 'Clic : ' + S.name + ' épouse ' + b.o.name : 'Épouser un tracé : clic sur un bord ou une couture de voile, un tube, un câble ou une ligne — Échap = annuler'; return;
       }
       if (ui.tool === 'seam' && !D) {
@@ -7704,7 +7707,7 @@ function run(){const M=job;if(!M)return;stepSolve(M,80,opt);const now=Date.now()
       if (ui.create && !D) {ui.alt = e.altKey; const sn = findSnap(x, y, [], null, {allow: crossAllow()}); if (sn && sn.kind === 'pt' && isSlave(sn.pid)) sn.lab = 'symétrique (forme à cheval sur l\'axe)'; ui.snap = sn; ui.create.mouse = sn ? [sn.x, sn.y] : [x, y]; cv1.style.cursor = 'crosshair'; cv1.title = (ui.create.kind === 'poly' && ui.create.pts.length >= 3 && sn && sn.kind === 'pt' && sn.pid === ui.create.pts[0]) ? 'Clic = fermer la forme' : sn ? 'Accroche : ' + sn.lab : ui.create.kind === 'poly' && ui.create.pts.length >= 3 ? 'Clic = sommet ; premier point, double-clic ou Entrée = fermer ; Échap = annuler' : 'Clic = sommet ; Échap = annuler'; drawEditor(); return;}
       if (!D) {
         const H = ui.tool === 'sel' ? hitTest(x, y) : null; const hk = H && (H.type === 'giz2' ? 'z' + H.k : H.type === 'handle' ? 'h' + H.seg + H.which : H.type === 'anchor' ? 'a' + H.pid : H.type === 'grain' ? 'g' : ''); if (hk !== (ui.hoverKey || '')) {ui.hoverKey = hk; ui.hover = hk ? H : null; drawEditor();}
-        cv1.style.cursor = ui.tool !== 'sel' ? 'crosshair' : !H ? 'grab' : H.type === 'giz2' ? 'move' : H.type === 'grain' ? ROT_CURSOR : H.type === 'handle' || H.type === 'anchor' ? 'move' : H.type === 'seg' ? 'crosshair' : 'pointer';
+        cv1.style.cursor = ui.tool !== 'sel' ? 'crosshair' : !H ? 'grab' : H.type === 'giz2' ? 'move' : H.type === 'grain' ? ROT_CURSOR : H.type === 'handle' || H.type === 'anchor' ? 'move' : H.type === 'seg' ? 'crosshair' : SEL_CURSOR;
         cv1.title = H && H.type === 'giz2' ? 'Glisser : déplacer le point le long de cet axe (' + (H.k === 'n' ? 'profondeur, perpendiculaire au plan' : 'dans le plan') + ') — Maj = fin ×0,1, Alt = sans aimant' : H && H.type === 'link' ? 'Liaison ' + H.L.name + ' : clic pour la régler' : !H ? 'Glisser = fenêtre de sélection (→ dedans, ← touchées) ; clic droit glissé = ' + (PERSP() ? 'tourner' : 'déplacer la vue') + ' ; molette = zoom ; double-clic = recadrer' : H.type === 'anchor' ? 'Point ' + H.pid + ' (' + doc.shapes.filter(q => q.pts.includes(H.pid) && q.kind !== 'guide').map(q => q.name).join(', ') + ') — ancre : glisser pour déplacer (posée sur un point = raccord) ; re-clic sur un raccord = forme suivante ; clic droit ou Maj+clic = retirer ; Ctrl/Cmd+clic = sélection multiple' :
           H.type === 'grain' ? 'Fil de chaîne : glisser pour tourner (rotation libre)' : H.type === 'handle' ? 'Poignée de Bézier : glisser pour courber' : H.type === 'seg' ? (H.sh.kind === 'sail' ? H.sh.name + ', bord ' + (H.seg + 1) + ' : clic pour le régler ; clic droit ou Maj+clic = ajouter un point ; Ctrl/Cmd+clic = sélection multiple' : H.sh.name + ' : clic droit ou Maj+clic = ajouter un point ; Ctrl/Cmd+clic = sélection multiple') : H.sh.name + ' — Ctrl/Cmd+clic = sélection multiple'; return;
       }
