@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="google" content="notranslate">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>AtelierCV v398</title>
+  <title>AtelierCV v399</title>
   <style>
     :root {
       --bg: #f4f3ef;
@@ -1096,7 +1096,7 @@
   <script id="engine">
     'use strict';
     /* ================= MOTEUR (sans DOM) ================= */
-    const VERSION = 'v398';
+    const VERSION = 'v399';
     const V = {
       add: (a, b) => [a[0] + b[0], a[1] + b[1], a[2] + b[2]],
       sub: (a, b) => [a[0] - b[0], a[1] - b[1], a[2] - b[2]],
@@ -9028,7 +9028,7 @@ function run(){const M=job;if(!M)return;stepSolve(M,80,opt);const now=Date.now()
         const vals = SH ? null : M.tris.map((t, k) => val(k)), A = SH ? null : M.tris.map(t => t.pk ? 0 : t.A0);
         let vmax = SH ? 1 : vals.length ? pct(vals.map(Math.abs), A, 0.98) : 1; const flat = !(vmax > 1e-4); if (flat) vmax = 1; const vmin = q === 'dp' ? -vmax : 0;/* cisaillement en valeur absolue : son signe ne dépend que du sens des axes chaîne/trame (il s'inverse d'une moitié symétrique à l'autre) */
         let mean = 0, At = 0; if (!SH) M.tris.forEach((t, k) => {if (t.pk) return; mean += M.ts1[k] * t.A0; At += t.A0;}); mean /= At || 1;
-        const WP = i => {const o = 3 * i; return [x0[o] + amp * (x[o] - x0[o]), x0[o + 1] + amp * (x[o + 1] - x0[o + 1]), x0[o + 2] + amp * (x[o + 2] - x0[o + 2])];}, shade = t => {const a = WP(t.a), nn = V.cross(V.sub(WP(t.b), a), V.sub(WP(t.c), a)), l = V.len(nn) || 1, c = 0.42 + 0.58 * Math.abs(V.dot(nn, B.f)) / l; return `rgb(${Math.round(232 * c)},${Math.round(214 * c)},${Math.round(178 * c)})`;};
+        const WP = i => {const o = 3 * i; return [x0[o] + amp * (x[o] - x0[o]), x0[o + 1] + amp * (x[o + 1] - x0[o + 1]), x0[o + 2] + amp * (x[o + 2] - x0[o + 2])];}, shade = t => {const a = WP(t.a), nn = V.cross(V.sub(WP(t.b), a), V.sub(WP(t.c), a)), l = V.len(nn) || 1, c = 0.42 + 0.58 * Math.abs(V.dot(nn, B.f)) / l; return `rgba(${Math.round(250 * c)},${Math.round(235 * c)},${Math.round(200 * c)},0.8)`;/* v399 : voile ombrée plus claire et un peu transparente (réglage de Pierre) */};
         const shS = ui.show3 !== 'frame', shF = ui.show3 !== 'sail';
         const nz = NEAR(); if (shS) M.tris.forEach((t, k) => {const a = S[t.a], b = S[t.b], c = S[t.c]; if (a[3] < nz || b[3] < nz || c[3] < nz) return; items3.push({z: (a[2] + b[2] + c[2]) / 3, k, tri: [a, b, c], col: SH ? shade(t) : t.pk ? 'rgb(214,200,178)' : flat || (M.ts1[k] < 0.1 * mean && q !== 'sxy' && q !== 'e1' && q !== 'dp') ? 'rgb(170,170,170)' : cmap((vals[k] - vmin) / (vmax - vmin)), v: SH ? 0 : vals[k]});});
         let Nm = 1e-9; for (const e of M.beams) Nm = Math.max(Nm, Math.abs(e.N));
