@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="google" content="notranslate">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>AtelierCV v397</title>
+  <title>AtelierCV v398</title>
   <style>
     :root {
       --bg: #f4f3ef;
@@ -815,6 +815,22 @@
       max-width: 260px
     }
 
+    #flashMsg {
+      position: absolute;
+      display: none;
+      left: 8px;
+      top: 44px;
+      background: var(--pan);
+      border: 1px solid var(--bd);
+      border-radius: 6px;
+      padding: 6px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, .2);
+      z-index: 6;
+      font-size: 12px;
+      max-width: 260px;
+      pointer-events: none
+    }
+
     #hov {
       font-variant-numeric: tabular-nums
     }
@@ -1080,7 +1096,7 @@
   <script id="engine">
     'use strict';
     /* ================= MOTEUR (sans DOM) ================= */
-    const VERSION = 'v397';
+    const VERSION = 'v398';
     const V = {
       add: (a, b) => [a[0] + b[0], a[1] + b[1], a[2] + b[2]],
       sub: (a, b) => [a[0] - b[0], a[1] - b[1], a[2] - b[2]],
@@ -3129,7 +3145,8 @@ const PRESETS_USINE = {"mat":[{"id":"cp","name":"Carbone pultrudé","vals":{"E":
       drawEditor(); draw3D(); if (ui.auto && !noCalc) scheduleCalc(200);
     }
 
-    function flash(t) {const c = $('cv1'); c.title = t; const m = $('edgeMenu'); m.innerHTML = ''; m.append(el('div', 'lab', t)); m.style.display = 'block'; m.style.left = '8px'; m.style.top = '44px'; clearTimeout(flash.t); flash.t = setTimeout(hideEdgeMenu, 1800);}
+    /* v398 : message fugitif dans son propre cadre (avant : dans celui du menu de bord, qu'il remplaçait puis refermait 1,8 s plus tard — le menu « Fourreau / Prolonger » disparaissait) */
+    function flash(t) {const c = $('cv1'); c.title = t; let m = $('flashMsg'); if (!m) {m = el('div'); m.id = 'flashMsg'; $('edgeMenu').after(m);} m.innerHTML = ''; m.append(el('div', 'lab', t)); m.style.display = 'block'; clearTimeout(flash.t); flash.t = setTimeout(() => {m.style.display = 'none';}, 1800);}
     /* ---------- visibilité, symétrie, segments liés ---------- */
     /* couche de dessin d'une forme : voilure, bridage (brides et ligne) ou armature (le reste) */
     const modeOf = sh => sh.kind === 'sail' ? 'sail' : sh.kind === 'cable' && sh.props.bride ? 'bride' : 'frame';
