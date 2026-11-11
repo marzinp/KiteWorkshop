@@ -1788,7 +1788,8 @@
     "fabId": "t_rny",
     "fab": "Ripstop nylon 40 g"
    },
-   "name": "Voile 1 ′ · P1"
+   "name": "Voile 1 · P1 ′",
+   "voile": "Voile 1"
   },
   {
    "id": "s256",
@@ -1899,7 +1900,8 @@
     "fabId": "t_rny",
     "fab": "Ripstop nylon 40 g"
    },
-   "name": "Voile 1 ′ · P2"
+   "name": "Voile 1 · P2 ′",
+   "voile": "Voile 1"
   },
   {
    "id": "s257",
@@ -2010,7 +2012,8 @@
     "fabId": "t_rny",
     "fab": "Ripstop nylon 40 g"
    },
-   "name": "Voile 1 ′ · P3"
+   "name": "Voile 1 · P3 ′",
+   "voile": "Voile 1"
   },
   {
    "id": "s258",
@@ -2088,7 +2091,8 @@
     "fabId": "t_rny",
     "fab": "Ripstop nylon 40 g"
    },
-   "name": "Voile 1 ′ · P4"
+   "name": "Voile 1 · P4 ′",
+   "voile": "Voile 1"
   },
   {
    "id": "s259",
@@ -2405,7 +2409,8 @@
     "fabId": "t_rpe",
     "fab": "Ripstop polyester 31 g"
    },
-   "name": "Voile 4 ′ · P1"
+   "name": "Voile 4 ′ · P1",
+   "voile": "Voile 4 ′"
   },
   {
    "id": "s264",
@@ -2480,7 +2485,8 @@
     "fabId": "t_rpe",
     "fab": "Ripstop polyester 31 g"
    },
-   "name": "Voile 4 ′ · P2"
+   "name": "Voile 4 ′ · P2",
+   "voile": "Voile 4 ′"
   },
   {
    "id": "s265",
@@ -2536,7 +2542,8 @@
     "fabId": "t_rpe",
     "fab": "Ripstop polyester 31 g"
    },
-   "name": "Voile 4 ′ · P3"
+   "name": "Voile 4 ′ · P3",
+   "voile": "Voile 4 ′"
   },
   {
    "id": "s266",
@@ -2630,7 +2637,8 @@
     "fabId": "t_rpe",
     "fab": "Ripstop polyester 31 g"
    },
-   "name": "Voile 2 ′ · P1"
+   "name": "Voile 2 ′ · P1",
+   "voile": "Voile 2 ′"
   },
   {
    "id": "s267",
@@ -2705,7 +2713,8 @@
     "fabId": "t_rpe",
     "fab": "Ripstop polyester 31 g"
    },
-   "name": "Voile 2 ′ · P2"
+   "name": "Voile 2 ′ · P2",
+   "voile": "Voile 2 ′"
   },
   {
    "id": "s268",
@@ -2761,7 +2770,8 @@
     "fabId": "t_rpe",
     "fab": "Ripstop polyester 31 g"
    },
-   "name": "Voile 2 ′ · P3"
+   "name": "Voile 2 ′ · P3",
+   "voile": "Voile 2 ′"
   },
   {
    "id": "s269",
@@ -2866,7 +2876,8 @@
     "fabId": "t_rpe",
     "fab": "Ripstop polyester 31 g"
    },
-   "name": "Voile 3 ′ · P1"
+   "name": "Voile 3 ′ · P1",
+   "voile": "Voile 3 ′"
   },
   {
    "id": "s270",
@@ -2922,7 +2933,8 @@
     "fabId": "t_rpe",
     "fab": "Ripstop polyester 31 g"
    },
-   "name": "Voile 3 ′ · P2"
+   "name": "Voile 3 ′ · P2",
+   "voile": "Voile 3 ′"
   },
   {
    "id": "s271",

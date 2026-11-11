@@ -350,7 +350,8 @@
     "fab": "Ripstop nylon 40 g",
     "cornR": 55
    },
-   "name": "Voile 2"
+   "name": "Voile 2 · P1",
+   "voile": "Voile 2"
   },
   {
    "id": "s18",
@@ -426,7 +427,8 @@
     "fab": "Ripstop nylon 40 g",
     "cornR": 55
    },
-   "name": "Voile 3"
+   "name": "Voile 3 · P1",
+   "voile": "Voile 3"
   },
   {
    "id": "s21",
@@ -502,7 +504,8 @@
     "fab": "Ripstop nylon 40 g",
     "cornR": 55
    },
-   "name": "Voile 3 ′"
+   "name": "Voile 3 ′ · P1",
+   "voile": "Voile 3 ′"
   },
   {
    "id": "s22",
@@ -695,7 +698,8 @@
     "fab": "Ripstop nylon 40 g",
     "cornR": 55
    },
-   "name": "Voile 6"
+   "name": "Voile 2 · P2",
+   "voile": "Voile 2"
   },
   {
    "id": "s31",
@@ -752,7 +756,8 @@
     "fab": "Ripstop nylon 40 g",
     "cornR": 55
    },
-   "name": "Voile 7"
+   "name": "Voile 3 · P2",
+   "voile": "Voile 3"
   },
   {
    "id": "s33",
@@ -809,7 +814,8 @@
     "fab": "Ripstop nylon 40 g",
     "cornR": 55
    },
-   "name": "Voile 7 ′"
+   "name": "Voile 3 ′ · P2",
+   "voile": "Voile 3 ′"
   },
   {
    "id": "s35",

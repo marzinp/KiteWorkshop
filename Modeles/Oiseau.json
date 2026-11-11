@@ -976,7 +976,8 @@
     "fabId": "t_rny",
     "fab": "Ripstop nylon 40 g"
    },
-   "name": "Voile 1"
+   "name": "Voile 1 · P1",
+   "voile": "Voile 1"
   },
   {
    "id": "s307",
@@ -2048,7 +2049,8 @@
     "fabId": "t_rny",
     "fab": "Ripstop nylon 40 g"
    },
-   "name": "Voile 1 ′"
+   "name": "Voile 1 · P2",
+   "voile": "Voile 1"
   },
   {
    "id": "s340",

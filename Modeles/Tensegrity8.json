@@ -338,7 +338,7 @@
     "mat": "Carbone enroulé",
     "compId": "comp_umv44djpr"
    },
-   "name": "Tube 2 ′a",
+   "name": "Tube 2a",
    "kinks": {},
    "ends": {}
   },
@@ -376,7 +376,7 @@
     "mat": "Carbone enroulé",
     "compId": "comp_umv44djpr"
    },
-   "name": "Tube 2 ′b",
+   "name": "Tube 2b",
    "kinks": {}
   },
   {
@@ -477,7 +477,7 @@
     "fab": "Ripstop nylon 40 g",
     "cornR": 55
    },
-   "name": "Trou 2 ′",
+   "name": "Trou 2",
    "hole": true
   },
   {
@@ -570,7 +570,8 @@
     "fab": "Ripstop nylon 40 g",
     "cornR": 55
    },
-   "name": "Voile 5 ′"
+   "name": "Voile 5 · P1",
+   "voile": "Voile 5"
   },
   {
    "id": "s180",
@@ -818,7 +819,8 @@
     "fab": "Ripstop nylon 40 g",
     "cornR": 55
    },
-   "name": "Voile 1"
+   "name": "Voile 5 · P2",
+   "voile": "Voile 5"
   },
   {
    "id": "s199",
@@ -1801,7 +1803,7 @@
     "mat": "Carbone enroulé",
     "compId": "comp_umv44djpr"
    },
-   "name": "Tube 2 ′a ′",
+   "name": "Tube 2a ′",
    "kinks": {}
   },
   {

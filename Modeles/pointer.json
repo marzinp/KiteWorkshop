@@ -581,7 +581,7 @@
     "mat": "Polyester 2mm",
     "side": "ext"
    },
-   "name": "Cable 3 ′"
+   "name": "Cable 3"
   },
   {
    "id": "s64",
@@ -610,7 +610,7 @@
     "compId": "cable_umvb20yb7",
     "mat": "Polyester 2mm"
    },
-   "name": "Cable 2 ′"
+   "name": "Cable 2"
   },
   {
    "id": "s65",
@@ -640,7 +640,7 @@
     "mat": "Polyester 2mm",
     "side": "ext"
    },
-   "name": "Cable 3 ′ ′"
+   "name": "Cable 3 ′"
   },
   {
    "id": "s66",
@@ -669,7 +669,7 @@
     "compId": "cable_umvb20yb7",
     "mat": "Polyester 2mm"
    },
-   "name": "Cable 2 ′ ′"
+   "name": "Cable 2 ′"
   }
  ],
  "offset": {

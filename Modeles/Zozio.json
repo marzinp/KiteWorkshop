@@ -1135,7 +1135,7 @@
     "fabId": "t_rny",
     "fab": "Ripstop nylon 40 g"
    },
-   "name": "Voile2 ′ · P1",
+   "name": "Voile2 · P1 ′",
    "patron": {
     "P": {
      "p4": [
@@ -1216,7 +1216,8 @@
       ]
      }
     ]
-   }
+   },
+   "voile": "Voile2"
   },
   {
    "id": "s187",
