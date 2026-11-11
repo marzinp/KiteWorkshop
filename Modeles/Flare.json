@@ -744,7 +744,11 @@
     "poche": 0,
     "matId": "cp",
     "mat": "Carbone pultrudé",
-    "compId": "c_tc64"
+    "compId": "c_tc64",
+    "cone": false,
+    "de2": 2,
+    "di2": 0,
+    "cprof": 1
    },
    "name": "Latte 1",
    "ends": {}
@@ -806,7 +810,11 @@
     "poche": 0,
     "matId": "cp",
     "mat": "Carbone pultrudé",
-    "compId": "c_tc64"
+    "compId": "c_tc64",
+    "cone": false,
+    "de2": 2,
+    "di2": 0,
+    "cprof": 1
    },
    "name": "Latte 2"
   },
@@ -867,7 +875,11 @@
     "poche": 0,
     "matId": "cp",
     "mat": "Carbone pultrudé",
-    "compId": "c_tc64"
+    "compId": "c_tc64",
+    "cone": false,
+    "de2": 2,
+    "di2": 0,
+    "cprof": 1
    },
    "name": "Latte 3",
    "ends": {}
@@ -2135,7 +2147,11 @@
     "poche": 0,
     "matId": "cp",
     "mat": "Carbone pultrudé",
-    "compId": "c_tc64"
+    "compId": "c_tc64",
+    "cone": false,
+    "de2": 2,
+    "di2": 0,
+    "cprof": 1
    },
    "name": "Latte 1 ′"
   },
@@ -2196,7 +2212,11 @@
     "poche": 0,
     "matId": "cp",
     "mat": "Carbone pultrudé",
-    "compId": "c_tc64"
+    "compId": "c_tc64",
+    "cone": false,
+    "de2": 2,
+    "di2": 0,
+    "cprof": 1
    },
    "name": "Latte 2 ′"
   },
@@ -2257,7 +2277,11 @@
     "poche": 0,
     "matId": "cp",
     "mat": "Carbone pultrudé",
-    "compId": "c_tc64"
+    "compId": "c_tc64",
+    "cone": false,
+    "de2": 2,
+    "di2": 0,
+    "cprof": 1
    },
    "name": "Latte 3 ′"
   },
@@ -2998,7 +3022,7 @@
   "rot": 0
  },
  "h": 25,
- "hk": 25,
+ "hk": 15,
  "hMode": "rel",
  "deduce": 1,
  "nodes": {
@@ -3261,22 +3285,12 @@
     "id": "cable_umvb20yb7",
     "name": "Polyester 2mm",
     "vals": {
-     "EA": 4000
+     "EA": 4000,
+     "d": 2
     }
    }
   ],
   "calc": [
-   {
-    "id": "p_rap",
-    "name": "Estimation",
-    "vals": {
-     "hk": 15,
-     "tol": 0.001,
-     "maxIt": 60000,
-     "stages": 0,
-     "imperf": true
-    }
-   },
    {
     "id": "p_std",
     "name": "Standard",
@@ -3284,6 +3298,17 @@
      "hk": 25,
      "tol": 0.001,
      "maxIt": 258000,
+     "stages": 0,
+     "imperf": true
+    }
+   },
+   {
+    "id": "p_rap",
+    "name": "Estimation",
+    "vals": {
+     "hk": 15,
+     "tol": 0.005,
+     "maxIt": 60000,
      "stages": 0,
      "imperf": true
     }
@@ -3298,7 +3323,8 @@
      "E2": 120,
      "G": 6,
      "nu": 0.2,
-     "gsm": 31
+     "gsm": 31,
+     "D": 0.03
     }
    }
   ],
@@ -3322,11 +3348,14 @@
     "vals": {
      "de": 6,
      "di": 4,
+     "cone": false,
+     "de2": 2,
+     "di2": 0,
+     "cprof": 1,
      "E": 135,
      "sigR": 1500,
      "matId": "cp",
-     "mat": "Carbone pultrudé",
-     "forme": "rond"
+     "mat": "Carbone pultrudé"
     }
    }
   ]

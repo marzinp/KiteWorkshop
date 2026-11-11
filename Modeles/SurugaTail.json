@@ -113,7 +113,7 @@
     "mat": "Polyester tressé 1 mm",
     "side": "ext"
    },
-   "name": "Câble 2"
+   "name": "Câble 3 ′"
   },
   {
    "id": "s19",
@@ -627,7 +627,7 @@
     "compId": "comp_umv44djpr",
     "appuiSet": true
    },
-   "name": "Tube 2"
+   "name": "Tube 1 ′"
   }
  ],
  "offset": {
@@ -703,10 +703,10 @@
  "name": "SurugaTail",
  "sym": true,
  "symMap": {
-  "p3": "p6",
   "p55": "p53",
   "p4": "p27",
-  "p26": "p10"
+  "p26": "p10",
+  "p6": "p3"
  },
  "presets": {
   "comp": [
