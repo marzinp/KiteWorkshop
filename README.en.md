@@ -3,7 +3,7 @@
 [Français](README.md) · **English** · [Español](README.es.md)
 
 AtelierCV is for drawing a kite (frame, sail, bridle) and calculating its shape: at rest, flying
-in the wind or gliding. It is **a single file**: open `AtelierCV_v431.html` in a recent
+in the wind or gliding. It is **a single file**: open `AtelierCV_v457.html` in a recent
 browser (Chrome or Edge recommended), nothing to install.
 
 The **`Modeles/`** folder holds a library of kites ready to open (Eddy, Edo, Flare, Sled,
