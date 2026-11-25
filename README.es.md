@@ -3,7 +3,7 @@
 [Français](README.md) · [English](README.en.md) · **Español**
 
 AtelierCV sirve para dibujar una cometa (armazón, vela, embridado) y calcular su forma: en
-reposo, en vuelo con viento o en planeo. Es **un solo archivo**: abrir `AtelierCV_v612.html`
+reposo, en vuelo con viento o en planeo. Es **un solo archivo**: abrir `AtelierCV_v613.html`
 en un navegador reciente (se recomiendan Chrome o Edge), sin instalar nada.
 
 La carpeta **`Modeles/`** contiene una biblioteca de cometas listas para abrir (Eddy, Edo, Flare,
@@ -13,8 +13,9 @@ para descubrir la herramienta, y una buena base para un diseño nuevo.
 > **Una herramienta en desarrollo.** AtelierCV sigue evolucionando y sus resultados **no son
 > fiables tal cual**: dan **pistas** (tendencias, comparaciones entre variantes, sentido de una
 > corrección), que hay que confirmar en la realidad. Sus principales límites:
-> - **sin simulación del flujo de aire**: el viento se calcula con un modelo simplificado de
->   superficie sustentadora, sin entrada en pérdida real, capa límite, turbulencia ni estela;
+> - **el flujo de aire solo se simula a modo de prueba**: el vuelo con viento usa un modelo
+>   simplificado de superficie sustentadora, sin entrada en pérdida real, capa límite, turbulencia
+>   ni estela; el túnel de viento integrado simula el flujo, pero sigue en prueba (ver «Estado de cada parte»);
 > - **todavía no gestiona las estructuras totalmente flexibles** (parafoils, cajones): la presión
 >   interior de los cajones existe, pero no está validada;
 > - la tela, el armazón y el viento siguen siendo modelos: rozamiento, costuras, dobladillos,
@@ -24,6 +25,28 @@ En todas partes, el pequeño **ⓘ** explica un ajuste; la mayoría de los valor
 cursor, y un clic en el valor permite escribirlo (más allá de los límites del cursor si hace falta).
 
 La interfaz existe en francés, inglés y español (elección en la cabecera).
+
+## Estado de cada parte
+
+**Sólido** — se puede usar con confianza, dentro de los límites anteriores:
+- dibujo por planos, simetría, «Vérifier» y «Symétriser», paneles y costuras, corte de varillas y uniones;
+- forma en reposo: armazón, tela, cables y bridas;
+- patrones planos (.dxf), informe de cálculo, biblioteca de materiales.
+
+**Delicado** — funciona en la mayoría de los modelos, hay que mirar los resultados con atención:
+- vuelo con viento: en una cometa flexible, la forma y la orientación pueden oscilar sin fijarse
+  («équilibre oscillant»: el veredicto se basa en la media), o el acoplamiento puede fallar
+  («tours alternés»: resultado aproximado);
+- sondas de estabilidad (cabeceo, alabeo, guiñada);
+- vuelo planeado y su optimización;
+- cálculo en GPU: más rápido, pero algunos modelos (cola larga, Dazzle) son más seguros en el procesador.
+
+**Experimental** — una pista, no una medida:
+- túnel de viento integrado: bien probado para la fuerza de una cola (Dazzle, Kiteman); los
+  intercambios de presión para una cometa sin cola siguen en prueba;
+- cola aproximada con cintas (sin tarjeta gráfica compatible): a ± 25 % del túnel de viento;
+- presión interior de los cajones; exportación a FluidX3D;
+- intercambios con PanelSearch (todavía poco probados).
 
 ## La pantalla
 

@@ -4,7 +4,7 @@
 
 AtelierCV sert à dessiner un cerf-volant (armature, voile, bridage) et à calculer sa forme :
 au repos, en vol au vent ou en vol plané. C'est **un seul fichier** : ouvrir
-`AtelierCV_v612.html` dans un navigateur récent (Chrome ou Edge conseillés), sans rien installer.
+`AtelierCV_v613.html` dans un navigateur récent (Chrome ou Edge conseillés), sans rien installer.
 
 Le dossier **`Modeles/`** contient une bibliothèque de cerfs-volants prêts à ouvrir (Eddy, Edo,
 Flare, Sled, Eclipse, Mouette…) : bouton **Ouvrir**, puis le fichier `.json`. C'est le plus
@@ -13,8 +13,9 @@ simple pour découvrir l'outil, et une bonne base pour un nouveau dessin.
 > **Un outil en développement.** AtelierCV évolue encore et ses résultats ne sont **pas fiables
 > tels quels** : ils donnent des **pistes** (tendances, comparaisons entre variantes, sens d'une
 > correction), à confirmer en vrai. Ses principales limites :
-> - **pas de simulation de l'écoulement de l'air** : le vent est calculé par un modèle simplifié de
->   surface portante, sans décrochage réel, couche limite, turbulence ni sillage ;
+> - **l'écoulement de l'air n'est simulé qu'en essai** : le vol au vent utilise un modèle simplifié de
+>   surface portante, sans décrochage réel, couche limite, turbulence ni sillage ; la soufflerie
+>   intégrée simule l'écoulement, mais reste un essai (voir « État des parties ») ;
 > - **pas encore de gestion des structures entièrement souples** (parafoils, caissons) : la
 >   pression intérieure des caissons existe, mais n'est pas validée ;
 > - la toile, l'armature et le vent restent des modèles : frottement, coutures, ourlets,
@@ -24,6 +25,28 @@ Partout, le petit **ⓘ** donne l'explication d'un réglage ; la plupart des val
 curseur, et un clic sur la valeur permet d'en taper une (au-delà des bornes si besoin).
 
 L'interface existe en français, en anglais et en espagnol (choix dans l'en-tête).
+
+## État des parties
+
+**Solide** — à utiliser en confiance, dans les limites ci-dessus :
+- dessin par plans, symétrie, « Vérifier » et « Symétriser », panneaux et coutures, découpe des baguettes et jonctions ;
+- forme au repos : armature, toile, câbles et brides ;
+- patrons à plat (.dxf), rapport de calcul, bibliothèque de matériaux.
+
+**Délicat** — marche sur la plupart des modèles, résultats à regarder de près :
+- vol au vent : sur un cerf-volant souple, forme et orientation peuvent osciller sans se figer
+  (« équilibre oscillant » : le verdict porte sur la moyenne), ou le couplage décrocher
+  (« tours alternés » : résultat approché) ;
+- sondes de stabilité (tangage, roulis, lacet) ;
+- vol plané et son optimisation ;
+- calcul sur GPU : plus rapide, mais certains modèles (longue traîne, Dazzle) restent plus sûrs sur le processeur.
+
+**Expérimental** — une piste, pas une mesure :
+- soufflerie intégrée : bien éprouvée pour la force d'une traîne (Dazzle, Kiteman) ; les échanges de
+  pression pour un cerf-volant sans traîne sont encore en essai ;
+- traîne approchée par des rubans (sans carte graphique compatible) : à ± 25 % de la soufflerie ;
+- pression intérieure des caissons ; export vers FluidX3D ;
+- échanges avec PanelSearch (encore peu éprouvés).
 
 ## L'écran
 

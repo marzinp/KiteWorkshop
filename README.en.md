@@ -3,7 +3,7 @@
 [Français](README.md) · **English** · [Español](README.es.md)
 
 AtelierCV is for drawing a kite (frame, sail, bridle) and calculating its shape: at rest, flying
-in the wind or gliding. It is **a single file**: open `AtelierCV_v612.html` in a recent
+in the wind or gliding. It is **a single file**: open `AtelierCV_v613.html` in a recent
 browser (Chrome or Edge recommended), nothing to install.
 
 The **`Modeles/`** folder holds a library of kites ready to open (Eddy, Edo, Flare, Sled,
@@ -13,8 +13,9 @@ tool, and a good starting point for a new design.
 > **A tool under development.** AtelierCV is still evolving and its results are **not reliable
 > as they stand**: they give **leads** (trends, comparisons between variants, which way to
 > correct), to be confirmed for real. Its main limits:
-> - **no simulation of the air flow**: the wind is computed with a simplified lifting-surface
->   model, without real stall, boundary layer, turbulence or wake;
+> - **the air flow is simulated only as a trial**: wind flight uses a simplified lifting-surface
+>   model, without real stall, boundary layer, turbulence or wake; the built-in wind tunnel
+>   simulates the flow, but is still a trial (see "State of each part");
 > - **fully soft structures are not handled yet** (parafoils, cells): the internal pressure of
 >   cells exists, but has not been validated;
 > - fabric, frame and wind remain models: friction, seams, hems, connectors and real fabrics are
@@ -24,6 +25,27 @@ Everywhere, the small **ⓘ** explains a setting; most values are set with a sli
 the value lets you type one (beyond the slider range if needed).
 
 The interface is available in French, English and Spanish (choice in the header).
+
+## State of each part
+
+**Solid** — use with confidence, within the limits above:
+- drawing by planes, symmetry, "Vérifier" and "Symétriser", panels and seams, cutting rods and joints;
+- rest shape: frame, fabric, cables and bridles;
+- flat patterns (.dxf), calculation report, materials library.
+
+**Delicate** — works on most models, look at the results closely:
+- wind flight: on a soft kite, shape and orientation may keep oscillating ("équilibre oscillant":
+  the verdict is on the average), or the coupling may give up ("tours alternés": approximate result);
+- stability probes (pitch, roll, yaw);
+- gliding flight and its optimisation;
+- GPU calculation: faster, but some models (long tail, Dazzle) are safer on the CPU.
+
+**Experimental** — a lead, not a measurement:
+- built-in wind tunnel: well tested for the force of a tail (Dazzle, Kiteman); pressure exchanges
+  for a kite without a tail are still a trial;
+- tail approximated by ribbons (without a compatible graphics card): within ± 25 % of the wind tunnel;
+- internal pressure of cells; export to FluidX3D;
+- exchanges with PanelSearch (not much tested yet).
 
 ## The screen
 
