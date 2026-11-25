@@ -3,7 +3,7 @@
 [Français](README.md) · [English](README.en.md) · **Español**
 
 AtelierCV sirve para dibujar una cometa (armazón, vela, embridado) y calcular su forma: en
-reposo, en vuelo con viento o en planeo. Es **un solo archivo**: abrir `AtelierCV_v457.html`
+reposo, en vuelo con viento o en planeo. Es **un solo archivo**: abrir `AtelierCV_v612.html`
 en un navegador reciente (se recomiendan Chrome o Edge), sin instalar nada.
 
 La carpeta **`Modeles/`** contiene una biblioteca de cometas listas para abrir (Eddy, Edo, Flare,
@@ -42,7 +42,7 @@ Se trabaja en una capa a la vez; las demás siguen visibles y sirven de enganche
 
 | Capa | Herramientas |
 |---|---|
-| **Armazón** | Tubo, Sable (en un bolsillo de la vela), Cable, Whisker (separador), Línea de construcción |
+| **Armazón** | Varilla (tubo, junco o sable plano), Cable, Línea de construcción |
 | **Embridado** | Brida / línea, Cola, Lastre |
 | **Velamen** | Forma (un clic por vértice), Círculo, Costura (corte en paneles), Unión (vela ↔ armazón), Montar |
 
@@ -52,12 +52,15 @@ Se trabaja en una capa a la vez; las demás siguen visibles y sirven de enganche
   Seleccionarlo para elegir su tipo: **rígido** (soldado), **rótula**, **corredera** (el elemento
   que lo atraviesa se desliza en él, como en un manguito) o **libre**. Un nodo también puede ser
   **Punto fijo** (anclaje al suelo) o la **Anilla** (donde se ata la línea).
-- **Bordes de vela**: dobladillo, funda sobre un tubo, o borde unido a un cable.
+- **Bordes de vela**: dobladillo, funda sobre una varilla, o borde unido a un cable.
 - **Simetría**: se dibuja el lado izquierdo (X negativa) y el lado derecho lo sigue. El botón
   **Simetrizar** reconstruye el lado derecho de un dibujo existente.
 - **Aislar**: mostrar una sola forma para retocarla, en su propio plano si está inclinada.
-- **Tubos y sables**: material y sección de la biblioteca, **sobrelongitud** (pretensado),
-  **Recto en reposo** (desmarcado: la curva dibujada es su forma libre).
+- **Varillas**: material y sección de la biblioteca, **sobrelongitud** (pretensado), **Recta en
+  reposo** (desmarcada: la curva dibujada es su forma libre), y **sujeción en la tela**: solo en los
+  extremos (con o sin rótulas: separador, whisker), en los nudos intermedios, en apoyo (lado
+  intradós o extradós, tela enganchada o no), en vaina abierta (en un extremo o en ambos), en vaina
+  cerrada (sable: la sobrelongitud tensa la tela).
 - **Velas**: tejido (biblioteca), patrón, agujeros y refuerzos; casilla **Quilla** (fuera del
   cálculo en reposo) y casilla **Cajón** (parafoil: piel inflada por la presión interior).
 
@@ -89,7 +92,7 @@ Los mismos gestos valen en la vista de dibujo y en la vista 3D.
 | **Cifras** durante un trazado | escribir una longitud exacta, luego Intro |
 | **Flechas** | mover los puntos seleccionados (Mayús: ×10) |
 | **D** | duplicar la selección |
-| **V** selección · **U** tubo · **A** sable · **B** cable · **W** whisker · **L** línea · **R** brida · **T** forma · **O** círculo · **C** costura · **K** unión · **M** montar | elegir la herramienta |
+| **V** selección · **U** varilla · **B** cable · **L** línea · **R** brida · **T** forma · **O** círculo · **C** costura · **K** unión · **M** montar | elegir la herramienta |
 
 ## Verificar antes de calcular
 
@@ -167,6 +170,17 @@ encontrar **en qué sentido corregir** (tensión, embridado, centrado).
 - **Informe de cálculo (.html)**: todos los resultados y la vista 3D, con el archivo de la cometa
   incluido (se puede recuperar desde el informe).
 - **PanelSearch**: envía una vela a la herramienta compañera PanelSearch, para buscar su panelado.
+
+## Túnel de viento integrado (prueba)
+
+AtelierCV tiene su propio túnel de viento (integrado en el archivo de AtelierCV): calcula el
+aire alrededor de la tela en la tarjeta gráfica (navegador compatible con WebGPU) y se abre junto al dibujo.
+- **Cometa con cola** (cola ajustada en «soufflerie»): «Calculer» envía la cometa, el túnel mide la fuerza de la cola
+  que flamea y AtelierCV la aplica en sus enganches durante el vuelo con viento. Es el uso más probado (Dazzle,
+  Kiteman). Sin tarjeta gráfica compatible, la cola se aproxima con cintas.
+- **Cometa sin cola**: «Envoyer à la soufflerie», o «Échanges de pression avec la soufflerie» para rehacer el vuelo
+  con la presión medida hasta que las fuerzas se estabilicen. Todavía experimental.
+- Resolución según el perfil de cálculo: 32 celdas en Estimation, 48 en Standard, 64 en Précis.
 
 ## Túnel de viento virtual FluidX3D
 

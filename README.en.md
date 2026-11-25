@@ -3,7 +3,7 @@
 [Français](README.md) · **English** · [Español](README.es.md)
 
 AtelierCV is for drawing a kite (frame, sail, bridle) and calculating its shape: at rest, flying
-in the wind or gliding. It is **a single file**: open `AtelierCV_v457.html` in a recent
+in the wind or gliding. It is **a single file**: open `AtelierCV_v612.html` in a recent
 browser (Chrome or Edge recommended), nothing to install.
 
 The **`Modeles/`** folder holds a library of kites ready to open (Eddy, Edo, Flare, Sled,
@@ -42,7 +42,7 @@ You work on one layer at a time; the others stay visible and can be snapped to.
 
 | Layer | Tools |
 |---|---|
-| **Frame** | Tube, Batten (in a sail pocket), Cable, Whisker (spreader), Construction line |
+| **Frame** | Rod (tube, solid rod or flat batten), Cable, Construction line |
 | **Bridling** | Bridle / line, Tail, Ballast |
 | **Sails** | Shape (one click per vertex), Circle, Seam (cut into panels), Link (sail ↔ frame), Mount |
 
@@ -52,12 +52,15 @@ You work on one layer at a time; the others stay visible and can be snapped to.
   choose its type: **rigid** (welded), **ball joint**, **sliding** (the element passing through
   slides in it, like in a sleeve) or **free**. A node can also be a **Fixed point** (anchored to
   the ground) or the **Ring** (where the line is attached).
-- **Sail edges**: hem, sleeve on a tube, or edge tied to a cable.
+- **Sail edges**: hem, sleeve on a rod, or edge tied to a cable.
 - **Symmetry**: you draw the left side (negative X), the right side follows. The **Symmetrize**
   button rebuilds the right side of an existing drawing.
 - **Isolate**: show only one shape to edit it, in its own plane if it is tilted.
-- **Tubes and battens**: material and section from the library, **over-length** (pre-stress),
-  **Straight at rest** (unticked: the drawn curve is their free shape).
+- **Rods**: material and section from the library, **over-length** (pre-stress), **Straight at
+  rest** (unticked: the drawn curve is its free shape), and **how the sail holds it**: at the ends
+  only (with or without ball joints: spreader, whisker), at intermediate nodes, bearing (upper or
+  lower side, sail attached or not), open sleeve (at one end or both), closed sleeve (batten: the
+  over-length tensions the sail).
 - **Sails**: fabric (library), pattern, holes and reinforcements; **Keel** box (left out of the
   rest calculation) and **Cell** box (parafoil: skin inflated by the internal pressure).
 
@@ -89,7 +92,7 @@ The same gestures work in the drawing view and in the 3D view.
 | **Digits** while drawing | type an exact length, then Enter |
 | **Arrows** | move the selected points (Shift: ×10) |
 | **D** | duplicate the selection |
-| **V** selection · **U** tube · **A** batten · **B** cable · **W** whisker · **L** line · **R** bridle · **T** shape · **O** circle · **C** seam · **K** link · **M** mount | choose the tool |
+| **V** selection · **U** rod · **B** cable · **L** line · **R** bridle · **T** shape · **O** circle · **C** seam · **K** link · **M** mount | choose the tool |
 
 ## Check before calculating
 
@@ -167,6 +170,17 @@ correct** (tension, bridle, balance).
 - **Calculation report (.html)**: all the results and the 3D view, with the kite file included
   (it can be retrieved from the report).
 - **PanelSearch**: sends a sail to the companion tool PanelSearch, to search for its panelling.
+
+## Built-in wind tunnel (trial)
+
+AtelierCV has its own wind tunnel (built into the AtelierCV file): it computes the
+air around the sail on the graphics card (WebGPU-capable browser) and opens next to the drawing.
+- **Kite with a tail** (tail setting on "soufflerie"): "Calculer" sends the kite, the wind tunnel measures the force
+  of the flapping tail, then AtelierCV applies it at the tail attachments in wind flight. This is the best-tested use
+  (Dazzle, Kiteman). Without a compatible graphics card, the tail is approximated by ribbons.
+- **Kite without a tail**: "Envoyer à la soufflerie", or "Échanges de pression avec la soufflerie" to redo the wind
+  flight with the measured pressure until the forces settle. Still experimental.
+- Resolution follows the calculation profile: 32 cells in Estimation, 48 in Standard, 64 in Précis.
 
 ## FluidX3D virtual wind tunnel
 

@@ -4,7 +4,7 @@
 
 AtelierCV sert à dessiner un cerf-volant (armature, voile, bridage) et à calculer sa forme :
 au repos, en vol au vent ou en vol plané. C'est **un seul fichier** : ouvrir
-`AtelierCV_v457.html` dans un navigateur récent (Chrome ou Edge conseillés), sans rien installer.
+`AtelierCV_v612.html` dans un navigateur récent (Chrome ou Edge conseillés), sans rien installer.
 
 Le dossier **`Modeles/`** contient une bibliothèque de cerfs-volants prêts à ouvrir (Eddy, Edo,
 Flare, Sled, Eclipse, Mouette…) : bouton **Ouvrir**, puis le fichier `.json`. C'est le plus
@@ -42,7 +42,7 @@ On travaille sur une couche à la fois ; les autres restent visibles et servent 
 
 | Couche | Outils |
 |---|---|
-| **Armature** | Tube, Latte (dans une poche de la voile), Câble, Whisker (écarteur), Ligne de construction |
+| **Armature** | Baguette (tube, jonc ou latte plate), Câble, Ligne de construction |
 | **Bridage** | Bride / ligne, Queue, Lest |
 | **Voilure** | Forme (un clic par sommet), Cercle, Couture (découpe en panneaux), Liaison (voile ↔ armature), Monter |
 
@@ -52,12 +52,15 @@ On travaille sur une couche à la fois ; les autres restent visibles et servent 
   Le sélectionner pour choisir son type : **rigide** (soudé), **rotule**, **coulisse**
   (l'élément qui le traverse y glisse, comme dans un manchon) ou **libre**.
   Un nœud peut aussi être **Point fixe** (ancrage au sol) ou **Anneau** (où la ligne s'attache).
-- **Bords de voile** : ourlet, fourreau sur un tube, ou bord lié à un câble.
+- **Bords de voile** : ourlet, fourreau sur une baguette, ou bord lié à un câble.
 - **Symétrie** : on dessine le côté gauche (X négatif), le côté droit suit. Le bouton
   **Symétriser** reconstruit le côté droit d'un dessin existant.
 - **Isoler** : n'afficher qu'une forme pour la retoucher, dans son propre plan si elle est inclinée.
-- **Tubes et lattes** : matériau et section dans la bibliothèque, **surlongueur** (précontrainte),
-  **Droit au repos** (décoché : la courbe dessinée est leur forme libre).
+- **Baguettes** : matériau et section dans la bibliothèque, **surlongueur** (précontrainte),
+  **Droite au repos** (décochée : la courbe dessinée est sa forme libre), et **tenue dans la toile** :
+  aux extrémités seulement (avec ou sans rotules : écarteur, whisker), aux nœuds intermédiaires,
+  en appui (côté intrados ou extrados, toile accrochée ou non), en fourreau ouvert (à un bout ou aux
+  deux), en fourreau fermé (latte : la surlongueur tend la toile).
 - **Voiles** : tissu (bibliothèque), patron, trous et renforts ; case **Quille** (hors du calcul au
   repos) et case **Caisson** (parafoil : peau gonflée par la pression intérieure).
 
@@ -89,7 +92,7 @@ Les mêmes gestes valent dans la vue de dessin et dans la vue 3D.
 | **Chiffres** pendant un tracé | taper une longueur exacte, puis Entrée |
 | **Flèches** | déplacer les points sélectionnés (Maj : ×10) |
 | **D** | dupliquer la sélection |
-| **V** sélection · **U** tube · **A** latte · **B** câble · **W** whisker · **L** ligne · **R** bride · **T** forme · **O** cercle · **C** couture · **K** liaison · **M** monter | choisir l'outil |
+| **V** sélection · **U** baguette · **B** câble · **L** ligne · **R** bride · **T** forme · **O** cercle · **C** couture · **K** liaison · **M** monter | choisir l'outil |
 
 ## Vérifier avant de calculer
 
@@ -167,6 +170,17 @@ Le calcul est un modèle : toile et armature sont bien calculées ; l'air l'est 
 - **Rapport de calcul (.html)** : tout le bilan et la vue 3D, avec le fichier du cerf-volant
   inclus (on peut le récupérer depuis le rapport).
 - **PanelSearch** : envoie une voile à l'outil compagnon PanelSearch, pour chercher son panneautage.
+
+## Soufflerie intégrée (essai)
+
+AtelierCV a sa propre soufflerie (intégrée au fichier d'AtelierCV) : elle
+calcule l'air autour de la toile sur la carte graphique (navigateur compatible WebGPU) et s'ouvre à côté du dessin.
+- **Cerf-volant à traîne** (réglage de la traîne sur « soufflerie ») : « Calculer » envoie le cerf-volant, la soufflerie
+  mesure la force de la traîne qui bat, puis AtelierCV l'applique à ses attaches dans le vol au vent. C'est l'usage le
+  mieux éprouvé (Dazzle, Kiteman). Sans carte graphique compatible, la traîne est approchée par des rubans.
+- **Cerf-volant sans traîne** : « Envoyer à la soufflerie », ou « Échanges de pression avec la soufflerie » pour refaire
+  le vol au vent avec la pression mesurée jusqu'à ce que les forces ne bougent plus. Encore expérimental.
+- Finesse selon le profil de calcul : 32 mailles en Estimation, 48 en Standard, 64 en Précis.
 
 ## Soufflerie numérique FluidX3D
 

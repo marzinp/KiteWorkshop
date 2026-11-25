@@ -1,6 +1,6 @@
 {
  "v": 2,
- "nid": 69,
+ "nid": 70,
  "points": {
   "p1": [
    0,
@@ -71,6 +71,11 @@
    0,
    103.2019,
    -1.2098
+  ],
+  "p69": [
+   0,
+   103.2019,
+   -1.2098
   ]
  },
  "shapes": [
@@ -81,7 +86,7 @@
    "plane": "face",
    "pts": [
     "p26",
-    "p58",
+    "p69",
     "p6"
    ],
    "segs": [
@@ -122,7 +127,7 @@
    "plane": "face",
    "pts": [
     "p3",
-    "p58",
+    "p69",
     "p10"
    ],
    "segs": [
@@ -221,10 +226,10 @@
     "droit": true,
     "sur": 5,
     "creux": -1,
-    "poche": 0,
     "matId": "cp",
     "mat": "Carbone pultrudé",
-    "compId": "comp_umv3jmwf9"
+    "compId": "comp_umv3jmwf9",
+    "poche": 0
    },
    "name": "Latte 1",
    "ends": {}
@@ -368,7 +373,8 @@
     "hemEA": 3000,
     "gsm": 40,
     "fabId": "t_rny",
-    "fab": "Ripstop nylon 40 g"
+    "fab": "Ripstop nylon 40 g",
+    "couleur": "#000000"
    },
    "name": "Voile 1"
   },
@@ -426,10 +432,10 @@
     "droit": true,
     "sur": 5,
     "creux": -1,
-    "poche": 0,
     "matId": "ce",
     "mat": "Carbone enroulé",
-    "compId": "c_tc64"
+    "compId": "c_tc64",
+    "poche": 0
    },
    "name": "Latte 4",
    "ends": {},
@@ -582,11 +588,11 @@
     "sigR": 1100,
     "droit": true,
     "sur": 2.08,
-    "poche": 30,
-    "appui": true,
     "matId": "ce",
     "mat": "Carbone enroulé",
     "compId": "comp_umv44djpr",
+    "poche": 30,
+    "appui": true,
     "appuiSet": true
    },
    "name": "Tube 1"
@@ -619,11 +625,11 @@
     "sigR": 1100,
     "droit": true,
     "sur": 2.08,
-    "poche": 30,
-    "appui": true,
     "matId": "ce",
     "mat": "Carbone enroulé",
     "compId": "comp_umv44djpr",
+    "poche": 30,
+    "appui": true,
     "appuiSet": true
    },
    "name": "Tube 1 ′"
@@ -697,6 +703,11 @@
    "type": "rigide",
    "auto": true,
    "name": "N19"
+  },
+  "p69": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N20"
   }
  },
  "name": "Suruga",
@@ -724,9 +735,22 @@
      "mat": "Carbone pultrudé"
     }
    }
+  ],
+  "calc": [
+   {
+    "id": "p_rap",
+    "name": "Estimation",
+    "vals": {
+     "hk": 25,
+     "tol": 0.0049,
+     "maxIt": 60000,
+     "stages": 0,
+     "imperf": true
+    }
+   }
   ]
  },
- "hk": 15,
+ "hk": 25,
  "hMode": "rel",
  "vol": {
   "anchor": "p36",
@@ -736,7 +760,8 @@
  "wind": {
   "V": 6,
   "coupled": true,
-  "coupEvery": 100
+  "coupEvery": 100,
+  "probe": false
  },
  "calcMode": "repos",
  "tails": {},
@@ -744,5 +769,36 @@
   "L": 3.7,
   "beta": 75
  },
- "deduce": 1
+ "deduce": 1,
+ "lests": {},
+ "detach": {
+  "p69": 1
+ },
+ "palette": [
+  "#000000"
+ ],
+ "disp": {
+  "d": {
+   "aim": true,
+   "cotes": true,
+   "q": "ombre",
+   "amp": 1,
+   "ghost": false,
+   "mesh": false,
+   "wr": true,
+   "other": "dim",
+   "ptsz": 0.5,
+   "grid": false,
+   "hideTub": false,
+   "hideBr": true,
+   "liveShade": false,
+   "hideCab": true,
+   "sky": true,
+   "rulers": false,
+   "skyMode": "pano"
+  },
+  "az": -0.62,
+  "el": 0.06999999999999995,
+  "pano": "prairie"
+ }
 }

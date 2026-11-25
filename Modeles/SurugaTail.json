@@ -1,6 +1,6 @@
 {
  "v": 2,
- "nid": 69,
+ "nid": 80,
  "points": {
   "p1": [
    0,
@@ -71,6 +71,26 @@
    0,
    103.2019,
    -1.2098
+  ],
+  "p74": [
+   95.46396772047294,
+   -453.547602662819,
+   0
+  ],
+  "p75": [
+   -214.3730044257572,
+   -143.71063051658882,
+   0
+  ],
+  "p76": [
+   -524.2099765719873,
+   -453.5476026628189,
+   0
+  ],
+  "p77": [
+   -214.37300442575727,
+   -763.3845748090491,
+   0
   ]
  },
  "shapes": [
@@ -221,10 +241,10 @@
     "droit": true,
     "sur": 5,
     "creux": -1,
-    "poche": 0,
     "matId": "cp",
     "mat": "Carbone pultrudé",
-    "compId": "comp_umv3jmwf9"
+    "compId": "comp_umv3jmwf9",
+    "poche": 0
    },
    "name": "Latte 1",
    "ends": {}
@@ -368,7 +388,8 @@
     "hemEA": 3000,
     "gsm": 40,
     "fabId": "t_rny",
-    "fab": "Ripstop nylon 40 g"
+    "fab": "Ripstop nylon 40 g",
+    "couleur": "#000000"
    },
    "name": "Voile 1"
   },
@@ -426,10 +447,10 @@
     "droit": true,
     "sur": 5,
     "creux": -1,
-    "poche": 0,
     "matId": "ce",
     "mat": "Carbone enroulé",
-    "compId": "c_tc64"
+    "compId": "c_tc64",
+    "poche": 0
    },
    "name": "Latte 4",
    "ends": {},
@@ -582,14 +603,15 @@
     "sigR": 1100,
     "droit": true,
     "sur": 2.08,
-    "poche": 30,
-    "appui": true,
     "matId": "ce",
     "mat": "Carbone enroulé",
     "compId": "comp_umv44djpr",
+    "poche": 30,
+    "appui": true,
     "appuiSet": true
    },
-   "name": "Tube 1"
+   "name": "Tube 1",
+   "ends": {}
   },
   {
    "id": "s68",
@@ -619,14 +641,216 @@
     "sigR": 1100,
     "droit": true,
     "sur": 2.08,
-    "poche": 30,
-    "appui": true,
     "matId": "ce",
     "mat": "Carbone enroulé",
     "compId": "comp_umv44djpr",
+    "poche": 30,
+    "appui": true,
     "appuiSet": true
    },
-   "name": "Tube 1 ′"
+   "name": "Tube 1 ′",
+   "ends": {}
+  },
+  {
+   "id": "s78",
+   "kind": "sail",
+   "closed": true,
+   "plane": "face",
+   "pts": [
+    "p74",
+    "p75",
+    "p76",
+    "p77"
+   ],
+   "segs": [
+    {
+     "straight": false,
+     "c1": [
+      0,
+      171.1182346501112,
+      0
+     ],
+     "c2": [
+      171.1182346501112,
+      -1.0477969917000219e-14,
+      0
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      -171.1182346501112,
+      1.0477969917000219e-14,
+      0
+     ],
+     "c2": [
+      2.0955939834000437e-14,
+      171.1182346501112,
+      0
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      -2.0955939834000437e-14,
+      -171.1182346501112,
+      0
+     ],
+     "c2": [
+      -171.1182346501112,
+      3.143390975100066e-14,
+      0
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      171.1182346501112,
+      -3.143390975100066e-14,
+      0
+     ],
+     "c2": [
+      -4.1911879668000874e-14,
+      -171.1182346501112,
+      0
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "E1": 60,
+    "E2": 50,
+    "G": 3,
+    "nu": 0.25,
+    "ang": 0,
+    "ret": 0,
+    "hemEA": 3000,
+    "gsm": 40,
+    "fabId": "t_rny",
+    "fab": "Ripstop nylon 40 g"
+   },
+   "name": "Trou 1",
+   "hole": true,
+   "holeOf": "s24"
+  },
+  {
+   "id": "s79",
+   "kind": "sail",
+   "closed": true,
+   "plane": "face",
+   "pts": [
+    "p74",
+    "p75",
+    "p76",
+    "p77"
+   ],
+   "segs": [
+    {
+     "straight": false,
+     "c1": [
+      0,
+      171.13959584621924,
+      0
+     ],
+     "c2": [
+      171.13959584621924,
+      -1.0479277913022202e-14,
+      0
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      -171.13959584621924,
+      1.0479277913022202e-14,
+      0
+     ],
+     "c2": [
+      2.0958555826044405e-14,
+      171.13959584621924,
+      0
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      -2.0958555826044405e-14,
+      -171.13959584621924,
+      0
+     ],
+     "c2": [
+      -171.13959584621924,
+      3.1437833739066606e-14,
+      0
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      171.13959584621924,
+      -3.1437833739066606e-14,
+      0
+     ],
+     "c2": [
+      -4.191711165208881e-14,
+      -171.13959584621924,
+      0
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "E1": 60,
+    "E2": 50,
+    "G": 3,
+    "nu": 0.25,
+    "ang": 0,
+    "ret": 0,
+    "hemEA": 3000,
+    "gsm": 40,
+    "fabId": "t_rny",
+    "fab": "Ripstop nylon 40 g",
+    "couleur": "#ff5500"
+   },
+   "name": "Voile 2"
   }
  ],
  "offset": {
@@ -700,13 +924,8 @@
   }
  },
  "name": "SurugaTail",
- "sym": true,
- "symMap": {
-  "p55": "p53",
-  "p4": "p27",
-  "p26": "p10",
-  "p6": "p3"
- },
+ "sym": false,
+ "symMap": {},
  "presets": {
   "comp": [
    {
@@ -724,6 +943,19 @@
      "mat": "Carbone pultrudé"
     }
    }
+  ],
+  "calc": [
+   {
+    "id": "p_std",
+    "name": "Standard",
+    "vals": {
+     "hk": 15,
+     "tol": 0.00166,
+     "maxIt": 303000,
+     "stages": 0,
+     "imperf": true
+    }
+   }
   ]
  },
  "hk": 15,
@@ -738,7 +970,7 @@
   "coupled": true,
   "coupEvery": 100
  },
- "calcMode": "repos",
+ "calcMode": "vent",
  "tails": {
   "p11": {
    "type": "ruban",
@@ -753,5 +985,10 @@
  "fpos": {
   "L": 3.7,
   "beta": 75
- }
+ },
+ "lests": {},
+ "palette": [
+  "#000000",
+  "#ff5500"
+ ]
 }

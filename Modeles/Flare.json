@@ -1,11 +1,11 @@
 {
- "v": 2,
- "nid": 274,
+ "v": 3,
+ "nid": 290,
  "points": {
   "p1": [
-   -1000,
-   650,
-   0
+   -1000.8744838682387,
+   649.997718660817,
+   0.40311098820098545
   ],
   "p2": [
    0,
@@ -18,9 +18,9 @@
    0
   ],
   "p4": [
-   -1000,
-   -1000,
-   0
+   -997.3243875055132,
+   -999.9930199059764,
+   -1.2333775794718704
   ],
   "p5": [
    -1500,
@@ -33,27 +33,27 @@
    0
   ],
   "p20": [
-   -603.8925170898438,
-   650,
-   0
+   -605.3925010853466,
+   649.9830579482766,
+   0.3727205085829631
   ],
   "p22": [
-   -598.0300903320312,
-   -1000,
-   0
+   -587.5003413955455,
+   -999.8810683636282,
+   -2.6164635026937644
   ],
   "p26": [
-   -199.34368881164113,
+   -201.0761031029475,
    650,
    0
   ],
   "p28": [
-   -199.34305927017704,
+   -201.0761031029475,
    -1000,
    0
   ],
   "p38": [
-   -209.13470549036828,
+   -140.29966366724054,
    167.4523470191163,
    2061.3027818850387
   ],
@@ -63,74 +63,74 @@
    3304.0523152434707
   ],
   "p73": [
-   -737.5571328071655,
-   106.238270584161,
-   584.9408194532768
+   -731.3256674272575,
+   106.25452712891321,
+   582.0682997208154
   ],
   "p77": [
-   -457.9259836347506,
-   106.23827058416094,
-   584.9408194532768
+   -454.224770553694,
+   106.28007512584053,
+   584.021130959212
   ],
   "p81": [
-   -199.34305927017704,
+   -201.0761031029475,
    54.853963599532904,
    584.9408194532768
   ],
   "p91": [
-   -1000,
-   591.1311340332031,
-   0
+   -1000.7478231731195,
+   591.1291831243656,
+   0.3447241844757824
   ],
   "p93": [
-   -881.7769615697451,
-   -393.4550107828021,
-   239.95959858252183
+   -886.6816878437174,
+   -393.4678061523194,
+   242.22053114739393
   ],
   "p95": [
-   -921.3429455040425,
-   -94.27240041614003,
-   175.31328782061993
+   -918.8369853852023,
+   -94.26586290845356,
+   174.15811492768543
   ],
   "p101": [
-   -1000,
-   -771.0203774176771,
-   0
+   -997.8170540056753,
+   -771.0146825839446,
+   -1.0062730130561377
   ],
   "p107": [
-   -199.34367660556575,
+   -201.0761031029475,
    618.0084228515623,
    0
   ],
   "p109": [
-   -199.34323680355516,
+   -201.0761031029475,
    -534.6929619717412,
    0
   ],
   "p111": [
-   -199.34330077387463,
+   -201.0761031029475,
    -91.5140093203294,
    161.16032584699738
   ],
   "p117": [
-   -603.6318718572147,
-   576.6405105590813,
-   0
+   -604.5970103581712,
+   576.6296094918349,
+   0.23982050075737596
   ],
   "p119": [
-   -524.7244629729927,
-   -409.970488945849,
-   226.49867608296304
+   -536.5032890801741,
+   -410.1035286861046,
+   229.42551401612866
   ],
   "p121": [
-   -559.8225677242435,
-   -96.87940414930497,
-   168.63826545626705
+   -555.4182011892132,
+   -96.8296576147625,
+   167.54385528932923
   ],
   "p127": [
-   -599.6653807050479,
-   -539.7419486935544,
-   0
+   -592.4912568819041,
+   -539.6609182443987,
+   -1.782647740253392
   ],
   "p134": [
    1500,
@@ -138,151 +138,152 @@
    0
   ],
   "p136": [
-   1000,
-   650,
-   0
+   1000.8744838682387,
+   649.997718660817,
+   0.40311098820098545
   ],
   "p137": [
-   1000,
-   591.1311340332031,
-   0
+   1000.7478231731195,
+   591.1291831243656,
+   0.3447241844757824
   ],
   "p138": [
-   1000,
-   -771.0203774176771,
-   0
+   997.8170540056753,
+   -771.0146825839446,
+   -1.0062730130561377
   ],
   "p139": [
-   1000,
-   -1000,
-   0
+   997.3243875055132,
+   -999.9930199059764,
+   -1.2333775794718704
   ],
   "p141": [
-   603.8925170898438,
-   650,
-   0
+   605.3925010853466,
+   649.9830579482766,
+   0.3727205085829631
   ],
   "p142": [
-   603.6318718572147,
-   576.6405105590813,
-   0
+   604.5970103581712,
+   576.6296094918349,
+   0.23982050075737596
   ],
   "p143": [
-   599.6653807050479,
-   -539.7419486935544,
-   0
+   592.4912568819041,
+   -539.6609182443987,
+   -1.782647740253392
   ],
   "p144": [
-   598.0300903320312,
-   -1000,
-   0
+   587.5003413955455,
+   -999.8810683636282,
+   -2.6164635026937644
   ],
   "p146": [
-   199.34368881164113,
+   201.0761031029475,
    650,
    0
   ],
   "p147": [
-   199.34367660556575,
+   201.0761031029475,
    618.0084228515623,
    0
   ],
   "p148": [
-   199.34323680355516,
+   201.0761031029475,
    -534.6929619717412,
    0
   ],
   "p149": [
-   199.34305927017704,
+   201.0761031029475,
    -1000,
    0
   ],
   "p185": [
-   737.5571328071655,
-   106.238270584161,
-   584.9408194532768
+   731.3256674272575,
+   106.25452712891321,
+   582.0682997208154
   ],
   "p186": [
-   881.7769615697451,
-   -393.4550107828021,
-   239.95959858252183
+   886.6816878437174,
+   -393.4678061523194,
+   242.22053114739393
   ],
   "p187": [
-   921.3429455040425,
-   -94.27240041614003,
-   175.31328782061993
+   918.8369853852023,
+   -94.26586290845356,
+   174.15811492768543
   ],
   "p191": [
-   457.9259836347506,
-   106.23827058416094,
-   584.9408194532768
+   454.224770553694,
+   106.28007512584053,
+   584.021130959212
   ],
   "p192": [
-   524.7244629729927,
-   -409.970488945849,
-   226.49867608296304
+   536.5032890801741,
+   -410.1035286861046,
+   229.42551401612866
   ],
   "p193": [
-   559.8225677242435,
-   -96.87940414930497,
-   168.63826545626705
+   555.4182011892132,
+   -96.8296576147625,
+   167.54385528932923
   ],
   "p197": [
-   199.34305927017704,
+   201.0761031029475,
    54.853963599532904,
    584.9408194532768
   ],
   "p198": [
-   199.34330077387463,
+   201.0761031029475,
    -91.5140093203294,
    161.16032584699738
   ],
   "p246": [
-   209.13470549036828,
+   140.29966366724054,
    167.4523470191163,
    2061.3027818850387
+  ],
+  "p278": [
+   -201.0761031029475,
+   -432.60128199936435,
+   248.19412212217395
+  ],
+  "p279": [
+   201.0761031029475,
+   -432.60128199936435,
+   248.19412212217395
+  ],
+  "p284": [
+   -999.8146453822403,
+   -7.892565956216176e-16,
+   0
+  ],
+  "p285": [
+   999.8146453822403,
+   -7.892565956216176e-16,
+   0
+  ],
+  "p286": [
+   -598.1303278273715,
+   -5.023322151821458e-16,
+   0
+  ],
+  "p287": [
+   598.1303278273715,
+   -5.023322151821458e-16,
+   0
+  ],
+  "p288": [
+   -201.0761031029475,
+   -5.684341886080802e-14,
+   0
+  ],
+  "p289": [
+   201.0761031029475,
+   -5.684341886080802e-14,
+   0
   ]
  },
  "shapes": [
-  {
-   "id": "s16",
-   "kind": "latte",
-   "closed": false,
-   "plane": "face",
-   "pts": [
-    "p5",
-    "p13"
-   ],
-   "segs": [
-    {
-     "straight": true,
-     "c1": null,
-     "c2": null,
-     "edge": {
-      "type": "ourlet",
-      "host": null,
-      "mode": "glissant"
-     }
-    }
-   ],
-   "props": {
-    "forme": "rond",
-    "de": 8,
-    "di": 6,
-    "b": 10,
-    "e": 1.5,
-    "E": 40,
-    "sigR": 800,
-    "droit": true,
-    "sur": 5,
-    "creux": 1,
-    "poche": 0,
-    "matId": "fv",
-    "mat": "Fibre de verre",
-    "compId": "comp_umv98nybw"
-   },
-   "name": "Latte 4"
-  },
   {
    "id": "s69",
    "kind": "sail",
@@ -295,9 +296,20 @@
     "p3",
     "p28",
     "p109",
+    "p288",
     "p107"
    ],
    "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
     {
      "straight": true,
      "c1": null,
@@ -379,7 +391,8 @@
     "hemEA": 3000,
     "gsm": 40,
     "fabId": "t_rny",
-    "fab": "Ripstop nylon 40 g"
+    "fab": "Ripstop nylon 40 g",
+    "couleur": "#4667b4"
    },
    "name": "Voile 1 · P1",
    "voile": "Voile 1"
@@ -397,6 +410,7 @@
     "p20",
     "p26",
     "p107",
+    "p288",
     "p109"
    ],
    "segs": [
@@ -479,6 +493,16 @@
       "host": null,
       "mode": "glissant"
      }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
     }
    ],
    "props": {
@@ -491,7 +515,8 @@
     "hemEA": 3000,
     "gsm": 40,
     "fabId": "t_rny",
-    "fab": "Ripstop nylon 40 g"
+    "fab": "Ripstop nylon 40 g",
+    "couleur": "#774dc7"
    },
    "name": "Voile 1 · P2",
    "voile": "Voile 1"
@@ -603,7 +628,8 @@
     "hemEA": 3000,
     "gsm": 40,
     "fabId": "t_rny",
-    "fab": "Ripstop nylon 40 g"
+    "fab": "Ripstop nylon 40 g",
+    "couleur": "#a23bbf"
    },
    "name": "Voile 1 · P3",
    "voile": "Voile 1"
@@ -682,14 +708,15 @@
     "hemEA": 3000,
     "gsm": 40,
     "fabId": "t_rny",
-    "fab": "Ripstop nylon 40 g"
+    "fab": "Ripstop nylon 40 g",
+    "couleur": "#99469b"
    },
    "name": "Voile 1 · P4",
    "voile": "Voile 1"
   },
   {
    "id": "s18",
-   "kind": "latte",
+   "kind": "baguette",
    "closed": false,
    "plane": "face",
    "pts": [
@@ -741,21 +768,27 @@
     "droit": true,
     "sur": 5,
     "creux": 1,
-    "poche": 0,
     "matId": "cp",
     "mat": "Carbone pultrudé",
     "compId": "c_tc64",
     "cone": false,
     "de2": 2,
     "di2": 0,
-    "cprof": 1
+    "cprof": 1,
+    "tenue": "fourreau-ouvert",
+    "renfort": 15,
+    "tenueSet": true
    },
    "name": "Latte 1",
-   "ends": {}
+   "ends": {},
+   "kinks": {
+    "p91": "geom",
+    "p101": "geom"
+   }
   },
   {
    "id": "s24",
-   "kind": "latte",
+   "kind": "baguette",
    "closed": false,
    "plane": "face",
    "pts": [
@@ -807,29 +840,46 @@
     "droit": true,
     "sur": 5,
     "creux": 1,
-    "poche": 0,
     "matId": "cp",
     "mat": "Carbone pultrudé",
     "compId": "c_tc64",
     "cone": false,
     "de2": 2,
     "di2": 0,
-    "cprof": 1
+    "cprof": 1,
+    "tenue": "fourreau-ouvert",
+    "renfort": 15,
+    "tenueSet": true
    },
-   "name": "Latte 2"
+   "name": "Latte 2",
+   "kinks": {
+    "p117": "geom",
+    "p127": "geom"
+   }
   },
   {
    "id": "s30",
-   "kind": "latte",
+   "kind": "baguette",
    "closed": false,
    "plane": "face",
    "pts": [
     "p26",
     "p107",
+    "p288",
     "p109",
     "p28"
    ],
    "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
     {
      "straight": true,
      "c1": null,
@@ -872,17 +922,24 @@
     "droit": true,
     "sur": 5,
     "creux": 1,
-    "poche": 0,
     "matId": "cp",
     "mat": "Carbone pultrudé",
     "compId": "c_tc64",
     "cone": false,
     "de2": 2,
     "di2": 0,
-    "cprof": 1
+    "cprof": 1,
+    "tenue": "fourreau-ouvert",
+    "renfort": 15,
+    "tenueSet": true
    },
    "name": "Latte 3",
-   "ends": {}
+   "ends": {},
+   "kinks": {
+    "p107": "geom",
+    "p288": "geom",
+    "p109": "geom"
+   }
   },
   {
    "id": "s51",
@@ -938,14 +995,14 @@
     {
      "straight": false,
      "c1": [
-      69.23008996703322,
-      -255.7775056240057,
-      154.30217627665957
+      71.346279547368,
+      -255.77198494331196,
+      153.32667597993313
      ],
      "c2": [
-      -103.74070208322064,
-      172.62405185699004,
-      -231.22050119438114
+      -106.458551531755,
+      172.61696157589301,
+      -229.96765363850017
      ],
      "edge": {
       "type": "ourlet",
@@ -956,14 +1013,14 @@
     {
      "straight": false,
      "c1": [
-      -50.96874939085482,
-      -119.185030631747,
-      -141.16584929351606
+      -62.344886598057315,
+      -119.21470851204342,
+      -135.92178925071437
      ],
      "c2": [
-      43.86164554118727,
-      168.41545890091902,
-      97.76019885722832
+      44.49136221344122,
+      168.4171016954528,
+      97.46991824799287
      ],
      "edge": {
       "type": "ourlet",
@@ -1002,7 +1059,8 @@
     "hemEA": 3000,
     "gsm": 31,
     "fabId": "t_rpe",
-    "fab": "Ripstop polyester 31 g"
+    "fab": "Ripstop polyester 31 g",
+    "couleur": "#c800ff"
    },
    "name": "Voile 4 · P1",
    "voile": "Voile 4"
@@ -1032,14 +1090,14 @@
     {
      "straight": false,
      "c1": [
-      -43.73961634614545,
-      -166.02424006382756,
-      -97.48821639449338
+      -44.371717811273925,
+      -166.0258890797699,
+      -97.19683646685166
      ],
      "c2": [
-      36.88149950620607,
-      175.4862961859526,
-      82.20263242275797
+      37.33812386413376,
+      175.48748742009366,
+      81.99214220922028
      ],
      "edge": {
       "type": "ourlet",
@@ -1078,7 +1136,8 @@
     "hemEA": 3000,
     "gsm": 31,
     "fabId": "t_rpe",
-    "fab": "Ripstop polyester 31 g"
+    "fab": "Ripstop polyester 31 g",
+    "couleur": "#4667b4"
    },
    "name": "Voile 4 · P2",
    "voile": "Voile 4"
@@ -1135,7 +1194,8 @@
     "hemEA": 3000,
     "gsm": 31,
     "fabId": "t_rpe",
-    "fab": "Ripstop polyester 31 g"
+    "fab": "Ripstop polyester 31 g",
+    "couleur": "#ffae00"
    },
    "name": "Voile 4 · P3",
    "voile": "Voile 4"
@@ -1166,14 +1226,14 @@
     {
      "straight": false,
      "c1": [
-      35.96194611465671,
-      -260.01297699263705,
-      142.66771239140985
+      38.2459834773465,
+      -259.98717919795865,
+      142.10016795760484
      ],
      "c2": [
-      -59.760205390488466,
-      166.24559926500436,
-      -240.92564383301436
+      -61.628071384679004,
+      166.2245020517135,
+      -240.4615109053252
      ],
      "edge": {
       "type": "ourlet",
@@ -1184,14 +1244,14 @@
     {
      "straight": false,
      "c1": [
-      -38.29543132027584,
-      -94.94317669490255,
-      -132.3488291708925
+      -32.19171205425482,
+      -94.87423627432453,
+      -133.8654995859767
      ],
      "c2": [
-      21.0722199692471,
-      146.9489216845787,
-      87.92746216608884
+      20.240195365228715,
+      146.93952411505882,
+      88.13420612768647
      ],
      "edge": {
       "type": "ourlet",
@@ -1230,7 +1290,8 @@
     "hemEA": 3000,
     "gsm": 31,
     "fabId": "t_rpe",
-    "fab": "Ripstop polyester 31 g"
+    "fab": "Ripstop polyester 31 g",
+    "couleur": "#c800ff"
    },
    "name": "Voile 2 · P1",
    "voile": "Voile 2"
@@ -1260,14 +1321,14 @@
     {
      "straight": false,
      "c1": [
-      -26.657940936329283,
-      -184.33522542129612,
-      -111.21218545376806
+      -25.61672439414872,
+      -184.3234650661418,
+      -111.47091005370382
      ],
      "c2": [
-      25.21063493648852,
-      193.7543815037568,
-      62.53499201860092
+      14.041509702996564,
+      193.62822822613612,
+      65.31032965549248
      ],
      "edge": {
       "type": "ourlet",
@@ -1306,7 +1367,8 @@
     "hemEA": 3000,
     "gsm": 31,
     "fabId": "t_rpe",
-    "fab": "Ripstop polyester 31 g"
+    "fab": "Ripstop polyester 31 g",
+    "couleur": "#4667b4"
    },
    "name": "Voile 2 · P2",
    "voile": "Voile 2"
@@ -1363,23 +1425,23 @@
     "hemEA": 3000,
     "gsm": 31,
     "fabId": "t_rpe",
-    "fab": "Ripstop polyester 31 g"
+    "fab": "Ripstop polyester 31 g",
+    "couleur": "#ffae00"
    },
    "name": "Voile 2 · P3",
    "voile": "Voile 2"
   },
   {
-   "id": "s112",
+   "id": "s280",
    "kind": "sail",
    "closed": true,
    "plane": "cote",
    "pts": [
+    "p111",
     "p107",
     "p26",
     "p81",
-    "p28",
-    "p109",
-    "p111"
+    "p278"
    ],
    "segs": [
     {
@@ -1393,14 +1455,24 @@
      }
     },
     {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
      "straight": false,
      "c1": [
-      0.00019080549125760626,
+      0,
       -258.6183835390205,
       141.24815722107033
      ],
      "c2": [
-      -0.00022203655453267857,
+      0,
       167.63972312016995,
       -242.34574814283746
      ],
@@ -1413,14 +1485,71 @@
     {
      "straight": false,
      "c1": [
-      -16.32432100115361,
-      -238.53863888501823,
-      -249.5893241134729
+      0,
+      -119.72356782710459,
+      -125.26995422667909
      ],
      "c2": [
-      -1.0037906400950438,
-      350.9215652693191,
-      134.5102787962587
+      0,
+      190.86150765219082,
+      98.48682341666779
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "E1": 150,
+    "E2": 120,
+    "G": 6,
+    "nu": 0.2,
+    "ang": 30.5,
+    "ret": 0,
+    "hemEA": 3000,
+    "gsm": 31,
+    "fabId": "t_rpe",
+    "fab": "Ripstop polyester 31 g",
+    "couleur": "#c800ff"
+   },
+   "name": "Voile 3 · P1",
+   "voile": "Voile 3"
+  },
+  {
+   "id": "s281",
+   "kind": "sail",
+   "closed": true,
+   "plane": "cote",
+   "pts": [
+    "p278",
+    "p28",
+    "p109",
+    "p111"
+   ],
+   "segs": [
+    {
+     "straight": false,
+     "c1": [
+      0,
+      -189.41319579336505,
+      -97.73947715472599
+     ],
+     "c2": [
+      0,
+      174.79252379454715,
+      66.99899189456227
      ],
      "edge": {
       "type": "ourlet",
@@ -1469,9 +1598,10 @@
     "hemEA": 3000,
     "gsm": 31,
     "fabId": "t_rpe",
-    "fab": "Ripstop polyester 31 g"
+    "fab": "Ripstop polyester 31 g",
+    "couleur": "#4667b4"
    },
-   "name": "Voile 3 · P1",
+   "name": "Voile 3 · P2",
    "voile": "Voile 3"
   },
   {
@@ -1481,10 +1611,21 @@
    "plane": "cote",
    "pts": [
     "p109",
+    "p288",
     "p107",
     "p111"
    ],
    "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
     {
      "straight": true,
      "c1": null,
@@ -1526,9 +1667,10 @@
     "hemEA": 3000,
     "gsm": 31,
     "fabId": "t_rpe",
-    "fab": "Ripstop polyester 31 g"
+    "fab": "Ripstop polyester 31 g",
+    "couleur": "#ffae00"
    },
-   "name": "Voile 3 · P2",
+   "name": "Voile 3 · P3",
    "voile": "Voile 3"
   },
   {
@@ -1644,51 +1786,12 @@
    ],
    "props": {
     "EA": 4000,
-    "rac": 89,
+    "rac": 75,
     "compId": "cable_umvb20yb7",
     "mat": "Polyester 2mm",
     "side": "ext"
    },
    "name": "Câble 1"
-  },
-  {
-   "id": "s254",
-   "kind": "latte",
-   "closed": false,
-   "plane": "face",
-   "pts": [
-    "p134",
-    "p13"
-   ],
-   "segs": [
-    {
-     "straight": true,
-     "c1": null,
-     "c2": null,
-     "edge": {
-      "type": "ourlet",
-      "host": null,
-      "mode": "glissant"
-     }
-    }
-   ],
-   "props": {
-    "forme": "rond",
-    "de": 8,
-    "di": 6,
-    "b": 10,
-    "e": 1.5,
-    "E": 40,
-    "sigR": 800,
-    "droit": true,
-    "sur": 5,
-    "creux": 1,
-    "poche": 0,
-    "matId": "fv",
-    "mat": "Fibre de verre",
-    "compId": "comp_umv98nybw"
-   },
-   "name": "Latte 4 ′"
   },
   {
    "id": "s255",
@@ -1702,9 +1805,20 @@
     "p3",
     "p149",
     "p148",
+    "p289",
     "p147"
    ],
    "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
     {
      "straight": true,
      "c1": null,
@@ -1786,7 +1900,8 @@
     "hemEA": 3000,
     "gsm": 40,
     "fabId": "t_rny",
-    "fab": "Ripstop nylon 40 g"
+    "fab": "Ripstop nylon 40 g",
+    "couleur": "#4667b4"
    },
    "name": "Voile 1 · P1 ′",
    "voile": "Voile 1"
@@ -1804,6 +1919,7 @@
     "p141",
     "p146",
     "p147",
+    "p289",
     "p148"
    ],
    "segs": [
@@ -1886,6 +2002,16 @@
       "host": null,
       "mode": "glissant"
      }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
     }
    ],
    "props": {
@@ -1898,7 +2024,8 @@
     "hemEA": 3000,
     "gsm": 40,
     "fabId": "t_rny",
-    "fab": "Ripstop nylon 40 g"
+    "fab": "Ripstop nylon 40 g",
+    "couleur": "#774dc7"
    },
    "name": "Voile 1 · P2 ′",
    "voile": "Voile 1"
@@ -2010,7 +2137,8 @@
     "hemEA": 3000,
     "gsm": 40,
     "fabId": "t_rny",
-    "fab": "Ripstop nylon 40 g"
+    "fab": "Ripstop nylon 40 g",
+    "couleur": "#a23bbf"
    },
    "name": "Voile 1 · P3 ′",
    "voile": "Voile 1"
@@ -2089,14 +2217,15 @@
     "hemEA": 3000,
     "gsm": 40,
     "fabId": "t_rny",
-    "fab": "Ripstop nylon 40 g"
+    "fab": "Ripstop nylon 40 g",
+    "couleur": "#99469b"
    },
    "name": "Voile 1 · P4 ′",
    "voile": "Voile 1"
   },
   {
    "id": "s259",
-   "kind": "latte",
+   "kind": "baguette",
    "closed": false,
    "plane": "face",
    "pts": [
@@ -2148,20 +2277,27 @@
     "droit": true,
     "sur": 5,
     "creux": 1,
-    "poche": 0,
     "matId": "cp",
     "mat": "Carbone pultrudé",
     "compId": "c_tc64",
     "cone": false,
     "de2": 2,
     "di2": 0,
-    "cprof": 1
+    "cprof": 1,
+    "tenue": "fourreau-ouvert",
+    "renfort": 15,
+    "tenueSet": true
    },
-   "name": "Latte 1 ′"
+   "name": "Latte 1 ′",
+   "ends": {},
+   "kinks": {
+    "p137": "geom",
+    "p138": "geom"
+   }
   },
   {
    "id": "s260",
-   "kind": "latte",
+   "kind": "baguette",
    "closed": false,
    "plane": "face",
    "pts": [
@@ -2213,29 +2349,46 @@
     "droit": true,
     "sur": 5,
     "creux": 1,
-    "poche": 0,
     "matId": "cp",
     "mat": "Carbone pultrudé",
     "compId": "c_tc64",
     "cone": false,
     "de2": 2,
     "di2": 0,
-    "cprof": 1
+    "cprof": 1,
+    "tenue": "fourreau-ouvert",
+    "renfort": 15,
+    "tenueSet": true
    },
-   "name": "Latte 2 ′"
+   "name": "Latte 2 ′",
+   "kinks": {
+    "p142": "geom",
+    "p143": "geom"
+   }
   },
   {
    "id": "s261",
-   "kind": "latte",
+   "kind": "baguette",
    "closed": false,
    "plane": "face",
    "pts": [
     "p146",
     "p147",
+    "p289",
     "p148",
     "p149"
    ],
    "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
     {
      "straight": true,
      "c1": null,
@@ -2278,16 +2431,24 @@
     "droit": true,
     "sur": 5,
     "creux": 1,
-    "poche": 0,
     "matId": "cp",
     "mat": "Carbone pultrudé",
     "compId": "c_tc64",
     "cone": false,
     "de2": 2,
     "di2": 0,
-    "cprof": 1
+    "cprof": 1,
+    "tenue": "fourreau-ouvert",
+    "renfort": 15,
+    "tenueSet": true
    },
-   "name": "Latte 3 ′"
+   "name": "Latte 3 ′",
+   "ends": {},
+   "kinks": {
+    "p147": "geom",
+    "p289": "geom",
+    "p148": "geom"
+   }
   },
   {
    "id": "s262",
@@ -2343,14 +2504,14 @@
     {
      "straight": false,
      "c1": [
-      -69.23008996703322,
-      -255.7775056240057,
-      154.30217627665957
+      -71.346279547368,
+      -255.77198494331196,
+      153.32667597993313
      ],
      "c2": [
-      103.74070208322064,
-      172.62405185699004,
-      -231.22050119438114
+      106.458551531755,
+      172.61696157589301,
+      -229.96765363850017
      ],
      "edge": {
       "type": "ourlet",
@@ -2361,14 +2522,14 @@
     {
      "straight": false,
      "c1": [
-      50.96874939085482,
-      -119.185030631747,
-      -141.16584929351606
+      62.344886598057315,
+      -119.21470851204342,
+      -135.92178925071437
      ],
      "c2": [
-      -43.86164554118727,
-      168.41545890091902,
-      97.76019885722832
+      -44.49136221344122,
+      168.4171016954528,
+      97.46991824799287
      ],
      "edge": {
       "type": "ourlet",
@@ -2407,7 +2568,8 @@
     "hemEA": 3000,
     "gsm": 31,
     "fabId": "t_rpe",
-    "fab": "Ripstop polyester 31 g"
+    "fab": "Ripstop polyester 31 g",
+    "couleur": "#c800ff"
    },
    "name": "Voile 4 ′ · P1",
    "voile": "Voile 4 ′"
@@ -2437,14 +2599,14 @@
     {
      "straight": false,
      "c1": [
-      43.73961634614545,
-      -166.02424006382756,
-      -97.48821639449338
+      44.371717811273925,
+      -166.0258890797699,
+      -97.19683646685166
      ],
      "c2": [
-      -36.88149950620607,
-      175.4862961859526,
-      82.20263242275797
+      -37.33812386413376,
+      175.48748742009366,
+      81.99214220922028
      ],
      "edge": {
       "type": "ourlet",
@@ -2483,7 +2645,8 @@
     "hemEA": 3000,
     "gsm": 31,
     "fabId": "t_rpe",
-    "fab": "Ripstop polyester 31 g"
+    "fab": "Ripstop polyester 31 g",
+    "couleur": "#4667b4"
    },
    "name": "Voile 4 ′ · P2",
    "voile": "Voile 4 ′"
@@ -2540,7 +2703,8 @@
     "hemEA": 3000,
     "gsm": 31,
     "fabId": "t_rpe",
-    "fab": "Ripstop polyester 31 g"
+    "fab": "Ripstop polyester 31 g",
+    "couleur": "#ffae00"
    },
    "name": "Voile 4 ′ · P3",
    "voile": "Voile 4 ′"
@@ -2571,14 +2735,14 @@
     {
      "straight": false,
      "c1": [
-      -35.96194611465671,
-      -260.01297699263705,
-      142.66771239140985
+      -38.2459834773465,
+      -259.98717919795865,
+      142.10016795760484
      ],
      "c2": [
-      59.760205390488466,
-      166.24559926500436,
-      -240.92564383301436
+      61.628071384679004,
+      166.2245020517135,
+      -240.4615109053252
      ],
      "edge": {
       "type": "ourlet",
@@ -2589,14 +2753,14 @@
     {
      "straight": false,
      "c1": [
-      38.29543132027584,
-      -94.94317669490255,
-      -132.3488291708925
+      32.19171205425482,
+      -94.87423627432453,
+      -133.8654995859767
      ],
      "c2": [
-      -21.0722199692471,
-      146.9489216845787,
-      87.92746216608884
+      -20.240195365228715,
+      146.93952411505882,
+      88.13420612768647
      ],
      "edge": {
       "type": "ourlet",
@@ -2635,7 +2799,8 @@
     "hemEA": 3000,
     "gsm": 31,
     "fabId": "t_rpe",
-    "fab": "Ripstop polyester 31 g"
+    "fab": "Ripstop polyester 31 g",
+    "couleur": "#c800ff"
    },
    "name": "Voile 2 ′ · P1",
    "voile": "Voile 2 ′"
@@ -2665,14 +2830,14 @@
     {
      "straight": false,
      "c1": [
-      26.657940936329283,
-      -184.33522542129612,
-      -111.21218545376806
+      25.61672439414872,
+      -184.3234650661418,
+      -111.47091005370382
      ],
      "c2": [
-      -25.21063493648852,
-      193.7543815037568,
-      62.53499201860092
+      -14.041509702996564,
+      193.62822822613612,
+      65.31032965549248
      ],
      "edge": {
       "type": "ourlet",
@@ -2711,7 +2876,8 @@
     "hemEA": 3000,
     "gsm": 31,
     "fabId": "t_rpe",
-    "fab": "Ripstop polyester 31 g"
+    "fab": "Ripstop polyester 31 g",
+    "couleur": "#4667b4"
    },
    "name": "Voile 2 ′ · P2",
    "voile": "Voile 2 ′"
@@ -2768,23 +2934,23 @@
     "hemEA": 3000,
     "gsm": 31,
     "fabId": "t_rpe",
-    "fab": "Ripstop polyester 31 g"
+    "fab": "Ripstop polyester 31 g",
+    "couleur": "#ffae00"
    },
    "name": "Voile 2 ′ · P3",
    "voile": "Voile 2 ′"
   },
   {
-   "id": "s269",
+   "id": "s282",
    "kind": "sail",
    "closed": true,
    "plane": "cote",
    "pts": [
+    "p198",
     "p147",
     "p146",
     "p197",
-    "p149",
-    "p148",
-    "p198"
+    "p279"
    ],
    "segs": [
     {
@@ -2798,14 +2964,24 @@
      }
     },
     {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
      "straight": false,
      "c1": [
-      -0.00019080549125760626,
+      0,
       -258.6183835390205,
       141.24815722107033
      ],
      "c2": [
-      0.00022203655453267857,
+      0,
       167.63972312016995,
       -242.34574814283746
      ],
@@ -2818,14 +2994,71 @@
     {
      "straight": false,
      "c1": [
-      16.32432100115361,
-      -238.53863888501823,
-      -249.5893241134729
+      0,
+      -119.72356782710459,
+      -125.26995422667909
      ],
      "c2": [
-      1.0037906400950438,
-      350.9215652693191,
-      134.5102787962587
+      0,
+      190.86150765219082,
+      98.48682341666779
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "E1": 150,
+    "E2": 120,
+    "G": 6,
+    "nu": 0.2,
+    "ang": 30.5,
+    "ret": 0,
+    "hemEA": 3000,
+    "gsm": 31,
+    "fabId": "t_rpe",
+    "fab": "Ripstop polyester 31 g",
+    "couleur": "#c800ff"
+   },
+   "name": "Voile 3 ′ · P1",
+   "voile": "Voile 3 ′"
+  },
+  {
+   "id": "s283",
+   "kind": "sail",
+   "closed": true,
+   "plane": "cote",
+   "pts": [
+    "p279",
+    "p149",
+    "p148",
+    "p198"
+   ],
+   "segs": [
+    {
+     "straight": false,
+     "c1": [
+      0,
+      -189.41319579336505,
+      -97.73947715472599
+     ],
+     "c2": [
+      0,
+      174.79252379454715,
+      66.99899189456227
      ],
      "edge": {
       "type": "ourlet",
@@ -2874,9 +3107,10 @@
     "hemEA": 3000,
     "gsm": 31,
     "fabId": "t_rpe",
-    "fab": "Ripstop polyester 31 g"
+    "fab": "Ripstop polyester 31 g",
+    "couleur": "#4667b4"
    },
-   "name": "Voile 3 ′ · P1",
+   "name": "Voile 3 ′ · P2",
    "voile": "Voile 3 ′"
   },
   {
@@ -2886,10 +3120,21 @@
    "plane": "cote",
    "pts": [
     "p148",
+    "p289",
     "p147",
     "p198"
    ],
    "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
     {
      "straight": true,
      "c1": null,
@@ -2931,9 +3176,10 @@
     "hemEA": 3000,
     "gsm": 31,
     "fabId": "t_rpe",
-    "fab": "Ripstop polyester 31 g"
+    "fab": "Ripstop polyester 31 g",
+    "couleur": "#ffae00"
    },
-   "name": "Voile 3 ′ · P2",
+   "name": "Voile 3 ′ · P3",
    "voile": "Voile 3 ′"
   },
   {
@@ -3025,6 +3271,236 @@
     "mat": "Polyester 2mm"
    },
    "name": "Bride 3 ′"
+  },
+  {
+   "id": "s276",
+   "kind": "baguette",
+   "closed": false,
+   "plane": "face",
+   "pts": [
+    "p5",
+    "p284",
+    "p286",
+    "p288",
+    "p13"
+   ],
+   "segs": [
+    {
+     "straight": false,
+     "c1": [
+      162.48894421443606,
+      -6.039629516993438e-16,
+      0
+     ],
+     "c2": [
+      -170.0996232214152,
+      -7.973394732322425e-18,
+      0
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      132.78268576923165,
+      6.224168797116561e-18,
+      0
+     ],
+     "c2": [
+      -134.5938099398677,
+      -1.5184753655402733e-16,
+      0
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      132.4685189838491,
+      1.4944980224309466e-16,
+      0
+     ],
+     "c2": [
+      -131.84120426474416,
+      -9.901058690897298e-17,
+      0
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      67.31316752016929,
+      5.055108727231341e-17,
+      0
+     ],
+     "c2": [
+      -66.684461444894,
+      0,
+      0
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "forme": "rond",
+    "de": 10,
+    "di": 8,
+    "b": 10,
+    "e": 1.5,
+    "E": 135,
+    "sigR": 1500,
+    "droit": true,
+    "sur": 3,
+    "creux": 1,
+    "cone": false,
+    "de2": 2,
+    "di2": 0,
+    "cprof": 1,
+    "matId": "cp",
+    "mat": "Carbone pultrudé",
+    "compId": "comp_umvblr6ii",
+    "tenue": "fourreau-ouvert",
+    "renfort": 10,
+    "passants": "points",
+    "tenueSet": true,
+    "ouvertBout": "deux"
+   },
+   "name": "Baguette 1",
+   "kinks": {
+    "p288": "geom"
+   }
+  },
+  {
+   "id": "s277",
+   "kind": "baguette",
+   "closed": false,
+   "plane": "face",
+   "pts": [
+    "p134",
+    "p285",
+    "p287",
+    "p289",
+    "p13"
+   ],
+   "segs": [
+    {
+     "straight": false,
+     "c1": [
+      -162.48894421443606,
+      -6.039629516993438e-16,
+      0
+     ],
+     "c2": [
+      170.0996232214152,
+      -7.973394732322425e-18,
+      0
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      -132.78268576923165,
+      6.224168797116561e-18,
+      0
+     ],
+     "c2": [
+      134.5938099398677,
+      -1.5184753655402733e-16,
+      0
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      -132.4685189838491,
+      1.4944980224309466e-16,
+      0
+     ],
+     "c2": [
+      131.84120426474416,
+      -9.901058690897298e-17,
+      0
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      -67.31316752016929,
+      5.055108727231341e-17,
+      0
+     ],
+     "c2": [
+      66.684461444894,
+      0,
+      0
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "forme": "rond",
+    "de": 10,
+    "di": 8,
+    "b": 10,
+    "e": 1.5,
+    "E": 135,
+    "sigR": 1500,
+    "droit": true,
+    "sur": 3,
+    "creux": 1,
+    "cone": false,
+    "de2": 2,
+    "di2": 0,
+    "cprof": 1,
+    "matId": "cp",
+    "mat": "Carbone pultrudé",
+    "compId": "comp_umvblr6ii",
+    "tenue": "fourreau-ouvert",
+    "renfort": 10,
+    "passants": "points",
+    "tenueSet": true,
+    "ouvertBout": "deux"
+   },
+   "name": "Baguette 1 ′",
+   "kinks": {
+    "p289": "geom"
+   }
   }
  ],
  "offset": {
@@ -3038,44 +3514,39 @@
  "hMode": "rel",
  "deduce": 1,
  "nodes": {
-  "p13": {
-   "type": "rigide",
-   "auto": true,
-   "name": "N1"
-  },
   "p5": {
    "type": "rigide",
-   "auto": true,
+   "auto": false,
    "name": "N2"
   },
   "p1": {
    "type": "rigide",
-   "auto": true,
+   "auto": false,
    "name": "N4"
   },
   "p4": {
    "type": "rigide",
-   "auto": true,
+   "auto": false,
    "name": "N5"
   },
   "p20": {
    "type": "rigide",
-   "auto": true,
+   "auto": false,
    "name": "N8"
   },
   "p22": {
    "type": "rigide",
-   "auto": true,
+   "auto": false,
    "name": "N9"
   },
   "p26": {
    "type": "rigide",
-   "auto": true,
+   "auto": false,
    "name": "N12"
   },
   "p28": {
    "type": "rigide",
-   "auto": true,
+   "auto": false,
    "name": "N13"
   },
   "p38": {
@@ -3091,112 +3562,112 @@
   },
   "p73": {
    "type": "rigide",
-   "auto": true,
+   "auto": false,
    "name": "N21"
   },
   "p77": {
    "type": "rigide",
-   "auto": true,
+   "auto": false,
    "name": "N23"
   },
   "p81": {
    "type": "rigide",
-   "auto": true,
+   "auto": false,
    "name": "N25"
   },
   "p101": {
    "type": "rigide",
-   "auto": true,
+   "auto": false,
    "name": "N27"
   },
   "p91": {
    "type": "rigide",
-   "auto": true,
+   "auto": false,
    "name": "N28"
   },
   "p109": {
    "type": "rigide",
-   "auto": true,
+   "auto": false,
    "name": "N31"
   },
   "p107": {
    "type": "rigide",
-   "auto": true,
+   "auto": false,
    "name": "N32"
   },
   "p127": {
    "type": "rigide",
-   "auto": true,
+   "auto": false,
    "name": "N35"
   },
   "p117": {
    "type": "rigide",
-   "auto": true,
+   "auto": false,
    "name": "N36"
   },
   "p134": {
    "type": "rigide",
-   "auto": true,
+   "auto": false,
    "name": "N37"
   },
   "p136": {
    "type": "rigide",
-   "auto": true,
+   "auto": false,
    "name": "N38"
   },
   "p137": {
    "type": "rigide",
-   "auto": true,
+   "auto": false,
    "name": "N39"
   },
   "p138": {
    "type": "rigide",
-   "auto": true,
+   "auto": false,
    "name": "N40"
   },
   "p139": {
    "type": "rigide",
-   "auto": true,
+   "auto": false,
    "name": "N41"
   },
   "p141": {
    "type": "rigide",
-   "auto": true,
+   "auto": false,
    "name": "N42"
   },
   "p142": {
    "type": "rigide",
-   "auto": true,
+   "auto": false,
    "name": "N43"
   },
   "p143": {
    "type": "rigide",
-   "auto": true,
+   "auto": false,
    "name": "N44"
   },
   "p144": {
    "type": "rigide",
-   "auto": true,
+   "auto": false,
    "name": "N45"
   },
   "p146": {
    "type": "rigide",
-   "auto": true,
+   "auto": false,
    "name": "N46"
   },
   "p147": {
    "type": "rigide",
-   "auto": true,
+   "auto": false,
    "name": "N47"
   },
   "p148": {
    "type": "rigide",
-   "auto": true,
+   "auto": false,
    "name": "N48"
   },
   "p149": {
    "type": "rigide",
-   "auto": true,
+   "auto": false,
    "name": "N49"
   },
   "p246": {
@@ -3206,27 +3677,37 @@
   },
   "p185": {
    "type": "rigide",
-   "auto": true,
+   "auto": false,
    "name": "N51"
   },
   "p191": {
    "type": "rigide",
-   "auto": true,
+   "auto": false,
    "name": "N52"
   },
   "p197": {
    "type": "rigide",
-   "auto": true,
+   "auto": false,
    "name": "N53"
+  },
+  "p13": {
+   "type": "rigide",
+   "auto": false,
+   "name": "N54"
+  },
+  "p288": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N55"
+  },
+  "p289": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N56"
   }
  },
  "sym": true,
  "symMap": {
-  "p134": "p5",
-  "p136": "p1",
-  "p137": "p91",
-  "p138": "p101",
-  "p139": "p4",
   "p141": "p20",
   "p142": "p117",
   "p143": "p127",
@@ -3243,7 +3724,16 @@
   "p193": "p121",
   "p197": "p81",
   "p198": "p111",
-  "p246": "p38"
+  "p246": "p38",
+  "p279": "p278",
+  "p139": "p4",
+  "p134": "p5",
+  "p136": "p1",
+  "p137": "p91",
+  "p138": "p101",
+  "p285": "p284",
+  "p287": "p286",
+  "p289": "p288"
  },
  "tails": {
   "p4": {
@@ -3280,12 +3770,13 @@
   }
  },
  "name": "Flare",
- "calcMode": "repos",
+ "calcMode": "vent",
  "wind": {
-  "V": 7,
+  "V": 5,
   "bdrag": true,
   "tails": true,
-  "probe": false
+  "probe": false,
+  "lsoft": true
  },
  "fpos": {
   "on": true,
@@ -3298,7 +3789,8 @@
     "name": "Polyester 2mm",
     "vals": {
      "EA": 4000,
-     "d": 2
+     "d": 2,
+     "ml": 2.6
     }
    }
   ],
@@ -3369,7 +3861,47 @@
      "matId": "cp",
      "mat": "Carbone pultrudé"
     }
+   },
+   {
+    "id": "c_tc86",
+    "name": "Tube carbone 8/6",
+    "vals": {
+     "de": 8,
+     "di": 6,
+     "cone": false,
+     "de2": 2,
+     "di2": 0,
+     "cprof": 1,
+     "E": 135,
+     "sigR": 1500,
+     "matId": "cp",
+     "mat": "Carbone pultrudé"
+    }
+   },
+   {
+    "id": "comp_umvblr6ii",
+    "name": "Tube carbone 10/8",
+    "vals": {
+     "forme": "rond",
+     "de": 10,
+     "di": 8,
+     "E": 135,
+     "sigR": 1500,
+     "matId": "cp",
+     "mat": "Carbone pultrudé"
+    }
    }
   ]
- }
+ },
+ "palette": [
+  "#99469b",
+  "#c800ff",
+  "#a23bbf",
+  "#774dc7",
+  "#4667b4",
+  "#ffae00",
+  "#44e456",
+  "#99469be6"
+ ],
+ "lests": {}
 }
