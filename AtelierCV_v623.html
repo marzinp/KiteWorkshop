@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="google" content="notranslate">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>AtelierCV v622</title>
+  <title>AtelierCV v623</title>
   <style>
     :root {
       --bg: #f4f3ef;
@@ -1217,7 +1217,7 @@
   <script id="engine">
     'use strict';
     /* ================= MOTEUR (sans DOM) ================= */
-    const VERSION = 'v622';
+    const VERSION = 'v623';
     const V = {
       add: (a, b) => [a[0] + b[0], a[1] + b[1], a[2] + b[2]],
       sub: (a, b) => [a[0] - b[0], a[1] - b[1], a[2] - b[2]],
@@ -9693,7 +9693,7 @@ function pdown(e, x, y) {
     return;
   }
   /* v615 : glisser dans le vide = déplacer la vue (la fenêtre de sélection demande Ctrl) */
-  if (!H) { hideEdgeMenu(); if (E) { ui.psel = null; if (ui.sel) ui.sel = { shape: E, seg: null, anchor: null }; } else { ui.sel = null; ui.multi = []; } buildSel(); ui.drag = PERSP() ? (e.shiftKey ? { kind: 'ppan', x, y, t: ui.camP.t.slice() } : { kind: 'orbit', x, y, az: ui.camP.az, el: ui.camP.el }) : { kind: 'pan', x, y, cx: ui.cam.cx, cy: ui.cam.cy }; drawEditor(); return; }
+  if (!H) { hideEdgeMenu(); if (E) { ui.psel = null; if (ui.sel) ui.sel = { shape: E, seg: null, anchor: null }; } else { ui.sel = null; ui.multi = []; } buildSel(); ui.drag = PERSP() ? (e.shiftKey ? { kind: 'ppan', x, y, t: ui.camP.t.slice() } : { kind: 'orbit', x, y, az: ui.camP.az, el: ui.camP.el }) : { kind: 'pan', x, y, cx: ui.cam.cx, cy: ui.cam.cy }; if (E) { ui.drag.exitEdit = true; ui.drag.x0 = x; ui.drag.y0 = y; } drawEditor(); return; }
   if (ui.multi.length && H && H.sh && ui.multi.includes(H.sh.id) && (H.type === 'fill' || H.type === 'seg')) {
     pushUndo(); const st = {}; shapePids(ui.multi).forEach(q => st[q] = doc.points[q].slice()); ui.drag = { kind: 'move', x, y, st, moved: false, ids: ui.multi.slice(), again: e.detail < 2 }; return;
   }
@@ -9812,7 +9812,7 @@ function endDrag(e) {
   if (e) ui.ptrs.delete(e.pointerId); const D = ui.drag; if (!D) return; ui.drag = null; $('veil2').style.display = 'none';
   if (D.kind === 'rulO') { if (D.px != null && !rulCorner(D.px, D.py)) rulSetOrigin(D.px, D.py); ui.snap = null; drawEditor(); return; }
   if (D.kind === 'rnav') { pdown(D.ev, D.x, D.y); if (ui.drag && ['orbit', 'ppan', 'pan'].includes(ui.drag.kind)) { ui.drag = null; drawEditor(); } else if (ui.drag) endDrag(); return; }
-  if (D.kind === 'orbit' || D.kind === 'ppan' || D.kind === 'pan') { cv1.style.cursor = ''; drawEditor(); }/* v622 : le gizmo et le cadre (masqués pendant un glissé) réapparaissent dès qu'on relâche */
+  if (D.kind === 'orbit' || D.kind === 'ppan' || D.kind === 'pan') { cv1.style.cursor = ''; if (D.exitEdit && e && (() => { const [ex, ey] = evPos(e, cv1); return Math.hypot(ex - D.x0, ey - D.y0) < 3; })()) { editExit(); return; }/* v623 : clic (sans glisser) dans le vide = fin de l'édition des points ; un glissé fait défiler sans en sortir */ drawEditor(); }/* v622 : le gizmo et le cadre (masqués pendant un glissé) réapparaissent dès qu'on relâche */
   if (D.kind === 'giz2') {
     if (!D.moved) {
       ui.undo.pop(); updHist();/* clic sans glisser sur une flèche = clic sur ce qui est dessous */

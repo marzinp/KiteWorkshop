@@ -3,7 +3,7 @@
 [Français](README.md) · [English](README.en.md) · **Español**
 
 AtelierCV sirve para dibujar una cometa (armazón, vela, embridado) y calcular su forma: en
-reposo, en vuelo con viento o en planeo. Es **un solo archivo**: abrir `AtelierCV_v622.html`
+reposo, en vuelo con viento o en planeo. Es **un solo archivo**: abrir `AtelierCV_v623.html`
 en un navegador reciente (se recomiendan Chrome o Edge), sin instalar nada.
 
 La carpeta **`Modeles/`** contiene una biblioteca de cometas listas para abrir (Eddy, Edo, Flare,
@@ -101,7 +101,7 @@ Los mismos gestos valen en la vista de dibujo y en la vista 3D.
 | **Arrastrar sobre el fondo** o sobre una forma no seleccionada | desplazar la vista |
 | **Ctrl+arrastrar** (Cmd en Mac) | ventana de selección: de izquierda a derecha = formas completamente dentro, de derecha a izquierda = formas tocadas |
 | **Ctrl+clic** | añadir o quitar de la selección; en edición de puntos: seleccionar varios puntos |
-| **Doble clic** sobre una forma | editar sus puntos (tiradores de curva incluidos); **Esc** para terminar. Los nudos (puntos compartidos) son cuadrados, los puntos de control círculos. Arrastrar el trazado: la curva se deforma para pasar por el ratón. Un punto puede ser anguloso (Casser), suave o simétrico (tiradores de igual longitud) |
+| **Doble clic** sobre una forma | editar sus puntos (tiradores de curva incluidos); **Esc** o un clic en el fondo para terminar (arrastrar en el fondo desplaza la vista sin salir). Los nudos (puntos compartidos) son cuadrados, los puntos de control círculos. Arrastrar el trazado: la curva se deforma para pasar por el ratón. Un punto puede ser anguloso (Casser), suave o simétrico (tiradores de igual longitud) |
 | **Doble clic**, en edición de puntos | sobre un punto: quitarlo de esta forma (un nudo sigue en las demás); sobre el trazado: añadir un punto (en un cruce: nudo común a los dos trazados). Solo doble clic rápido: un segundo clic más lento retoma el punto |
 | **Clic derecho** (sin arrastrar) | sobre un borde de vela: su menú (dobladillo, funda, cable, costura); durante un trazado: cancelarlo |
 | **Alt** pulsado | sin imán (punto colocado libremente); **Alt+clic**: la forma de debajo |

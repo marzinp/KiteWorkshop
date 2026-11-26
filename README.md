@@ -4,7 +4,7 @@
 
 AtelierCV sert à dessiner un cerf-volant (armature, voile, bridage) et à calculer sa forme :
 au repos, en vol au vent ou en vol plané. C'est **un seul fichier** : ouvrir
-`AtelierCV_v622.html` dans un navigateur récent (Chrome ou Edge conseillés), sans rien installer.
+`AtelierCV_v623.html` dans un navigateur récent (Chrome ou Edge conseillés), sans rien installer.
 
 Le dossier **`Modeles/`** contient une bibliothèque de cerfs-volants prêts à ouvrir (Eddy, Edo,
 Flare, Sled, Eclipse, Mouette…) : bouton **Ouvrir**, puis le fichier `.json`. C'est le plus
@@ -101,7 +101,7 @@ Les mêmes gestes valent dans la vue de dessin et dans la vue 3D.
 | **Glisser dans le vide** ou sur une forme non sélectionnée | déplacer la vue |
 | **Ctrl+glisser** (Cmd sur Mac) | fenêtre de sélection : de gauche à droite = formes entièrement dedans, de droite à gauche = formes touchées |
 | **Ctrl+clic** | ajouter ou retirer de la sélection ; en édition des points : sélectionner plusieurs points |
-| **Double-clic** sur une forme | éditer ses points (poignées de courbe comprises) ; **Échap** pour terminer. Les nœuds (points partagés) sont des carrés, les points de contrôle des ronds. Glisser le tracé : la courbe se déforme pour passer par la souris. Un point se règle anguleux (Casser), lisse ou symétrique (poignées de même longueur) |
+| **Double-clic** sur une forme | éditer ses points (poignées de courbe comprises) ; **Échap** ou un clic dans le vide pour terminer (glisser dans le vide fait défiler sans sortir). Les nœuds (points partagés) sont des carrés, les points de contrôle des ronds. Glisser le tracé : la courbe se déforme pour passer par la souris. Un point se règle anguleux (Casser), lisse ou symétrique (poignées de même longueur) |
 | **Double-clic**, en édition des points | sur un point : le retirer de cette forme (un nœud reste aux autres) ; sur le tracé : ajouter un point (sur un croisement : nœud commun aux deux tracés). Double-clic rapide seulement : un second clic plus lent reprend le point |
 | **Clic droit** (sans glisser) | sur un bord de voile : son menu (ourlet, fourreau, câble, couture) ; pendant un tracé : l'annuler |
 | **Alt** maintenu | pas d'aimantation (point posé librement) ; **Alt+clic** : la forme de dessous |
