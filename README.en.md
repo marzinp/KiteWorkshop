@@ -3,7 +3,7 @@
 [Français](README.md) · **English** · [Español](README.es.md)
 
 AtelierCV is for drawing a kite (frame, sail, bridle) and calculating its shape: at rest, flying
-in the wind or gliding. It is **a single file**: open `AtelierCV_v616.html` in a recent
+in the wind or gliding. It is **a single file**: open `AtelierCV_v617.html` in a recent
 browser (Chrome or Edge recommended), nothing to install.
 
 The **`Modeles/`** folder holds a library of kites ready to open (Eddy, Edo, Flare, Sled,
@@ -99,7 +99,7 @@ The same gestures work in the drawing view and in the 3D view.
 | **Drag on the background** or on an unselected shape | move the view |
 | **Ctrl+drag** (Cmd on Mac) | selection window: left to right = shapes fully inside, right to left = shapes touched |
 | **Ctrl+click** | add to or remove from the selection; when editing points: select several points |
-| **Double click** a shape | edit its points (curve handles included); **Esc** to finish |
+| **Double click** a shape | edit its points (curve handles included); **Esc** to finish. Nodes (shared points) are squares, control points are circles. Drag the curve: it bends to pass through the mouse. A point can be corner (Casser), smooth or symmetric (handles of equal length) |
 | **Double click**, when editing points | on a point: remove it from this shape (a node stays on the others); on the curve: add a point (on a crossing: node shared by both curves). Quick double click only: a slower second click picks the point up |
 | **Right click** (without dragging) | on a sail edge: its menu (hem, sleeve, cable, seam); while drawing: cancel |
 | Hold **Alt** | no snapping (point placed freely); **Alt+click**: the shape underneath |
