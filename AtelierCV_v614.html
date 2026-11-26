@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="google" content="notranslate">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>AtelierCV v613</title>
+  <title>AtelierCV v614</title>
   <style>
     :root {
       --bg: #f4f3ef;
@@ -916,9 +916,17 @@
       font-variant-numeric: tabular-nums
     }
 
+    /* v614 : cadre fin autour de chaque pli (montre son étendue ; fermé : liseré pointillé) */
     .fold {
-      border-top: 1px solid var(--bd);
+      border: 1px solid color-mix(in srgb, var(--ok) 55%, transparent);
+      border-radius: 6px;
+      padding: 0 6px 4px;
       margin-top: 6px
+    }
+
+    .fold:not(.open) {
+      border-style: dashed;
+      padding-bottom: 0
     }
 
     .fh {
@@ -1209,7 +1217,7 @@
   <script id="engine">
     'use strict';
     /* ================= MOTEUR (sans DOM) ================= */
-    const VERSION = 'v613';
+    const VERSION = 'v614';
     const V = {
       add: (a, b) => [a[0] + b[0], a[1] + b[1], a[2] + b[2]],
       sub: (a, b) => [a[0] - b[0], a[1] - b[1], a[2] - b[2]],
