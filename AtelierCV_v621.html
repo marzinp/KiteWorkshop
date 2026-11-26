@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="google" content="notranslate">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>AtelierCV v620</title>
+  <title>AtelierCV v621</title>
   <style>
     :root {
       --bg: #f4f3ef;
@@ -1217,7 +1217,7 @@
   <script id="engine">
     'use strict';
     /* ================= MOTEUR (sans DOM) ================= */
-    const VERSION = 'v620';
+    const VERSION = 'v621';
     const V = {
       add: (a, b) => [a[0] + b[0], a[1] + b[1], a[2] + b[2]],
       sub: (a, b) => [a[0] - b[0], a[1] - b[1], a[2] - b[2]],
@@ -9131,7 +9131,10 @@ function xfDrag(D, x, y, shift) {
 function selLinkedIds() {
   const E = editing(), ids = E ? [E] : ui.multi.length ? ui.multi.slice() : ui.sel && ui.sel.shape ? [ui.sel.shape] : []; if (!ids.length) return null;
   const own = new Set(withKids(ids)), pts = new Set(); own.forEach(id => { const S = shapeById(id); if (S) S.pts.forEach(q => { pts.add(q); if (doc.sym) { const t = twinPid(q); if (t) pts.add(t); } }); });
-  const sh = doc.shapes.filter(S => !own.has(S.id) && S.kind !== 'guide' && !(S.hole && S.inset) && !vis(S) && S.pts.some(q => pts.has(q)));
+  /* v621 : aussi les baguettes qui tiennent un bord de la sélection (fourreau, câble de bord : pas de nœud partagé) et, pour une baguette, les voiles qu'elle tient */
+  const hosts = new Set(), add = id => { hosts.add(id); const T = doc.sym && shapeById(id) && twinShape(shapeById(id)); if (T) hosts.add(T.id); };
+  doc.shapes.forEach(S => (S.segs || []).forEach(g => { const h = g.edge && g.edge.host; if (!h) return; if (own.has(S.id)) add(h); if (own.has(h)) add(S.id); }));
+  const sh = doc.shapes.filter(S => !own.has(S.id) && S.kind !== 'guide' && !(S.hole && S.inset) && !vis(S) && (S.pts.some(q => pts.has(q)) || hosts.has(S.id)));
   const lk = (doc.links || []).filter(L => pts.has(L.a) || pts.has(L.b)); return { sh, lk };
 }
 function drawLinked(g, F) {
