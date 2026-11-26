@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="google" content="notranslate">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>AtelierCV v618</title>
+  <title>AtelierCV v619</title>
   <style>
     :root {
       --bg: #f4f3ef;
@@ -1217,7 +1217,7 @@
   <script id="engine">
     'use strict';
     /* ================= MOTEUR (sans DOM) ================= */
-    const VERSION = 'v618';
+    const VERSION = 'v619';
     const V = {
       add: (a, b) => [a[0] + b[0], a[1] + b[1], a[2] + b[2]],
       sub: (a, b) => [a[0] - b[0], a[1] - b[1], a[2] - b[2]],
@@ -8801,7 +8801,8 @@ function drawEditor() {
   for (const id in doc.points) {
     if (!visP.has(id) || !(ptShownAt(id, cntN, ES0) || pselA.has(id))) continue; const P = w2s(doc.points[id], F), on = onP.has(id) && !isSlave(id), isN = cntN[id] > 1 || !!(doc.nodes && doc.nodes[id]);
     /* v617 : nœud = carré (point partagé, réglable) ; point de contrôle = rond — deux objets différents */
-    if (isN) { const r = (on ? 5 : 4) * PS(); g.beginPath(); g.rect(P[0] - r, P[1] - r, 2 * r, 2 * r); g.fillStyle = on ? css('--acc') : css('--view'); g.fill(); g.lineWidth = 1.5; g.strokeStyle = on ? css('--sel') : css('--ghost'); g.stroke(); }
+    if (isN && ES0) { const r = (on ? 5 : 4) * PS(); g.beginPath(); g.rect(P[0] - r, P[1] - r, 2 * r, 2 * r); g.fillStyle = on ? css('--acc') : css('--view'); g.fill(); g.lineWidth = 1.5; g.strokeStyle = on ? css('--sel') : css('--ghost'); g.stroke(); }
+    else if (isN) {/* v619 : niveau objet — nœud discret (petit carré creux gris), un peu plus marqué sur la forme sélectionnée ; cliquable pour le régler, pas déplaçable */ const r = (on ? 3.5 : 3) * PS(); g.beginPath(); g.rect(P[0] - r, P[1] - r, 2 * r, 2 * r); g.fillStyle = css('--view'); g.fill(); g.lineWidth = on ? 1.6 : 1.1; g.strokeStyle = on ? css('--fg') : css('--mut'); g.stroke(); }
     else { g.beginPath(); g.arc(P[0], P[1], (on ? 4.5 : 3.5) * PS(), 0, 7); g.fillStyle = on ? css('--fg') : css('--view'); g.fill(); g.lineWidth = 1.2; g.strokeStyle = on ? css('--fg') : css('--ghost'); g.stroke(); }
     { const nf = doc.nodes && doc.nodes[id]; if (nf && nf.fixe) { g.beginPath(); g.moveTo(P[0], P[1] + 5); g.lineTo(P[0] - 8, P[1] + 17); g.lineTo(P[0] + 8, P[1] + 17); g.closePath(); g.moveTo(P[0] - 11, P[1] + 20); g.lineTo(P[0] + 11, P[1] + 20); g.strokeStyle = css('--sel'); g.lineWidth = 2; g.stroke(); } if (nf && nf.ring) { g.beginPath(); g.arc(P[0], P[1], 9, 0, 7); g.strokeStyle = css('--sel'); g.lineWidth = 2; g.stroke(); } }
   }
@@ -9011,9 +9012,11 @@ function gizTargets() {
 }
 function giz2(F) {
   if (ui.drag && ui.drag.kind !== 'giz2') return null; const T = gizTargets(); if (!T || !T.pids.length) return null;
-  let c = [0, 0, 0]; T.pids.forEach(q => c = V.add(c, doc.points[q])); c = V.mul(c, 1 / T.pids.length); const P = w2s(c, F), ax = []; const one = T.pids.length === 1 ? T.pids[0] : null;
+  let c = [0, 0, 0]; T.pids.forEach(q => c = V.add(c, doc.points[q])); c = V.mul(c, 1 / T.pids.length); let P = w2s(c, F); const ax = [];
+  /* v619 : forme ou groupe dans une vue à plat — le gizmo se pose hors du cadre de sélection, au coin bas-gauche (le centre garde le droit fil et le centre de rotation) */
+  if (!PERSP() && (T.lab === 'forme' || T.lab === 'groupe') && !(ui.drag && ui.drag.kind === 'giz2')) { const XG = xfGeom(F); if (XG) P = [Math.min(Math.max(XG.corners[0][0] - 26, 30), W1 - 90), Math.min(Math.max(XG.corners[0][1] + 26, 90), H1 - 40)]; }/* gardé dans la vue */ else if (ui.drag && ui.drag.kind === 'giz2' && ui.drag.P0) P = ui.drag.P0; const one = T.pids.length === 1 ? T.pids[0] : null;
   const AXL = PERSP() ? [['x', [1, 0, 0]], ['y', [0, 1, 0]], ['z', [0, 0, 1]]].map(([k, w]) => { const Q = w2s(V.add(c, V.mul(w, 10))), dx = Q[0] - P[0], dy = Q[1] - P[1], L = Math.hypot(dx, dy); return L < 0.3 ? null : [k, w, [dx / L, dy / L], L / 10]; }).filter(Boolean) : [['u', F.u, [1, 0], ui.cam.s], ['v', F.v, [0, -1], ui.cam.s], ['n', F.n, OBL, ui.cam.s]];
-  for (const [k, w, dir, ppm] of AXL) { if (doc.sym && one && isAxis(one) && Math.abs(w[SA()]) > 0.5) continue; if (!PERSP() && k !== 'n') continue;/* v615 : vues à plat — on glisse la forme ou le point lui-même ; reste la profondeur */ ax.push({ k, w, dir, ppm, P, tip: [P[0] + dir[0] * 58, P[1] + dir[1] * 58], ...axisCol(w) }); }
+  for (const [k, w, dir, ppm] of AXL) { if (doc.sym && one && isAxis(one) && Math.abs(w[SA()]) > 0.5) continue;  ax.push({ k, w, dir, ppm, P, tip: [P[0] + dir[0] * 58, P[1] + dir[1] * 58], ...axisCol(w) }); }
   return { pids: T.pids, c, P, ax, lab: T.lab };
 }
 function drawGiz2(g, F) {
@@ -9065,7 +9068,7 @@ function xfIds() {
 const xfAxisIn = F => doc.sym && Math.abs(F.n[SA()]) < 0.5;/* l'axe de symétrie est dans le plan de la vue (Dessus, Face) */
 function xfBox(ids, F) {
   let lo = [1e18, 1e18], hi = [-1e18, -1e18], n = 0; for (const S of withKids(ids).map(shapeById).filter(Boolean)) S.segs.forEach((g, i) => { const C = segCtrl(doc, S, i); for (let k = 0; k <= 12; k++) { const l = toLocal(bez(C, k / 12), F); lo = [Math.min(lo[0], l[0]), Math.min(lo[1], l[1])]; hi = [Math.max(hi[0], l[0]), Math.max(hi[1], l[1])]; n++; } });
-  if (!n) return null; const pd = 7 / ui.cam.s; lo = [lo[0] - pd, lo[1] - pd]; hi = [hi[0] + pd, hi[1] + pd]; for (const k of [0, 1]) { const m = 36 / ui.cam.s; if (hi[k] - lo[k] < m) { const c = (lo[k] + hi[k]) / 2; lo[k] = c - m / 2; hi[k] = c + m / 2; } }/* forme très mince : cadre d'au moins 36 px, poignées séparées */
+  if (!n) return null; const pd = 11 / ui.cam.s; lo = [lo[0] - pd, lo[1] - pd]; hi = [hi[0] + pd, hi[1] + pd]; for (const k of [0, 1]) { const m = 36 / ui.cam.s; if (hi[k] - lo[k] < m) { const c = (lo[k] + hi[k]) / 2; lo[k] = c - m / 2; hi[k] = c + m / 2; } }/* forme très mince : cadre d'au moins 36 px, poignées séparées */
   const pids = shapePids(ids), ax = doc.sym && withKids(ids).map(shapeById).some(S => S && S.pts.some(q => isAxis(q) || isSlave(q))); return { lo, hi, ax, pids };/* ax : forme sur l'axe ou à cheval (son propre symétrique) */
 }
 const l2s = (a, b, F) => w2s(toWorld(a, b, 0, F), F);
@@ -9081,12 +9084,12 @@ function drawXf(g, F) {
   const G = xfGeom(F); if (!G) return; g.save(); g.strokeStyle = css('--sel'); g.lineWidth = 1; g.setLineDash([4, 3]); g.beginPath(); G.corners.forEach((P, i) => i ? g.lineTo(P[0], P[1]) : g.moveTo(P[0], P[1])); g.closePath(); g.stroke(); g.setLineDash([]);
   for (const h of G.H) {
     const hv = ui.hover && ui.hover.type === 'xf' && ui.hover.k === h.k; g.fillStyle = hv ? css('--sel') : css('--view'); g.strokeStyle = css('--sel'); g.lineWidth = 1.4;
-    if (h.kind === 'scale') { g.beginPath(); g.rect(h.x - 4, h.y - 4, 8, 8); g.fill(); g.stroke(); }
+    if (h.kind === 'scale') { g.beginPath(); g.rect(h.x - 3.5, h.y - 3.5, 7, 7); g.fillStyle = hv ? css('--sel') : css('--fg'); g.fill(); }/* poignées du cadre : petits carrés pleins sombres (les nœuds sont des carrés orange) */
     else if (h.kind === 'rot') { const dx = Math.sign(h.x - G.Cs[0]) || 1, dy = Math.sign(h.y - G.Cs[1]) || 1, a0 = Math.atan2(dy, dx); g.lineWidth = hv ? 2.6 : 1.8; g.beginPath(); g.arc(h.x, h.y, 7, a0 - 1.2, a0 + 1.2); g.stroke(); const e = [h.x + 7 * Math.cos(a0 + 1.2), h.y + 7 * Math.sin(a0 + 1.2)]; g.beginPath(); g.arc(e[0], e[1], 2.2, 0, 7); g.fillStyle = css('--sel'); g.fill(); }
     else { const hz = h.k[1] === 'b'; g.lineWidth = hv ? 2.6 : 1.8; g.beginPath(); if (hz) { g.moveTo(h.x - 8, h.y); g.lineTo(h.x + 8, h.y); g.moveTo(h.x + 4, h.y - 3); g.lineTo(h.x + 8, h.y); g.lineTo(h.x + 4, h.y + 3); g.moveTo(h.x - 4, h.y - 3); g.lineTo(h.x - 8, h.y); g.lineTo(h.x - 4, h.y + 3); } else { g.moveTo(h.x, h.y - 8); g.lineTo(h.x, h.y + 8); g.moveTo(h.x - 3, h.y + 4); g.lineTo(h.x, h.y + 8); g.lineTo(h.x + 3, h.y + 4); g.moveTo(h.x - 3, h.y - 4); g.lineTo(h.x, h.y - 8); g.lineTo(h.x + 3, h.y - 4); } g.stroke(); }
   }
   if (G.rot && !G.noRot) { const [x, y] = G.Cs, hv = ui.hover && ui.hover.type === 'xfc'; g.strokeStyle = css('--sel'); g.lineWidth = hv ? 2.4 : 1.6; g.beginPath(); g.arc(x, y, 6, 0, 7); g.moveTo(x - 9, y); g.lineTo(x + 9, y); g.moveTo(x, y - 9); g.lineTo(x, y + 9); g.stroke(); }
-  if (G.noRot) { g.fillStyle = css('--mut'); g.font = '11px system-ui'; g.fillText(tr('Forme sur l\'axe de symétrie : rotation et inclinaison dans la vue Côté'), G.corners[3][0], G.corners[3][1] - 6); }
+  if (G.noRot) { g.fillStyle = css('--mut'); g.font = '11px system-ui'; g.fillText(tr('Forme sur l\'axe de symétrie : rotation et inclinaison dans la vue Côté'), G.corners[0][0], G.corners[0][1] + 16); }
   if (ui.drag && ui.drag.kind === 'xf' && ui.drag.lab) { g.fillStyle = css('--sel'); g.font = '600 12px system-ui'; g.fillText(ui.drag.lab, ui.drag.mx + 12, ui.drag.my - 10); }
   g.restore();
 }
@@ -9679,7 +9682,7 @@ function pdown(e, x, y) {
   if (ui.multi.length && !(H && H.type === 'giz2')) { ui.multi = []; }
   hideEdgeMenu();
   if (H.type === 'link') { ui.sel = { link: H.L.id }; buildSel(); drawEditor(); ui.drag = { kind: 'pan', x, y, cx: ui.cam.cx, cy: ui.cam.cy }; return; }
-  if (H.type === 'giz2') { const T = gizTargets(); let ps = null; if (T && T.psel && pselStartMove(x, y)) ps = ui.drag; else pushUndo(); const st = {}; H.pids.forEach(q => st[q] = doc.points[q].slice()); ui.drag = { kind: 'giz2', k: H.k, w: H.a.w, dir: H.a.dir, ppm: H.a.ppm, pids: H.pids, c: H.c, x, y, st, moved: false, ps }; return; }
+  if (H.type === 'giz2') { const T = gizTargets(); let ps = null; if (T && T.psel && pselStartMove(x, y)) ps = ui.drag; else pushUndo(); const st = {}; H.pids.forEach(q => st[q] = doc.points[q].slice()); ui.drag = { kind: 'giz2', k: H.k, w: H.a.w, dir: H.a.dir, ppm: H.a.ppm, pids: H.pids, c: H.c, x, y, st, moved: false, ps, P0: H.a.P }; return; }
   if (H.type === 'xf') { if (e.button === 0) xfhStart(H, x, y); return; }
   if (H.type === 'xfc') { ui.drag = { kind: 'xfc', moved: false }; return; }
   if (H.type === 'grain') { pushUndo(); ui.drag = { kind: 'grain', sh: H.sh, x, y, moved: false }; return; }
@@ -9692,6 +9695,8 @@ function pdown(e, x, y) {
   if (H.type === 'anchor') {
     /* en édition : point de la forme éditée ; au niveau objet : nœud (point partagé) — le glisser déplace le point commun, les formes accrochées suivent */
     if (!editable(H.sh)) setMode(modeOf(H.sh)); const own = doc.shapes.filter(q => q.pts.includes(H.pid));
+    /* v619 : au niveau objet, un nœud se sélectionne (réglages à gauche ; re-clic = forme suivante) mais ne se déplace pas — on le déplace en éditant les points d'une de ses formes (double-clic) : on sélectionne d'abord, on déplace ensuite, et la géométrie se touche en édition */
+    if (!E) { ui.multi = []; if (ui.sel && ui.sel.anchor != null && own.length > 1) { const cur = shapeById(ui.sel.shape); if (cur && cur.pts[ui.sel.anchor] === H.pid) { const nx = own[(own.indexOf(cur) + 1) % own.length]; H.sh = nx; H.idx = nx.pts.indexOf(H.pid); } } ui.sel = { shape: H.sh.id, seg: null, anchor: H.idx }; buildSel(); ui.drag = { kind: 'pan', x, y, cx: ui.cam.cx, cy: ui.cam.cy }; drawEditor(); return; }
     if (!E && ui.sel && ui.sel.anchor != null && own.length > 1) { const cur = shapeById(ui.sel.shape); if (cur && cur.pts[ui.sel.anchor] === H.pid && e.detail < 2) { const nx = own[(own.indexOf(cur) + 1) % own.length]; H.sh = nx; H.idx = nx.pts.indexOf(H.pid); ui.cycled = true; } }
     ui.sel = { shape: H.sh.id, seg: null, anchor: H.idx }; buildSel(); pushUndo(); const tw = doc.sym ? twinPid(H.pid) : null; ui.drag = { kind: 'anchor', sh: H.sh, pid: H.pid, x, y, start: doc.points[H.pid].slice(), moved: false, tw, axis: tw === H.pid }; drawEditor(); return;
   }
@@ -9736,7 +9741,7 @@ cv1.addEventListener('pointermove', e => {
     cv1.style.cursor = ui.tool !== 'sel' ? 'crosshair' : !H ? 'grab' : H.type === 'giz2' ? 'move' : H.type === 'grain' ? ROT_CURSOR : H.type === 'handle' || H.type === 'anchor' ? 'move' : (selNow || (ui.multi.length && ui.multi.includes(H.sh.id))) ? 'move' : SEL_CURSOR;
     if (H && (H.type === 'xf' || H.type === 'xfc')) { cv1.style.cursor = H.type === 'xfc' ? 'move' : H.h.kind === 'rot' ? ROT_CURSOR : H.h.kind === 'skew' ? (H.k[1] === 'b' ? 'ew-resize' : 'ns-resize') : ({ c00: 'nesw-resize', c11: 'nesw-resize', c10: 'nwse-resize', c01: 'nwse-resize', ma0: 'ew-resize', ma1: 'ew-resize', mb0: 'ns-resize', mb1: 'ns-resize' })[H.k]; cv1.title = tr(H.type === 'xfc' ? 'Centre de rotation : glisser pour le déplacer (aimanté aux points)' : H.h.kind === 'rot' ? 'Glisser : tourner autour du centre (Maj : par 15°)' : H.h.kind === 'skew' ? 'Glisser : incliner' : H.k[0] === 'c' ? 'Glisser : mettre à l\'échelle, proportionnellement, depuis le coin opposé' : 'Glisser : mettre à l\'échelle dans une direction, depuis le côté opposé'); return; }
     cv1.title = H && H.type === 'giz2' ? 'Glisser : déplacer en profondeur (perpendiculaire au plan) — Maj = fin ×0,1, Alt = sans aimant' : H && H.type === 'link' ? 'Liaison ' + H.L.name + ' : clic pour la régler' : !H ? tr(E ? 'Glisser = déplacer la vue ; Ctrl+glisser = fenêtre de sélection de points ; Échap = terminer l\'édition des points' : 'Glisser = déplacer la vue ; Ctrl+glisser = fenêtre de sélection (→ dedans, ← touchées) ; molette = zoom ; double-clic = recadrer') :
-      H.type === 'anchor' ? (E ? 'Point ' + H.pid + ' de ' + H.sh.name + ' : glisser = déplacer (un nœud entraîne les formes accrochées) ; double-clic = le retirer de cette forme ; Ctrl+clic = sélection multiple' : 'Nœud ' + ((doc.nodes && doc.nodes[H.pid] && doc.nodes[H.pid].name) || H.pid) + ' (' + doc.shapes.filter(q => q.pts.includes(H.pid) && q.kind !== 'guide').map(q => q.name).join(', ') + ') : clic = le régler ; glisser = le déplacer (les formes accrochées suivent) ; re-clic = forme suivante') :
+      H.type === 'anchor' ? (E ? 'Point ' + H.pid + ' de ' + H.sh.name + ' : glisser = déplacer (un nœud entraîne les formes accrochées) ; double-clic = le retirer de cette forme ; Ctrl+clic = sélection multiple' : 'Nœud ' + ((doc.nodes && doc.nodes[H.pid] && doc.nodes[H.pid].name) || H.pid) + ' (' + doc.shapes.filter(q => q.pts.includes(H.pid) && q.kind !== 'guide').map(q => q.name).join(', ') + ') : clic = le sélectionner et le régler ; re-clic = forme suivante ; pour le déplacer : double-clic sur une de ses formes') :
       H.type === 'grain' ? 'Fil de chaîne : glisser pour tourner (rotation libre)' : H.type === 'handle' ? 'Poignée de Bézier : glisser pour courber' :
       E && H.sh.id === E ? H.sh.name + ' : double-clic = ajouter un point (sur un croisement : nœud commun aux deux tracés ; Alt = sans aimant)' + (H.sh.kind === 'sail' && H.type === 'seg' ? ' ; clic droit = régler ce bord' : '') :
       H.sh.name + (selNow ? ' : glisser = déplacer' : ' : clic = sélectionner') + ' ; double-clic = éditer ses points' + (H.sh.kind === 'sail' && H.type === 'seg' ? ' ; clic droit = régler ce bord' : '') + ' ; Ctrl+clic = sélection multiple'; return;

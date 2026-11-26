@@ -3,7 +3,7 @@
 [Français](README.md) · [English](README.en.md) · **Español**
 
 AtelierCV sirve para dibujar una cometa (armazón, vela, embridado) y calcular su forma: en
-reposo, en vuelo con viento o en planeo. Es **un solo archivo**: abrir `AtelierCV_v618.html`
+reposo, en vuelo con viento o en planeo. Es **un solo archivo**: abrir `AtelierCV_v619.html`
 en un navegador reciente (se recomiendan Chrome o Edge), sin instalar nada.
 
 La carpeta **`Modeles/`** contiene una biblioteca de cometas listas para abrir (Eddy, Edo, Flare,
@@ -96,7 +96,8 @@ Los mismos gestos valen en la vista de dibujo y en la vista 3D.
 | **Clic** | seleccionar una forma entera, sea cual sea su capa (la capa activa va primero, luego cambia a la de la forma); con una herramienta, colocar un punto (se engancha a los puntos, puntos medios y trazados cercanos) |
 | **Arrastrar** una forma seleccionada | moverla (las formas enganchadas a sus nudos la siguen) |
 | **Tiradores** del marco de selección | cuadrados: escalar (esquina: proporcional, lado: una dirección, desde la esquina o el lado opuesto); **otro clic** sobre la forma: rotación en las esquinas (Mayús: de 15° en 15°), inclinación en los lados, centro de rotación desplazable (imantado a los puntos). Solo vistas planas; una forma en el eje solo gira en la vista Lateral |
-| **Arrastrar** un nudo | moverlo (todas las formas que lo comparten lo siguen) |
+| **Clic** en un nudo (cuadradito gris) | seleccionarlo para ajustarlo (unión, punto fijo, anilla, empalme); otro clic: forma siguiente. Para moverlo: doble clic en una de sus formas y luego arrastrarlo (las formas que lo comparten lo siguen) |
+| **Flechas X, Y del gizmo** (abajo a la izquierda del marco) | mover la selección a lo largo de un solo eje; flecha punteada: en profundidad |
 | **Arrastrar sobre el fondo** o sobre una forma no seleccionada | desplazar la vista |
 | **Ctrl+arrastrar** (Cmd en Mac) | ventana de selección: de izquierda a derecha = formas completamente dentro, de derecha a izquierda = formas tocadas |
 | **Ctrl+clic** | añadir o quitar de la selección; en edición de puntos: seleccionar varios puntos |
