@@ -3,7 +3,7 @@
 [Français](README.md) · **English** · [Español](README.es.md)
 
 AtelierCV is for drawing a kite (frame, sail, bridle) and calculating its shape: at rest, flying
-in the wind or gliding. It is **a single file**: open `AtelierCV_v614.html` in a recent
+in the wind or gliding. It is **a single file**: open `AtelierCV_v615.html` in a recent
 browser (Chrome or Edge recommended), nothing to install.
 
 The **`Modeles/`** folder holds a library of kites ready to open (Eddy, Edo, Flare, Sled,
@@ -92,29 +92,33 @@ The same gestures work in the drawing view and in the 3D view.
 
 | Gesture | Effect |
 |---|---|
-| **Click** | select; with a tool, place a point (it snaps to nearby points, midpoints and curves) |
-| **Drag** a point or a handle | move it |
-| **Drag on the background** | selection window: left to right = shapes fully inside, right to left = shapes touched |
-| **Ctrl+click** (Cmd on Mac) | add to or remove from the selection; on the points of a selected shape: select several points |
-| **Shift+click** or **right click** (without dragging) | on a curve: add a point; on a point: remove it; while drawing: cancel |
-| Hold **Alt** | no snapping (point placed freely) |
+| **Click** | select a whole shape, whatever its layer (the active layer comes first, then switches to the shape's layer); with a tool, place a point (it snaps to nearby points, midpoints and curves) |
+| **Drag** a selected shape | move it (shapes attached at its nodes follow) |
+| **Drag** a node | move it (all the shapes sharing it follow) |
+| **Drag on the background** or on an unselected shape | move the view |
+| **Ctrl+drag** (Cmd on Mac) | selection window: left to right = shapes fully inside, right to left = shapes touched |
+| **Ctrl+click** | add to or remove from the selection; when editing points: select several points |
+| **Double click** a shape | edit its points (curve handles included); **Esc** to finish |
+| **Double click**, when editing points | on a point: remove it from this shape (a node stays on the others); on the curve: add a point (on a crossing: node shared by both curves). Quick double click only: a slower second click picks the point up |
+| **Right click** (without dragging) | on a sail edge: its menu (hem, sleeve, cable, seam); while drawing: cancel |
+| Hold **Alt** | no snapping (point placed freely); **Alt+click**: the shape underneath |
 | **Right drag** | rotate (3D view and perspective) or move the view (flat views) |
 | **Shift+right drag**, **middle button** or **Space+drag** | move the view |
 | **Wheel** | zoom (towards the cursor; in 3D towards the orange cross, the pivot) |
-| **Double click** | reframe on the kite (while drawing a shape: close it) |
+| **Double click on the background** | reframe on the kite (while drawing a shape: close it) |
 | **F** | put the pivot on the selection or on the point under the mouse |
-| **Shift** while dragging a move handle | fine movement (÷ 10) |
+| **Shift** while dragging the depth arrow | fine movement (÷ 10) |
 
 | Key | Effect |
 |---|---|
 | **Ctrl+Z** / **Ctrl+Y** | undo / redo |
 | **Delete** | delete the selection |
-| **Esc** | cancel the current drawing, clear the selection, leave Isolate |
+| **Esc** | finish editing points, cancel the current drawing, clear the selection, leave Isolate |
 | **Enter** | close the shape being drawn (at least 3 vertices) |
 | **Digits** while drawing | type an exact length, then Enter |
-| **Arrows** | move the selected points (Shift: ×10) |
+| **Arrows** | move the selected shape, or when editing points the selected point (1 mm, Shift: 10 mm, no snapping) |
 | **D** | duplicate the selection |
-| **V** selection · **U** rod · **B** cable · **L** line · **R** bridle · **T** shape · **O** circle · **C** seam · **K** link · **M** mount | choose the tool |
+| **V** selection · **U** rod · **B** cable · **L** line · **R** bridle · **T** shape · **O** circle · **C** seam | choose the tool |
 
 ## Check before calculating
 

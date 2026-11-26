@@ -4,7 +4,7 @@
 
 AtelierCV sert à dessiner un cerf-volant (armature, voile, bridage) et à calculer sa forme :
 au repos, en vol au vent ou en vol plané. C'est **un seul fichier** : ouvrir
-`AtelierCV_v614.html` dans un navigateur récent (Chrome ou Edge conseillés), sans rien installer.
+`AtelierCV_v615.html` dans un navigateur récent (Chrome ou Edge conseillés), sans rien installer.
 
 Le dossier **`Modeles/`** contient une bibliothèque de cerfs-volants prêts à ouvrir (Eddy, Edo,
 Flare, Sled, Eclipse, Mouette…) : bouton **Ouvrir**, puis le fichier `.json`. C'est le plus
@@ -93,29 +93,33 @@ Les mêmes gestes valent dans la vue de dessin et dans la vue 3D.
 
 | Geste | Effet |
 |---|---|
-| **Clic** | sélectionner ; avec un outil, poser un point (il s'accroche aux points, milieux et tracés proches) |
-| **Glisser** un point ou une poignée | le déplacer |
-| **Glisser sur le fond** | fenêtre de sélection : de gauche à droite = formes entièrement dedans, de droite à gauche = formes touchées |
-| **Ctrl+clic** (Cmd sur Mac) | ajouter ou retirer de la sélection ; sur les points d'une forme sélectionnée : sélectionner plusieurs points |
-| **Maj+clic** ou **clic droit** (sans glisser) | sur un tracé : ajouter un point ; sur un point : le retirer ; pendant un tracé : l'annuler |
-| **Alt** maintenu | pas d'aimantation (point posé librement) |
+| **Clic** | sélectionner une forme entière, quelle que soit sa couche (la couche active passe en premier, puis bascule sur celle de la forme) ; avec un outil, poser un point (il s'accroche aux points, milieux et tracés proches) |
+| **Glisser** une forme sélectionnée | la déplacer (les formes accrochées à ses nœuds suivent) |
+| **Glisser** un nœud | le déplacer (toutes les formes qui le partagent suivent) |
+| **Glisser dans le vide** ou sur une forme non sélectionnée | déplacer la vue |
+| **Ctrl+glisser** (Cmd sur Mac) | fenêtre de sélection : de gauche à droite = formes entièrement dedans, de droite à gauche = formes touchées |
+| **Ctrl+clic** | ajouter ou retirer de la sélection ; en édition des points : sélectionner plusieurs points |
+| **Double-clic** sur une forme | éditer ses points (poignées de courbe comprises) ; **Échap** pour terminer |
+| **Double-clic**, en édition des points | sur un point : le retirer de cette forme (un nœud reste aux autres) ; sur le tracé : ajouter un point (sur un croisement : nœud commun aux deux tracés). Double-clic rapide seulement : un second clic plus lent reprend le point |
+| **Clic droit** (sans glisser) | sur un bord de voile : son menu (ourlet, fourreau, câble, couture) ; pendant un tracé : l'annuler |
+| **Alt** maintenu | pas d'aimantation (point posé librement) ; **Alt+clic** : la forme de dessous |
 | **Clic droit glissé** | tourner (vue 3D et perspective) ou déplacer la vue (vues à plat) |
 | **Maj+clic droit**, **bouton du milieu** ou **Espace+glisser** | déplacer la vue |
 | **Molette** | zoom (vers le curseur ; en 3D vers la croix orange, le pivot) |
-| **Double-clic** | recadrer sur le cerf-volant (pendant un tracé de forme : le fermer) |
+| **Double-clic dans le vide** | recadrer sur le cerf-volant (pendant un tracé de forme : le fermer) |
 | **F** | placer le pivot sur la sélection ou sur le point sous la souris |
-| **Maj** pendant un glissé de poignée de déplacement | mouvement fin (÷ 10) |
+| **Maj** pendant un glissé de la flèche de profondeur | mouvement fin (÷ 10) |
 
 | Touche | Effet |
 |---|---|
 | **Ctrl+Z** / **Ctrl+Y** | annuler / rétablir |
 | **Suppr** | effacer la sélection |
-| **Échap** | annuler le tracé en cours, vider la sélection, sortir d'Isoler |
+| **Échap** | terminer l'édition des points, annuler le tracé en cours, vider la sélection, sortir d'Isoler |
 | **Entrée** | fermer une forme en cours (3 sommets au moins) |
 | **Chiffres** pendant un tracé | taper une longueur exacte, puis Entrée |
-| **Flèches** | déplacer les points sélectionnés (Maj : ×10) |
+| **Flèches** | déplacer la forme sélectionnée, ou en édition des points le point sélectionné (1 mm, Maj : 10 mm, sans aimantation) |
 | **D** | dupliquer la sélection |
-| **V** sélection · **U** baguette · **B** câble · **L** ligne · **R** bride · **T** forme · **O** cercle · **C** couture · **K** liaison · **M** monter | choisir l'outil |
+| **V** sélection · **U** baguette · **B** câble · **L** ligne · **R** bride · **T** forme · **O** cercle · **C** couture | choisir l'outil |
 
 ## Vérifier avant de calculer
 

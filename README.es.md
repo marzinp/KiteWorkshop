@@ -3,7 +3,7 @@
 [Français](README.md) · [English](README.en.md) · **Español**
 
 AtelierCV sirve para dibujar una cometa (armazón, vela, embridado) y calcular su forma: en
-reposo, en vuelo con viento o en planeo. Es **un solo archivo**: abrir `AtelierCV_v614.html`
+reposo, en vuelo con viento o en planeo. Es **un solo archivo**: abrir `AtelierCV_v615.html`
 en un navegador reciente (se recomiendan Chrome o Edge), sin instalar nada.
 
 La carpeta **`Modeles/`** contiene una biblioteca de cometas listas para abrir (Eddy, Edo, Flare,
@@ -93,29 +93,33 @@ Los mismos gestos valen en la vista de dibujo y en la vista 3D.
 
 | Gesto | Efecto |
 |---|---|
-| **Clic** | seleccionar; con una herramienta, colocar un punto (se engancha a los puntos, puntos medios y trazados cercanos) |
-| **Arrastrar** un punto o un tirador | moverlo |
-| **Arrastrar sobre el fondo** | ventana de selección: de izquierda a derecha = formas completamente dentro, de derecha a izquierda = formas tocadas |
-| **Ctrl+clic** (Cmd en Mac) | añadir o quitar de la selección; sobre los puntos de una forma seleccionada: seleccionar varios puntos |
-| **Mayús+clic** o **clic derecho** (sin arrastrar) | sobre un trazado: añadir un punto; sobre un punto: quitarlo; durante un trazado: cancelarlo |
-| **Alt** pulsado | sin imán (punto colocado libremente) |
+| **Clic** | seleccionar una forma entera, sea cual sea su capa (la capa activa va primero, luego cambia a la de la forma); con una herramienta, colocar un punto (se engancha a los puntos, puntos medios y trazados cercanos) |
+| **Arrastrar** una forma seleccionada | moverla (las formas enganchadas a sus nudos la siguen) |
+| **Arrastrar** un nudo | moverlo (todas las formas que lo comparten lo siguen) |
+| **Arrastrar sobre el fondo** o sobre una forma no seleccionada | desplazar la vista |
+| **Ctrl+arrastrar** (Cmd en Mac) | ventana de selección: de izquierda a derecha = formas completamente dentro, de derecha a izquierda = formas tocadas |
+| **Ctrl+clic** | añadir o quitar de la selección; en edición de puntos: seleccionar varios puntos |
+| **Doble clic** sobre una forma | editar sus puntos (tiradores de curva incluidos); **Esc** para terminar |
+| **Doble clic**, en edición de puntos | sobre un punto: quitarlo de esta forma (un nudo sigue en las demás); sobre el trazado: añadir un punto (en un cruce: nudo común a los dos trazados). Solo doble clic rápido: un segundo clic más lento retoma el punto |
+| **Clic derecho** (sin arrastrar) | sobre un borde de vela: su menú (dobladillo, funda, cable, costura); durante un trazado: cancelarlo |
+| **Alt** pulsado | sin imán (punto colocado libremente); **Alt+clic**: la forma de debajo |
 | **Arrastrar con clic derecho** | girar (vista 3D y perspectiva) o desplazar la vista (vistas planas) |
 | **Mayús+clic derecho**, **botón central** o **Espacio+arrastrar** | desplazar la vista |
 | **Rueda** | zoom (hacia el cursor; en 3D hacia la cruz naranja, el pivote) |
-| **Doble clic** | reencuadrar la cometa (durante el trazado de una forma: cerrarla) |
+| **Doble clic en el fondo** | reencuadrar la cometa (durante el trazado de una forma: cerrarla) |
 | **F** | colocar el pivote en la selección o en el punto bajo el ratón |
-| **Mayús** al arrastrar un tirador de desplazamiento | movimiento fino (÷ 10) |
+| **Mayús** al arrastrar la flecha de profundidad | movimiento fino (÷ 10) |
 
 | Tecla | Efecto |
 |---|---|
 | **Ctrl+Z** / **Ctrl+Y** | deshacer / rehacer |
 | **Supr** | borrar la selección |
-| **Esc** | cancelar el trazado en curso, vaciar la selección, salir de Aislar |
+| **Esc** | terminar la edición de puntos, cancelar el trazado en curso, vaciar la selección, salir de Aislar |
 | **Intro** | cerrar la forma en curso (3 vértices como mínimo) |
 | **Cifras** durante un trazado | escribir una longitud exacta, luego Intro |
-| **Flechas** | mover los puntos seleccionados (Mayús: ×10) |
+| **Flechas** | mover la forma seleccionada o, en edición de puntos, el punto seleccionado (1 mm, Mayús: 10 mm, sin imán) |
 | **D** | duplicar la selección |
-| **V** selección · **U** varilla · **B** cable · **L** línea · **R** brida · **T** forma · **O** círculo · **C** costura · **K** unión · **M** montar | elegir la herramienta |
+| **V** selección · **U** varilla · **B** cable · **L** línea · **R** brida · **T** forma · **O** círculo · **C** costura | elegir la herramienta |
 
 ## Verificar antes de calcular
 
