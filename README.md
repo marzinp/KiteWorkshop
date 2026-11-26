@@ -4,7 +4,7 @@
 
 AtelierCV sert à dessiner un cerf-volant (armature, voile, bridage) et à calculer sa forme :
 au repos, en vol au vent ou en vol plané. C'est **un seul fichier** : ouvrir
-`AtelierCV_v615.html` dans un navigateur récent (Chrome ou Edge conseillés), sans rien installer.
+`AtelierCV_v616.html` dans un navigateur récent (Chrome ou Edge conseillés), sans rien installer.
 
 Le dossier **`Modeles/`** contient une bibliothèque de cerfs-volants prêts à ouvrir (Eddy, Edo,
 Flare, Sled, Eclipse, Mouette…) : bouton **Ouvrir**, puis le fichier `.json`. C'est le plus
@@ -95,6 +95,7 @@ Les mêmes gestes valent dans la vue de dessin et dans la vue 3D.
 |---|---|
 | **Clic** | sélectionner une forme entière, quelle que soit sa couche (la couche active passe en premier, puis bascule sur celle de la forme) ; avec un outil, poser un point (il s'accroche aux points, milieux et tracés proches) |
 | **Glisser** une forme sélectionnée | la déplacer (les formes accrochées à ses nœuds suivent) |
+| **Poignées** du cadre de sélection | carrés : mettre à l'échelle (coin : proportionnel, côté : une direction, depuis le coin ou le côté opposé) ; **re-clic** sur la forme : rotation aux coins (Maj : par 15°), inclinaison aux côtés, centre de rotation déplaçable (aimanté aux points). Vues à plat seulement ; une forme sur l'axe ne tourne que dans la vue Côté |
 | **Glisser** un nœud | le déplacer (toutes les formes qui le partagent suivent) |
 | **Glisser dans le vide** ou sur une forme non sélectionnée | déplacer la vue |
 | **Ctrl+glisser** (Cmd sur Mac) | fenêtre de sélection : de gauche à droite = formes entièrement dedans, de droite à gauche = formes touchées |
