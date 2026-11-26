@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="google" content="notranslate">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>AtelierCV v621</title>
+  <title>AtelierCV v622</title>
   <style>
     :root {
       --bg: #f4f3ef;
@@ -1217,7 +1217,7 @@
   <script id="engine">
     'use strict';
     /* ================= MOTEUR (sans DOM) ================= */
-    const VERSION = 'v621';
+    const VERSION = 'v622';
     const V = {
       add: (a, b) => [a[0] + b[0], a[1] + b[1], a[2] + b[2]],
       sub: (a, b) => [a[0] - b[0], a[1] - b[1], a[2] - b[2]],
@@ -9811,8 +9811,8 @@ cv1.addEventListener('pointermove', e => {
 function endDrag(e) {
   if (e) ui.ptrs.delete(e.pointerId); const D = ui.drag; if (!D) return; ui.drag = null; $('veil2').style.display = 'none';
   if (D.kind === 'rulO') { if (D.px != null && !rulCorner(D.px, D.py)) rulSetOrigin(D.px, D.py); ui.snap = null; drawEditor(); return; }
-  if (D.kind === 'rnav') { pdown(D.ev, D.x, D.y); if (ui.drag && ['orbit', 'ppan', 'pan'].includes(ui.drag.kind)) ui.drag = null; else if (ui.drag) endDrag(); return; }
-  if (D.kind === 'orbit' || D.kind === 'ppan' || D.kind === 'pan') cv1.style.cursor = '';
+  if (D.kind === 'rnav') { pdown(D.ev, D.x, D.y); if (ui.drag && ['orbit', 'ppan', 'pan'].includes(ui.drag.kind)) { ui.drag = null; drawEditor(); } else if (ui.drag) endDrag(); return; }
+  if (D.kind === 'orbit' || D.kind === 'ppan' || D.kind === 'pan') { cv1.style.cursor = ''; drawEditor(); }/* v622 : le gizmo et le cadre (masqués pendant un glissé) réapparaissent dès qu'on relâche */
   if (D.kind === 'giz2') {
     if (!D.moved) {
       ui.undo.pop(); updHist();/* clic sans glisser sur une flèche = clic sur ce qui est dessous */
