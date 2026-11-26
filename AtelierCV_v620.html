@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="google" content="notranslate">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>AtelierCV v619</title>
+  <title>AtelierCV v620</title>
   <style>
     :root {
       --bg: #f4f3ef;
@@ -1217,7 +1217,7 @@
   <script id="engine">
     'use strict';
     /* ================= MOTEUR (sans DOM) ================= */
-    const VERSION = 'v619';
+    const VERSION = 'v620';
     const V = {
       add: (a, b) => [a[0] + b[0], a[1] + b[1], a[2] + b[2]],
       sub: (a, b) => [a[0] - b[0], a[1] - b[1], a[2] - b[2]],
@@ -8835,6 +8835,7 @@ function drawEditor() {
     if (ES1) { g.save(); g.font = '600 12px system-ui'; g.fillStyle = css('--sel'); g.fillText(tr('Édition des points : {0} — double-clic sur un point = le retirer, sur le tracé = en ajouter ; Échap = terminer').replace('{0}', ES1.name), rulOn() ? RUL + 6 : 8, H1 - 40); g.restore(); } }
   drawPatron(g, F); drawPsel(g, F); drawNodes(g, F); drawArms(g, F); drawRep(g, F); drawMount(g, F);
   drawGiz2(g, F); { const S = ui.sel && ui.sel.shape && shapeById(ui.sel.shape); if (S && S.kind === 'sail' && !S.hole && !S.reinf && editable(S) && ui.tool === 'sel' && vis(S) && !slaveShape(S) && (S.plane === ui.plane || PERSP()) && ui.sel.anchor == null && ui.sel.seg == null && ui.xfMode !== 'rot' && !editing()) grainHandle(g, S, F); }
+  drawLinked(g, F);
   drawXf(g, F);
   if (ui.drag && ui.drag.kind === 'rect') { const D = ui.drag; g.save(); const cr = D.x < D.x0; g.strokeStyle = cr ? '#2b8a3e' : css('--sel'); g.setLineDash(cr ? [5, 3] : []); g.lineWidth = 1.2; g.fillStyle = cr ? 'rgba(43,138,62,.07)' : 'rgba(217,72,15,.06)'; g.beginPath(); g.rect(Math.min(D.x0, D.x), Math.min(D.y0, D.y), Math.abs(D.x - D.x0), Math.abs(D.y - D.y0)); g.fill(); g.stroke(); g.restore(); }
   drawNumIn(g);
@@ -9125,6 +9126,20 @@ function xfDrag(D, x, y, shift) {
     if (o.ends) for (const q in o.ends) { const e = o.ends[q]; if (e && e.dir && S.ends && S.ends[q]) S.ends[q].dir = V.norm(W(e.dir)); }
     if (o.ang != null && S.kind === 'sail') { const Fs = frameOf(doc, S.plane); if (Math.abs(V.dot(Fs.n, F.n)) > 0.9) { const a0 = (o.ang || 0) * Math.PI / 180, gv = W(V.add(V.mul(Fs.u, Math.cos(a0)), V.mul(Fs.v, Math.sin(a0)))); let a = Math.atan2(V.dot(gv, Fs.v), V.dot(gv, Fs.u)) * 180 / Math.PI; while (a > 90) a -= 180; while (a <= -90) a += 180; S.props.ang = Math.round(a * 10) / 10; } } }
   D.lab = lab; D.mx = x; D.my = y; symEnforce(); drawEditor();
+}
+/* v620 : éléments liés à la sélection montrés en fantôme quand leur famille est masquée (brides, câbles, baguettes, autre couche, Isoler) — formes qui partagent un nœud avec elle (elles bougeront avec elle) et liaisons ; premier niveau seulement, non cliquables ; plus marqués pendant un glissé */
+function selLinkedIds() {
+  const E = editing(), ids = E ? [E] : ui.multi.length ? ui.multi.slice() : ui.sel && ui.sel.shape ? [ui.sel.shape] : []; if (!ids.length) return null;
+  const own = new Set(withKids(ids)), pts = new Set(); own.forEach(id => { const S = shapeById(id); if (S) S.pts.forEach(q => { pts.add(q); if (doc.sym) { const t = twinPid(q); if (t) pts.add(t); } }); });
+  const sh = doc.shapes.filter(S => !own.has(S.id) && S.kind !== 'guide' && !(S.hole && S.inset) && !vis(S) && S.pts.some(q => pts.has(q)));
+  const lk = (doc.links || []).filter(L => pts.has(L.a) || pts.has(L.b)); return { sh, lk };
+}
+function drawLinked(g, F) {
+  if (ui.tool !== 'sel' || ui.create) return; const R = selLinkedIds(); if (!R || (!R.sh.length && !R.lk.length)) return;
+  const live = ui.drag && ['move', 'xf', 'anchor', 'giz2', 'bend', 'pmove', 'handle'].includes(ui.drag.kind); g.save(); g.globalAlpha = live ? 0.85 : 0.45; g.strokeStyle = css('--sel'); g.lineWidth = live ? 1.8 : 1.2; g.setLineDash([5, 4]);
+  for (const S of R.sh) { g.beginPath(); scrSegs(S, F).forEach((C, i) => { if (i === 0) g.moveTo(C[0][0], C[0][1]); g.bezierCurveTo(C[1][0], C[1][1], C[2][0], C[2][1], C[3][0], C[3][1]); }); g.stroke(); }
+  for (const L of R.lk) { const a = doc.points[L.a], b = doc.points[L.b]; if (!a || !b) continue; const A = w2s(a, F), B = w2s(b, F); g.beginPath(); g.moveTo(A[0], A[1]); g.lineTo(B[0], B[1]); g.stroke(); }
+  g.restore();
 }
 function hitTest(x, y, noGiz) {
   const F = AF(), selS = ui.sel && shapeById(ui.sel.shape);
