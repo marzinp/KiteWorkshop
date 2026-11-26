@@ -3,7 +3,7 @@
 [Français](README.md) · **English** · [Español](README.es.md)
 
 AtelierCV is for drawing a kite (frame, sail, bridle) and calculating its shape: at rest, flying
-in the wind or gliding. It is **a single file**: open `AtelierCV_v627.html` in a recent
+in the wind or gliding. It is **a single file**: open `AtelierCV_v628.html` in a recent
 browser (Chrome or Edge recommended), nothing to install.
 
 The **`Modeles/`** folder holds a library of kites ready to open (Eddy, Edo, Flare, Sled,
@@ -95,7 +95,8 @@ The same gestures work in the drawing view and in the 3D view.
 | **Click** | select a whole shape, whatever its layer (the active layer comes first, then switches to the shape's layer); with a tool, place a point (it snaps to nearby points, midpoints and curves) |
 | **Drag** a selected shape | move it (shapes attached at its nodes follow; if their family is hidden, they stay visible as dashed lines while the shape is selected) |
 | **Handles** of the selection frame | squares: scale (corner: proportional, side: one direction, from the opposite corner or side); **click again** on the shape: rotation at the corners (Shift: by 15°), skew at the sides, movable rotation centre (snaps to points). Flat views only; a shape on the axis only rotates in the Side view |
-| **Click** a node (small grey square) | select it to set it (joint, fixed point, ring, junction); click again: next shape. To move it: double-click one of its shapes, then drag it (the shapes sharing it follow) |
+| **Click** a node (small grey square) | select it to set it (joint, fixed point, ring, junction); click again: next shape |
+| **Drag** a node | move it, directly (the shapes sharing it follow, dashed if their family is hidden) |
 | **Gizmo X, Y arrows** (bottom left of the frame) | move the selection along a single axis; dashed arrow: in depth |
 | **Drag on the background** or on an unselected shape | move the view |
 | **Ctrl+drag** (Cmd on Mac) | selection window: left to right = shapes fully inside, right to left = shapes touched |
