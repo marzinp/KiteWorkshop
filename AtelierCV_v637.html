@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="google" content="notranslate">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>AtelierCV v636</title>
+  <title>AtelierCV v637</title>
   <style>
     :root {
       --bg: #f4f3ef;
@@ -1217,7 +1217,7 @@
   <script id="engine">
     'use strict';
     /* ================= MOTEUR (sans DOM) ================= */
-    const VERSION = 'v636';
+    const VERSION = 'v637';
     const V = {
       add: (a, b) => [a[0] + b[0], a[1] + b[1], a[2] + b[2]],
       sub: (a, b) => [a[0] - b[0], a[1] - b[1], a[2] - b[2]],
@@ -3801,7 +3801,23 @@ const SF_HTML = "<!doctype html>\n<html lang=\"fr\">\n<head>\n<meta charset=\"ut
     function redo() {if (ui.create) cancelCreate(); if (!ui.redo.length) return; ui.undo.push(JSON.stringify(doc)); doc = JSON.parse(ui.redo.pop()); afterHist();}
     /* v459-s113 : changement d'aspect seulement (couleur, transparence, palette) : redessiné et gardé, sans relancer le calcul ni périmer son résultat */
     function changedLook() {try {localStorage.setItem(KEY_PRJ, JSON.stringify(doc));} catch (e) { } drawEditor(); draw3D();}
+    /* v637 : fourreau — le bord de voile et la baguette qui y passe gardent la même courbe, tronçon par tronçon (là où ils joignent les deux mêmes points) :
+       le dernier modifié commande. Avant : « Épouser un tracé » recopiait la courbe une fois, puis bord et baguette divergeaient à la première retouche (Pierre, Manta) */
+    function syncSleeves() {
+      const ref = ui.slvRef || (ui.slvRef = new Map()), cur = (st, a, b) => JSON.stringify([!!st, a || null, b || null]), cp = v => v ? v.slice() : null;
+      for (const S of doc.shapes) {if (S.kind !== 'sail') continue; const n = S.pts.length;
+        S.segs.forEach((g, i) => {if (!g.edge || g.edge.type !== 'fourreau' || !g.edge.host) return; const R = shapeById(g.edge.host); if (!R || !R.segs) return;
+          const u = S.pts[i], v = S.pts[(i + 1) % n], m = R.pts.length; let j = -1, rev = false;
+          for (let k = 0; k < R.segs.length; k++) {if (k + 1 >= m && !R.closed) break; const a = R.pts[k], b = R.pts[(k + 1) % m]; if (a === u && b === v) {j = k; break;} if (a === v && b === u) {j = k; rev = true; break;} }
+          if (j < 0) return; const h = R.segs[j], K = S.id + ':' + i + '>' + R.id + ':' + j, eS = cur(g.straight, g.c1, g.c2), rS = rev ? cur(h.straight, h.c2, h.c1) : cur(h.straight, h.c1, h.c2), old = ref.get(K);
+          if (eS !== rS && old) {const dE = eS !== old[0], dR = rS !== old[1];/* chaque côté comparé à son propre état au dernier passage */
+            if (dE && !dR) {h.straight = g.straight; if (rev) {h.c1 = cp(g.c2); h.c2 = cp(g.c1);} else {h.c1 = cp(g.c1); h.c2 = cp(g.c2);} }/* bord retouché : la baguette suit */
+            else if (dR && !dE) {g.straight = h.straight; if (rev) {g.c1 = cp(h.c2); g.c2 = cp(h.c1);} else {g.c1 = cp(h.c1); g.c2 = cp(h.c2);} }/* baguette retouchée : le bord suit */
+          }
+          ref.set(K, [cur(g.straight, g.c1, g.c2), rev ? cur(h.straight, h.c2, h.c1) : cur(h.straight, h.c1, h.c2)]);});}
+    }
     function changed(noCalc) {
+      try {syncSleeves();} catch (e) {console.error(e);}
       try {syncInsets();} catch (e) {console.error(e);}
       try {syncRacs();} catch (e) {console.error(e);}
       try {syncLinkNames();} catch (e) {console.error(e);}
