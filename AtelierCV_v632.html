@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="google" content="notranslate">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>AtelierCV v631</title>
+  <title>AtelierCV v632</title>
   <style>
     :root {
       --bg: #f4f3ef;
@@ -1217,7 +1217,7 @@
   <script id="engine">
     'use strict';
     /* ================= MOTEUR (sans DOM) ================= */
-    const VERSION = 'v631';
+    const VERSION = 'v632';
     const V = {
       add: (a, b) => [a[0] + b[0], a[1] + b[1], a[2] + b[2]],
       sub: (a, b) => [a[0] - b[0], a[1] - b[1], a[2] - b[2]],
@@ -7966,6 +7966,7 @@ void main_setup() { // AtelierCV; required extensions in defines.hpp: FP16S, EQU
     function tailChoice(f, M, noHead) {
       const W = doc.wind || (doc.wind = {V: 6}), md = tailMode(); if (!noHead) {const h = el('div', 'lab', 'Traîne'); h.style.cssText = 'margin-top:6px;font-weight:600'; h.append(tip('Toile repérée comme une traîne : elle flotte au-delà de l\'armature (traîne, bras, flammes…). Comment la calculer en vol au vent.')); f.append(h);}
       mkBtns(f, TAIL_OPTS.map(([k, l, t]) => [k, l, t]), md || 'voile', k => {W.traine = k; delete W.tailApprox; delete W.sf; changed(true); buildSolve(); renderInfo(); draw3D();});
+        if (md === 'soufflerie') mkChk(f, 'Soufflerie d\'emblée (sans vol au vent)', () => !!W.sfDirect, v => {W.sfDirect = v; changed(true);}, 'Cerf-volant à traîne, traîne mesurée en soufflerie. Coché : tant qu\'il n\'y a pas de mesure à jour, « Calculer » envoie directement la forme au repos, posée à la position réglée dans « Vent et ligne », à la soufflerie (traîne vivante), sans vol au vent préalable ; le vol au vent se fait ensuite avec la traîne mesurée. Décoché : vol au vent avec la traîne approchée (rubans) d\'abord.');/* v632 : sous le choix « Traîne mesurée en soufflerie » (v631 : caché dans le cadre Soufflerie, introuvable) */
       if (md === 'rubans' || md === 'soufflerie') {mkSlider(f, {lab: 'Frottement des rubans', tip: 'Coefficient de frottement des rubans (rapporté à leurs deux faces). 0,03 : calé sur les traînes mesurées en soufflerie (Dazzle, Kiteman), à ± 15 % sur la traînée ; la portance mesurée n\'est pas rendue.', min: 0.01, max: 0.08, step: 0.001, get: () => W.tapCd || TAP_CD, set: v => {W.tapCd = v; changed(true);}, fmt: v => v.toFixed(3).replace('.', ',')});
         if (M) {const TM = tailMask(M), A = TM ? tailApprox(M, TM) : null; if (A) {const G = sfTailSym(A).reduce((a, F) => a.map((v, i) => v + F[i]), [0, 0, 0]); f.append(el('div', 'n', A.pieces.length + ' rubans, ' + A.A.toFixed(2).replace('.', ',') + ' m² : traînée ' + G[0].toFixed(1).replace('.', ',') + ' N à ' + A.V.toFixed(1).replace('.', ',') + ' m/s, poids ' + A.pieces.reduce((a, p) => a + p.W, 0).toFixed(1).replace('.', ',') + ' N'));} } }
     }
@@ -7993,13 +7994,12 @@ void main_setup() { // AtelierCV; required extensions in defines.hpp: FP16S, EQU
         if (M && !valid) ft.append(el('div', 'warn', tailMode() === 'soufflerie' ? 'La traîne a été modifiée depuis l\'essai : mesure ignorée (rubans en attendant). « Calculer » la refait.' : 'La traîne a été modifiée depuis l\'essai : mesure ignorée. Envoyer à la soufflerie pour la refaire.'));
         /* tête tournée depuis la mesure : « Calculer » refait l'aller-retour tout seul (au-delà de 3°), le bandeau du haut le dit — plus d'avertissement ici (il renvoyait à « Envoyer à la soufflerie ») */}}
       /* Soufflerie (essai) : envoi à la main et échanges de pression (cerfs-volants sans traîne) — rien pour une traîne réglée sur « soufflerie » (« Calculer » s'en charge) */
-      const hasEx = tl === false || (tl == null && !S), hasSend = !(tl !== false && tailMode() === 'soufflerie') && !(hasEx && WD().sf), tailSf = tl !== false && tailMode() === 'soufflerie' && (tl || S); if (!hasSend && !hasEx && !tailSf) return;/* v628 : échanges cochés → « Calculer » seul lance la soufflerie (plus de second départ) */
+      const hasEx = tl === false || (tl == null && !S), hasSend = !(tl !== false && tailMode() === 'soufflerie') && !(hasEx && WD().sf); if (!hasSend && !hasEx) return;/* v628 : échanges cochés → « Calculer » seul lance la soufflerie (plus de second départ) */
       const f = fold(o, 'calcSf', 'Soufflerie (essai)', 'Essai : la soufflerie (ouverte à côté) calcule l\'air et la toile ensemble, pas à pas. Pour un cerf-volant à traîne, elle mesure la force de la traîne qui bat (traîne vivante) ; AtelierCV l\'applique ensuite à ses attaches dans le vol au vent. Finesse de la soufflerie selon le profil de calcul : 32 mailles en Estimation, 48 en Standard, 64 en Précis.', false);
       if (hasSend) {const b = el('button', null, 'Envoyer à la soufflerie'); b.id = 'bSfSend'; b.className = 'long';
         b.onclick = () => {const r2 = ui.result; if (r2 && r2.M && r2.M.done && ui.resVer === ui.ver) {const tm = !!tailMask(r2.M); sfGo(0, !tm); phaseEnd('<b>Soufflerie</b> : forme ' + (r2.flight || r2.flightTry ? 'en vol' : 'calculée') + ' envoyée' + (tm ? '. Y lancer le calcul (traîne vivante), puis « Renvoyer la traîne à AtelierCV ».' : ', mesure lancée : pressions comparées dans la vue 3D (« Pression soufflerie »).'), true); return;}
           ui.sfSendNext = true; runCalc();};
         const d = el('div', 'btns'); d.append(b, tip('Mesure unique, pour comparer les pressions (rien ne revient dans la forme). Forme à jour (dernier calcul, dessin inchangé depuis) : envoyée telle quelle — forme en vol après un vol au vent. Sinon : la position de vol est calculée (forme au repos, posée à l\'incidence de la bride ; traîne figée), puis envoyée. La mesure se lance d\'elle-même (traîne : « Lancer » dans la soufflerie). Pour voler sous la pression de la soufflerie : cocher « Échanges de pression », puis Calculer.')); f.append(d);}
-      if (tailSf && !hasEx) mkChk(f, 'Soufflerie d\'emblée (sans vol au vent)', () => !!WD().sfDirect, v => {WD().sfDirect = v; changed(true);}, 'Cerf-volant à traîne, traîne mesurée en soufflerie. Coché : tant qu\'il n\'y a pas de mesure à jour, « Calculer » envoie directement la forme au repos, posée à la position réglée dans « Vent et ligne », à la soufflerie (traîne vivante), sans vol au vent préalable ; le vol au vent se fait ensuite avec la traîne mesurée. Décoché : vol au vent avec la traîne approchée (rubans) d\'abord.');/* v631 */
       if (hasEx) {mkChk(f, 'Échanges de pression avec la soufflerie', () => !!WD().sf, v => {WD().sf = v; changed(true); buildSolve();}, 'Cerf-volant sans traîne. Coché : après chaque vol au vent, la forme part dans la soufflerie, qui mesure la pression sur la toile ; le vol au vent est refait avec cette pression, et ainsi de suite jusqu\'à ce que les forces ne bougent plus (ou Arrêter).');
         if (WD().sf) mkChk(f, 'Soufflerie d\'emblée (sans vol au vent)', () => !!WD().sfDirect, v => {WD().sfDirect = v; changed(true);}, 'Coché : la forme au repos, posée à la position réglée dans « Vent et ligne » (incidence et angle de ligne) — pas la forme affichée —, part directement en soufflerie, sans vol au vent préalable. Décoché : un vol au vent ordinaire d\'abord (moins d\'échanges).');}
     }
