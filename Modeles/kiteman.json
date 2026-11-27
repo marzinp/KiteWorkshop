@@ -1,0 +1,6480 @@
+{
+ "v": 3,
+ "nid": 384,
+ "points": {
+  "p1": [
+   -400,
+   765.7630457971319,
+   0
+  ],
+  "p2": [
+   0,
+   1000,
+   0
+  ],
+  "p4": [
+   -1232.899567616408,
+   0.833106685077988,
+   -14.545993678281976
+  ],
+  "p5": [
+   -295.7955093275997,
+   307.9828893348847,
+   -0.6888174563139715
+  ],
+  "p8": [
+   400,
+   765.7630457971319,
+   0
+  ],
+  "p9": [
+   1232.899567616408,
+   0.833106685077988,
+   -14.545993678281976
+  ],
+  "p10": [
+   295.7955093275997,
+   307.9828893348847,
+   -0.6888174563139715
+  ],
+  "p12": [
+   -200,
+   1000,
+   0
+  ],
+  "p17": [
+   0,
+   -7697.876325156992,
+   0
+  ],
+  "p20": [
+   0,
+   0.8331066850779507,
+   0
+  ],
+  "p23": [
+   -292.27458908083554,
+   -4851.99476036373,
+   0
+  ],
+  "p24": [
+   292.27458908083554,
+   -4851.99476036373,
+   0
+  ],
+  "p42": [
+   0,
+   146.59432705960836,
+   1958.4045283528003
+  ],
+  "p120": [
+   -733.3615401739376,
+   230.83188026407728,
+   0
+  ],
+  "p121": [
+   733.3615401739376,
+   230.83188026407728,
+   0
+  ],
+  "p122": [
+   -571.2953942107042,
+   49.80838707000626,
+   0
+  ],
+  "p123": [
+   571.2953942107042,
+   49.80838707000626,
+   0
+  ],
+  "p131": [
+   -852.0704430159357,
+   -468.44966219932434,
+   -1.4616600448926431
+  ],
+  "p132": [
+   852.0704430159357,
+   -468.44966219932434,
+   -1.4616600448926431
+  ],
+  "p138": [
+   -199.07589310258732,
+   -4851.99476036373,
+   0
+  ],
+  "p139": [
+   199.07589310258732,
+   -4851.99476036373,
+   0
+  ],
+  "p183": [
+   -1231.5481813710414,
+   -522.576390839421,
+   0
+  ],
+  "p184": [
+   1231.5481813710414,
+   -522.576390839421,
+   0
+  ],
+  "p189": [
+   -1232.8995676164077,
+   -3699.8596980046004,
+   0
+  ],
+  "p190": [
+   1232.8995676164077,
+   -3699.8596980046004,
+   0
+  ],
+  "p198": [
+   0,
+   58.37828980961385,
+   869.5524533075709
+  ],
+  "p203": [
+   0,
+   765.7630457971319,
+   0
+  ],
+  "p205": [
+   -954.5454841222031,
+   -3699.8596980046004,
+   0
+  ],
+  "p206": [
+   954.5454841222031,
+   -3699.8596980046004,
+   0
+  ],
+  "p217": [
+   0,
+   -2000,
+   0
+  ],
+  "p240": [
+   0,
+   -1000,
+   0
+  ],
+  "p242": [
+   -773.1760343012354,
+   -1000.0000000000002,
+   -27.62278041024476
+  ],
+  "p243": [
+   773.1760343012354,
+   -1000.0000000000002,
+   -27.62278041024476
+  ],
+  "p269": [
+   200,
+   1000,
+   0
+  ],
+  "p277": [
+   -496.2367016494039,
+   -1998.0597521811178,
+   0
+  ],
+  "p279": [
+   -632.3809532316399,
+   -1998.0597521811178,
+   0
+  ],
+  "p285": [
+   632.3809532316399,
+   -1998.0597521811178,
+   0
+  ],
+  "p287": [
+   496.2367016494039,
+   -1998.0597521811178,
+   0
+  ],
+  "p296": [
+   0,
+   307.98288934177754,
+   0
+  ],
+  "p299": [
+   -517.7142253551613,
+   0.8331066850779507,
+   -1.004147676774069
+  ],
+  "p300": [
+   517.7142253551613,
+   0.8331066850779507,
+   -1.004147676774069
+  ],
+  "p315": [
+   -1232.8995676164077,
+   -1000,
+   0
+  ],
+  "p316": [
+   1232.8995676164077,
+   -1000,
+   0
+  ],
+  "p321": [
+   -1232.8995676164077,
+   -1586.7590447659475,
+   0
+  ],
+  "p322": [
+   1232.8995676164077,
+   -1586.7590447659475,
+   0
+  ],
+  "p331": [
+   0,
+   -1000,
+   -27.62278041024476
+  ],
+  "p363": [
+   0,
+   -4851.99476036373,
+   0
+  ],
+  "p375": [
+   0,
+   720.8457528775798,
+   0
+  ]
+ },
+ "shapes": [
+  {
+   "id": "s298",
+   "kind": "sail",
+   "closed": true,
+   "plane": "face",
+   "pts": [
+    "p296",
+    "p5",
+    "p1",
+    "p12",
+    "p2"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "colle",
+      "manual": true
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "E1": 60,
+    "E2": 50,
+    "G": 3,
+    "nu": 0.25,
+    "ang": 0,
+    "ret": 0,
+    "hemEA": 3000,
+    "gsm": 40,
+    "fabId": "t_rny",
+    "fab": "Ripstop nylon 40 g",
+    "couleur": "#ff5500",
+    "colAsym": true
+   },
+   "name": "Voile 1 · P1",
+   "voile": "Voile 1"
+  },
+  {
+   "id": "s306",
+   "kind": "sail",
+   "closed": true,
+   "plane": "face",
+   "pts": [
+    "p20",
+    "p299",
+    "p122",
+    "p5",
+    "p296"
+   ],
+   "segs": [
+    {
+     "straight": false,
+     "c1": [
+      -164.2790863272956,
+      0,
+      0
+     ],
+     "c2": [
+      163.18576789204275,
+      -1.852969211604682,
+      2.794478392126583
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant",
+      "auto": true
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant",
+      "auto": true
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "E1": 60,
+    "E2": 50,
+    "G": 3,
+    "nu": 0.25,
+    "ang": 0,
+    "ret": 0,
+    "hemEA": 3000,
+    "gsm": 40,
+    "fabId": "t_rny",
+    "fab": "Ripstop nylon 40 g",
+    "couleur": "#ffffff",
+    "colAsym": true
+   },
+   "name": "Voile 1 · P2",
+   "voile": "Voile 1"
+  },
+  {
+   "id": "s302",
+   "kind": "sail",
+   "closed": true,
+   "plane": "face",
+   "pts": [
+    "p299",
+    "p4",
+    "p120",
+    "p122"
+   ],
+   "segs": [
+    {
+     "straight": false,
+     "c1": [
+      -244.59820543873258,
+      2.7774048542736236,
+      -4.188627529722259
+     ],
+     "c2": [
+      252.57559859762205,
+      -2.55351295663786e-14,
+      0
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant",
+      "auto": true
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant",
+      "auto": true
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant",
+      "auto": true
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "E1": 60,
+    "E2": 50,
+    "G": 3,
+    "nu": 0.25,
+    "ang": 0,
+    "ret": 0,
+    "hemEA": 3000,
+    "gsm": 40,
+    "fabId": "t_rny",
+    "fab": "Ripstop nylon 40 g",
+    "couleur": "#ff5500",
+    "colAsym": true
+   },
+   "name": "Voile 1 · P3",
+   "voile": "Voile 1"
+  },
+  {
+   "id": "s333",
+   "kind": "sail",
+   "closed": true,
+   "plane": "face",
+   "pts": [
+    "p331",
+    "p242",
+    "p131",
+    "p299",
+    "p20"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant",
+      "galbe": {
+       "g": 38,
+       "a": 0,
+       "b": 1
+      }
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      163.18576789204275,
+      -1.852969211604682,
+      2.794478392126583
+     ],
+     "c2": [
+      -164.2790863272956,
+      0,
+      0
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant",
+      "auto": true
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "E1": 60,
+    "E2": 50,
+    "G": 3,
+    "nu": 0.25,
+    "ang": 0,
+    "ret": 0,
+    "hemEA": 3000,
+    "gsm": 40,
+    "fabId": "t_rny",
+    "fab": "Ripstop nylon 40 g",
+    "D": 0.005,
+    "couleur": "#ff5500",
+    "colAsym": true
+   },
+   "name": "Voile 1 · P4",
+   "voile": "Voile 1"
+  },
+  {
+   "id": "s311",
+   "kind": "sail",
+   "closed": true,
+   "plane": "face",
+   "pts": [
+    "p4",
+    "p299",
+    "p131"
+   ],
+   "segs": [
+    {
+     "straight": false,
+     "c1": [
+      252.57559859762205,
+      -2.55351295663786e-14,
+      0
+     ],
+     "c2": [
+      -244.59820543873258,
+      2.777404854273625,
+      -4.188627529722259
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant",
+      "auto": true
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "E1": 60,
+    "E2": 50,
+    "G": 3,
+    "nu": 0.25,
+    "ang": 0,
+    "ret": 0,
+    "hemEA": 3000,
+    "gsm": 40,
+    "fabId": "t_rny",
+    "fab": "Ripstop nylon 40 g",
+    "D": 0.005,
+    "couleur": "#ffffff",
+    "colAsym": true
+   },
+   "name": "Voile 1 · P5",
+   "voile": "Voile 1"
+  },
+  {
+   "id": "s323",
+   "kind": "sail",
+   "closed": true,
+   "plane": "face",
+   "pts": [
+    "p131",
+    "p205",
+    "p189",
+    "p321"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      -39.985862244219334,
+      0,
+      0
+     ],
+     "c2": [
+      39.985862244219334,
+      0,
+      0
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "colle",
+      "manual": true
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "E1": 60,
+    "E2": 50,
+    "G": 3,
+    "nu": 0.25,
+    "ang": 0,
+    "ret": 0,
+    "hemEA": 3000,
+    "gsm": 40,
+    "fabId": "t_rny",
+    "fab": "Ripstop nylon 40 g",
+    "D": 0.005,
+    "couleur": "#ff5500",
+    "colAsym": true
+   },
+   "name": "Voile 1 · P6",
+   "voile": "Voile 1"
+  },
+  {
+   "id": "s324",
+   "kind": "sail",
+   "closed": true,
+   "plane": "face",
+   "pts": [
+    "p321",
+    "p315",
+    "p131"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "E1": 60,
+    "E2": 50,
+    "G": 3,
+    "nu": 0.25,
+    "ang": 0,
+    "ret": 0,
+    "hemEA": 3000,
+    "gsm": 40,
+    "fabId": "t_rny",
+    "fab": "Ripstop nylon 40 g",
+    "D": 0.005,
+    "couleur": "#ffffff",
+    "colAsym": true
+   },
+   "name": "Voile 1 · P7",
+   "voile": "Voile 1"
+  },
+  {
+   "id": "s318",
+   "kind": "sail",
+   "closed": true,
+   "plane": "face",
+   "pts": [
+    "p315",
+    "p183",
+    "p4",
+    "p131"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "E1": 60,
+    "E2": 50,
+    "G": 3,
+    "nu": 0.25,
+    "ang": 0,
+    "ret": 0,
+    "hemEA": 3000,
+    "gsm": 40,
+    "fabId": "t_rny",
+    "fab": "Ripstop nylon 40 g",
+    "D": 0.005,
+    "colAsym": true,
+    "couleur": "#ff5500"
+   },
+   "name": "Voile 1 · P8",
+   "voile": "Voile 1"
+  },
+  {
+   "id": "s335",
+   "kind": "sail",
+   "closed": true,
+   "plane": "face",
+   "pts": [
+    "p217",
+    "p277",
+    "p279",
+    "p242",
+    "p331"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "fourreau",
+      "host": "s146",
+      "mode": "glissant",
+      "auto": true
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "fourreau",
+      "host": "s146",
+      "mode": "glissant",
+      "auto": true
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant",
+      "galbe": {
+       "g": 38,
+       "a": 0,
+       "b": 1
+      }
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "E1": 60,
+    "E2": 50,
+    "G": 3,
+    "nu": 0.25,
+    "ang": 0,
+    "ret": 0,
+    "hemEA": 3000,
+    "gsm": 40,
+    "fabId": "t_rny",
+    "fab": "Ripstop nylon 40 g",
+    "D": 0.005,
+    "couleur": "#ffffff",
+    "colAsym": true
+   },
+   "name": "Voile 1 · P9",
+   "voile": "Voile 1"
+  },
+  {
+   "id": "s364",
+   "kind": "sail",
+   "closed": true,
+   "plane": "face",
+   "pts": [
+    "p217",
+    "p287",
+    "p24",
+    "p363"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "fourreau",
+      "host": "s146",
+      "mode": "glissant",
+      "auto": true
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant",
+      "auto": true
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "E1": 60,
+    "E2": 50,
+    "G": 3,
+    "nu": 0.25,
+    "ang": 0,
+    "ret": 0,
+    "hemEA": 3000,
+    "gsm": 40,
+    "fabId": "t_rny",
+    "fab": "Ripstop nylon 40 g",
+    "D": 0.005,
+    "couleur": "#ffffff",
+    "colAsym": true
+   },
+   "name": "Voile 1 · P10 ′",
+   "voile": "Voile 1"
+  },
+  {
+   "id": "s365",
+   "kind": "sail",
+   "closed": true,
+   "plane": "face",
+   "pts": [
+    "p363",
+    "p23",
+    "p277",
+    "p217"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant",
+      "auto": true
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "fourreau",
+      "host": "s146",
+      "mode": "glissant",
+      "auto": true
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "E1": 60,
+    "E2": 50,
+    "G": 3,
+    "nu": 0.25,
+    "ang": 0,
+    "ret": 0,
+    "hemEA": 3000,
+    "gsm": 40,
+    "fabId": "t_rny",
+    "fab": "Ripstop nylon 40 g",
+    "D": 0.005,
+    "couleur": "#ff5500",
+    "colAsym": true
+   },
+   "name": "Voile 1 · P10",
+   "voile": "Voile 1"
+  },
+  {
+   "id": "s367",
+   "kind": "sail",
+   "closed": true,
+   "plane": "face",
+   "pts": [
+    "p17",
+    "p138",
+    "p23",
+    "p363"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant",
+      "auto": true
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      -31.066231992749408,
+      0,
+      0
+     ],
+     "c2": [
+      31.066231992749408,
+      0,
+      0
+     ],
+     "edge": {
+      "type": "fourreau",
+      "host": "s147",
+      "mode": "glissant",
+      "auto": true
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "E1": 60,
+    "E2": 50,
+    "G": 3,
+    "nu": 0.25,
+    "ang": 0,
+    "ret": 0,
+    "hemEA": 3000,
+    "gsm": 40,
+    "fabId": "t_rny",
+    "fab": "Ripstop nylon 40 g",
+    "D": 0.005,
+    "couleur": "#ffffff",
+    "colAsym": true
+   },
+   "name": "Voile 1 · P11",
+   "voile": "Voile 1"
+  },
+  {
+   "id": "s46",
+   "kind": "cable",
+   "closed": false,
+   "plane": "face",
+   "pts": [
+    "p20",
+    "p198",
+    "p42"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "EA": 4000,
+    "rac": 0,
+    "compId": "k_pe1",
+    "mat": "Polyester tressé 1 mm",
+    "bride": true
+   },
+   "name": "Bride 2"
+  },
+  {
+   "id": "s63",
+   "kind": "baguette",
+   "closed": false,
+   "plane": "face",
+   "pts": [
+    "p1",
+    "p203",
+    "p8"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "forme": "rond",
+    "de": 6,
+    "di": 4,
+    "b": 10,
+    "e": 1.5,
+    "E": 40,
+    "sigR": 800,
+    "droit": true,
+    "sur": 4,
+    "creux": 1,
+    "matId": "fv",
+    "mat": "Fibre de verre",
+    "compId": "comp_umv98klih",
+    "tenue": "noeuds",
+    "renfort": 10,
+    "tenueSet": true,
+    "passants": "points",
+    "side": "ext"
+   },
+   "name": "Latte 5",
+   "ends": {},
+   "kinks": {
+    "p203": "geom"
+   }
+  },
+  {
+   "id": "s84",
+   "kind": "baguette",
+   "closed": false,
+   "plane": "face",
+   "pts": [
+    "p12",
+    "p2",
+    "p269"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "forme": "rond",
+    "de": 4,
+    "di": 0,
+    "b": 10,
+    "e": 1.5,
+    "E": 135,
+    "sigR": 1500,
+    "droit": true,
+    "sur": 2,
+    "creux": 1,
+    "matId": "cp",
+    "mat": "Carbone pultrudé",
+    "compId": "comp_umv9kvxor",
+    "tenue": "fourreau-ouvert",
+    "renfort": 10,
+    "tenueSet": true,
+    "ouvertBout": "deux"
+   },
+   "name": "Latte 3",
+   "ends": {},
+   "kinks": {
+    "p2": "geom"
+   }
+  },
+  {
+   "id": "s140",
+   "kind": "cable",
+   "closed": false,
+   "plane": "face",
+   "pts": [
+    "p1",
+    "p120"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "EA": 4000,
+    "rac": 16,
+    "d": 2,
+    "ml": 2.6,
+    "compId": "cable_umvb20yb7",
+    "mat": "Polyester 2mm"
+   },
+   "name": "Câble 4"
+  },
+  {
+   "id": "s146",
+   "kind": "baguette",
+   "closed": false,
+   "plane": "face",
+   "pts": [
+    "p279",
+    "p277",
+    "p217",
+    "p287",
+    "p285"
+   ],
+   "segs": [
+    {
+     "straight": false,
+     "c1": [
+      45.91905084485484,
+      0,
+      0
+     ],
+     "c2": [
+      -45.91905084485478,
+      0,
+      0
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      45.91905084485478,
+      0,
+      0
+     ],
+     "c2": [
+      -45.91905084485484,
+      0,
+      0
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "forme": "rond",
+    "de": 6,
+    "di": 4,
+    "b": 10,
+    "e": 1.5,
+    "E": 40,
+    "sigR": 800,
+    "droit": true,
+    "sur": 0,
+    "creux": 1,
+    "matId": "fv",
+    "mat": "Fibre de verre",
+    "compId": "comp_umv98klih",
+    "cone": false,
+    "de2": 2,
+    "di2": 0,
+    "cprof": 1,
+    "tenue": "fourreau-ferme",
+    "renfort": 5,
+    "tenueSet": true,
+    "passants": "points"
+   },
+   "name": "Latte 8",
+   "kinks": {
+    "p136": "geom",
+    "p137": "geom",
+    "p217": "geom"
+   },
+   "ends": {}
+  },
+  {
+   "id": "s147",
+   "kind": "baguette",
+   "closed": false,
+   "plane": "face",
+   "pts": [
+    "p23",
+    "p138",
+    "p363",
+    "p139",
+    "p24"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "forme": "rond",
+    "de": 4,
+    "di": 0,
+    "b": 10,
+    "e": 1.5,
+    "E": 135,
+    "sigR": 1500,
+    "droit": true,
+    "sur": 0,
+    "creux": 1,
+    "matId": "cp",
+    "mat": "Carbone pultrudé",
+    "compId": "comp_umv9kvxor",
+    "tenue": "fourreau-ferme",
+    "renfort": 0,
+    "side": "ext"
+   },
+   "name": "Latte 1",
+   "ends": {}
+  },
+  {
+   "id": "s380",
+   "kind": "baguette",
+   "closed": false,
+   "plane": "face",
+   "pts": [
+    "p4",
+    "p299",
+    "p20"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "forme": "rond",
+    "de": 8,
+    "di": 6,
+    "b": 10,
+    "e": 1.5,
+    "E": 40,
+    "sigR": 800,
+    "droit": true,
+    "sur": 0,
+    "creux": 1,
+    "matId": "fv",
+    "mat": "Fibre de verre",
+    "compId": "comp_umv98nybw",
+    "tenue": "fourreau-ferme",
+    "renfort": 10,
+    "tenueSet": true,
+    "passants": "points"
+   },
+   "name": "Latte 7a",
+   "kinks": {},
+   "ends": {
+    "p20": {
+     "rac": {
+      "type": "rint",
+      "L": 100,
+      "de": 6,
+      "di": 4,
+      "cone": false,
+      "de2": 2,
+      "di2": 0,
+      "cprof": 1,
+      "E": 135,
+      "sigR": 1500,
+      "matId": "cp",
+      "mat": "Carbone pultrudé",
+      "compId": "c_tc64"
+     }
+    }
+   }
+  },
+  {
+   "id": "s381",
+   "kind": "baguette",
+   "closed": false,
+   "plane": "face",
+   "pts": [
+    "p20",
+    "p300",
+    "p9"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "forme": "rond",
+    "de": 8,
+    "di": 6,
+    "b": 10,
+    "e": 1.5,
+    "E": 40,
+    "sigR": 800,
+    "droit": true,
+    "sur": 0,
+    "creux": 1,
+    "matId": "fv",
+    "mat": "Fibre de verre",
+    "compId": "comp_umv98nybw",
+    "tenue": "fourreau-ferme",
+    "renfort": 10,
+    "tenueSet": true,
+    "passants": "points"
+   },
+   "name": "Latte 7b",
+   "kinks": {},
+   "ends": {
+    "p20": {
+     "rac": {
+      "type": "rint",
+      "L": 100,
+      "de": 6,
+      "di": 4,
+      "cone": false,
+      "de2": 2,
+      "di2": 0,
+      "cprof": 1,
+      "E": 135,
+      "sigR": 1500,
+      "matId": "cp",
+      "mat": "Carbone pultrudé",
+      "compId": "c_tc64"
+     }
+    }
+   }
+  },
+  {
+   "id": "s202",
+   "kind": "cable",
+   "closed": false,
+   "plane": "dessus",
+   "pts": [
+    "p198",
+    "p299"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "EA": 4000,
+    "rac": 12.5,
+    "compId": "k_pe1",
+    "mat": "Polyester tressé 1 mm",
+    "bride": true
+   },
+   "name": "Bride 1"
+  },
+  {
+   "id": "s204",
+   "kind": "cable",
+   "closed": false,
+   "plane": "cote",
+   "pts": [
+    "p42",
+    "p203"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "EA": 4000,
+    "rac": 0,
+    "compId": "k_pe1",
+    "mat": "Polyester tressé 1 mm",
+    "bride": true
+   },
+   "name": "Bride 3"
+  },
+  {
+   "id": "s382",
+   "kind": "baguette",
+   "closed": false,
+   "plane": "face",
+   "pts": [
+    "p2",
+    "p203",
+    "p375",
+    "p296",
+    "p20"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "forme": "rond",
+    "de": 10,
+    "di": 8,
+    "b": 10,
+    "e": 1.5,
+    "E": 135,
+    "sigR": 1500,
+    "droit": true,
+    "sur": 6.5,
+    "creux": 1,
+    "matId": "cp",
+    "mat": "Carbone pultrudé",
+    "compId": "comp_umvblr6ii",
+    "tenue": "fourreau-ferme",
+    "renfort": 20,
+    "tenueSet": true,
+    "passants": "points"
+   },
+   "name": "Latte 6a",
+   "kinks": {},
+   "ends": {
+    "p20": {
+     "rac": {
+      "type": "rint",
+      "L": 100,
+      "de": 8,
+      "di": 6,
+      "cone": false,
+      "de2": 2,
+      "di2": 0,
+      "cprof": 1,
+      "E": 135,
+      "sigR": 1500,
+      "matId": "cp",
+      "mat": "Carbone pultrudé",
+      "compId": "c_tc86"
+     }
+    }
+   }
+  },
+  {
+   "id": "s383",
+   "kind": "baguette",
+   "closed": false,
+   "plane": "face",
+   "pts": [
+    "p20",
+    "p240",
+    "p217"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "forme": "rond",
+    "de": 10,
+    "di": 8,
+    "b": 10,
+    "e": 1.5,
+    "E": 135,
+    "sigR": 1500,
+    "droit": true,
+    "sur": 13,
+    "creux": 1,
+    "matId": "cp",
+    "mat": "Carbone pultrudé",
+    "compId": "comp_umvblr6ii",
+    "tenue": "fourreau-ferme",
+    "renfort": 20,
+    "tenueSet": true,
+    "passants": "points"
+   },
+   "name": "Latte 6b",
+   "kinks": {},
+   "ends": {
+    "p20": {
+     "rac": {
+      "type": "rint",
+      "L": 100,
+      "de": 8,
+      "di": 6,
+      "cone": false,
+      "de2": 2,
+      "di2": 0,
+      "cprof": 1,
+      "E": 135,
+      "sigR": 1500,
+      "matId": "cp",
+      "mat": "Carbone pultrudé",
+      "compId": "c_tc86"
+     }
+    }
+   }
+  },
+  {
+   "id": "s241",
+   "kind": "cable",
+   "closed": false,
+   "plane": "cote",
+   "pts": [
+    "p42",
+    "p240"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "EA": 4000,
+    "rac": 0,
+    "compId": "k_pe1",
+    "mat": "Polyester tressé 1 mm",
+    "bride": true
+   },
+   "name": "Bride 4"
+  },
+  {
+   "id": "s244",
+   "kind": "baguette",
+   "closed": false,
+   "plane": "face",
+   "pts": [
+    "p242",
+    "p240",
+    "p243"
+   ],
+   "segs": [
+    {
+     "straight": false,
+     "c1": [
+      286.01540143286735,
+      0,
+      27.622780410244776
+     ],
+     "c2": [
+      -330.3451902971732,
+      -10.447804424836352,
+      2.089912418576988e-15
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     },
+     "smB": true
+    },
+    {
+     "straight": false,
+     "c1": [
+      330.3451902971732,
+      -10.447804424836352,
+      2.089912418576988e-15
+     ],
+     "c2": [
+      -286.01540143286735,
+      0,
+      27.622780410244776
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     },
+     "smA": true
+    }
+   ],
+   "props": {
+    "forme": "rond",
+    "de": 6,
+    "di": 4,
+    "b": 10,
+    "e": 1.5,
+    "E": 135,
+    "sigR": 1500,
+    "droit": true,
+    "sur": 3,
+    "creux": 1,
+    "cone": false,
+    "de2": 2,
+    "di2": 0,
+    "cprof": 1,
+    "matId": "cp",
+    "mat": "Carbone pultrudé",
+    "compId": "c_tc64",
+    "tenue": "noeuds",
+    "renfort": 10,
+    "tenueSet": true,
+    "passants": "points",
+    "side": "ext"
+   },
+   "name": "Latte 4",
+   "ends": {},
+   "kinks": {
+    "p240": "geom"
+   }
+  },
+  {
+   "id": "s266",
+   "kind": "cable",
+   "closed": false,
+   "plane": "face",
+   "pts": [
+    "p1",
+    "p8"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "EA": 4000,
+    "rac": 20,
+    "side": "ext",
+    "d": 2,
+    "ml": 2.6,
+    "compId": "cable_umvb20yb7",
+    "mat": "Polyester 2mm"
+   },
+   "name": "Câble 6"
+  },
+  {
+   "id": "s270",
+   "kind": "cable",
+   "closed": false,
+   "plane": "face",
+   "pts": [
+    "p12",
+    "p269"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "EA": 4000,
+    "rac": 20,
+    "side": "ext",
+    "d": 2,
+    "ml": 2.6,
+    "compId": "cable_umvb20yb7",
+    "mat": "Polyester 2mm"
+   },
+   "name": "Câble 1"
+  },
+  {
+   "id": "s292",
+   "kind": "cable",
+   "closed": false,
+   "plane": "face",
+   "pts": [
+    "p242",
+    "p331",
+    "p243"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "EA": 4000,
+    "rac": 31,
+    "side": "ext",
+    "d": 2,
+    "ml": 2.6,
+    "compId": "cable_umvb20yb7",
+    "mat": "Polyester 2mm"
+   },
+   "name": "Câble 3"
+  },
+  {
+   "id": "s293",
+   "kind": "cable",
+   "closed": false,
+   "plane": "face",
+   "pts": [
+    "p279",
+    "p285"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "EA": 4000,
+    "rac": 26.5,
+    "d": 2,
+    "ml": 2.6,
+    "compId": "cable_umvb20yb7",
+    "mat": "Polyester 2mm",
+    "side": "ext"
+   },
+   "name": "Câble 5"
+  },
+  {
+   "id": "s349",
+   "kind": "sail",
+   "closed": true,
+   "plane": "face",
+   "pts": [
+    "p296",
+    "p10",
+    "p8",
+    "p269",
+    "p2"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "colle",
+      "auto": true
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "E1": 60,
+    "E2": 50,
+    "G": 3,
+    "nu": 0.25,
+    "ang": 0,
+    "ret": 0,
+    "hemEA": 3000,
+    "gsm": 40,
+    "fabId": "t_rny",
+    "fab": "Ripstop nylon 40 g",
+    "couleur": "#ffffff",
+    "colAsym": true
+   },
+   "name": "Voile 1 · P1 ′",
+   "voile": "Voile 1"
+  },
+  {
+   "id": "s350",
+   "kind": "sail",
+   "closed": true,
+   "plane": "face",
+   "pts": [
+    "p20",
+    "p300",
+    "p123",
+    "p10",
+    "p296"
+   ],
+   "segs": [
+    {
+     "straight": false,
+     "c1": [
+      164.2790863272956,
+      0,
+      0
+     ],
+     "c2": [
+      -163.18576789204275,
+      -1.852969211604682,
+      2.794478392126583
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "E1": 60,
+    "E2": 50,
+    "G": 3,
+    "nu": 0.25,
+    "ang": 0,
+    "ret": 0,
+    "hemEA": 3000,
+    "gsm": 40,
+    "fabId": "t_rny",
+    "fab": "Ripstop nylon 40 g",
+    "couleur": "#ff5500",
+    "colAsym": true
+   },
+   "name": "Voile 1 · P2 ′",
+   "voile": "Voile 1"
+  },
+  {
+   "id": "s351",
+   "kind": "sail",
+   "closed": true,
+   "plane": "face",
+   "pts": [
+    "p300",
+    "p9",
+    "p121",
+    "p123"
+   ],
+   "segs": [
+    {
+     "straight": false,
+     "c1": [
+      244.59820543873258,
+      2.7774048542736236,
+      -4.188627529722259
+     ],
+     "c2": [
+      -252.57559859762205,
+      -2.55351295663786e-14,
+      0
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "E1": 60,
+    "E2": 50,
+    "G": 3,
+    "nu": 0.25,
+    "ang": 0,
+    "ret": 0,
+    "hemEA": 3000,
+    "gsm": 40,
+    "fabId": "t_rny",
+    "fab": "Ripstop nylon 40 g",
+    "couleur": "#ffffff",
+    "colAsym": true
+   },
+   "name": "Voile 1 · P3 ′",
+   "voile": "Voile 1"
+  },
+  {
+   "id": "s352",
+   "kind": "sail",
+   "closed": true,
+   "plane": "face",
+   "pts": [
+    "p331",
+    "p243",
+    "p132",
+    "p300",
+    "p20"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      -163.18576789204275,
+      -1.852969211604682,
+      2.794478392126583
+     ],
+     "c2": [
+      164.2790863272956,
+      0,
+      0
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "E1": 60,
+    "E2": 50,
+    "G": 3,
+    "nu": 0.25,
+    "ang": 0,
+    "ret": 0,
+    "hemEA": 3000,
+    "gsm": 40,
+    "fabId": "t_rny",
+    "fab": "Ripstop nylon 40 g",
+    "D": 0.005,
+    "couleur": "#ffffff",
+    "colAsym": true
+   },
+   "name": "Voile 1 · P4 ′",
+   "voile": "Voile 1"
+  },
+  {
+   "id": "s353",
+   "kind": "sail",
+   "closed": true,
+   "plane": "face",
+   "pts": [
+    "p9",
+    "p300",
+    "p132"
+   ],
+   "segs": [
+    {
+     "straight": false,
+     "c1": [
+      -252.57559859762205,
+      -2.55351295663786e-14,
+      0
+     ],
+     "c2": [
+      244.59820543873258,
+      2.777404854273625,
+      -4.188627529722259
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "E1": 60,
+    "E2": 50,
+    "G": 3,
+    "nu": 0.25,
+    "ang": 0,
+    "ret": 0,
+    "hemEA": 3000,
+    "gsm": 40,
+    "fabId": "t_rny",
+    "fab": "Ripstop nylon 40 g",
+    "D": 0.005,
+    "couleur": "#ff5500",
+    "colAsym": true
+   },
+   "name": "Voile 1 · P5 ′",
+   "voile": "Voile 1"
+  },
+  {
+   "id": "s354",
+   "kind": "sail",
+   "closed": true,
+   "plane": "face",
+   "pts": [
+    "p132",
+    "p206",
+    "p190",
+    "p322"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      39.985862244219334,
+      0,
+      0
+     ],
+     "c2": [
+      -39.985862244219334,
+      0,
+      0
+     ],
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "colle"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "E1": 60,
+    "E2": 50,
+    "G": 3,
+    "nu": 0.25,
+    "ang": 0,
+    "ret": 0,
+    "hemEA": 3000,
+    "gsm": 40,
+    "fabId": "t_rny",
+    "fab": "Ripstop nylon 40 g",
+    "D": 0.005,
+    "couleur": "#ffffff",
+    "colAsym": true
+   },
+   "name": "Voile 1 · P6 ′",
+   "voile": "Voile 1"
+  },
+  {
+   "id": "s355",
+   "kind": "sail",
+   "closed": true,
+   "plane": "face",
+   "pts": [
+    "p322",
+    "p316",
+    "p132"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "E1": 60,
+    "E2": 50,
+    "G": 3,
+    "nu": 0.25,
+    "ang": 0,
+    "ret": 0,
+    "hemEA": 3000,
+    "gsm": 40,
+    "fabId": "t_rny",
+    "fab": "Ripstop nylon 40 g",
+    "D": 0.005,
+    "couleur": "#ff5500",
+    "colAsym": true
+   },
+   "name": "Voile 1 · P7 ′",
+   "voile": "Voile 1"
+  },
+  {
+   "id": "s356",
+   "kind": "sail",
+   "closed": true,
+   "plane": "face",
+   "pts": [
+    "p316",
+    "p184",
+    "p9",
+    "p132"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "E1": 60,
+    "E2": 50,
+    "G": 3,
+    "nu": 0.25,
+    "ang": 0,
+    "ret": 0,
+    "hemEA": 3000,
+    "gsm": 40,
+    "fabId": "t_rny",
+    "fab": "Ripstop nylon 40 g",
+    "D": 0.005,
+    "colAsym": true,
+    "couleur": "#ffffff"
+   },
+   "name": "Voile 1 · P8 ′",
+   "voile": "Voile 1"
+  },
+  {
+   "id": "s357",
+   "kind": "sail",
+   "closed": true,
+   "plane": "face",
+   "pts": [
+    "p217",
+    "p287",
+    "p285",
+    "p243",
+    "p331"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "fourreau",
+      "host": "s146",
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "fourreau",
+      "host": "s146",
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "E1": 60,
+    "E2": 50,
+    "G": 3,
+    "nu": 0.25,
+    "ang": 0,
+    "ret": 0,
+    "hemEA": 3000,
+    "gsm": 40,
+    "fabId": "t_rny",
+    "fab": "Ripstop nylon 40 g",
+    "D": 0.005,
+    "couleur": "#ff5500",
+    "colAsym": true
+   },
+   "name": "Voile 1 · P9 ′",
+   "voile": "Voile 1"
+  },
+  {
+   "id": "s358",
+   "kind": "cable",
+   "closed": false,
+   "plane": "face",
+   "pts": [
+    "p8",
+    "p121"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "EA": 4000,
+    "rac": 16,
+    "d": 2,
+    "ml": 2.6,
+    "compId": "cable_umvb20yb7",
+    "mat": "Polyester 2mm"
+   },
+   "name": "Câble 4 ′"
+  },
+  {
+   "id": "s359",
+   "kind": "cable",
+   "closed": false,
+   "plane": "dessus",
+   "pts": [
+    "p198",
+    "p300"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "EA": 4000,
+    "rac": 12.5,
+    "compId": "k_pe1",
+    "mat": "Polyester tressé 1 mm",
+    "bride": true
+   },
+   "name": "Bride 1 ′"
+  },
+  {
+   "id": "s368",
+   "kind": "sail",
+   "closed": true,
+   "plane": "face",
+   "pts": [
+    "p17",
+    "p139",
+    "p24",
+    "p363"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": false,
+     "c1": [
+      31.066231992749408,
+      0,
+      0
+     ],
+     "c2": [
+      -31.066231992749408,
+      0,
+      0
+     ],
+     "edge": {
+      "type": "fourreau",
+      "host": "s147",
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "E1": 60,
+    "E2": 50,
+    "G": 3,
+    "nu": 0.25,
+    "ang": 0,
+    "ret": 0,
+    "hemEA": 3000,
+    "gsm": 40,
+    "fabId": "t_rny",
+    "fab": "Ripstop nylon 40 g",
+    "D": 0.005,
+    "couleur": "#ff5500",
+    "colAsym": true
+   },
+   "name": "Voile 1 · P11 ′",
+   "voile": "Voile 1"
+  },
+  {
+   "id": "s377",
+   "kind": "cable",
+   "closed": false,
+   "plane": "face",
+   "pts": [
+    "p4",
+    "p9"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "EA": 8000,
+    "rac": 65
+   },
+   "name": "Câble 2"
+  },
+  {
+   "id": "s378",
+   "kind": "baguette",
+   "closed": false,
+   "plane": "face",
+   "pts": [
+    "p315",
+    "p131",
+    "p299",
+    "p5",
+    "p375",
+    "p269"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "forme": "rond",
+    "de": 2.1,
+    "di": 0,
+    "b": 10,
+    "e": 1.5,
+    "E": 40,
+    "sigR": 800,
+    "droit": true,
+    "sur": 4.9,
+    "creux": 1,
+    "cone": false,
+    "de2": 2,
+    "di2": 0,
+    "cprof": 1,
+    "matId": "fv",
+    "mat": "Fibre de verre",
+    "compId": "comp_umvilndlp",
+    "tenue": "noeuds",
+    "renfort": 10,
+    "passants": "points",
+    "tenueSet": true,
+    "side": "ext"
+   },
+   "name": "Baguette 1",
+   "kinks": {}
+  },
+  {
+   "id": "s379",
+   "kind": "baguette",
+   "closed": false,
+   "plane": "face",
+   "pts": [
+    "p316",
+    "p132",
+    "p300",
+    "p10",
+    "p375",
+    "p12"
+   ],
+   "segs": [
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    },
+    {
+     "straight": true,
+     "c1": null,
+     "c2": null,
+     "edge": {
+      "type": "ourlet",
+      "host": null,
+      "mode": "glissant"
+     }
+    }
+   ],
+   "props": {
+    "forme": "rond",
+    "de": 2.1,
+    "di": 0,
+    "b": 10,
+    "e": 1.5,
+    "E": 40,
+    "sigR": 800,
+    "droit": true,
+    "sur": 4.9,
+    "creux": 1,
+    "cone": false,
+    "de2": 2,
+    "di2": 0,
+    "cprof": 1,
+    "matId": "fv",
+    "mat": "Fibre de verre",
+    "compId": "comp_umvilndlp",
+    "tenue": "noeuds",
+    "renfort": 10,
+    "passants": "points",
+    "tenueSet": true,
+    "side": "ext"
+   },
+   "name": "Baguette 1 ′",
+   "kinks": {}
+  }
+ ],
+ "offset": {
+  "base": "face",
+  "d": 150,
+  "tilt": 0,
+  "rot": 0
+ },
+ "h": 50,
+ "hk": 15,
+ "hMode": "rel",
+ "deduce": 1,
+ "nodes": {
+  "p8": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N2"
+  },
+  "p1": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N4"
+  },
+  "p2": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N6"
+  },
+  "p20": {
+   "type": "coulisse",
+   "auto": false,
+   "name": "N8",
+   "coul": [
+    "s175"
+   ]
+  },
+  "p12": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N11"
+  },
+  "p42": {
+   "type": "rigide",
+   "auto": false,
+   "name": "N16",
+   "ring": true
+  },
+  "p120": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N23"
+  },
+  "p121": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N24"
+  },
+  "p4": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N41"
+  },
+  "p9": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N42"
+  },
+  "p198": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N47"
+  },
+  "p203": {
+   "type": "coulisse",
+   "auto": false,
+   "name": "N50"
+  },
+  "p23": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N60"
+  },
+  "p24": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N59"
+  },
+  "p138": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N62"
+  },
+  "p139": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N61"
+  },
+  "p217": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N63"
+  },
+  "p240": {
+   "type": "coulisse",
+   "auto": false,
+   "name": "N66"
+  },
+  "p269": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N69"
+  },
+  "p279": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N72"
+  },
+  "p285": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N73"
+  },
+  "p242": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N70"
+  },
+  "p243": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N71"
+  },
+  "p296": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N74"
+  },
+  "p331": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N75"
+  },
+  "p363": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N76"
+  },
+  "p299": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N83"
+  },
+  "p300": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N84"
+  },
+  "p5": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N85"
+  },
+  "p131": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N86"
+  },
+  "p315": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N87"
+  },
+  "p375": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N88"
+  },
+  "p10": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N89"
+  },
+  "p132": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N90"
+  },
+  "p316": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N91"
+  },
+  "p277": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N92"
+  },
+  "p287": {
+   "type": "rigide",
+   "auto": true,
+   "name": "N93"
+  }
+ },
+ "name": "kiteman",
+ "sym": true,
+ "symMap": {
+  "p8": "p1",
+  "p9": "p4",
+  "p24": "p23",
+  "p121": "p120",
+  "p123": "p122",
+  "p139": "p138",
+  "p184": "p183",
+  "p190": "p189",
+  "p206": "p205",
+  "p322": "p321",
+  "p10": "p5",
+  "p132": "p131",
+  "p269": "p12",
+  "p300": "p299",
+  "p316": "p315",
+  "p243": "p242",
+  "p287": "p277",
+  "p285": "p279"
+ },
+ "tails": {},
+ "lests": {},
+ "presets": {
+  "comp": [
+   {
+    "id": "c_jc3",
+    "name": "Jonc carbone Ø3mm",
+    "vals": {
+     "forme": "rond",
+     "de": 3,
+     "di": 0,
+     "E": 135,
+     "sigR": 1500,
+     "matId": "cp",
+     "mat": "Carbone pultrudé"
+    }
+   },
+   {
+    "id": "comp_umv44djpr",
+    "name": "Tube carbone 7.5/6.2",
+    "vals": {
+     "de": 7.5,
+     "di": 6.2,
+     "E": 110,
+     "sigR": 1100,
+     "matId": "ce",
+     "mat": "Carbone enroulé",
+     "forme": "rond"
+    }
+   },
+   {
+    "id": "comp_umvbku3ov",
+    "name": "Jonc carbone Ø2mm",
+    "vals": {
+     "de": 2,
+     "di": 0,
+     "cone": false,
+     "de2": 5,
+     "di2": 3.5,
+     "cprof": 1.5,
+     "E": 135,
+     "sigR": 1500,
+     "matId": "cp",
+     "mat": "Carbone pultrudé"
+    }
+   },
+   {
+    "id": "c_tc86",
+    "name": "Tube carbone 8/6",
+    "vals": {
+     "de": 8,
+     "di": 6,
+     "cone": false,
+     "de2": 2,
+     "di2": 0,
+     "cprof": 1,
+     "E": 135,
+     "sigR": 1500,
+     "matId": "cp",
+     "mat": "Carbone pultrudé"
+    }
+   },
+   {
+    "id": "comp_umvblr6ii",
+    "name": "Tube carbone 10/8",
+    "vals": {
+     "forme": "rond",
+     "de": 10,
+     "di": 8,
+     "E": 135,
+     "sigR": 1500,
+     "matId": "cp",
+     "mat": "Carbone pultrudé"
+    }
+   },
+   {
+    "id": "c_tc64",
+    "name": "Tube carbone 6/4",
+    "vals": {
+     "de": 6,
+     "di": 4,
+     "cone": false,
+     "de2": 2,
+     "di2": 0,
+     "cprof": 1,
+     "E": 135,
+     "sigR": 1500,
+     "matId": "cp",
+     "mat": "Carbone pultrudé"
+    }
+   },
+   {
+    "id": "comp_umv98klih",
+    "name": "Tube Fibre de verre 6/4",
+    "vals": {
+     "forme": "rond",
+     "de": 6,
+     "di": 4,
+     "E": 40,
+     "sigR": 800,
+     "matId": "fv",
+     "mat": "Fibre de verre"
+    }
+   },
+   {
+    "id": "comp_umv98nybw",
+    "name": "Tube Fibre de verre 8/6",
+    "vals": {
+     "de": 8,
+     "di": 6,
+     "E": 40,
+     "sigR": 800,
+     "matId": "fv",
+     "mat": "Fibre de verre",
+     "forme": "rond"
+    }
+   },
+   {
+    "id": "comp_umv9kvxor",
+    "name": "Jonc carbone Ø4 mm",
+    "vals": {
+     "forme": "rond",
+     "de": 4,
+     "di": 0,
+     "E": 135,
+     "sigR": 1500,
+     "matId": "cp",
+     "mat": "Carbone pultrudé"
+    }
+   },
+   {
+    "id": "comp_umvilofn5",
+    "name": "Jonc Fibre tressée (JTech) 3.1mm",
+    "vals": {
+     "de": 3.1,
+     "di": 0,
+     "E": 40,
+     "sigR": 800,
+     "matId": "fv",
+     "mat": "Fibre de verre",
+     "forme": "rond"
+    }
+   },
+   {
+    "id": "comp_umvilndlp",
+    "name": "Jonc Fibre tressée (JTech) 2.1mm",
+    "vals": {
+     "de": 2.1,
+     "di": 0,
+     "E": 40,
+     "sigR": 800,
+     "matId": "fv",
+     "mat": "Fibre de verre",
+     "forme": "rond"
+    }
+   }
+  ],
+  "cable": [
+   {
+    "id": "k_pe1",
+    "name": "Polyester tressé 1 mm",
+    "vals": {
+     "EA": 4000,
+     "d": 1,
+     "ml": 0.8
+    }
+   },
+   {
+    "id": "cable_umvb20yb7",
+    "name": "Polyester 2mm",
+    "vals": {
+     "EA": 4000,
+     "d": 2,
+     "ml": 2.6
+    }
+   }
+  ],
+  "calc": [
+   {
+    "id": "p_fin",
+    "name": "Précis",
+    "vals": {
+     "hk": 35,
+     "tol": 0.0002,
+     "maxIt": 400000,
+     "stages": 0,
+     "imperf": true
+    }
+   },
+   {
+    "id": "p_rap",
+    "name": "Estimation",
+    "vals": {
+     "hk": 15,
+     "tol": 0.0049,
+     "maxIt": 60000,
+     "stages": 0,
+     "imperf": true
+    }
+   },
+   {
+    "id": "p_std",
+    "name": "Standard",
+    "vals": {
+     "hk": 15,
+     "tol": 0.00166,
+     "maxIt": 303000,
+     "stages": 0,
+     "imperf": true
+    }
+   }
+  ],
+  "tissu": [
+   {
+    "id": "t_rny",
+    "name": "Ripstop nylon 40 g",
+    "vals": {
+     "E1": 60,
+     "E2": 50,
+     "G": 3,
+     "nu": 0.25,
+     "gsm": 40,
+     "D": 0.005
+    }
+   }
+  ]
+ },
+ "rest": {
+  "key": "1i85x5x1rwde3jl6l",
+  "n": 415,
+  "dx": "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",
+  "q": "AAAAAAAAAABq7YTn2/HvP22sZu4AEq6/sbh3IH+FML+PSqwvPVAUvwAAAAAAAPA/Ovf9ce3n7z/nmVaecMOxv7LoPb7xiaC/iI4rugk1aj8AAAAAAAAIQGfoLfnFje8/d84xtJkQvr8Cp7WxYB++v2yCxm7ccX4/AAAAAAAAFEBrgUwLBGXvPwP4nOuGksC/xQQBxlxlwr9NdlvmDyWAPwAAAAAAABhAt2nr3gTr7z/xiKuDRU+yvySlqNMh1SE/HTmcSEGQQj8AAAAAAAAiQJesB9bh9+8/ACPSinXJpr892uY3AWM4v3VH63tD8xe/AAAAAAAAKEDr6HxI3N/vP8pCHb20Dqe/9gOamdxms79SXYRNZ4Z/vwAAAAAAADNApKN4vzOB7z8+Uklyy0mlv7DEUehlx8W/iaqbTro5eb8AAAAAAAA7QDcwYcEe8e8/NxXhrtP9k7+13mDWmyytv5XixqLDFlS/AAAAAAAAPkB+Y6wE8tLvP3VobQyUdJY/2K/R1kE0ur9eJTMuXyZrvwAAAAAAQFJAOchcejPZ7z+uE372dUO4v8vZ1QjLoXw/matmL1bvlL8AAAAAAABUQMv2TLwe7O8/E0IWdd/SsT8LvVu5tvQ0v90vnGGofyI/AAAAAACAVEAnJWYg/rHvP2+/Pu73zLA/SfyYld/Dvr8JprhFSE6NvwAAAAAAwFRAzThY5x6n7z90mDxUBd2wP5iCDdFOqcC/yV/wLNqykb8AAAAAAEBXQO+Z1suMsu8/HJRkSHavsD/qOMXS17O+P/3pI7JQDYw/AAAAAADAWkBTosD////vP1tEgPcne7W+8zwE7kclwb61YkcYkb3/PgAAAAAAAFtAv/T2////7z88YHQI6Xq1vmpAXngqJ8G+HIGxb0KF574AAAAAAIBeQKno9f///+8/QC53uul6tb7AqtX3YoXDvj57Q+qby+i+AAAAAADAYkAP8/b////vP4DajeXqerW+n2Hg9gE9w7770AcdsW3nvgAAAAAAgGRAIrq8qZiX7z97KniJ0uO+v6y0CiGuerq/+XfyWFftgD8AAAAAAKBkQLA3kIrDwO8/lhsgi0Kqv7+1i5kUQTyCPwQCyisOYRq/AAAAAADAZECvrP1rHunvPxSmDPKNALO/zN2hEEPxgD9SlFV+/RRCvwAAAAAA4GRAO4RiAqGY7z++SE5NCu6/v+rouO2L5bg/7srvsHlIgL8AAAAAAABlQBrSB5/ghu8/fsuoFpcDwL8sVm+MF+q9P9hkK9/0jXu/AAAAAAAgZUDkpIrrWGbvP4fZbBvoPMC/6YJ4T++Jwj8Q7RGQsoaDvwAAAAAAgGVAr5Vf9LbS7z8zzSr398KwPyFLHNgZs7S/VKTp4SH/jL8AAAAAAKBlQGUlHyI30+8/u6nUYhK5sD8U4WNAhYm0Py7PrP4+Bo0/AAAAAADAZUDDQ3HQtKfvPwRpInoeubA/gdszrtujwD8YEwyk++aQPwAAAAAA4GVAoLfs////7z8F6LDmCnu1viCoKODzrMC+nZ3wkpNj8T4AAAAAAABmQBH9kObmnO8/cChe3tXppb+SEwTyfhDDvwSSUJvySHe/AAAAAAAgZkDzx5QcTa7vP5nA9HFAVqa/3dJzWxYfwb/ip0aU+Ex9vwAAAAAAQGZAsCNySQvA7z/sNTJw1rCmvyIW+rBMwL2/VL3IJS2tgr8AAAAAAGBmQB5aZSVE9O8/mHoUNRXupr+F0+mkAO+dvw73tuhvgFm/AAAAAACAZkC+WDE40ffvP6BduJzzzqa/z7kI7QFCaz9kWqLL8sFRPwAAAAAAoGZA5L6Ezcr37z+LkW24Ac+mv5V1v/smyHC/t3+iFmJNVL8AAAAAAMBmQLJiUu5m9O8/S6c9V1Xtpr/1KoqUpl6dP1FBpSZVW1U/AAAAAADgZkD5AK4k4N/vP1ScEDWHCKe/T6I144Bnsz/vKOdaS0h/PwAAAAAAAGdAmzwoX3O/7z+W2tKq47Smv/z3VGvq5r0/8EmZA0kWgz8AAAAAACBnQO2g1CU6re8/XEI/Myhmpr+i0qLkKj3BP5/kppf2Bn4/AAAAAABAZ0AdPvrnk5vvP56hvcicBKa/NjMNdWExwz8MfZOnTPN3PwAAAAAAYGdA97pQP7F/7z+E8I1J6G6lv1dVjfzB58U/1mRP3GnyeT8AAAAAAIBnQMeF9BwF6u8/pxzw8ZC9sr/JfjlNKSoAvwU6p96Wkik/AAAAAACgZ0CqbYva7ezvP2RT+ng5dbG/07NrYt/7Eb9KeV00v7gEPwAAAAAAwGdAxDNdQsXv7z+E3OwdMBuwv0q3bvaVMSe/tGKn0INJKL8AAAAAAOBnQJL1qk+h+e8/i2a+XaIvpL/Aig/x+Ig3v4O7f1woMhm/AAAAAAAAaECBQX+Bhv/vPzIokQb4B4a/2j2aQcwKOL/lNBOLuDMVvwAAAAAAIGhArfRpKPv/7z+sDd06PlZhv6r4snN2mje/ejDPebtEGb8AAAAAAEBoQAIcS7bL/+8/aWocMtDhfD/13MT2jCw3v0bAuAbtNCK/AAAAAABgaEA6iDsK+P7vP64acYHnPZA/0MdRE27aNr8Amk0GmNMhvwAAAAAAgGhAai9PaB3+7z9z7K7nu/aVP73yAilzxTa/iYEsxLYhBT8AAAAAAKBoQHAJRLk9/u8/2LxynLhakj8Cb3od6kmFv1ESsx/fTSo/AAAAAADAaECDvmq4VP3vPxFhTPGMIpo/Ho0fEmElNr+DjfJmJF0cPwAAAAAA4GhAEO+woyr87z9zpDDKOFKfP5+8RTPNiTW/D244pLSHAz8AAAAAAABpQCIiwiMQ++8/rkbYV43FoT/OVAZBK441vyhmDdMBxCc/AAAAAAAgaUAOovDHN/rvP/bVlb6BO6M/LnUUvYnuNL/bQhn4pwUqPwAAAAAAQGlAeRbDy+zu7z/hk5bCjYCWv0vaMVXIN62/UeUXYbYblT8AAAAAAGBpQL1E42wn8e8/QnDoMjUQl79gspTYQESovzhqh0FyKZ4/AAAAAACAaUB2EJmwFPrvP83gO/sxXJa/QnkNol//mr+WSEuMveiQPwAAAAAAoGlAnrf987j97z/ViOfEP3WVv8awGJMewIW/Pc4Ce6t9YL8AAAAAAMBpQBINJuIu/O8/+s3z/CJVlb9J4lCTdluIP0ntY9hvU5O/AAAAAADgaUDwFjP9HvHvPxAqCSmc2pS/UMZToTj+qD9LBhEe04edvwAAAAAAAGpAVlBglQnn7z//A3YCMlaTv7gAl3LayLI/O+XGNwUAk78AAAAAACBqQD64AtMA5u8/oJx7+asJkL8tma6XoPmzP/OWaOhqL10/AAAAAAAgbEDPT173uOfvPxMJcEyH67G/+jtTTyI9oD/4H3axtdRsvwAAAAAAYG5AjGESjubR7z8EqXrPjWGXP0r2Ic0Webo/TmHnddk/Zz8AAAAAAKBxQLOPQs6q2O8/je+X8ZxouL9ymX6JTxh8v8UnC7aEhZU/AAAAAADwc0Aodv8wgufvPztHUdcWg7K/3RkIUoALkr/Ak5fZpkCVvwAAAAAAAHRA8tNsykzu7z8lv8TdBSuev52QUmGQKa2/eUQafW1Jjb8AAAAAABB0QAqSd6c6wO8/B7qQ+fMFoj8LWJauIpG+v+KQouXe5mw/AAAAAAAgdEAEYMT02NjvP97FU1RkEHa/Ob/UD/f1uL+fHVEidZHsvgAAAAAAMHRAFWlK7fre7z+pz/Ov5Qq1v0uImXTmT6K/KCE13r9iab8AAAAAAEB0QCqOG/Pd7e8/gHa7Wumtrr8dxmFNZH6cv2kdGBajBH8/AAAAAABQdECRHJgUk/LvP7mdb6fjt6q/a/Du7t3Olr8zP0jezpJ+PwAAAAAAYHRAgVwEzpHG7z8kWIKizUy4v6vg/SVx3bE/ykAhzLWfg78AAAAAAHB0QHI/gY+95u8/2eroeajUsr918iVfyaCRP4F4+hvrupU/AAAAAACAdECbnOZsGe7vP3pad6/XRJ6/euGgciperT+KydItthWNPwAAAAAAkHRAZ1QRRwq/7z+FWCsVBYCiP4DdzYp5zb4/QlmaCCfebb8AAAAAAKB0QKj1NBle2O8/Ed2eu5oGc78O7v8Tfh+5P4NkPmQ9+jE/AAAAAACwdEBXoWI7E9/vP4DGNOgMAbW/hy3wIt9Voj/99qoEFxNnPwAAAAAAwHRAjcBQmtDt7z/087uLZsquv8zkjfg1LZw/vPZzl9sBgL8AAAAAANB0QE94fZtt8u8/h2GCS3X8qr85DHmo6UOWP5eRdXw1sH+/AAAAAADgdEDsk6RmhMfvP1A0cyOmSri/bDuFS6Rpsb9J0qY8j6eFPwAAAAAA8HRAu1OPq07p7z/Ql8JikwCzv/7Z1F0UjnM/izEEI8pZIL8AAAAAAAB1QDPbjeXT6O8/At81hpQAs79PfvyaaBaIPwkeCeOpH1K/AAAAAAAQdUCsDBwoHOnvP4X1BCCBAbO/m0zeXdTxgD/ApDhu5JtBvwAAAAAAIHVAKBqcsSDp7z99dhPUmf+yv2DpBor28IA/Pt9y5ltWQr8AAAAAADB1QEL6PeI9/u8/becZp6dZkj/ADBfN1kmFvxVY5/KUBSk/AAAAAABAdUDb9XORPf7vPwTgP53TW5I/HB/T+OJJhb9qspfrTLUpPwAAAAAAUHVAuVMmIDn+7z8JZ9FiMVmSP7Hmfn5Zr4W/e8hhi9LRSD8AAAAAAGB1QBv8GadB/u8/bCsjlwFckj9ulJp2MOWEv319sSn0ADK/",
+  "it": 72550
+ },
+ "calcMode": "repos",
+ "wind": {
+  "V": 5.833333333333333,
+  "probe": false,
+  "sfDirect": true,
+  "sfTail": {
+   "sig": "438/476",
+   "ax": [
+    -0.00027430950047994203,
+    0.8859170849021152,
+    0.4638435549113908
+   ],
+   "V": 5.833333333333333,
+   "dir": [
+    0.00001180057776633367,
+    -0.9999999999303731,
+    0
+   ],
+   "pieces": [
+    {
+     "hinge": [
+      67,
+      40,
+      68,
+      72
+     ],
+     "F": [
+      0.826140642025971,
+      -0.2123927740748517,
+      -0.6677764597294917
+     ],
+     "sd": [
+      0.8098984475942419,
+      0.9875775342874812,
+      0.6713449161191154
+     ],
+     "W": 0.32898643069771716
+    },
+    {
+     "hinge": [
+      94,
+      121,
+      401,
+      135,
+      411
+     ],
+     "F": [
+      4.524914496640581,
+      0.09796802649025388,
+      0.10481561284920364
+     ],
+     "sd": [
+      0.7236426647581611,
+      0.922659253792321,
+      0.6658006978866742
+     ],
+     "W": 1.0365069434218181
+    },
+    {
+     "hinge": [
+      281,
+      282,
+      254,
+      286
+     ],
+     "F": [
+      0.20376674071787415,
+      -0.1892094674545312,
+      1.1521377535048511
+     ],
+     "sd": [
+      0.4445077203576257,
+      0.7487302127094274,
+      0.695386388542535
+     ],
+     "W": 0.32912171614187563
+    }
+   ],
+   "dur": 1.0130767318501612,
+   "date": "2026-11-19T10:54:06.536Z",
+   "tsig": "174:0,-19397,22265:434:174:4:7",
+   "hp": [
+    [
+     [
+      1106,
+      -17148.1,
+      23083.2
+     ],
+     [
+      864.9,
+      -16827.4,
+      23200.7
+     ],
+     [
+      1042.5,
+      -16973.1,
+      23147.1
+     ],
+     [
+      1232.9,
+      -17130.7,
+      23089
+     ]
+    ],
+    [
+     [
+      -481.7,
+      -18076.3,
+      22744.9
+     ],
+     [
+      0,
+      -18078,
+      22744.3
+     ],
+     [
+      -305.5,
+      -18005.2,
+      22770.8
+     ],
+     [
+      481.7,
+      -18076.3,
+      22744.9
+     ],
+     [
+      305.5,
+      -18005.2,
+      22770.8
+     ]
+    ],
+    [
+     [
+      -1106,
+      -17148.1,
+      23083.2
+     ],
+     [
+      -1042.5,
+      -16973.1,
+      23147.1
+     ],
+     [
+      -864.9,
+      -16827.4,
+      23200.7
+     ],
+     [
+      -1232.9,
+      -17130.7,
+      23089
+     ]
+    ]
+   ],
+   "shape": {
+    "X": [
+     29,
+     66.664,
+     59.516,
+     29.27,
+     66.938,
+     55.898,
+     32.256,
+     64,
+     59.516,
+     39.116,
+     59.141,
+     54.205,
+     38.909,
+     58.855,
+     59.519,
+     35.544,
+     61.378,
+     59.517,
+     36.048,
+     61.957,
+     53.273,
+     33.018,
+     64.817,
+     52.359,
+     32.796,
+     64.013,
+     55.945,
+     31.079,
+     65.787,
+     54.113,
+     44.003,
+     56.449,
+     50.192,
+     43.756,
+     56.018,
+     53.282,
+     41.366,
+     58.259,
+     51.779,
+     43.547,
+     57.309,
+     49.321,
+     43.646,
+     55.831,
+     56.401,
+     43.568,
+     55.694,
+     59.52,
+     41.229,
+     57.266,
+     59.519,
+     45.397,
+     58.842,
+     40.885,
+     44.854,
+     57.946,
+     43.947,
+     44.23,
+     59.584,
+     40.664,
+     45.973,
+     59.799,
+     37.846,
+     44.372,
+     57.126,
+     47.044,
+     42.787,
+     59.801,
+     43.656,
+     41.296,
+     59.959,
+     46.625,
+     60.637,
+     49.186,
+     45.779,
+     60.218,
+     48.465,
+     49.178,
+     57.954,
+     50.961,
+     45.335,
+     46.665,
+     53.779,
+     59.521,
+     59.979,
+     47.873,
+     56.14,
+     59.627,
+     47.09,
+     59.521,
+     56.318,
+     48.631,
+     59.525,
+     60.181,
+     48.319,
+     52.675,
+     56.244,
+     51.03,
+     49.862,
+     54.919,
+     51.971,
+     44.793,
+     55.867,
+     50.37,
+     53.402,
+     55.568,
+     49.662,
+     57.043,
+     53.049,
+     50.255,
+     59.524,
+     52.051,
+     53.381,
+     44.274,
+     53.356,
+     52.405,
+     47.951,
+     49.391,
+     54.443,
+     46.262,
+     53.118,
+     52.05,
+     51.616,
+     52.843,
+     51.445,
+     55.252,
+     46.725,
+     55.5,
+     48.24,
+     50.374,
+     53.612,
+     49.785,
+     50.159,
+     53.121,
+     53.374,
+     49.829,
+     51.969,
+     59.522,
+     49.831,
+     52.525,
+     57.022,
+     47.35,
+     54.759,
+     51.519,
+     47.078,
+     54.219,
+     55.176,
+     50.063,
+     55.588,
+     42.173,
+     47.947,
+     57.579,
+     39.963,
+     101.065,
+     53.282,
+     41.149,
+     98.255,
+     54.127,
+     42.985,
+     100.477,
+     54.047,
+     40.506,
+     95.056,
+     53.983,
+     44.129,
+     97.756,
+     54.222,
+     42.174,
+     92.109,
+     52.925,
+     44.066,
+     95.093,
+     53.449,
+     43.909,
+     88.899,
+     51.382,
+     44.264,
+     91.678,
+     53.075,
+     44.007,
+     85.429,
+     50.829,
+     43.193,
+     88.534,
+     51.297,
+     44.174,
+     85.402,
+     50.771,
+     42.8,
+     63.551,
+     48.584,
+     39.217,
+     60.893,
+     49.67,
+     41.526,
+     64.458,
+     48.028,
+     39.641,
+     58.87,
+     50.777,
+     43.942,
+     61.31,
+     49.266,
+     40.774,
+     55.391,
+     51.898,
+     44.095,
+     58.215,
+     50.62,
+     41.923,
+     55.143,
+     52.018,
+     43.097,
+     82.211,
+     50.193,
+     41.568,
+     84.173,
+     50.968,
+     40.612,
+     79.433,
+     49.641,
+     40.098,
+     81.841,
+     49.934,
+     41.943,
+     76.283,
+     50.293,
+     39.476,
+     78.615,
+     50.033,
+     38.862,
+     78.497,
+     50.325,
+     40.518,
+     75.828,
+     49.761,
+     38.297,
+     73.587,
+     49.815,
+     38.112,
+     73.047,
+     49.685,
+     37.323,
+     70.064,
+     49.512,
+     37.881,
+     72.314,
+     48.864,
+     38.098,
+     69.017,
+     48.612,
+     38.654,
+     66.516,
+     49.412,
+     38.358,
+     67.23,
+     48.606,
+     37.972,
+     65.598,
+     48.306,
+     38.479,
+     55.293,
+     52.563,
+     42.152,
+     58.263,
+     51.44,
+     39.782,
+     61.234,
+     50.269,
+     37.439,
+     64.333,
+     48.556,
+     37.383,
+     65.558,
+     49.072,
+     38.946,
+     48.614,
+     58.064,
+     37.802,
+     51.492,
+     56.764,
+     37.933,
+     54.343,
+     55.402,
+     38.04,
+     57.988,
+     53.081,
+     37.923,
+     76.989,
+     42.068,
+     48.26,
+     76.818,
+     41.456,
+     50.621,
+     73.559,
+     43.226,
+     47.784,
+     63.509,
+     46.969,
+     46.188,
+     76.551,
+     40.555,
+     55.028,
+     76.5,
+     40.179,
+     59.517,
+     73.1,
+     41.431,
+     59.516,
+     72.421,
+     43.153,
+     51.182,
+     72.281,
+     42.598,
+     54.814,
+     66.841,
+     45.569,
+     46.708,
+     70.002,
+     43.843,
+     47.28,
+     69.432,
+     44.181,
+     49.363,
+     69.468,
+     44.28,
+     53.018,
+     69.7,
+     42.782,
+     59.516,
+     69.212,
+     43.632,
+     56.635,
+     66.319,
+     44.168,
+     59.516,
+     66.607,
+     45.696,
+     51.169,
+     66.423,
+     45.221,
+     54.831,
+     63.713,
+     46.962,
+     49.37,
+     63.536,
+     46.59,
+     53.01,
+     63.389,
+     46.158,
+     56.681,
+     62.96,
+     45.602,
+     59.518,
+     126.086,
+     30.832,
+     64.337,
+     122.955,
+     32.419,
+     64.233,
+     122.86,
+     31.417,
+     58.866,
+     126.132,
+     29.901,
+     59.185,
+     76.556,
+     40.581,
+     64.004,
+     79.994,
+     39,
+     59.518,
+     119.639,
+     32.288,
+     64.579,
+     118.909,
+     32.46,
+     62.571,
+     119.295,
+     31.36,
+     59.083,
+     115.986,
+     32.403,
+     65.119,
+     115.686,
+     31.846,
+     59.216,
+     112.387,
+     33.236,
+     65.421,
+     112.883,
+     33.546,
+     62.798,
+     112.266,
+     33.031,
+     59.223,
+     108.881,
+     34.379,
+     65.731,
+     108.833,
+     34.382,
+     59.198,
+     105.372,
+     35.451,
+     66.019,
+     106.791,
+     35.066,
+     62.826,
+     105.243,
+     35.091,
+     59.256,
+     101.752,
+     36.123,
+     66.284,
+     98.131,
+     36.759,
+     66.553,
+     100.398,
+     35.429,
+     62.999,
+     97.937,
+     35.631,
+     59.384,
+     101.617,
+     35.674,
+     59.33,
+     94.626,
+     37.817,
+     66.676,
+     94.154,
+     36.366,
+     63.025,
+     94.288,
+     35.991,
+     59.456,
+     90.845,
+     37.315,
+     59.487,
+     91.02,
+     38.54,
+     67.008,
+     87.326,
+     38.658,
+     67.509,
+     91.21,
+     37.747,
+     64.783,
+     83.818,
+     39.309,
+     59.596,
+     87.387,
+     38.52,
+     59.514,
+     88.015,
+     37.903,
+     63.1,
+     83.646,
+     38.863,
+     67.892,
+     84.914,
+     38.396,
+     64.971,
+     80.208,
+     40.004,
+     68.187,
+     81.777,
+     38.918,
+     63.159,
+     76.828,
+     41.496,
+     68.408,
+     78.813,
+     40.12,
+     65.014,
+     126.017,
+     31.087,
+     54.106,
+     122.592,
+     31.602,
+     54.025,
+     118.522,
+     30.55,
+     55.629,
+     119.038,
+     30.905,
+     53.592,
+     115.375,
+     30.981,
+     53.284,
+     112.356,
+     32.125,
+     55.674,
+     111.826,
+     31.941,
+     53.053,
+     108.404,
+     33.255,
+     52.798,
+     106.649,
+     34.778,
+     55.612,
+     105.057,
+     34.798,
+     52.455,
+     101.455,
+     35.623,
+     52.377,
+     100.305,
+     35.638,
+     55.679,
+     97.814,
+     36,
+     52.265,
+     93.988,
+     35.745,
+     55.881,
+     94.13,
+     36.152,
+     51.964,
+     90.443,
+     36.238,
+     51.75,
+     90.822,
+     36.228,
+     54.112,
+     87.196,
+     37.975,
+     51.657,
+     87.879,
+     37.439,
+     55.98,
+     84.846,
+     38.356,
+     54.159,
+     83.703,
+     39.131,
+     51.245,
+     81.847,
+     39.513,
+     55.952,
+     80.2,
+     39.97,
+     50.845,
+     78.811,
+     40.102,
+     54.02,
+     126.422,
+     30.392,
+     55.606,
+     129.936,
+     29.531,
+     56.131,
+     133.42,
+     28.415,
+     56.774,
+     129.633,
+     29.36,
+     59.39,
+     136.995,
+     27.734,
+     57.394,
+     133.275,
+     29.126,
+     59.703,
+     140.627,
+     27.857,
+     57.84,
+     136.894,
+     28.765,
+     60.006,
+     144.192,
+     28.771,
+     58.107,
+     140.538,
+     28.399,
+     60.335,
+     147.47,
+     30.452,
+     58.255,
+     143.97,
+     29.525,
+     60.272,
+     150.213,
+     32.26,
+     58.245,
+     146.981,
+     31.397,
+     59.964,
+     152.214,
+     29.644,
+     58.728,
+     150.019,
+     32.54,
+     59.983,
+     150.77,
+     26.866,
+     56.858,
+     151.13,
+     29.37,
+     59.76,
+     151.791,
+     23.674,
+     56.581,
+     149.959,
+     26.55,
+     57.778,
+     154.734,
+     21.665,
+     57.208,
+     151.472,
+     23.457,
+     57.51,
+     158.021,
+     20.605,
+     58.378,
+     154.63,
+     21.787,
+     57.946,
+     160.783,
+     18.766,
+     59.464,
+     157.775,
+     20.341,
+     58.7,
+     163.227,
+     16.187,
+     60.009,
+     160.822,
+     18.622,
+     59.287,
+     29.272,
+     66.939,
+     63.135,
+     39.117,
+     59.149,
+     64.831,
+     36.051,
+     61.967,
+     65.764,
+     33.023,
+     64.83,
+     66.677,
+     32.79,
+     64.008,
+     63.095,
+     31.079,
+     65.792,
+     64.924,
+     44.003,
+     56.459,
+     68.847,
+     41.365,
+     58.267,
+     67.259,
+     43.756,
+     56.026,
+     65.757,
+     43.544,
+     57.317,
+     69.719,
+     43.647,
+     55.835,
+     62.639,
+     45.395,
+     58.849,
+     78.155,
+     44.228,
+     59.591,
+     78.376,
+     44.853,
+     57.955,
+     75.092,
+     45.969,
+     59.804,
+     81.196,
+     42.786,
+     59.81,
+     75.384,
+     44.371,
+     57.136,
+     71.996,
+     41.296,
+     59.97,
+     72.415,
+     60.608,
+     49.151,
+     73.218,
+     57.961,
+     50.972,
+     73.687,
+     60.248,
+     48.599,
+     69.78,
+     59.996,
+     47.914,
+     62.889,
+     56.272,
+     51.119,
+     69.163,
+     60.289,
+     48.549,
+     66.312,
+     54.926,
+     51.981,
+     74.24,
+     55.863,
+     50.368,
+     65.646,
+     55.578,
+     49.686,
+     61.999,
+     52.048,
+     53.388,
+     74.767,
+     53.362,
+     52.43,
+     71.088,
+     49.387,
+     54.446,
+     72.78,
+     53.122,
+     52.071,
+     67.424,
+     52.851,
+     51.465,
+     63.789,
+     46.722,
+     55.506,
+     70.8,
+     50.376,
+     53.63,
+     69.255,
+     50.163,
+     53.138,
+     65.666,
+     49.833,
+     52.532,
+     62.02,
+     47.352,
+     54.774,
+     67.52,
+     47.079,
+     54.226,
+     63.864,
+     50.065,
+     55.601,
+     76.865,
+     47.945,
+     57.586,
+     79.077,
+     94.338,
+     49.718,
+     63.07,
+     94.121,
+     49.778,
+     62.717,
+     91.282,
+     48.385,
+     64.089,
+     91.004,
+     48.519,
+     64.1,
+     88.9,
+     49.478,
+     64.572,
+     88.77,
+     47.792,
+     65.465,
+     86.217,
+     49.052,
+     66.371,
+     85.94,
+     49.269,
+     66.627,
+     82.82,
+     49.253,
+     66.765,
+     82.384,
+     49.4,
+     66.94,
+     79.299,
+     49.504,
+     67.267,
+     79.265,
+     49.436,
+     66.716,
+     63.604,
+     50.015,
+     79.528,
+     64.45,
+     48.026,
+     79.402,
+     61.213,
+     49.913,
+     77.551,
+     61.304,
+     49.266,
+     78.269,
+     58.827,
+     50.677,
+     75.085,
+     58.215,
+     50.633,
+     77.118,
+     55.366,
+     51.856,
+     74.949,
+     55.144,
+     52.032,
+     75.942,
+     78.68,
+     51.414,
+     67.915,
+     76.911,
+     51.336,
+     68.11,
+     75.114,
+     51.849,
+     70.948,
+     77.119,
+     51.099,
+     69.105,
+     74.076,
+     52.054,
+     71.673,
+     73.581,
+     52.459,
+     73.049,
+     74.441,
+     51.752,
+     71.579,
+     71.89,
+     52.06,
+     74.342,
+     70.3,
+     53.046,
+     75.843,
+     70.906,
+     52.13,
+     75.025,
+     68.496,
+     52.791,
+     77.623,
+     69.921,
+     52.559,
+     77.001,
+     67.136,
+     51.826,
+     79.4,
+     66.274,
+     51.205,
+     79.493,
+     65.811,
+     52.182,
+     79.841,
+     65.604,
+     49.061,
+     80.25,
+     55.289,
+     52.567,
+     76.89,
+     58.259,
+     51.443,
+     79.26,
+     61.227,
+     50.269,
+     81.604,
+     64.325,
+     48.553,
+     81.66,
+     65.288,
+     49.278,
+     80.115,
+     48.611,
+     58.07,
+     81.239,
+     51.491,
+     56.772,
+     81.107,
+     54.34,
+     55.408,
+     81.001,
+     57.982,
+     53.081,
+     81.121,
+     77,
+     42.114,
+     70.767,
+     73.572,
+     43.279,
+     71.24,
+     63.433,
+     46.882,
+     72.767,
+     72.514,
+     43.402,
+     67.8,
+     72.288,
+     42.629,
+     64.207,
+     66.792,
+     45.555,
+     72.259,
+     69.542,
+     44.49,
+     69.605,
+     70.031,
+     43.986,
+     71.686,
+     69.476,
+     44.327,
+     65.989,
+     69.222,
+     43.659,
+     62.386,
+     66.616,
+     45.766,
+     67.82,
+     66.44,
+     45.27,
+     64.182,
+     63.731,
+     47.07,
+     69.605,
+     63.564,
+     46.666,
+     66.002,
+     63.4,
+     46.188,
+     62.345,
+     126.519,
+     30.42,
+     62.749,
+     129.621,
+     28.753,
+     62.592,
+     133.082,
+     29.565,
+     62.588,
+     136.736,
+     29.739,
+     62.648,
+     140.344,
+     29.02,
+     62.818,
+     143.452,
+     30.693,
+     62.187,
+     146.537,
+     32.311,
+     61.687,
+     149.797,
+     32.676,
+     61.703,
+     149.978,
+     29.174,
+     60.715,
+     149.375,
+     26.231,
+     58.843,
+     151.447,
+     23.507,
+     58.5,
+     154.562,
+     21.992,
+     58.667,
+     157.835,
+     20.58,
+     59.133,
+     160.753,
+     18.599,
+     59.522
+    ],
+    "p0": [
+     [
+      0,
+      -15067.4,
+      23839.7
+     ],
+     [
+      200,
+      -15067.4,
+      23839.7
+     ],
+     [
+      0,
+      -15284.2,
+      23760.8
+     ],
+     [
+      295.8,
+      -15718,
+      23603.7
+     ],
+     [
+      0,
+      -15717.7,
+      23603.1
+     ],
+     [
+      0,
+      -15501,
+      23682
+     ],
+     [
+      347.9,
+      -15502.7,
+      23681.7
+     ],
+     [
+      400,
+      -15287.5,
+      23759.6
+     ],
+     [
+      197.5,
+      -15304.7,
+      23753.4
+     ],
+     [
+      300,
+      -15177.5,
+      23799.7
+     ],
+     [
+      517.7,
+      -16006.7,
+      23499
+     ],
+     [
+      345.1,
+      -16007,
+      23497.3
+     ],
+     [
+      433.5,
+      -15839.1,
+      23559.3
+     ],
+     [
+      571.3,
+      -15960.3,
+      23514.8
+     ],
+     [
+      172.6,
+      -16006.6,
+      23497.6
+     ],
+     [
+      0,
+      -16006.4,
+      23498.1
+     ],
+     [
+      0,
+      -15862,
+      23550.6
+     ],
+     [
+      1054.1,
+      -16010.5,
+      23510.5
+     ],
+     [
+      875.3,
+      -16008.6,
+      23507.3
+     ],
+     [
+      1066.4,
+      -15937.6,
+      23533.4
+     ],
+     [
+      1232.9,
+      -16011.3,
+      23511.7
+     ],
+     [
+      696.5,
+      -16006.9,
+      23503
+     ],
+     [
+      899.9,
+      -15863.9,
+      23555
+     ],
+     [
+      733.4,
+      -15790.2,
+      23576.7
+     ],
+     [
+      773.2,
+      -16956.3,
+      23181.8
+     ],
+     [
+      579.9,
+      -16956.3,
+      23181.8
+     ],
+     [
+      799.5,
+      -16786.8,
+      23234.2
+     ],
+     [
+      0,
+      -16196.4,
+      23434.8
+     ],
+     [
+      193.3,
+      -16956.3,
+      23181.8
+     ],
+     [
+      0,
+      -16956.3,
+      23181.8
+     ],
+     [
+      0,
+      -16766.3,
+      23245.1
+     ],
+     [
+      386.6,
+      -16956.3,
+      23181.8
+     ],
+     [
+      546.3,
+      -16707,
+      23261.7
+     ],
+     [
+      825.8,
+      -16617.3,
+      23286.6
+     ],
+     [
+      346.5,
+      -16705.6,
+      23263.8
+     ],
+     [
+      141,
+      -16707.9,
+      23264.1
+     ],
+     [
+      0,
+      -16576.3,
+      23308.3
+     ],
+     [
+      852.1,
+      -16447.9,
+      23339
+     ],
+     [
+      649.5,
+      -16536.8,
+      23315.3
+     ],
+     [
+      740.6,
+      -16300.8,
+      23392.3
+     ],
+     [
+      445.8,
+      -16536.8,
+      23318.5
+     ],
+     [
+      241.8,
+      -16538.9,
+      23319.5
+     ],
+     [
+      629.2,
+      -16153.8,
+      23445.7
+     ],
+     [
+      546,
+      -16370.4,
+      23372.9
+     ],
+     [
+      345.6,
+      -16373.7,
+      23373.8
+     ],
+     [
+      0,
+      -16386.3,
+      23371.6
+     ],
+     [
+      140.7,
+      -16373,
+      23375.3
+     ],
+     [
+      447.2,
+      -16203.4,
+      23430.8
+     ],
+     [
+      242.3,
+      -16204.6,
+      23431.2
+     ],
+     [
+      979,
+      -16302.4,
+      23396.6
+     ],
+     [
+      1106,
+      -16156.8,
+      23454.1
+     ],
+     [
+      954.5,
+      -19484,
+      22232.7
+     ],
+     [
+      948.1,
+      -19294.3,
+      22301.9
+     ],
+     [
+      1232.9,
+      -19484,
+      22232.7
+     ],
+     [
+      941.7,
+      -19104.5,
+      22371
+     ],
+     [
+      1232.9,
+      -19285.4,
+      22305
+     ],
+     [
+      935.3,
+      -18914.7,
+      22440.2
+     ],
+     [
+      1232.9,
+      -19086.9,
+      22377.2
+     ],
+     [
+      928.9,
+      -18725,
+      22509.3
+     ],
+     [
+      1232.9,
+      -18888.3,
+      22449.5
+     ],
+     [
+      922.5,
+      -18535.2,
+      22578.4
+     ],
+     [
+      1232.9,
+      -18689.7,
+      22521.7
+     ],
+     [
+      1232.9,
+      -18491.1,
+      22594
+     ],
+     [
+      877.7,
+      -17206.9,
+      23062.4
+     ],
+     [
+      871.3,
+      -17017.1,
+      23131.6
+     ],
+     [
+      1106,
+      -17148.1,
+      23083.2
+     ],
+     [
+      864.9,
+      -16827.4,
+      23200.7
+     ],
+     [
+      1042.5,
+      -16973.1,
+      23147.1
+     ],
+     [
+      858.5,
+      -16637.6,
+      23269.8
+     ],
+     [
+      979,
+      -16798,
+      23211.1
+     ],
+     [
+      915.5,
+      -16622.9,
+      23275
+     ],
+     [
+      916.1,
+      -18345.5,
+      22647.6
+     ],
+     [
+      1031.6,
+      -18409.8,
+      22623.9
+     ],
+     [
+      909.7,
+      -18155.7,
+      22716.7
+     ],
+     [
+      1232.9,
+      -18292.6,
+      22666.2
+     ],
+     [
+      903.3,
+      -17965.9,
+      22785.9
+     ],
+     [
+      1029,
+      -18080.7,
+      22743.8
+     ],
+     [
+      1232.9,
+      -18094,
+      22738.5
+     ],
+     [
+      1232.9,
+      -17895.4,
+      22810.7
+     ],
+     [
+      896.9,
+      -17776.2,
+      22855
+     ],
+     [
+      1029,
+      -17748.7,
+      22864.6
+     ],
+     [
+      890.5,
+      -17586.4,
+      22924.1
+     ],
+     [
+      1232.9,
+      -17696.8,
+      22883
+     ],
+     [
+      1232.9,
+      -17498.3,
+      22955.2
+     ],
+     [
+      884.1,
+      -17396.7,
+      22993.3
+     ],
+     [
+      1028.8,
+      -17419.4,
+      22984.6
+     ],
+     [
+      1169.4,
+      -17323.2,
+      23019.2
+     ],
+     [
+      979,
+      -16614.2,
+      23277.9
+     ],
+     [
+      1106,
+      -16780.5,
+      23216.9
+     ],
+     [
+      1232.9,
+      -16946.9,
+      23155.9
+     ],
+     [
+      1232.9,
+      -17130.7,
+      23089
+     ],
+     [
+      1232.9,
+      -17314.5,
+      23022.1
+     ],
+     [
+      1232.4,
+      -16173.6,
+      23447.5
+     ],
+     [
+      1232,
+      -16335.9,
+      23383.3
+     ],
+     [
+      1231.5,
+      -16498.2,
+      23319.1
+     ],
+     [
+      1232.2,
+      -16722.5,
+      23237.5
+     ],
+     [
+      632.4,
+      -17884.8,
+      22814.6
+     ],
+     [
+      496.2,
+      -17884.8,
+      22814.6
+     ],
+     [
+      660.5,
+      -17699.1,
+      22888.1
+     ],
+     [
+      745,
+      -17142,
+      23108.4
+     ],
+     [
+      248.1,
+      -17885.7,
+      22814.3
+     ],
+     [
+      0,
+      -17886.6,
+      22813.9
+     ],
+     [
+      0,
+      -17700.5,
+      22887.5
+     ],
+     [
+      469.2,
+      -17641.3,
+      22910.9
+     ],
+     [
+      264.4,
+      -17643.2,
+      22910.2
+     ],
+     [
+      716.9,
+      -17327.7,
+      23034.9
+     ],
+     [
+      688.7,
+      -17513.4,
+      22961.5
+     ],
+     [
+      570.7,
+      -17479.6,
+      22974.9
+     ],
+     [
+      367.6,
+      -17477.2,
+      22975.8
+     ],
+     [
+      0,
+      -17514.5,
+      22961.1
+     ],
+     [
+      163.9,
+      -17476.3,
+      22976.2
+     ],
+     [
+      0,
+      -17328.4,
+      23034.7
+     ],
+     [
+      470.4,
+      -17313.9,
+      23040.4
+     ],
+     [
+      266.1,
+      -17313.7,
+      23040.5
+     ],
+     [
+      569.2,
+      -17151.6,
+      23104.6
+     ],
+     [
+      366.7,
+      -17150,
+      23105.2
+     ],
+     [
+      162.2,
+      -17151.5,
+      23104.6
+     ],
+     [
+      0,
+      -17142.4,
+      23108.2
+     ],
+     [
+      -292.3,
+      -20566.7,
+      21838.8
+     ],
+     [
+      -306.8,
+      -20375.1,
+      21908.5
+     ],
+     [
+      0,
+      -20375.3,
+      21908.5
+     ],
+     [
+      0,
+      -20566.7,
+      21838.8
+     ],
+     [
+      -248.1,
+      -17885.7,
+      22814.3
+     ],
+     [
+      0,
+      -18078,
+      22744.3
+     ],
+     [
+      -321.4,
+      -20183.6,
+      21978.2
+     ],
+     [
+      -204.3,
+      -20155.5,
+      21988.4
+     ],
+     [
+      0,
+      -20183.8,
+      21978.1
+     ],
+     [
+      -336,
+      -19992,
+      22047.9
+     ],
+     [
+      0,
+      -19992.4,
+      22047.8
+     ],
+     [
+      -350.5,
+      -19800.4,
+      22117.6
+     ],
+     [
+      -203.3,
+      -19821.7,
+      22109.9
+     ],
+     [
+      0,
+      -19801,
+      22117.4
+     ],
+     [
+      -365.1,
+      -19608.9,
+      22187.3
+     ],
+     [
+      0,
+      -19609.5,
+      22187.1
+     ],
+     [
+      -379.7,
+      -19417.3,
+      22257
+     ],
+     [
+      -202,
+      -19494.7,
+      22228.9
+     ],
+     [
+      0,
+      -19418.1,
+      22256.7
+     ],
+     [
+      -394.3,
+      -19225.7,
+      22326.7
+     ],
+     [
+      -408.8,
+      -19034.2,
+      22396.4
+     ],
+     [
+      -203.9,
+      -19161.6,
+      22350
+     ],
+     [
+      0,
+      -19035.2,
+      22396
+     ],
+     [
+      0,
+      -19226.7,
+      22326.4
+     ],
+     [
+      -423.4,
+      -18842.6,
+      22466.1
+     ],
+     [
+      -201.9,
+      -18833.1,
+      22469.6
+     ],
+     [
+      0,
+      -18843.8,
+      22465.7
+     ],
+     [
+      0,
+      -18652.3,
+      22535.3
+     ],
+     [
+      -438,
+      -18651,
+      22535.8
+     ],
+     [
+      -452.5,
+      -18459.5,
+      22605.5
+     ],
+     [
+      -306.1,
+      -18668.7,
+      22529.4
+     ],
+     [
+      0,
+      -18269.5,
+      22674.6
+     ],
+     [
+      0,
+      -18460.9,
+      22605
+     ],
+     [
+      -203,
+      -18502.5,
+      22589.8
+     ],
+     [
+      -467.1,
+      -18267.9,
+      22675.2
+     ],
+     [
+      -306.3,
+      -18338.3,
+      22649.6
+     ],
+     [
+      -481.7,
+      -18076.3,
+      22744.9
+     ],
+     [
+      -202.1,
+      -18169.9,
+      22710.9
+     ],
+     [
+      -496.2,
+      -17884.8,
+      22814.6
+     ],
+     [
+      -305.5,
+      -18005.2,
+      22770.8
+     ],
+     [
+      292.3,
+      -20566.7,
+      21838.8
+     ],
+     [
+      306.8,
+      -20375.1,
+      21908.5
+     ],
+     [
+      204.3,
+      -20155.5,
+      21988.4
+     ],
+     [
+      321.4,
+      -20183.6,
+      21978.2
+     ],
+     [
+      336,
+      -19992,
+      22047.9
+     ],
+     [
+      203.3,
+      -19821.7,
+      22109.9
+     ],
+     [
+      350.5,
+      -19800.4,
+      22117.6
+     ],
+     [
+      365.1,
+      -19608.9,
+      22187.3
+     ],
+     [
+      202,
+      -19494.7,
+      22228.9
+     ],
+     [
+      379.7,
+      -19417.3,
+      22257
+     ],
+     [
+      394.3,
+      -19225.7,
+      22326.7
+     ],
+     [
+      203.9,
+      -19161.6,
+      22350
+     ],
+     [
+      408.8,
+      -19034.2,
+      22396.4
+     ],
+     [
+      201.9,
+      -18833.1,
+      22469.6
+     ],
+     [
+      423.4,
+      -18842.6,
+      22466.1
+     ],
+     [
+      438,
+      -18651,
+      22535.8
+     ],
+     [
+      306.1,
+      -18668.7,
+      22529.4
+     ],
+     [
+      452.5,
+      -18459.5,
+      22605.5
+     ],
+     [
+      203,
+      -18502.5,
+      22589.8
+     ],
+     [
+      306.3,
+      -18338.3,
+      22649.6
+     ],
+     [
+      467.1,
+      -18267.9,
+      22675.2
+     ],
+     [
+      202.1,
+      -18169.9,
+      22710.9
+     ],
+     [
+      481.7,
+      -18076.3,
+      22744.9
+     ],
+     [
+      305.5,
+      -18005.2,
+      22770.8
+     ],
+     [
+      199.1,
+      -20566.7,
+      21838.8
+     ],
+     [
+      184.9,
+      -20757.7,
+      21769.3
+     ],
+     [
+      170.6,
+      -20948.8,
+      21699.8
+     ],
+     [
+      0,
+      -20757.7,
+      21769.3
+     ],
+     [
+      156.4,
+      -21139.8,
+      21630.3
+     ],
+     [
+      0,
+      -20948.8,
+      21699.8
+     ],
+     [
+      142.2,
+      -21330.8,
+      21560.8
+     ],
+     [
+      0,
+      -21139.8,
+      21630.3
+     ],
+     [
+      128,
+      -21521.8,
+      21491.3
+     ],
+     [
+      0,
+      -21330.8,
+      21560.8
+     ],
+     [
+      113.8,
+      -21712.9,
+      21421.8
+     ],
+     [
+      0,
+      -21521.8,
+      21491.3
+     ],
+     [
+      99.5,
+      -21903.9,
+      21352.3
+     ],
+     [
+      0,
+      -21712.9,
+      21421.8
+     ],
+     [
+      85.3,
+      -22094.9,
+      21282.8
+     ],
+     [
+      0,
+      -21903.9,
+      21352.3
+     ],
+     [
+      71.1,
+      -22285.9,
+      21213.3
+     ],
+     [
+      0,
+      -22094.9,
+      21282.8
+     ],
+     [
+      56.9,
+      -22477,
+      21143.8
+     ],
+     [
+      0,
+      -22285.9,
+      21213.3
+     ],
+     [
+      42.7,
+      -22668,
+      21074.3
+     ],
+     [
+      0,
+      -22477,
+      21143.8
+     ],
+     [
+      28.4,
+      -22859,
+      21004.8
+     ],
+     [
+      0,
+      -22668,
+      21074.3
+     ],
+     [
+      14.2,
+      -23050,
+      20935.3
+     ],
+     [
+      0,
+      -22859,
+      21004.8
+     ],
+     [
+      0,
+      -23241.1,
+      20865.8
+     ],
+     [
+      0,
+      -23050,
+      20935.3
+     ],
+     [
+      -200,
+      -15067.4,
+      23839.7
+     ],
+     [
+      -295.8,
+      -15718,
+      23603.7
+     ],
+     [
+      -347.9,
+      -15502.7,
+      23681.7
+     ],
+     [
+      -400,
+      -15287.5,
+      23759.6
+     ],
+     [
+      -197.5,
+      -15304.7,
+      23753.4
+     ],
+     [
+      -300,
+      -15177.5,
+      23799.7
+     ],
+     [
+      -517.7,
+      -16006.7,
+      23499
+     ],
+     [
+      -433.5,
+      -15839.1,
+      23559.3
+     ],
+     [
+      -345.1,
+      -16007,
+      23497.3
+     ],
+     [
+      -571.3,
+      -15960.3,
+      23514.8
+     ],
+     [
+      -172.6,
+      -16006.6,
+      23497.6
+     ],
+     [
+      -1054.1,
+      -16010.5,
+      23510.5
+     ],
+     [
+      -1066.4,
+      -15937.6,
+      23533.4
+     ],
+     [
+      -875.3,
+      -16008.6,
+      23507.3
+     ],
+     [
+      -1232.9,
+      -16011.3,
+      23511.7
+     ],
+     [
+      -899.9,
+      -15863.9,
+      23555
+     ],
+     [
+      -696.5,
+      -16006.9,
+      23503
+     ],
+     [
+      -733.4,
+      -15790.2,
+      23576.7
+     ],
+     [
+      -773.2,
+      -16956.3,
+      23181.8
+     ],
+     [
+      -799.5,
+      -16786.8,
+      23234.2
+     ],
+     [
+      -579.9,
+      -16956.3,
+      23181.8
+     ],
+     [
+      -193.3,
+      -16956.3,
+      23181.8
+     ],
+     [
+      -546.3,
+      -16707,
+      23261.7
+     ],
+     [
+      -386.6,
+      -16956.3,
+      23181.8
+     ],
+     [
+      -825.8,
+      -16617.3,
+      23286.6
+     ],
+     [
+      -346.5,
+      -16705.6,
+      23263.8
+     ],
+     [
+      -141,
+      -16707.9,
+      23264.1
+     ],
+     [
+      -852.1,
+      -16447.9,
+      23339
+     ],
+     [
+      -649.5,
+      -16536.8,
+      23315.3
+     ],
+     [
+      -740.6,
+      -16300.8,
+      23392.3
+     ],
+     [
+      -445.8,
+      -16536.8,
+      23318.5
+     ],
+     [
+      -241.8,
+      -16538.9,
+      23319.5
+     ],
+     [
+      -629.2,
+      -16153.8,
+      23445.7
+     ],
+     [
+      -546,
+      -16370.4,
+      23372.9
+     ],
+     [
+      -345.6,
+      -16373.7,
+      23373.8
+     ],
+     [
+      -140.7,
+      -16373,
+      23375.3
+     ],
+     [
+      -447.2,
+      -16203.4,
+      23430.8
+     ],
+     [
+      -242.3,
+      -16204.6,
+      23431.2
+     ],
+     [
+      -979,
+      -16302.4,
+      23396.6
+     ],
+     [
+      -1106,
+      -16156.8,
+      23454.1
+     ],
+     [
+      -954.5,
+      -19484,
+      22232.7
+     ],
+     [
+      -1232.9,
+      -19484,
+      22232.7
+     ],
+     [
+      -948.1,
+      -19294.3,
+      22301.9
+     ],
+     [
+      -1232.9,
+      -19285.4,
+      22305
+     ],
+     [
+      -941.7,
+      -19104.5,
+      22371
+     ],
+     [
+      -1232.9,
+      -19086.9,
+      22377.2
+     ],
+     [
+      -935.3,
+      -18914.7,
+      22440.2
+     ],
+     [
+      -1232.9,
+      -18888.3,
+      22449.5
+     ],
+     [
+      -928.9,
+      -18725,
+      22509.3
+     ],
+     [
+      -1232.9,
+      -18689.7,
+      22521.7
+     ],
+     [
+      -922.5,
+      -18535.2,
+      22578.4
+     ],
+     [
+      -1232.9,
+      -18491.1,
+      22594
+     ],
+     [
+      -877.7,
+      -17206.9,
+      23062.4
+     ],
+     [
+      -1106,
+      -17148.1,
+      23083.2
+     ],
+     [
+      -871.3,
+      -17017.1,
+      23131.6
+     ],
+     [
+      -1042.5,
+      -16973.1,
+      23147.1
+     ],
+     [
+      -864.9,
+      -16827.4,
+      23200.7
+     ],
+     [
+      -979,
+      -16798,
+      23211.1
+     ],
+     [
+      -858.5,
+      -16637.6,
+      23269.8
+     ],
+     [
+      -915.5,
+      -16622.9,
+      23275
+     ],
+     [
+      -1031.6,
+      -18409.8,
+      22623.9
+     ],
+     [
+      -916.1,
+      -18345.5,
+      22647.6
+     ],
+     [
+      -909.7,
+      -18155.7,
+      22716.7
+     ],
+     [
+      -1232.9,
+      -18292.6,
+      22666.2
+     ],
+     [
+      -1029,
+      -18080.7,
+      22743.8
+     ],
+     [
+      -903.3,
+      -17965.9,
+      22785.9
+     ],
+     [
+      -1232.9,
+      -18094,
+      22738.5
+     ],
+     [
+      -1232.9,
+      -17895.4,
+      22810.7
+     ],
+     [
+      -1029,
+      -17748.7,
+      22864.6
+     ],
+     [
+      -896.9,
+      -17776.2,
+      22855
+     ],
+     [
+      -890.5,
+      -17586.4,
+      22924.1
+     ],
+     [
+      -1232.9,
+      -17696.8,
+      22883
+     ],
+     [
+      -1232.9,
+      -17498.3,
+      22955.2
+     ],
+     [
+      -1028.8,
+      -17419.4,
+      22984.6
+     ],
+     [
+      -884.1,
+      -17396.7,
+      22993.3
+     ],
+     [
+      -1169.4,
+      -17323.2,
+      23019.2
+     ],
+     [
+      -979,
+      -16614.2,
+      23277.9
+     ],
+     [
+      -1106,
+      -16780.5,
+      23216.9
+     ],
+     [
+      -1232.9,
+      -16946.9,
+      23155.9
+     ],
+     [
+      -1232.9,
+      -17130.7,
+      23089
+     ],
+     [
+      -1232.9,
+      -17314.5,
+      23022.1
+     ],
+     [
+      -1232.4,
+      -16173.6,
+      23447.5
+     ],
+     [
+      -1232,
+      -16335.9,
+      23383.3
+     ],
+     [
+      -1231.5,
+      -16498.2,
+      23319.1
+     ],
+     [
+      -1232.2,
+      -16722.5,
+      23237.5
+     ],
+     [
+      -632.4,
+      -17884.8,
+      22814.6
+     ],
+     [
+      -660.5,
+      -17699.1,
+      22888.1
+     ],
+     [
+      -745,
+      -17142,
+      23108.4
+     ],
+     [
+      -469.2,
+      -17641.3,
+      22910.9
+     ],
+     [
+      -264.4,
+      -17643.2,
+      22910.2
+     ],
+     [
+      -716.9,
+      -17327.7,
+      23034.9
+     ],
+     [
+      -570.7,
+      -17479.6,
+      22974.9
+     ],
+     [
+      -688.7,
+      -17513.4,
+      22961.5
+     ],
+     [
+      -367.6,
+      -17477.2,
+      22975.8
+     ],
+     [
+      -163.9,
+      -17476.3,
+      22976.2
+     ],
+     [
+      -470.4,
+      -17313.9,
+      23040.4
+     ],
+     [
+      -266.1,
+      -17313.7,
+      23040.5
+     ],
+     [
+      -569.2,
+      -17151.6,
+      23104.6
+     ],
+     [
+      -366.7,
+      -17150,
+      23105.2
+     ],
+     [
+      -162.2,
+      -17151.5,
+      23104.6
+     ],
+     [
+      -199.1,
+      -20566.7,
+      21838.8
+     ],
+     [
+      -184.9,
+      -20757.7,
+      21769.3
+     ],
+     [
+      -170.6,
+      -20948.8,
+      21699.8
+     ],
+     [
+      -156.4,
+      -21139.8,
+      21630.3
+     ],
+     [
+      -142.2,
+      -21330.8,
+      21560.8
+     ],
+     [
+      -128,
+      -21521.8,
+      21491.3
+     ],
+     [
+      -113.8,
+      -21712.9,
+      21421.8
+     ],
+     [
+      -99.5,
+      -21903.9,
+      21352.3
+     ],
+     [
+      -85.3,
+      -22094.9,
+      21282.8
+     ],
+     [
+      -71.1,
+      -22285.9,
+      21213.3
+     ],
+     [
+      -56.9,
+      -22477,
+      21143.8
+     ],
+     [
+      -42.7,
+      -22668,
+      21074.3
+     ],
+     [
+      -28.4,
+      -22859,
+      21004.8
+     ],
+     [
+      -14.2,
+      -23050,
+      20935.3
+     ]
+    ]
+   }
+  },
+  "traine": "rubans",
+  "lsoft": true
+ },
+ "fpos": {
+  "L": 26.5
+ },
+ "vol": {
+  "F": 20,
+  "on": true
+ },
+ "links": [],
+ "palette": [
+  "#ffffff",
+  "#ff5500"
+ ],
+ "disp": {
+  "d": {
+   "aim": true,
+   "cotes": true,
+   "q": "ombre",
+   "amp": 1,
+   "ghost": false,
+   "mesh": false,
+   "wr": true,
+   "other": "dim",
+   "ptsz": 0.5,
+   "grid": false,
+   "hideTub": false,
+   "hideBr": true,
+   "liveShade": false,
+   "hideCab": true,
+   "sky": true,
+   "rulers": false,
+   "skyMode": "pano",
+   "assyOpen": true
+  },
+  "az": 0,
+  "el": 0.35,
+  "pano": "prairie"
+ }
+}
