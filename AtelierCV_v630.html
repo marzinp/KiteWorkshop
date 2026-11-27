@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="google" content="notranslate">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>AtelierCV v629</title>
+  <title>AtelierCV v630</title>
   <style>
     :root {
       --bg: #f4f3ef;
@@ -1217,7 +1217,7 @@
   <script id="engine">
     'use strict';
     /* ================= MOTEUR (sans DOM) ================= */
-    const VERSION = 'v629';
+    const VERSION = 'v630';
     const V = {
       add: (a, b) => [a[0] + b[0], a[1] + b[1], a[2] + b[2]],
       sub: (a, b) => [a[0] - b[0], a[1] - b[1], a[2] - b[2]],
@@ -2269,6 +2269,13 @@
       const fr = new Set(), SI = M.shapesInfo.filter(si => (isBag(si) || si.kind === 'cable') && si.nodes && si.nodes.length);
       for (const si of SI) if (si.kind === 'cable' && si.props && si.props.bride) for (const q of [si.nodes[0], si.nodes[si.nodes.length - 1]]) fr.add(q);
       const used = new Set(SI.filter(si => si.kind === 'cable' && si.props && si.props.bride));
+      /* v630 : bride attachée à une voile (quille du delta serpent : anneau au coin de la quille, aucune bride sur un tube) — l'armature portée part des tubes et lattes
+         qui touchent cette voile ; avant, aucune armature n'était trouvée (la traîne n'était pas détectée) */
+      {const ends = new Set(); for (const si of SI) if (si.kind === 'cable' && si.props && si.props.bride) {ends.add(si.nodes[0]); ends.add(si.nodes[si.nodes.length - 1]);}
+        const onBag = [...ends].some(q => SI.some(si => si.kind !== 'cable' && si.nodes.includes(q)));/* seulement si aucune bride ne touche un tube (sinon le Kiteman, bride sur la voile ET sur l'armature, prenait les lattes de sa traîne pour de l'armature) */
+        const own = new Set(); if (!onBag) for (const t of M.tris || []) if (ends.has(t.a) || ends.has(t.b) || ends.has(t.c)) own.add(t.owner);
+        if (own.size) {const sn = new Set(); for (const t of M.tris) if (own.has(t.owner)) {sn.add(t.a); sn.add(t.b); sn.add(t.c);}
+          for (const si of SI) if (si.kind !== 'cable' && !used.has(si) && si.nodes.some(q => sn.has(q) && !ends.has(q))) {used.add(si); for (const q of si.nodes) fr.add(q);} } }
       for (let grow = true; grow;) {grow = false; for (const si of SI) if (!used.has(si) && si.nodes.some(q => fr.has(q))) {used.add(si); for (const q of si.nodes) fr.add(q); grow = true;} }
       for (const si of SI) if (si.kind === 'cable' && si.props && si.props.bride) for (const q of si.nodes.slice(1, -1)) fr.delete(q);/* les brides elles-mêmes ne comptent pas dans l'étendue de l'armature */
       {const ends = new Set(); for (const si of SI) if (si.kind === 'cable' && si.props && si.props.bride) {ends.add(si.nodes[0]); ends.add(si.nodes[si.nodes.length - 1]);} for (const q of ends) if (!SI.some(si => si.kind !== 'cable' && si.nodes.includes(q))) fr.delete(q);}/* anneau, nœuds de bride en l'air */
