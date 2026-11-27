@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="google" content="notranslate">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>AtelierCV v633</title>
+  <title>AtelierCV v634</title>
   <style>
     :root {
       --bg: #f4f3ef;
@@ -1217,7 +1217,7 @@
   <script id="engine">
     'use strict';
     /* ================= MOTEUR (sans DOM) ================= */
-    const VERSION = 'v633';
+    const VERSION = 'v634';
     const V = {
       add: (a, b) => [a[0] + b[0], a[1] + b[1], a[2] + b[2]],
       sub: (a, b) => [a[0] - b[0], a[1] - b[1], a[2] - b[2]],
@@ -7463,14 +7463,23 @@ void main_setup() { // AtelierCV; required extensions in defines.hpp: FP16S, EQU
        portée en vraie longueur sur la courbe du ruban ; le reste de l'écart tourné comme la tête (Horn, dessin → forme en vol) ; un nœud au-dessus de son attache suit la tête (plus de triangles écrasés) */
     /* v459-s87 : nœuds de traîne laissés sans place (nœuds de lattes de la traîne, maillage changé depuis la forme enregistrée…) : déplacement moyen de leurs voisins placés,
        de proche en proche — sinon leurs triangles restaient cachés (morceaux de bras manquants entre lattes transversales, Kiteman) */
-    function tailMorph(M, X) {const out = tailMorph0(M, X); if (!out || !out.size) return out; let T = null; try {T = sfTailOn(M);} catch (e) { } if (!T) return out;
+    function tailMorph(M, X) {M._tRub = false; const out = tailMorph0(M, X); if (!out || !out.size) return out; let T = null; try {T = sfTailOn(M);} catch (e) { } if (!T) return out;
       const nb = new Map(), tn = new Set(), add = (a, b) => {(nb.get(a) || nb.set(a, []).get(a)).push(b);}; M.tris.forEach((t, k) => {if (!(T.TM.tri[k] || t.frz)) return; const v = [t.a, t.b, t.c]; for (let i = 0; i < 3; i++) {tn.add(v[i]); add(v[i], v[(i + 1) % 3]); add(v[i], v[(i + 2) % 3]);} });
       const head = new Set(); M.tris.forEach((t, k) => {if (!(T.TM.tri[k] || t.frz)) {head.add(t.a); head.add(t.b); head.add(t.c);} }); const D = new Map(); for (const [q, p] of out) D.set(q, V.sub(p, X(q))); for (const q of head) if (!D.has(q)) D.set(q, [0, 0, 0]);
       let todo = [...tn].filter(q => !D.has(q)); for (let pass = 0; pass < 50 && todo.length; pass++) {const nx = []; for (const q of todo) {const L = (nb.get(q) || []).filter(w => D.has(w)); if (!L.length) {nx.push(q); continue;} D.set(q, V.mul(L.reduce((u, w) => V.add(u, D.get(w)), [0, 0, 0]), 1 / L.length)); out.set(q, V.add(X(q), D.get(q)));} if (nx.length === todo.length) break; todo = nx;}
+      /* v634 : rubans — chaque nœud suit le ruban de son attache ; des rubans voisins de longueurs différentes pendent différemment et déchiraient la toile en lanières (peigne, delta serpent).
+         Le déplacement est lissé sur la toile de la traîne (moyenne avec les voisins, la tête restant fixe), ce qui recoud les lanières sans changer l'allure d'ensemble */
+      if (M._tRub) {const Q = [...out.keys()].filter(q => tn.has(q) && !head.has(q));
+        for (let it = 0; it < 30; it++) {const nD = new Map(); for (const q of Q) {const L = nb.get(q) || []; let s = D.get(q).slice(), w = 1; for (const v of L) {const d = D.get(v); if (d) {s = V.add(s, d); w++;} } nD.set(q, V.mul(s, 1 / w));} for (const [q, d] of nD) D.set(q, d);}
+        for (const q of Q) out.set(q, V.add(X(q), D.get(q)));}
       return out;}
+    /* v634 : traîne qui porte des lattes (bras du Kiteman, bannière du Dazzle) — sa forme au repos, tenue par ses lattes, ressemble à la forme en vol ;
+       une traîne de toile seule (queues des deltas serpent et pyro, 13 m) s'entasse au repos : rideau de plis pendu sous le cerf-volant */
+    function tailHeld(M, T) {if (M._tHeld !== undefined) return M._tHeld; const inT = new Set(); M.tris.forEach((t, k) => {if (T.TM.tri[k]) {inT.add(t.a); inT.add(t.b); inT.add(t.c);} });
+      return (M._tHeld = M.shapesInfo.some(si => isBag(si) && si.nodes && si.nodes.filter(q => inT.has(q)).length >= 2));}
     function tailMorph0(M, X) {let T = null; try {T = sfTailOn(M);} catch (e) { } if (!T || !M.frzTail) return null; if (ui.sfLive && performance.now() - ui.sfLive.t < 5000) {/* v459-s86 : aussi pour un essai relancé à la main dans la soufflerie (plus de mailles…) */let F = null; try {F = tailFromLive(M, X, T);} catch (e) {F = null;} if (F && F.size) return F;} if (!T.S.approx) {let F = null; try {F = tailFromSf(M, X, T);} catch (e) {F = null;} if (F && F.size) return F;}
-      {let F = null; try {F = tailFromRest(M, X, T);} catch (e) {F = null;} if (F && F.size) return F;}/* rubans : la forme au repos, conformée à la tête */
-      const A = T.S.approx ? T.S : tailApprox(M, T.TM); if (!A || !A.bands || !A.bands.length || !A.morph) return null;
+      if (tailHeld(M, T)) {let F = null; try {F = tailFromRest(M, X, T);} catch (e) {F = null;} if (F && F.size) return F;}/* rubans : la forme au repos, conformée à la tête — v634 : traîne qui porte des lattes seulement (voir tailHeld) */
+      const A = T.S.approx ? T.S : tailApprox(M, T.TM); if (!A || !A.bands || !A.bands.length || !A.morph) return null; M._tRub = true;
       const d = tailWind() || [0, -1, 0], ey = V.cross([0, 0, 1], d), P0 = q => [M.x0[3 * q], M.x0[3 * q + 1], M.x0[3 * q + 2]], out = new Map(), mean = L => L.reduce((u, p) => V.add(u, p), [0, 0, 0]).map(v => v / L.length);
       const inT = new Set(); M.tris.forEach((t, k) => {if (T.TM.tri[k] || t.frz) {inT.add(t.a); inT.add(t.b); inT.add(t.c);} }); const head = []; for (const t of M.tris) for (const q of [t.a, t.b, t.c]) if (!inT.has(q)) head.push(q);
       const hh = [...new Set(head)]; if (hh.length < 4) return null; const HF = hornFit(hh.map(P0), hh.map(X)); if (!HF) return null;
